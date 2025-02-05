@@ -19,7 +19,7 @@ Here is a list of every prefix used and their respective language.
 cs_CZ: Czech
 de_DE: German
 el_GR: Greek
-en_US: English (Used by all English languages, as well as id_ID: Indonesian, and zh_MY: Malaysian)
+en_US: English (Used by all English regions, as well as Indonesian, and Malaysian)
 es_ES: Spanish (Spain)
 es_MX: Spanish (Mexico)
 fr_FR: French
@@ -36,10 +36,10 @@ vi_VN: Vietnamese
 zh_CN: Chinese
 zh_TW: Taiwanese
 
-> To see any of this game files you have to have downloaded that version of the game (in the Riot Client go to settings and change the language for League of Legends. select and download the version that you want and go into a game)
+> To see any of these game files, you have to have downloaded that version of the game. (In the Riot Client, go to settings and change the language for League of Legends. Select and download the version that you want, then go into any game, like Practice Tool or Customs.)
 {.is-warning}
 
 - .wav: Generic audio file format used before converting into the format that League of Legends can read.
-- .wem: File format that the game reads. You can not use any other type of audio format to replace sounds
-- .bin: Code that reads every .wem file and makes the logic to get it to work in game; something like the brain of the game. (Not only used for sounds)
+- .wem: File format that the game reads. You can not use any other type of audio format to replace sounds.
+- .bin: Code that reads every .wem file and makes the logic to get it to work in game; Something like the brain of the game. (Not only used for sounds)
 - .bnk: Format that contains all the compressed .wem files that a model can have. There are two distinctions of the formats: "events.bnk" and "audio.bnk"
