@@ -2,7 +2,7 @@
 title: Fix missing champion voicelines
 description: A guide on how to fix missing voicelines for champions in your custom skin.
 published: true
-date: 2025-02-04T02:00:57.988Z
+date: 2025-06-10T20:42:24.601Z
 tags: audio, voiceline, fix
 editor: markdown
 dateCreated: 2024-02-20T21:53:45.483Z
@@ -19,6 +19,14 @@ dateCreated: 2024-02-20T21:53:45.483Z
 
 This guide shows you how you can fix your mod if it does not play any champion voices anymore.
 This usually happens on new Riot skin releases.
+
+This guide also fixes crashes for the following champions:
+```Samira```
+```Lee sin```
+```Qiyana```
+```Yone E```
+```Viego```
+```Qiyana```
 
 **Your skin must have an edited SkinX.bin, if it doesn’t, there must be another issue.**
 
