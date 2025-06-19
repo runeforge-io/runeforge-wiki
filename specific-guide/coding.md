@@ -2,14 +2,14 @@
 title: Coding
 description: All guides listed here.
 published: true
-date: 2024-08-26T10:55:24.349Z
+date: 2025-06-19T18:34:27.733Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-06T17:07:09.342Z
 ---
 
 
-# Basic Guides
+# Mandatory
 - [Particle & Bin Dictionary *A dictionary with all informations about Particles in bin files*](/specific-guide/coding/particle-dictionary)
 {.links-list}
 
