@@ -2,12 +2,15 @@
 title: Sound FX
 description: All guides listed here.
 published: true
-date: 2025-02-01T17:07:04.641Z
+date: 2025-06-20T17:47:51.275Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-06T17:06:37.964Z
 ---
 
+# Dictionary
+- [Background Music Guide *Including a dictionary about useful Music/SFX Names*](/specific-guide/sfx/custom-bgm)
+{.links-list}
 
 # Basic Guides
 - [Basic Information *About Sound Effects*](/specific-guide/sfx/basic-information)
