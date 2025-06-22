@@ -2,7 +2,7 @@
 title: How to Update Linked Bins
 description: A guide on how to update your bin's linked bins. This will fix most missing voicelines or crashing skins.
 published: true
-date: 2025-06-22T04:20:41.989Z
+date: 2025-06-22T04:30:02.939Z
 tags: audio, voiceline, fix
 editor: markdown
 dateCreated: 2024-02-20T21:53:45.483Z
@@ -17,49 +17,35 @@ dateCreated: 2024-02-20T21:53:45.483Z
 
 # Introduction
 
-This guide shows you how you can fix your mod if it does not play any champion voices anymore.
-This usually happens on new Riot skin releases.
+When Riot releases a new skin, a part in `skinX.bins` usually gets updated and your custom skin does not play any voices anymore or it may crash. This guide will show you how to update the linked bins in your mod.
 
-This guide also fixes crashes for the following champions:
-```Samira```
-```Lee sin```
-```Qiyana```
-```Yone E```
-```Viego```
-```Qiyana```
+This guide fixes crashes for the following champions:
+```Samira, Lee Sin, Qiyana, Yone E2, Viego, Qiyana```
 
-**Your skin must have an edited SkinX.bin, if it doesn’t, there must be another issue.**
+**Your skin must have a SkinX.bin, if it doesn’t, there is either another crashing mod or another issue with your mod.**
 
-When Riot releases a new skin, a part in `skinX.bins` usually gets updated and your custom skin does not play any voices anymore.
-Only SkinX.bins are affected, so `data/characters/champion/skin0, skin1, skin2, skin3, etc.` and not .bins directly inside data, like `E67150BE212BCA8C.bin`.
-
-> IMPORTANT: If you want to fix a skin by someone else and your extracted files look like this, it’s best to just wait for the creator to update it.
-{.is-info}
-
-![exampleextractedfiles.webp](/user-pictures/vector/general-guides/fix-sfx/exampleextractedfiles.webp)
+Only `data/characters/char/skins/SkinX.bin` can be affected, not hashed bins or bins directly inside data, such as `13f570775654c664.bin` or `ahri_skins_skin0_skins_skin1.bin`.
 
 # Guide
-## Extracting the new skinX.bin
+## Extract Riot's Current skinX.bin
 
-Extract the matching skinx.bin to your custom skin from Obsidian. Make sure to not extract it in the same location, so you don’t override it and lose your particles.
+Extract the matching skinX.bin to your custom skin from Obsidian or extracted wad folder. Make sure to not extract it in the same location, in order to avoid overwriting your existing mod's files.
 
-Then convert it to **.py** with ritobin by drag-and-dropping the **.bin** onto ritobin_cli.exe.
-![ritobin_usage.webp](/user-pictures/vector/general-guides/fix-sfx/ritobin_usage.webp =x80)
-![ritobin_usage2.webp](/user-pictures/vector/general-guides/fix-sfx/ritobin_usage2.webp =x80)
+Convert it to `.py` with ritobin by drag-and-dropping the `.bin` onto `ritobin_cli.exe`.
 
-## Updating the .bin
+## Update the .bin
 Open both files side by side in your editor, Visual studio for me.
 
-Now right at the start of the .bins you will find `linked: list[string] = {` and then a long list of .bin files.
+At the start of the .bin you will find `linked: list[string] = {` and then a list of long `.bin` files.
 
 When you compare your .bin to the new .bin, you will see that they are different (*usually it is even more obvious by the new one simply having more lines*):
 ![codeblock1.webp](/user-pictures/vector/general-guides/fix-sfx/codeblock1.webp)
 ![codeblock2.webp](/user-pictures/vector/general-guides/fix-sfx/codeblock2.webp)
-Now copy the whole list of .bins from the new .bin file into your edited and outdated one.
-Save your .bin.
 
-## Converting the Python file back and repack your mod
-Now just convert the .py back into a .bin by drag-and-dropping the .bin onto ritobin_cli.exe and then repack your mod in CSLoL.
+Copy the whole list of .bins from Riot's current .bin into your mod's py file.
+
+## Convert the Python File Back and Repack Your Mod
+Convert your edited .py back to .bin by drag-and-dropping the .py onto ritobin_cli.exe and repack your mod in CSLoL.
 # Sources
 
 - Yoru Queen of Night
