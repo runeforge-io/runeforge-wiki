@@ -2,7 +2,7 @@
 title: How to Update Linked Bins
 description: A guide on how to update your bin's linked bins. This will fix most missing voicelines or crashing skins.
 published: true
-date: 2025-06-22T04:17:23.525Z
+date: 2025-06-22T04:20:41.989Z
 tags: audio, voiceline, fix
 editor: markdown
 dateCreated: 2024-02-20T21:53:45.483Z
