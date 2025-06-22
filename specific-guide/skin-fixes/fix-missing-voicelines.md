@@ -1,8 +1,8 @@
 ---
-title: Fix missing champion voicelines
-description: A guide on how to fix missing voicelines for champions in your custom skin.
+title: Update Linked Bins
+description: A guide on how to update your bin's linked bins. This will fix most missing voicelines or crashing skins.
 published: true
-date: 2025-06-10T20:42:24.601Z
+date: 2025-06-22T04:16:42.999Z
 tags: audio, voiceline, fix
 editor: markdown
 dateCreated: 2024-02-20T21:53:45.483Z
