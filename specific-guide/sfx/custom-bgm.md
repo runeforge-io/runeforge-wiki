@@ -2,13 +2,13 @@
 title: BGM moding guide
 description: Guide on how to mod in game background music
 published: true
-date: 2025-06-19T20:22:51.069Z
+date: 2025-06-23T16:11:58.586Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-19T20:22:51.069Z
 ---
 
-# Overview
+![updated.png](/user-pictures/aurumcoeils/updated.png)# Overview
 This is guide explaining how BGM in league works and what file does what.
 
 Background music files are found in `Map11.wad.client`
@@ -27,7 +27,7 @@ Optional:
 Updated BGM is **rective** to Gameplay, its still hard to pinpoint exact events that will trigger tracks to change.
 All `loop` tracks will loop into itself, so keeping proper length, to get clean loop is fairly important
 Using tims fast forward or jungle camp spawn in practice tool makes music change  strangely.
-![updated.png](https://media.discordapp.net/attachments/551721699368763403/1385331215703474218/image.png?ex=6855adbc&is=68545c3c&hm=6b1e65f350573c317e1c602a127a0dd43788caf338b5a6c83e73fdef10aabde6&=&format=webp&quality=lossless&width=485&height=101)
+![updated.png](/user-pictures/aurumcoeils/updated.png)
 
 > `map11.bin`
 > `mus_map11_seasonal_25s2_bloom_audio.bnk` <- game win/lose tracks
@@ -103,7 +103,7 @@ Transition tracks **Length** is **Flexible and will adjust**, sometimes game wil
 Due to flexibility, some transition tracks **can be replaced with empty (0:00 long) audio files**
 
 **Dont leave mute parts at the end of the transition tracks**
-![transition_do_dont.png](https://media.discordapp.net/attachments/551721699368763403/1385343219901923519/image.png?ex=6855b8ea&is=6854676a&hm=4b91a588122f976109625cb11e9921b3ce796d2dff3d01a601bf4ad626258ce8&=&format=webp&quality=lossless&width=864&height=826 =x385)
+![transition_do_dont.png](/user-pictures/aurumcoeils/do_dont.png =x385)
 
 ### 745170299 - transition_0
 **Length**: flex, `4 - 6` seconds is fine, usually will fadeout ~6s, not playing out fully
@@ -189,7 +189,7 @@ As per name, those tracks play when triggering Victory or Defeat screen
 `776947205` - Defeat
 # Classic BGM
 Old League BGM, fairly static
-![classic.png](https://cdn.discordapp.com/attachments/551721699368763403/1385331392665358467/image.png?ex=6855ade6&is=68545c66&hm=3f6e9c3226246515eaa9ed871455bff58c0cbc0d0ae5eef5b254b0dcdc3567e2&)
+![classic.png](/user-pictures/aurumcoeils/clasic.png)
 
 > `map11.bin`
 > `mus_map1_audio.wpk`
