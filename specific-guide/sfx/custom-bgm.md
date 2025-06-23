@@ -2,13 +2,13 @@
 title: BGM moding guide
 description: Guide on how to mod in game background music
 published: true
-date: 2025-06-23T16:11:58.586Z
+date: 2025-06-23T16:13:58.241Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-19T20:22:51.069Z
 ---
 
-![updated.png](/user-pictures/aurumcoeils/updated.png)# Overview
+# Overview
 This is guide explaining how BGM in league works and what file does what.
 
 Background music files are found in `Map11.wad.client`
