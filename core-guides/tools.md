@@ -2,7 +2,7 @@
 title: Tools
 description: All tools listed here which contain general mostly short guides.
 published: true
-date: 2025-03-09T08:16:11.111Z
+date: 2025-06-24T17:35:03.877Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-06T17:01:25.224Z
@@ -15,8 +15,8 @@ dateCreated: 2024-02-06T17:01:25.224Z
 -   [Obsidian *Main program to extract and browse Leagues gamefiles.*](/core-guides/tools/obsidian)
 {.links-list}
 ## Multifunctional
--   [LtMAO *Multifunctional tool for alot of different tasks*](/core-guides/tools/LtMAO)
-- 	[League Director *Camera tool for League of Legends replays with alot of functions*](https://github.com/RiotGames/leaguedirector/releaseshttps://github.com/RiotGames/leaguedirector/releases)
+-   [LtMAO *Multifunctional tool for a lot of different tasks*](/core-guides/tools/LtMAO)
+- 	[League Director *Camera tool for League of Legends replays with a lot of functions*](https://github.com/RiotGames/leaguedirector/releaseshttps://github.com/RiotGames/leaguedirector/releases)
 - [MindCorpViewer-Rust *Tool which lets you view animations, 3D models & Bones for League of Legends*](https://github.com/autergame/MindCorpViewer-Rust)
 
 {.links-list}
