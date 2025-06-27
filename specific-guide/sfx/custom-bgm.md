@@ -2,7 +2,7 @@
 title: BGM moding guide
 description: Guide on how to mod in game background music
 published: true
-date: 2025-06-23T16:13:58.241Z
+date: 2025-06-27T21:02:47.592Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-19T20:22:51.069Z
@@ -30,12 +30,11 @@ Using tims fast forward or jungle camp spawn in practice tool makes music change
 ![updated.png](/user-pictures/aurumcoeils/updated.png)
 
 > `map11.bin`
-> `mus_map11_seasonal_25s2_bloom_audio.bnk` <- game win/lose tracks
-> `mus_map11_seasonal_25s2_bloom_audio.wpk` <-rest of bgm tracks
+> `mus_map11_seasonal_25s2_bloom_audio.wpk` 
 > `mus_map11_seasonal_25s2_bloom_events.bnk`
 
 ## Main BGM
-### 839004754 - game_start
+### 68182309 - game_start
 **Length**: `1:25` <-- this is how long track should be to get **proper loop**ing into next track, going above it will result int this track overlapping with next track
 **Cut-off time**: `1:48` <-- this is maximum length, above it, game will cut the sound
 **Behvaiour**: Game will always start with this track
@@ -43,14 +42,14 @@ Using tims fast forward or jungle camp spawn in practice tool makes music change
 
 **Note**: making this track longer than 1:25 is **highly not reommended**
 
-### 31400101 - loop_0
-**Length**: `4:08`
-**Cut-off time**: `4:28`
+### 282533387 - loop_0
+**Length**: `2:52.5`
+**Cut-off time**: `3:11`
 **Behvaiour**: Primary loop that starts at 1:25, usually will play **early to mid game**
 
-### 747672666 - loop_1
-**Length**: `4:00`
-**Cut-off time**: `4:18`
+### 205940075 - loop_1
+**Length**: `3:00`
+**Cut-off time**: `3:11`
 **Behvaiour**: One of events triggering this loop is pushing on T2 tower top, tho exact events triggering this loop are not known. usually plays **mid game**
 
 ### 597986489 - loop_2
@@ -58,12 +57,11 @@ Using tims fast forward or jungle camp spawn in practice tool makes music change
 **Cut-off time**: `2:59`
 **Behvaiour**: **2nd most frequent loop**, it seems to start when there are some objectives going up or fight incoming, not really clear yet tho. **mid to late game** usually
 
-### 597986489 - loop_3
-**Length**: `4:15.43`
-**Cut-off time**: `4:24`
+### 1023994812 - loop_3
+**Length**: `4:03.529`
+**Cut-off time**: `4:15`
 **Behvaiour**: 
 This loops plays mainly in **late game**
-Has a unique Intro-Transition track `795233166`
 
 **Looping**: this track will loop **into itself**
 
@@ -127,14 +125,6 @@ Due to flexibility, some transition tracks **can be replaced with empty (0:00 lo
 **Cut-off time**: `0:08`
 **Behvaiour**: Killing or losing agro on **Herald/Baron**
 **Can be empty**: True
-
-
-### 795233166 - transition_into_loop_3
-**Length**: flex, `0:11.142`
-**Cut-off time**: `0:25`
-**Behvaiour**: Will **play** only, and **only before loop_3**, it server as intro into this loop
-**Loops**: into loop_3
-**Can be empty**: False (unsure)
 
 ### unused tranistion tracks
 Those are in sound bank file, but arent playing, probably old remanings??
