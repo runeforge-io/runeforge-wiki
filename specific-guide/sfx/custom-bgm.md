@@ -2,7 +2,7 @@
 title: BGM moding guide
 description: Guide on how to mod in game background music
 published: true
-date: 2025-06-27T21:02:47.592Z
+date: 2025-06-27T21:03:02.099Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-19T20:22:51.069Z
@@ -35,8 +35,8 @@ Using tims fast forward or jungle camp spawn in practice tool makes music change
 
 ## Main BGM
 ### 68182309 - game_start
-**Length**: `1:25` <-- this is how long track should be to get **proper loop**ing into next track, going above it will result int this track overlapping with next track
-**Cut-off time**: `1:48` <-- this is maximum length, above it, game will cut the sound
+**Length**: `1:23.799` <-- this is how long track should be to get **proper loop**ing into next track, going above it will result int this track overlapping with next track
+**Cut-off time**: `1:36` <-- this is maximum length, above it, game will cut the sound
 **Behvaiour**: Game will always start with this track
 **Looping**: this track will always be followed by `loop0` at `1:25`
 
