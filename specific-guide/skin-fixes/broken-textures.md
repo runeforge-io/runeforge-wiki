@@ -1,8 +1,8 @@
 ---
-title: Fix Broken Textures for Champions Who's Names Begin With A-R
+title: Fix Broken Textures for Champions Who's Names Begin With A-T
 description: A tutorial on how to update your mod's deprecated texture files to Riot's TEX format.
 published: true
-date: 2025-05-29T18:27:48.110Z
+date: 2025-07-17T22:33:46.165Z
 tags: texture, skin fix
 editor: markdown
 dateCreated: 2025-02-18T03:42:17.638Z
@@ -65,9 +65,9 @@ Under your extracted folder, `Mod_Name\WAD` you will find all of your mod's file
 
 ## 2. Convert DDS to TEX in Bulk Without LtMAO
 > Before bulk converting, you should understand a few details about TEX and DDS files in league. ***As of the 25.5 patch***, 
-> - Only champions who's name begin with `A-R` use TEX files for their textures and particles. This means AoE converting with a loop will incorrectly convert some of these files, ex., if a Caitlyn mod uses textures in a Zed folder. This is less common, and a more specific command can be used to work around this.
+> - Only champions who's name begin with `A-T` use TEX files for their textures and particles. This means AoE converting with a loop will incorrectly convert some of these files, ex., if a Caitlyn mod uses textures in a Zed folder. This is less common, and a more specific command can be used to work around this.
 > - Most files found under `assets\shared` do not need to be TEX and should be left alone if they are.
-> - ***Every*** champion, even `A-R` still uses DDS files for their QWER+P icons (found under `champ.wad\assets\characters\champ\hud\icons2d`).
+> - ***Every*** champion, even `A-T` still uses DDS files for their QWER+P icons (found under `champ.wad\assets\characters\champ\hud\icons2d`).
 > - ***Every*** champion uses TEX for their **loadscreen** found in the main folder and in game **HUD icons** found in `champ.wad\assets\characters\champ\hud`.
 
 First, you need to add both `tex2dds` and `texconv` to your Windows path in order to use them from within any directory, otherwise, they will only be available while inside the folder they were installed to. To do this, search `env var` from your Windows start menu and click `Edit the system environment variables` or follow this video guide since default windows search is garbage.
