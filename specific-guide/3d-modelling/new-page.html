@@ -1,0 +1,83 @@
+<!--
+title: Reducing model attributes
+description: This guide will help you process files that surpass the joint/verticle limit
+published: true
+date: 2025-07-19T17:57:03.858Z
+tags: maya
+editor: ckeditor
+dateCreated: 2025-07-19T17:57:03.858Z
+-->
+
+<h1>Reducing model attributes</h1>
+<p>This guide will tell you in details about ways that you can reduce the models verticle/joint so that maya may export it</p>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_223221.png"></figure>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_223040.png"></figure>
+<h3>Required tools:</h3>
+<p><a href="/core-guides/tools/maya">/core-guides/tools/maya</a></p>
+<h2>Reduce max verticles</h2>
+<p>&nbsp;</p>
+<h3>&nbsp;Solution #1: reduce mesh</h3>
+<blockquote>
+  <p>NOTE: This only work if you want to model swap. else if you want to maintain the entire weight, refer to solution #2 below. REDUCE MESH WILL RUIN THE WEIGGHT OF THAT PART YOU REDUCE.</p>
+</blockquote>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_230127.png"></figure>
+<p>&nbsp;Select the mesh you want to reduce. Usually you select the most detailed one, but for this guide i will be chosing her upper half.</p>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_230324.png"></figure>
+<p>In the red circle mark, you may see that the total visable vert (verticle in short) in the scene being 65k and her selected part being 21k. Go to modeling&gt;mesh and you may see this dropdown.</p>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_230949.png"></figure>
+<p>Some mesh may require you to clean up due to nonmanifold geometry. To do so, simply select the cleanup… function to the bottom of this mesh dropdown. Then, when you're ready, select the rectangle icon next to reduce</p>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_231838.png"></figure>
+<p>To simplify this process, i will only explain the 3 settting, shape and reduction method sections:</p>
+<p>-setting: decides whether you want to keep the original mesh along with the reduced one together in maya scene or not</p>
+<p>-reduction method:</p>
+<p>+vertex limit: decrease my 21k to an x value</p>
+<p>+percentage: decrease my 21k down by x% value</p>
+<p>+triangle limit: idk dont use this one</p>
+<p>-shape: it's best to leave default setting, or let it both be 1/1. If you want to read more, refer to <a href="https://help.autodesk.com/view/MAYAUL/2023/ENU/?guid=GUID-49F4731D-4F59-4B98-9751-F0E1CAA675CD">Maya Help | Reduce Options | Autodesk</a></p>
+<p>Once youre done, follow this guide to bind that reduced part back &nbsp;<a href="/specific-guide/3d-modelling/Replacing-Champion-With-Different-Model">/specific-guide/3d-modelling/Replacing-Champion-With-Different-Model</a></p>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_232651.png"></figure>
+<h3>Solution #2: delete unnecessary mesh</h3>
+<blockquote>
+  <p>There's two way to achieve this, one is faster, but will ruin current weight of your model so it's perfectly fine if youre model swapping.</p>
+</blockquote>
+<p><mark class="marker-yellow">Delete mesh and (might) break the weight&nbsp;</mark></p>
+<p>Back to the starting screen</p>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_230127.png"></figure>
+<p>If I inspect this model a little more, there's a lot of flower parts on her clothes. When ported into league, they are hardly visable and so we want to remove them, to do that, f11 aka face selection. Upon clicking on any mesh, you will see this weird spider alike net.</p>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_234006.png"></figure>
+<p>click on any vert, you may zooom however close you want to that. from then on, you can either single click, double click or drag select to choose multiple, then delete those parts until maya let you export the file. Hold shift to select multiple vert at once.</p>
+<blockquote>
+  <p>You may have to repeat this process multiple times. Keep in mind to check up, or bind the mesh again, cause by doing this there's a chance to break the weight.</p>
+</blockquote>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_234158.png"></figure>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_235528.png"></figure>
+<p><mark class="marker-yellow">Delete mesh, does not break the weight</mark></p>
+<blockquote>
+  <p>This may only work for models that you can already export.&nbsp;</p>
+</blockquote>
+<p>Back to the earlier step, be sure to check if you have all of the parts selected. Now, hold on to right mouse, drag down to assign new material and choose whichever option you want (we will be removing it anyways) but preferably another lambert. Export the scene as skl/skn with a placeholder name of your choice.</p>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-19_235801.png"></figure>
+<p>Start a new scene and import the file you just edit, with this settings perhap.</p>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-20_002521.png"></figure>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-20_002601.png"></figure>
+<p>You will see that newly generated mesh named lambert2 that I've just assigned. Select it, then the joint hierarchy it belongs to, unbind. You may delete lambert2 now, then repeat the export import process for a little more testing about weight.</p>
+<figure class="image"><img src="/user-pictures/ascila/screenshot_2025-07-20_005008.png"></figure>
+<h2>Reduce joint count</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
