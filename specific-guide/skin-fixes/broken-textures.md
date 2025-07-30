@@ -1,8 +1,8 @@
 ---
-title: Fix Broken Textures for Champions Who's Names Begin With A-T
-description: A tutorial on how to update your mod's deprecated texture files to Riot's TEX format.
+title: Fix Broken Textures
+description: A tutorial on how to update your mod's deprecated DDS texture files to Riot's TEX format.
 published: true
-date: 2025-07-17T22:33:46.165Z
+date: 2025-07-30T11:26:01.814Z
 tags: texture, skin fix
 editor: markdown
 dateCreated: 2025-02-18T03:42:17.638Z
