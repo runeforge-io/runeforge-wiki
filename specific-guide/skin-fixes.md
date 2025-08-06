@@ -2,7 +2,7 @@
 title: Skin fixes
 description: All guides for fixing issues with outdated custom skins
 published: true
-date: 2025-08-06T16:47:38.291Z
+date: 2025-08-06T16:48:01.257Z
 tags: guide, skin fix
 editor: markdown
 dateCreated: 2025-01-25T02:22:58.043Z
@@ -29,5 +29,5 @@ dateCreated: 2025-01-25T02:22:58.043Z
 {.links-list}
 
 # MISC (Sound)
-- [Update Linked Bins](/specific-guide/skin-fixes/fix-missing-voicelines)
+- [Update Linked Bins](/specific-guide/skin-fixes/update-linked-bins)
 {.links-list}
