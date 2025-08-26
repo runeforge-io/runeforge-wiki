@@ -2,7 +2,7 @@
 title: Maya Errorlist
 description: All common errors you might find while working with maya.
 published: true
-date: 2024-12-31T19:37:03.806Z
+date: 2025-08-26T20:34:40.347Z
 tags: maya, error, fix
 editor: markdown
 dateCreated: 2024-12-31T17:35:21.031Z
@@ -30,3 +30,10 @@ dateCreated: 2024-12-31T17:35:21.031Z
 
 # Common Errors
 
+## Unrecognized file type
+
+![unknownfile.png](/user-pictures/bud/unknownfile.png)
+This error occurs when you try to import a file that maya can't read. In the case of League Skn you most likely didn't install/enable the plugin properly.
+
+- **Fix**
+Import a file format maya can read. If you're trying to import .skn you will need to install the [LoLmaya plugin](https://wiki.runeforge.dev/core-guides/tools/maya#install-lol-maya) first.
