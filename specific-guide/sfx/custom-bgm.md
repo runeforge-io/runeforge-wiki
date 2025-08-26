@@ -2,7 +2,7 @@
 title: BGM moding guide
 description: Guide on how to mod in game background music
 published: true
-date: 2025-06-27T21:03:02.099Z
+date: 2025-08-26T12:34:12.778Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-19T20:22:51.069Z
@@ -33,150 +33,8 @@ Using tims fast forward or jungle camp spawn in practice tool makes music change
 > `mus_map11_seasonal_25s2_bloom_audio.wpk` 
 > `mus_map11_seasonal_25s2_bloom_events.bnk`
 
-## Main BGM
-### 68182309 - game_start
-**Length**: `1:23.799` <-- this is how long track should be to get **proper loop**ing into next track, going above it will result int this track overlapping with next track
-**Cut-off time**: `1:36` <-- this is maximum length, above it, game will cut the sound
-**Behvaiour**: Game will always start with this track
-**Looping**: this track will always be followed by `loop0` at `1:25`
+## Editing this one is atm just an insanity TT, do not problem
 
-**Note**: making this track longer than 1:25 is **highly not reommended**
-
-### 282533387 - loop_0
-**Length**: `2:52.5`
-**Cut-off time**: `3:11`
-**Behvaiour**: Primary loop that starts at 1:25, usually will play **early to mid game**
-
-### 205940075 - loop_1
-**Length**: `3:00`
-**Cut-off time**: `3:11`
-**Behvaiour**: One of events triggering this loop is pushing on T2 tower top, tho exact events triggering this loop are not known. usually plays **mid game**
-
-### 597986489 - loop_2
-**Length**: `2:50`
-**Cut-off time**: `2:59`
-**Behvaiour**: **2nd most frequent loop**, it seems to start when there are some objectives going up or fight incoming, not really clear yet tho. **mid to late game** usually
-
-### 1023994812 - loop_3
-**Length**: `4:03.529`
-**Cut-off time**: `4:15`
-**Behvaiour**: 
-This loops plays mainly in **late game**
-
-**Looping**: this track will loop **into itself**
-
-## Upper River BGM
-Entering upper river after `1:25` will fade Main BGM into River BGM
-
-### 678921810 - river_loop_0
-**Length**: `1:42.5`
-**Cut-off time**: `1:55`
-**Behvaiour**: Main upper River bgm loop
-
-### 468086310 - river_loop_1
-**Length**: `1:52.5`
-**Cut-off time**: `2:07`
-**Behvaiour**: Will play when **Void Grubs** are Alive
-
-### 195200710 - river_loop_2
-**Length**: `2:00`
-**Cut-off time**: `2:12`
-**Behvaiour**: Will play when **Herald** are Alive
-
-### 905385918 - river_loop_3
-**Length**: `2:37.5`
-**Cut-off time**: `3:06`
-**Behvaiour**: Will play when **Baron** are Alive
-
-## Atakhan track
-### 1068406348
-**Length**: unsure, having good sync on this one is not important
-**Cut-off time**: `2:16`
-**Behvaiour**: Will play when fighting Atakhan. Game cuts volume of this one a bit, making **Bass hard to hear**, more vocal/higher pitch tracks are preferable
-
-## Transitions
-Most commonly they will play when killing or losing agro on void-fights, making transition back into Main or River loops
-Transition tracks **Length** is **Flexible and will adjust**, sometimes game will fade them out before they fully play (even before cutoff time)
-
-Due to flexibility, some transition tracks **can be replaced with empty (0:00 long) audio files**
-
-**Dont leave mute parts at the end of the transition tracks**
-![transition_do_dont.png](/user-pictures/aurumcoeils/do_dont.png =x385)
-
-### 745170299 - transition_0
-**Length**: flex, `4 - 6` seconds is fine, usually will fadeout ~6s, not playing out fully
-**Cut-off time**: `0:08`
-**Behvaiour**: losing grubbies agro will usually play this one
-**Can be empty**: True
-
-
-### 78388607  - transition_1
-**Length**: flex, `4 - 6` seconds is fine
-**Cut-off time**: `0:15`
-**Behvaiour**: killing grubbies will usually play this one. it also serves as intro into loop_2
-
-**Not verified, can be false**: killing grubbies will play short version of this loop, getting this as transition into loop_2 will play it for longer, if the file is shorter, will play it twice
-
-**Can be empty**: True
-
-
-### 783218920 - transition_2
-**Length**: flex, `4 - 6` seconds is fine, usually will fadeout ~6s, not playing out fully
-**Cut-off time**: `0:08`
-**Behvaiour**: Killing or losing agro on **Herald/Baron**
-**Can be empty**: True
-
-### unused tranistion tracks
-Those are in sound bank file, but arent playing, probably old remanings??
-`141769107`
-`63874385` 
-
-## Void Objectives Tracks
-
-### General behaviour
-Similarly to transitions, those **can be replaced with empty (0:00 long) audio files**
-**Important**: If leaving void-objectives tracks empty, delay transition tracks audio by about half a second
-
-
-Even tho those tracks are originally around 30s long, game will usually play below 20s on them (clear time are not known yet)
-
-While fighting Void objectives, game will play tracks at random once every ~20s, when new track starts, previous track will get faded out, even tho there might be slight overlap.
-
-### Grubbies
-
-`759876728 `
-`1069654488`
-`2953661   `
-
-The `744754279` incident
-This track is outsorced from god knows where, changeing it in `mus_map11_seasonal_25s2_bloom_audio.wpk` will not affect this sound in game
-
-Similar thing touches `686821660` which i suspect to sometimes play when standing in front of herald or to be unused
-
-
-### Herald
-`167154966`
-`175162873`
-`50404283 `
-`786729186`
-`904784533`
-
-### Baron
-`155843588`
-`206166553`
-`209630168`
-`217447705`
-`276676272`
-`387409472`
-`398155686`
-`898372979`
-`915147143`
-`966402107`
-
-## Win/Lose Tracks
-As per name, those tracks play when triggering Victory or Defeat screen
-`942963713` - Victory
-`776947205` - Defeat
 # Classic BGM
 Old League BGM, fairly static
 ![classic.png](/user-pictures/aurumcoeils/clasic.png)
