@@ -2,7 +2,7 @@
 title: Replacing Champions With a Different Character (Model Swap)
 description: This tutorial will show you how to model swap a League champion with a custom model
 published: true
-date: 2025-05-28T16:46:35.782Z
+date: 2025-09-04T20:46:02.195Z
 tags: modelling
 editor: markdown
 dateCreated: 2024-02-29T02:01:05.953Z
@@ -22,7 +22,7 @@ And
 
 - [Maya 2023 Program to create, edit, animate, or rig 3D models](/core-guides/tools/maya)
 
-- [LoL-Maya Plugin made by tarngaina](https://github.com/tarngaina/lol_maya)
+- [lemon3D Plugin made by tarngaina](https://github.com/tarngaina/LtMAO)
 
 {.links-list}
 
