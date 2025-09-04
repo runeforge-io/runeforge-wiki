@@ -2,7 +2,7 @@
 title: Replacing Champions With a Different Character (Model Swap)
 description: This tutorial will show you how to model swap a League champion with a custom model
 published: true
-date: 2025-09-04T20:46:02.195Z
+date: 2025-09-04T20:47:00.849Z
 tags: modelling
 editor: markdown
 dateCreated: 2024-02-29T02:01:05.953Z
@@ -14,21 +14,21 @@ This guide will help you in replacing your champion with a new character, like a
 
 # Required Tools
 
-- [Obsidian Main program to extract and browse League's game files.](/core-guides/tools/obsidian)
+- [Obsidian to extract and browse League's game files.](/core-guides/tools/obsidian)
 
 {.links-list}
 
 And
 
-- [Maya 2023 Program to create, edit, animate, or rig 3D models](/core-guides/tools/maya)
+- [Maya 2023 to create, edit, animate, or rig 3D models](/core-guides/tools/maya)
 
-- [lemon3D Plugin made by tarngaina](https://github.com/tarngaina/LtMAO)
+- [lemon3d Plugin made by tarngaina](https://github.com/tarngaina/LtMAO)
 
 {.links-list}
 
 OR
 
-- [Blender program to create, edit, animate, or rig 3D models](/core-guides/tools/blender)
+- [Blender to create, edit, animate, or rig 3D models](/core-guides/tools/blender)
 
 {.links-list}
 
