@@ -2,7 +2,7 @@
 title: Fix Broken Textures
 description: A tutorial on how to update your mod's deprecated DDS texture files to Riot's TEX format.
 published: true
-date: 2025-09-02T16:28:22.823Z
+date: 2026-02-07T08:34:21.915Z
 tags: texture, skin fix
 editor: markdown
 dateCreated: 2025-02-18T03:42:17.638Z
@@ -90,9 +90,9 @@ To convert every single DDS file in a directory to TEX, or vice versa, shrimply 
 - `%I` represents the currently active file.
 - `(*dds)` uses the `*` wildcard to signify a file that begins with literally anything and ends in `dds`.
 
-> Once you're comfortable with the command line, append `&& del "%I"` in order to delete your DDS file after converting to TEX. Alternatively, if you would prefer to not delete anything rapidly, wait until after you have updated your mod and run `for /R %I in (*dds) do del "%I"` to delete any remaining DDS files. Again, make sure you know what files exist in your mod and whether they may need to remain as DDS.
+> Once you're comfortable with the command line, append `&& del "%I"` in order to delete your DDS file after converting to TEX. Alternatively, if you would prefer to not delete anything rapidly, wait until after you have updated your mod and run `DEL /S *.dds` to delete any remaining DDS files. Again, make sure you know what files exist in your mod and whether they may need to remain as DDS.
 
-Next, on the same command line, run `for /R %I in (4x*tex,2x*tex,4x*dds,2x*dds) do del "%I"` to delete your now redundant `4x_` and `2x_` alternative texture files.
+Next, on the same command line, run `DEL /S 4x*.dds 4x*.tex 2x*.dds 2x*.tex` to delete your now redundant `4x_` and `2x_` alternative texture files.
 
 If this completed successfully, you can go to Step 5 to remake your WAD file and try it in game. 
 
