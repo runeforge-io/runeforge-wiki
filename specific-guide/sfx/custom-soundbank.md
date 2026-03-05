@@ -2,7 +2,7 @@
 title: Custom Soundbanks
 description: Learn how to create custom soundbanks to add your own sound events in League of Legends! This guide will teach you to prepare audio files, package them using Wwise, and link them to in-game events like abilities, animations, and more.
 published: true
-date: 2025-04-27T16:31:43.838Z
+date: 2026-03-05T17:47:38.697Z
 tags: wwise, sound fx, sound effects, soundbank, events
 editor: markdown
 dateCreated: 2024-12-09T14:20:05.253Z
@@ -21,9 +21,13 @@ dateCreated: 2024-12-09T14:20:05.253Z
 # Tutorial 
 
 ## Adding the .wav files to Wwise2022.1.3
-First, drag your `.wav` audio files into `Actor-Mixer Hierarchy` > `Default Work Unit*`, then click `Import`. 
+First, drag your `.wav` audio files into `Actor-Mixer Hierarchy` (or `Interactive Music Hierarchy` for Music) > `Default Work Unit*`, then click `Import`. 
 
-Make sure all sounds are set to `Sound SFX`. and the `Audio Tab` is open shown on the left side.
+Make sure all sounds are imported as object of mathing type. (switch will be on top of import window)
+- Sound effects -> `Sound SFX` 
+- Dialogues -> `Sound Voice`
+- Music -> `Music Segment`
+ and the `Audio Tab` is open shown on the left side.
 ![step1-ezgif.com-video-to-gif-converter.gif](/user-pictures/nyht/step1-ezgif.com-video-to-gif-converter.gif)
 
 ## Creating the Events
@@ -43,6 +47,7 @@ Now press `F7` to open the Soundbank Manager in the middle, where you can see th
 ![step3-ezgif.com-video-to-gif-converter.gif](/user-pictures/nyht/step3-ezgif.com-video-to-gif-converter.gif)
 
 ## Adding the audios and the events to the soundbanks
+(Split into two banks is optional, feel free to use one bank for everything)
 
 **Audio SoundBank:**
 
@@ -108,20 +113,13 @@ The `New Attenuation` window will pop up. We want to create our own so we don’
 ![image_2024-12-09_220301661.png](/user-pictures/nyht/image_2024-12-09_220301661.png)
 
 Now, once you've created the `Attenuation`, click `Edit....`
+Adjust the curve to about `2000`-`3000` distance.
+Volume should be at the top for about `1300`-`1700` units, then drop down
+Remember to also disable `High Spread`
 
 ![image_2024-12-09_220544127.png](/user-pictures/nyht/image_2024-12-09_220544127.png)
 
-Now that the `Attenuation Editor` has opened, go to `Properties` and scroll down until you see `Focus`. Click the dropdown for `Focus` and select `Custom`. You will then see only the green line graph.
 
-Next, set the `Max Distance` to `2650` `(from 100)`, and double-click the middle of the graph to create a dot.
-
-Set the coordinates of the middle dot to `X: 30`, `Y: 0`.
-
-Lastly, select the other dot located at `Y: 100`. Right-click on it and select `Logarithmic (Base 3)`.
-
-After doing this, your graph should look like the screenshot below, and you can exit the window.
-
-![image_2024-12-09_220754525.png](/user-pictures/nyht/image_2024-12-09_220754525.png)
 
 After setting up the `Attenuation`, your `Positioning` should look like this. Now, repeat these steps for your other audio files. Don't worry—the `Attenuation` you just created and edited is saved, so you can use it again without needing to recreate the graphs for each.
 
