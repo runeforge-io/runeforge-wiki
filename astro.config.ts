@@ -8,85 +8,10 @@ export default defineConfig({
   site: 'https://wiki.runeforge.dev',
   output: 'static',
 
-  // Permanent redirects from old Wiki.js URLs. Wiki.js routes were
-  // case-sensitive and locale-prefixed (/en/...); Starlight slugs are
-  // lowercase. Do not remove - external links to the old wiki depend on it.
-  redirects: {
-    // every current page existed under /en/<path> on the old wiki
-    '/en/[...slug]': '/[...slug]',
-    // pages consolidated or dropped during the migration
-    '/home': '/',
-    '/en/home': '/',
-    '/status': '/',
-    '/en/status': '/',
-    '/runeforge': '/faq',
-    '/en/runeforge': '/faq',
-    '/runeforge2': '/faq',
-    '/en/runeforge2': '/faq',
-    '/es': '/',
-    '/es/home': '/',
-    // ckeditor landing stubs replaced by the section indexes
-    '/general-guides-landing': '/specific-guide',
-    '/3dmodelling-landing': '/specific-guide/3d-modelling',
-    '/3dmodelling-new-page': '/specific-guide/3d-modelling',
-    '/animation-landing': '/specific-guide/animation',
-    '/coding-landing': '/specific-guide/coding',
-    '/sfx-landing': '/specific-guide/sfx',
-    '/texture-landing': '/specific-guide/texturing',
-    '/vfx-landing': '/specific-guide/vfx',
-    '/tools-landing': '/core-guides/tools',
-    '/tools-landing/maya': '/core-guides/tools/maya',
-    '/en/tools-landing/maya': '/core-guides/tools/maya',
-    // unpublished drafts: land on the section index until they ship
-    '/posting-guide/apply-as-contributor': '/posting-guide',
-    '/templates/basic-guide-template': '/posting-guide',
-    '/specific-guide/coding/update-hashes': '/specific-guide/coding',
-    '/specific-guide/vfx/fake-gear-upgrades': '/specific-guide/vfx',
-    '/specific-guide/vfx/fake-gear-upgrades-forms': '/specific-guide/vfx',
-    '/specific-guide/animation/exporting-and-fixing-blender-animations': '/specific-guide/animation',
-    '/specific-guide/animation/Exporting-Blender-Animations': '/specific-guide/animation',
-    '/en/specific-guide/animation/Exporting-Blender-Animations': '/specific-guide/animation',
-    '/specific-guide/3d-modelling/maya/Weighting-Tricks': '/specific-guide/3d-modelling/maya',
-    '/en/specific-guide/3d-modelling/maya/Weighting-Tricks': '/specific-guide/3d-modelling/maya',
-    // old mixed-case routes -> lowercase Starlight slugs
-    '/core-guides/tools/LtMAO': '/core-guides/tools/ltmao',
-    '/en/core-guides/tools/LtMAO': '/core-guides/tools/ltmao',
-    '/specific-guide/3d-modelling/Replacing-Champion-With-Different-Model':
-      '/specific-guide/3d-modelling/replacing-champion-with-different-model',
-    '/en/specific-guide/3d-modelling/Replacing-Champion-With-Different-Model':
-      '/specific-guide/3d-modelling/replacing-champion-with-different-model',
-    '/specific-guide/animation/Importing-and-Exporting-Animation':
-      '/specific-guide/animation/importing-and-exporting-animation',
-    '/en/specific-guide/animation/Importing-and-Exporting-Animation':
-      '/specific-guide/animation/importing-and-exporting-animation',
-    '/specific-guide/animation/Retarget-Animation': '/specific-guide/animation/retarget-animation',
-    '/en/specific-guide/animation/Retarget-Animation':
-      '/specific-guide/animation/retarget-animation',
-    '/specific-guide/coding/Particle-swapping': '/specific-guide/coding/particle-swapping',
-    '/en/specific-guide/coding/Particle-swapping': '/specific-guide/coding/particle-swapping',
-    '/specific-guide/skin-fixes/Fixing_broken_face_normals':
-      '/specific-guide/skin-fixes/fixing_broken_face_normals',
-    '/en/specific-guide/skin-fixes/Fixing_broken_face_normals':
-      '/specific-guide/skin-fixes/fixing_broken_face_normals',
-    '/specific-guide/skin-fixes/How_to_fix_moonwalking':
-      '/specific-guide/skin-fixes/how_to_fix_moonwalking',
-    '/en/specific-guide/skin-fixes/How_to_fix_moonwalking':
-      '/specific-guide/skin-fixes/how_to_fix_moonwalking',
-    '/specific-guide/texturing/How-to-improve-flat-textures':
-      '/specific-guide/texturing/how-to-improve-flat-textures',
-    '/en/specific-guide/texturing/How-to-improve-flat-textures':
-      '/specific-guide/texturing/how-to-improve-flat-textures',
-    '/specific-guide/texturing/Making-model-parts-invisible':
-      '/specific-guide/texturing/making-model-parts-invisible',
-    '/en/specific-guide/texturing/Making-model-parts-invisible':
-      '/specific-guide/texturing/making-model-parts-invisible',
-    '/specific-guide/vfx/create-Idleparticles-using-idleparticle-packs':
-      '/specific-guide/vfx/create-idleparticles-using-idleparticle-packs',
-    '/en/specific-guide/vfx/create-Idleparticles-using-idleparticle-packs':
-      '/specific-guide/vfx/create-idleparticles-using-idleparticle-packs',
-    '/specific-guide/vfx/Recoloring_Particles': '/specific-guide/vfx/recoloring_particles',
-    '/en/specific-guide/vfx/Recoloring_Particles': '/specific-guide/vfx/recoloring_particles',
-  },
+  // Old-URL redirects live in public/_redirects (evaluated server-side by
+  // Cloudflare Workers static assets). Astro-level redirects are avoided on
+  // purpose: they emit HTML stub files whose case-variant paths collide with
+  // content pages on case-insensitive filesystems (Windows dev machines).
 
   integrations: [
     starlight({
