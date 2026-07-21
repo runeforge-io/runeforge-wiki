@@ -9,11 +9,12 @@ This page will explain the LtMAO tool made by Tarngaina and all of its features.
 
 ---
 ## Download and Installation
-> ### <p><span style="color:#ffffff">Installation</span>
-> Download: <a href="https://github.com/tarngaina/LtMAO/archive/refs/heads/hai.zip">LtMAO-hai.zip</a>
-> Extract: <kbd>LtMAO-hai.zip</kbd>
-> Run <kbd>LtMAO/start.bat</kbd>
-> {.is-info}
+:::note
+### <p><span style="color:#ffffff">Installation</span>
+Download: <a href="https://github.com/tarngaina/LtMAO/archive/refs/heads/hai.zip">LtMAO-hai.zip</a>
+Extract: <kbd>LtMAO-hai.zip</kbd>
+Run <kbd>LtMAO/start.bat</kbd>
+:::
   
 - [LtMAO GitHub page](https://github.com/tarngaina/LtMAO?tab=readme-ov-file)
 ---
@@ -95,8 +96,9 @@ Make the fantome work on all languages by cloning it.
 ![noskin.png](/user-pictures/bud/noskin.png)
     
   Use it by clicking "Browse Champions folder" button and locating the Champions folder inside the game installation address.
->The address should look like this: "\Riot Games\League of Legends\Game\DATA\FINAL\Champions"
->{.is-info}
+:::note
+The address should look like this: "\Riot Games\League of Legends\Game\DATA\FINAL\Champions"
+:::
   
 Press the Start button and select the folder where you want the mod to be created.
   

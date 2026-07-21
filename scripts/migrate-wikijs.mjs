@@ -234,12 +234,16 @@ function transformBody(lines, file, fmOffset) {
       continue;
     }
 
-    // {.is-*} attribute line: convert the preceding blockquote to an aside.
+    // {.is-*} attribute: convert the enclosing blockquote to an aside.
+    // The attribute appears on its own line, at the end of the quote's last
+    // line ("text{.is-danger}"), or on a trailing ">" line (">{.is-info}").
     // Wiki.js blockquotes use lazy continuation: only the first line needs
     // ">", following non-blank lines still belong to the quote. So take the
     // contiguous non-blank run above the attribute, back to the first ">".
-    const adm = line.match(/^\s*\{\.is-(info|warning|danger|success)\}\s*$/);
-    if (adm) {
+    const adm = line.match(/\{\.is-(info|warning|danger|success)\}\s*$/);
+    if (adm && !inCodeSpan(line, adm.index)) {
+      const rest = line.slice(0, adm.index).replace(/\s+$/, '');
+      if (rest && rest.trim() !== '>') out.push(rest); // attr shared the quote's last line
       const run = [];
       while (out.length && out[out.length - 1].trim() !== '') run.unshift(out.pop());
       const start = run.findIndex((l) => /^\s*>/.test(l));

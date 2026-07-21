@@ -45,13 +45,15 @@ This is what you want
 ![timeline_specification2.png](/user-pictures/goat/timeline_specification2.png)
 The bar needs to be "full"
 
->You also need to leave one empty frame at the start! So in my case, instead of 40/40, I would have 39/39
->{.is-warning}
+:::caution
+You also need to leave one empty frame at the start! So in my case, instead of 40/40, I would have 39/39
+:::
 
 ### Exporting the animation
 
->Make sure you export in 30 fps!
->{.is-warning}
+:::caution
+Make sure you export in 30 fps!
+:::
 
 To export, select File > Export All 
 ![export_all.png](/user-pictures/goat/export_all.png)

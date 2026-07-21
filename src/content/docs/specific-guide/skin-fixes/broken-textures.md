@@ -4,9 +4,11 @@ description: A tutorial on how to update your mod's deprecated DDS texture files
 lastUpdated: 2026-02-07
 ---
 
-> The first section of this tutorial uses LtMAO, specifically its explorer contexts. Follow the instructions [here to install LtMAO](/core-guides/tools/ltmao) and [here for enabling explorer contexts](/core-guides/tools/ltmao#explorer-contexts).
-> 
-> Use the [second section of this tutorial](/specific-guide/skin-fixes/broken-textures#bulk-fix-large-mods-no-ltmao) to fix without LtMAO, or if the first section causes a crash or invisible textures. {.is-warning}
+:::caution
+The first section of this tutorial uses LtMAO, specifically its explorer contexts. Follow the instructions [here to install LtMAO](/core-guides/tools/ltmao) and [here for enabling explorer contexts](/core-guides/tools/ltmao#explorer-contexts).
+
+Use the [second section of this tutorial](/specific-guide/skin-fixes/broken-textures#bulk-fix-large-mods-no-ltmao) to fix without LtMAO, or if the first section causes a crash or invisible textures.
+:::
 
 Riot is in the process of updating League's main texture file format from DDS to their own TEX format, updating groups of champions in alphabetical order. This causes mods to appear broken as Riot's bins are now using TEX files, which your mod does not have.
 

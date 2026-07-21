@@ -56,19 +56,22 @@ Head to <a href="/core-guides/tools/ltmao">LtMAO</a> guide page to see how to us
 ---
 # Saving FBX to convert back
 You will need to select what you want and then export it as FBX.
->Before saving your fbx you will have to open the Modeling tab and select your mesh.
->After selecting the mesh you will need to flip the normals. Press Alt+N and click Flip.
->![normalsflipp.png](/user-pictures/bud/normalsflipp.png)
->{.is-info}
+:::note
+Before saving your fbx you will have to open the Modeling tab and select your mesh.
+After selecting the mesh you will need to flip the normals. Press Alt+N and click Flip.
+![normalsflipp.png](/user-pictures/bud/normalsflipp.png)
+:::
 
->When saving the fbx file, you will need to open the armature tab on the right side of the prompt and <ins>uncheck</ins> "Add Leaf Bones" option.
->![leaf-bones.png](/user-pictures/bud/leaf-bones.png)
->{.is-warning}
+:::caution
+When saving the fbx file, you will need to open the armature tab on the right side of the prompt and <ins>uncheck</ins> "Add Leaf Bones" option.
+![leaf-bones.png](/user-pictures/bud/leaf-bones.png)
+:::
   
 After saving your FBX file convert it back to .skn and .skl using one of the tools mentioned.
 
-  >If you saved an animation that you plan to save in Maya make sure that "Bake Animation" option is checked.
->{.is-info}
+:::note
+If you saved an animation that you plan to save in Maya make sure that "Bake Animation" option is checked.
+:::
   
 ---
   

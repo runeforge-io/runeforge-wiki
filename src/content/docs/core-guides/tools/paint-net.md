@@ -4,8 +4,9 @@ description: A simple guide to using paint.net for League's image files.
 lastUpdated: 2025-03-19
 ---
 
-> This page is to be completed
->{.is-info}
+:::note
+This page is to be completed
+:::
 <!--IF SOMEONE IS EDITING THIS PAGE PLEASE USE EMPTY SPAN TEXT BETWEEN PAINT AND DOTNET BECAUSE OTHERWISE IT CREATES A LINK, THANK YOU-->
 # paint<span></span>.net
 This guide will explain the basics of paint<span>.net and using it to save League textures.

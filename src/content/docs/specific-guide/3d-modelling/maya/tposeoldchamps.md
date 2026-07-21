@@ -23,6 +23,7 @@ This short guide will show you how to T/A pose older champions.
   ![tryndapose.png](/user-pictures/bud/tryndapose.png)
   
   ---
-  >Results may vary depending on the skeleon used, some parts may break.
-	>If so try using a different skeleton from an older skin, yet newer than default.
-  >{.is-info}
+:::note
+Results may vary depending on the skeleon used, some parts may break.
+If so try using a different skeleton from an older skin, yet newer than default.
+:::
