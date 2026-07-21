@@ -1,1 +1,33 @@
 @import 'tailwindcss';
+
+/* Runeforge design tokens — the subset of the app's Tailwind theme the wiki
+   uses. Keep names in sync with apps/web in runeforge-io/runeforge. */
+@theme {
+  --font-display: 'Rubik', ui-sans-serif, system-ui, sans-serif;
+  --font-title: 'Beaufort Pro', 'Rubik', ui-sans-serif, sans-serif;
+
+  --color-base-100: #e9f4fb;
+  --color-base-200: #e2edf4;
+  --color-base-300: #ced9e0;
+  --color-base-400: #292e36;
+  --color-base-500: #20242b;
+  --color-base-600: #12161d;
+  --color-base-700: #0e1218;
+  --color-base-800: #090d14;
+  --color-base-900: #06090f;
+
+  --color-crimson-100: #ffaaad;
+  --color-crimson-200: #ff818a;
+  --color-crimson-300: #ff4a65;
+  --color-crimson-400: #f7004d;
+  --color-crimson-500: #ed0049;
+  --color-crimson-600: #d80042;
+  --color-crimson-700: #c4003b;
+
+  --color-discord-500: #5865f2;
+  --color-subtitle: #6c7076;
+
+  --shadow-crimson-md: 0px 0px 3px 1px rgba(237, 0, 73, 0.3);
+  --drop-shadow-gold: 0 3px 5px rgba(218, 165, 32, 0.5);
+  --drop-shadow-crimson: 0 1px 3px rgba(211, 19, 41, 0.5);
+}

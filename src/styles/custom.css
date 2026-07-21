@@ -1,7 +1,142 @@
 /*
- * Runeforge Wiki theme.
- *
- * Deliberately minimal during the migration - the site ships the default
- * Starlight look until content is in. The Runeforge re-skin (palette, fonts,
- * hero) lands as a dedicated step after Phase 2.
+ * Runeforge Wiki theme — dark-only re-skin using the Runeforge app palette
+ * (token values mirrored in tailwind.css). The light/dark toggle is removed
+ * via the ThemeProvider/ThemeSelect component overrides in astro.config.ts.
  */
+
+/* Self-hosted fonts, shared with the Runeforge web app. */
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/rubik-variable.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Beaufort Pro';
+  src: url('../fonts/beaufort-pro-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Beaufort Pro';
+  src: url('../fonts/beaufort-pro-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Beaufort Pro';
+  src: url('../fonts/beaufort-pro-bold.woff2') format('woff2');
+  font-weight: 600 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Beaufort Pro';
+  src: url('../fonts/beaufort-pro-heavy.woff2') format('woff2');
+  font-weight: 800 900;
+  font-display: swap;
+}
+
+/* Runeforge palette mapped onto Starlight's dark-theme tokens. The site is
+   pinned to data-theme="dark", so :root is sufficient. */
+:root {
+  color-scheme: dark;
+
+  --sl-color-accent-low: #4b0e24;
+  --sl-color-accent: #ed0049; /* crimson-500 */
+  --sl-color-accent-high: #ff4a65; /* crimson-300, the app's link color */
+
+  --sl-color-white: #e9f4fb; /* base-100 */
+  --sl-color-gray-1: #e2edf4; /* base-200 */
+  --sl-color-gray-2: #ced9e0; /* base-300 */
+  --sl-color-gray-3: #8b95a2; /* subtitle tone lifted to AA contrast on base-600 */
+  --sl-color-gray-4: #4d5158; /* field-border-hover */
+  --sl-color-gray-5: #292e36; /* base-400 / border-base */
+  --sl-color-gray-6: #0e1218; /* background-muted → header + sidebar */
+  --sl-color-black: #12161d; /* background-base → page */
+
+  /* gray-6 doubles as Starlight's hairline color but is darker than the page
+     here, so borders and inline code get explicit surfaces instead. */
+  --sl-color-hairline: #292e36; /* border-base */
+  --sl-color-hairline-shade: #090d14; /* base-800 */
+  --sl-color-bg-inline-code: #20242b; /* field-bg */
+
+  --sl-font: 'Rubik', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Beaufort Pro for headings, Rubik for everything else. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Beaufort Pro', var(--sl-font);
+  letter-spacing: 0.015em;
+}
+
+.site-title span {
+  font-family: 'Beaufort Pro', var(--sl-font);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Content links follow the app: crimson with a soft underline that fills in
+   on hover. Anchors with a class are components (cards, buttons) — skip them. */
+.sl-markdown-content a:not([class]) {
+  color: var(--sl-color-accent-high);
+  text-decoration: underline;
+  text-decoration-color: rgb(247 0 77 / 0.5); /* crimson-400/50 */
+  text-underline-offset: 2px;
+  transition: text-decoration-color 100ms ease;
+}
+.sl-markdown-content a:not([class]):hover {
+  color: var(--sl-color-accent-high);
+  text-decoration-color: #f7004d; /* crimson-400 */
+}
+
+/* Current page in the sidebar: solid crimson pill with the app's glow. */
+a[aria-current='page'],
+a[aria-current='page']:hover,
+a[aria-current='page']:focus {
+  background-color: var(--sl-color-accent);
+  color: #fff;
+  box-shadow: 0px 0px 3px 1px rgba(237, 0, 73, 0.3); /* shadow-crimson-md */
+}
+
+/* Hero action buttons. */
+.sl-link-button.primary {
+  background: var(--sl-color-accent);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0px 0px 3px 1px rgba(237, 0, 73, 0.3);
+}
+.sl-link-button.primary:hover {
+  background: #d80042; /* crimson-600 */
+}
+
+.hero-html img {
+  filter: drop-shadow(0 3px 5px rgba(218, 165, 32, 0.5)); /* drop-shadow-gold */
+}
+
+::selection {
+  background-color: rgba(237, 0, 73, 0.35);
+}
+
+/* App-style scrollbars. */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d14; /* base-800 */
+  border: 1px solid #12161d;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #20242b; /* base-500 */
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #292e36; /* base-400 */
+}

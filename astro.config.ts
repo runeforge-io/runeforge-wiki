@@ -35,6 +35,12 @@ export default defineConfig({
         baseUrl: 'https://github.com/runeforge-io/runeforge-wiki/edit/main/',
       },
       customCss: ['./src/styles/tailwind.css', './src/styles/custom.css'],
+      // The wiki is dark-only (matching the Runeforge app): the provider pins
+      // data-theme="dark" and the theme picker renders nothing.
+      components: {
+        ThemeProvider: './src/components/ThemeProvider.astro',
+        ThemeSelect: './src/components/ThemeSelect.astro',
+      },
       plugins: [starlightLinksValidator()],
       sidebar: [
         {
