@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "runeforge-wiki",
+  "compatibility_date": "2026-04-10",
+  "observability": {
+    "enabled": true,
+  },
+  // Assets-only Worker: the site is fully static (`output: 'static'`, no
+  // adapter), so there is no worker script - wrangler serves `dist` directly.
+  "assets": {
+    "directory": "dist",
+  },
+}

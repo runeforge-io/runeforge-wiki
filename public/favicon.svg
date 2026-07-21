@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Placeholder mark - replace with the real Runeforge logo during theming. -->
+  <rect width="32" height="32" rx="6" fill="#1b1e28"/>
+  <path d="M10 24V8h7a5 5 0 0 1 1.9 9.6L23 24h-4.2l-3.5-5.6H13.6V24Zm3.6-9h3.2a1.9 1.9 0 0 0 0-3.8h-3.2Z" fill="#e8b34b"/>
+</svg>
