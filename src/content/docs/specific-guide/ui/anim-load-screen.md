@@ -1,11 +1,7 @@
 ---
 title: Animated Loading Screen
 description: How to make Animated Loading Screen
-published: true
-date: 2024-09-09T10:34:15.868Z
-tags: 
-editor: markdown
-dateCreated: 2024-08-29T20:24:07.036Z
+lastUpdated: 2024-09-09
 ---
 
 # **Custom Animated Loading Screen Guide**

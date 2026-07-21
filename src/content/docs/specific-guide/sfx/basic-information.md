@@ -1,11 +1,7 @@
 ---
 title: Basic Information
 description: Basic Information to do SFX modding!
-published: true
-date: 2025-02-14T16:28:04.951Z
-tags: sfx, audio, voice over, sound effects, sound, effect, vo
-editor: markdown
-dateCreated: 2024-02-10T20:41:38.554Z
+lastUpdated: 2025-02-14
 ---
 
 # Sound Effects
@@ -37,8 +33,9 @@ vi_VN: Vietnamese
 zh_CN: Chinese
 zh_TW: Taiwanese
 
-> To see any of these game files, you have to have downloaded that version of the game. To change your League Language, go into the Riot Client, then go to Settings (click the little person icon) and select League of Legends. Select and download the version that you want under 'Game Text Language' (applies to audio too), then start League and go into any game, like Practice Tool or Customs)
-{.is-warning}
+:::caution
+To see any of these game files, you have to have downloaded that version of the game. To change your League Language, go into the Riot Client, then go to Settings (click the little person icon) and select League of Legends. Select and download the version that you want under 'Game Text Language' (applies to audio too), then start League and go into any game, like Practice Tool or Customs)
+:::
 
 ## File Extensions
 - .wav: Generic audio file format used before converting into the format that League of Legends can read.

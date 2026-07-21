@@ -1,11 +1,7 @@
 ---
 title: Ritoddstex
 description: Ritoddstex tool guide
-published: true
-date: 2025-01-03T15:23:02.959Z
-tags: guide, tools, texturing, texture, 2d, ritoddstex
-editor: markdown
-dateCreated: 2024-02-12T12:15:57.106Z
+lastUpdated: 2025-01-03
 ---
 
 # Ritoddstex
@@ -15,7 +11,6 @@ Ritoddstex is a programm used to convert between [.tex](/specific-guide/filetype
 
 # Download and Installation
 - [Ritoddstex *Download*](https://github.com/Morilli/Ritoddstex/releases)
-{.links-list}
 
 ![ritoddstex.png](/user-pictures/egogorn/ritoddstex.png)
 

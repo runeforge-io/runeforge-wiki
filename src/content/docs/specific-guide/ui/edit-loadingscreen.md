@@ -1,11 +1,7 @@
 ---
 title: Customizing the Loadingscreen
 description: A guide collection of different ways to customize loadingscreens.
-published: true
-date: 2024-08-26T10:57:28.130Z
-tags: guide, ui, loadingscreen
-editor: markdown
-dateCreated: 2024-02-22T18:42:08.415Z
+lastUpdated: 2024-08-26
 ---
 
 # Create custom loadingscreen
@@ -16,7 +12,6 @@ This guide teaches you how to change the loading screen background to any backgr
 
 - [Any 2D editing program *Any tool which can handle .dds files*](/core-guides/tools#texturing)
 - [Template *External Link*](https://www.mediafire.com/file/ulwhlqwju0ab5tz/Loading_Screen_Template.zip/file)
-{.links-list}
 <!--
 <br>
 <div align="left">
@@ -55,7 +50,8 @@ This will ensure that your loading screen is applied.
 
 ---
 # Custom loadingscreen spinner
-# Tabs {.tabset}
+<!-- wikijs:tabset -->
+# Tabs
 ## Photoshop
 
 ### Breaking down gifs frame by frame
@@ -79,7 +75,7 @@ If you aren't using Photoshop you can use [this online converter](https://www.co
  
 ### Converting .dds files to .tex
 
-You will need to convert the [.dds](/specific-guide/filetypes#dds) file to [.tex](/specific-guide/filetypes#tex). You will need [tex2dds](/core-guides/tools/ritoddstex) for this.
+You will need to convert the [.dds](/specific-guide/filetypes) file to [.tex](/specific-guide/filetypes). You will need [tex2dds](/core-guides/tools/ritoddstex) for this.
 
 When the conversion is done, we'll change the name of the file to "loadingscreen_spinner_atlas" (without quotations). After that, you will want to create a few folders. It should look something like this:
 <kbd style="background-color:#343942">[FOLDER WITH YOUR MOD NAME]/assets/ux/loadingscreen/loadingscreen_spinner_atlas.tex</kbd>

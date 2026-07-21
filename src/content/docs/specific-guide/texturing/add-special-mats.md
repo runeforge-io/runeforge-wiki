@@ -1,11 +1,7 @@
 ---
 title: Add special materials
 description: A full overview about different materials and how to use them.
-published: true
-date: 2024-08-26T10:57:20.941Z
-tags: maya, texturing, bin, material, special
-editor: markdown
-dateCreated: 2024-02-22T17:04:10.437Z
+lastUpdated: 2024-08-26
 ---
 
 # Overview
@@ -18,11 +14,9 @@ If you encounter any issues with this tutorial or you don’t understand part of
 - [Maya *3D Modeling software | 2023 recommended*](/core-guides/tools/maya)
 - [Ritobin *Tools to convert bin files into Python files*](/core-guides/tools/rito-bin)
 - [Any 2D editing tool *Including nessecary Plugins!*](/core-guides/tools#texturing)
-{.links-list}
 
 An code editor of your choice, we recommend **Visual Studio Code**:
 - [Choose any Code Editor *Visual Studio Code is recommended*](/core-guides/tools#code-bin-editing)
-{.links-list}
 
 If you choose Visual Studio Code, you need the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) aswell!
 *Other editors work aswell, aslong as they can edit .py (Python) files.*

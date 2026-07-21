@@ -1,18 +1,14 @@
 ---
 title: T/A posing older champions in Maya
 description: This guide shows you how to T/A pose an older champion that might not be posed.
-published: true
-date: 2024-12-31T17:21:20.762Z
-tags: maya, model
-editor: markdown
-dateCreated: 2024-02-13T00:23:29.029Z
+lastUpdated: 2024-12-31
 ---
 
 # T/A posing older champions in Maya
 This short guide will show you how to T/A pose older champions.
 
 ---
-### <span style="color:white">1. Import the bound champion <a href="/en/specific-guide/filetypes#skn">.skn</a> and <a href="/en/specific-guide/filetypes#skl">.skl</a> you want to T/A-pose.
+### <span style="color:white">1. Import the bound champion <a href="/specific-guide/filetypes">.skn</a> and <a href="/specific-guide/filetypes">.skl</a> you want to T/A-pose.
   
   
   ![trynanopose.png](/user-pictures/bud/trynanopose.png)

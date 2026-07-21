@@ -1,11 +1,7 @@
 ---
 title: Particle and Bin Dictionary
 description: The full overview about everything you need to know about bins and particles!
-published: true
-date: 2024-08-26T10:56:58.792Z
-tags: vfx, bin, particle, dictionary
-editor: markdown
-dateCreated: 2024-02-21T21:54:11.745Z
+lastUpdated: 2024-08-26
 ---
 
 # Overview
@@ -15,22 +11,20 @@ Adding Particle Events to Specific Animations (*Specifically Recall but the meth
 This post overall is very complicated as we cover a LOT of things, so if you feel confused about something, always refer back to the terms at the top of the page. Don’t be afraid to go try it out and experiment since that is how most of us have learned. Should you need help, ask for it on the Runeforge-Discord server.
 
 # Required Tools
-> Note: This is a dictionary, if you are here you may already have each tool. If not, down below you can find all nessecary programs we use to edit bins.
-{.is-info}
+:::note
+Note: This is a dictionary, if you are here you may already have each tool. If not, down below you can find all nessecary programs we use to edit bins.
+:::
 - [CS-LoL Manager *Standard League modding program*](/core-guides/tools/cslolmanager)
 - [Obsidian *Extraction & Exploration tool for League of Legends game files*](/core-guides/tools/obsidian)
-{.links-list}
 
 An code editor of your choice, we recommend **Visual Studio Code**:
 - [Choose any Code Editor *Visual Studio Code is recommended*](/core-guides/tools#code-bin-editing)
-{.links-list}
 
 If you choose Visual Studio Code, you need the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) aswell!
 *Other editors work aswell, aslong as they can edit .py (Python) files.*
 
 - [Ritobin *Tools to convert bin files into Python files*](/core-guides/tools/rito-bin)
 - [Hacksaw *Visual bin Editor by Marcius*](/core-guides/tools/hacksaw)
-{.links-list}
 
 ---
 
@@ -121,12 +115,10 @@ For regular texture files.
 - 3 = Darkens
 - 4 = Whiten (Sometimes a particle with color information and has a black background)
 - 5 = Overlay like in photoshop.
-{.grid-list}
 
 Blending modes are different for [SCB/SCO](/specific-guide/coding/particle-dictionary#scb-sco)s and [SKN/SKL](/specific-guide/coding/particle-dictionary#skn-skl).
 - SCB/SCO: 3 = Normal.
 - SKN/SKL: 1 = Normal, 3 = Inverts faces, 4 = Whiten,
-{.grid-list}
 
 Having `miscrenderflags` will change how meshes render. Usually inverts faces for blendmodes 1 and 3.
 ## birthcolor

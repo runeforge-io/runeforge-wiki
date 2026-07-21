@@ -1,11 +1,7 @@
 ---
 title: BGM moding guide
 description: Guide on how to mod in game background music
-published: true
-date: 2025-08-26T12:34:12.778Z
-tags: 
-editor: markdown
-dateCreated: 2025-06-19T20:22:51.069Z
+lastUpdated: 2025-08-26
 ---
 
 # Overview
@@ -14,13 +10,10 @@ This is guide explaining how BGM in league works and what file does what.
 Background music files are found in `Map11.wad.client`
 
 ## Before making the mod
-{.is-info}
 - [General sound modding guide *explains how to replace sound file*](/specific-guide/sfx/full-sfx-guide)
-{.links-list}
 
 Optional:
 - [Sound2wem *drag'n'drop convertion of audio files to .wem format*](https://github.com/EternalLeo/sound2wem)
-{.links-list}
 
 
 # Updated BGM tracks

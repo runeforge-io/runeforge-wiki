@@ -1,11 +1,7 @@
 ---
 title: Add child Particles
 description: A guide on how to add child particles to existing ones.
-published: true
-date: 2024-08-26T10:57:03.261Z
-tags: guide, vfx, bin, particle
-editor: markdown
-dateCreated: 2024-02-22T01:20:08.357Z
+lastUpdated: 2024-08-26
 ---
 
 # Overview
@@ -15,8 +11,7 @@ Adding child VFX to main VFX systems to create variations and elaborate particle
 *If you encounter any issues with this tutorial or you don’t understand part of it, you can ask for help on the Runeforge-Discord server*
 # Required Tools
 - [Ritobin *Tools to translate bin files into Python files*](/core-guides/tools/rito-bin)
-- [Choose any Code Editor *Visual Studio recommended*](/core-guides/tools#coding-bin-editing)
-{.links-list}
+- [Choose any Code Editor *Visual Studio recommended*](/core-guides/tools#code-bin-editing)
 
 *If you choose Visual Studio Code, you need the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) aswell!
 Other editors work aswell, aslong as they can edit .py (Python) files.*

@@ -1,17 +1,12 @@
 ---
 title: Ritobin
 description: A tool to to convert League's .bin into Python (.py) files.
-published: true
-date: 2024-08-26T10:56:35.474Z
-tags: code, bin, python, files, convert
-editor: markdown
-dateCreated: 2024-02-14T22:34:54.514Z
+lastUpdated: 2024-08-26
 ---
 
 # Installing
 
 - [Download Ritobin *by moonshadow*](https://github.com/moonshadow565/ritobin/releases)
-{.links-list}
 
 When installing the program, make sure that you have the latest release installed, you can confirm as such on github:
 ![ritogit.webp](/user-pictures/vector/new-post-guide/ritogit.webp)

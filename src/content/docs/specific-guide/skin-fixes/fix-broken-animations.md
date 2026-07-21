@@ -1,11 +1,7 @@
 ---
 title: How to fix broken animations with LoLmaya
 description: This tutorial shows you how to fix broken animations on your model that happen due to animation layering etc.
-published: true
-date: 2025-02-04T02:01:47.397Z
-tags: maya, animation
-editor: markdown
-dateCreated: 2024-02-22T05:14:01.874Z
+lastUpdated: 2025-02-04
 ---
 
 # How to fix broken animations with LoLmaya
@@ -13,21 +9,20 @@ Common issues that can appear are: bugged animations that just don’t look prop
 
 For Jhin, his reload animation is horribly bugged if you export it normally:
 
-![1.gif](/user-pictures/goat/fixbrokenanimation/1.gif =x300)
+<img src="/user-pictures/goat/fixbrokenanimation/1.gif" alt="1.gif" height="300" />
 
 ## Required Tools
 
 -   [Obsidian *Main program to extract and browse Leagues gamefiles.*](/core-guides/tools/obsidian)
 -   [Autodesk Maya *Program to create, edit, animate or rig 3D models*](/core-guides/tools/maya)
 - [LoL-Maya *Plugin made by tarngaina*](https://github.com/tarngaina/lol_maya)
-{.links-list}
 
 # Written Guide
 
 ## How to get a Riot .skl file
-First extract the original champion <a href="/en/specific-guide/filetypes#skn">.skl</a> file from Obsidian, following the tutorial above. You only need the <a href="/en/specific-guide/filetypes#skn">.skl</a>. In my case, it’s Jhin.skl
+First extract the original champion <a href="/specific-guide/filetypes">.skl</a> file from Obsidian, following the tutorial above. You only need the <a href="/specific-guide/filetypes">.skl</a>. In my case, it’s Jhin.skl
 
-Rename the <a href="/en/specific-guide/filetypes#skn">.skl</a> to Riot.skl and place it in the champion skin folder of your custom skin. I rename Jhin.skl to Riot.skl and put it into Jhin.wad.client/assets/characters/jhin/skins/base.
+Rename the <a href="/specific-guide/filetypes">.skl</a> to Riot.skl and place it in the champion skin folder of your custom skin. I rename Jhin.skl to Riot.skl and put it into Jhin.wad.client/assets/characters/jhin/skins/base.
 
 ![2.webp](/user-pictures/goat/fixbrokenanimation/2.webp)
 
@@ -45,7 +40,7 @@ Delete the riot.skl file.
 
 ## Result
 
-![5.gif](/user-pictures/goat/fixbrokenanimation/5.gif =x300)
+<img src="/user-pictures/goat/fixbrokenanimation/5.gif" alt="5.gif" height="300" />
 
 # Sources
 

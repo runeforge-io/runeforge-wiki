@@ -1,16 +1,14 @@
 ---
 title: Apply as Contributor
 description: This wiki lives through their community, so as a Contributor you can help out here by adding/ editing pages.
-published: false
-date: 2024-08-26T10:55:41.682Z
-tags: contributor, apply, staff
-editor: markdown
-dateCreated: 2024-02-09T18:24:48.431Z
+draft: true
+lastUpdated: 2024-08-26
 ---
 
-> Hey!
-> This page is currently W.I.P, but worked on!
-{.is-info}
+:::note
+Hey!
+This page is currently W.I.P, but worked on!
+:::
 
 # Apply as Contributor
 

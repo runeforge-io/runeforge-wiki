@@ -1,16 +1,13 @@
 ---
 title: How to manually fix healthbars
 description: A short tutorial on how to fix healthbars if FixHealthBar.exe doesnt work.
-published: true
-date: 2025-09-20T11:35:38.067Z
-tags: guide, skin fix
-editor: markdown
-dateCreated: 2025-01-28T18:37:13.690Z
+lastUpdated: 2025-09-20
 ---
 
 # How to Fix Healthbars
-> This tutorial uses LtMAO, specifically the explorer contexts. If you dont have it installed, follow the instructions [here for installing LtMAO](/core-guides/tools/LtMAO) and  [here for enabling explorer contexts](/core-guides/tools/LtMAO#explorer-contexts).
-{.is-info}
+:::note
+This tutorial uses LtMAO, specifically the explorer contexts. If you dont have it installed, follow the instructions [here for installing LtMAO](/core-guides/tools/ltmao) and  [here for enabling explorer contexts](/core-guides/tools/ltmao#explorer-contexts).
+:::
 
 ---
 Examples of Broken Healthbars

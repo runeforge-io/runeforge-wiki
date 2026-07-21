@@ -1,18 +1,13 @@
 ---
 title: Adobe Photoshop
 description: A guide on how to install and use Adobe Photoshop
-published: true
-date: 2024-08-26T10:56:09.048Z
-tags: guide, photoshop, install, adobe
-editor: markdown
-dateCreated: 2024-02-11T19:32:06.351Z
+lastUpdated: 2024-08-26
 ---
 
 
 # Photoshop
 Photoshop is a subscription based tool to edit 2D files. 
 - [View Photoshop Subscriptions *External Link*](https://www.adobe.com/de/products/photoshop.html)
-{.links-list}
 
 In order to edit [dds](/specific-guide/filetypes) files, you need to install a corresponding plugin.
 
@@ -21,7 +16,6 @@ In order to edit [dds](/specific-guide/filetypes) files, you need to install a c
 Head to Intel's website on the link below and click the download link at the top of the page.
 When redirected to the second page click the <kbd style="background:#7cad18">ZIP</kbd> button at the top.
 - <a href="https://www.intel.com/content/www/us/en/developer/articles/tool/intel-texture-works-plugin.html">Intel Texture Works download*Works with both Intel&reg; and AMD processors*</a>
-{.links-list}
 ### Installation
 1. Close Photoshop.
 2. Extract the plugin .zip file you downloaded.
@@ -53,7 +47,6 @@ When redirected to the second page click the <kbd style="background:#7cad18">ZIP
 
 ### Download
 - [Download Nvidia Texture Tools *Only if you have a Nvidia Graphics Card*](https://developer.nvidia.com/nvidia-texture-tools-exporter)
-{.links-list}
 
 Scroll down and download the Photoshop extension. You need a developer account for that, but you can simply create one following the site's instructions.
 
@@ -87,7 +80,6 @@ It's useful when doing batch export as it doesn't require you to confirm file sa
 
 ### Download
 - [DDS Plugin Download](/user-pictures/bud/dds.8bi)
-{.links-list}
 
 ### Installation
  Simply download the file and place it in the following address:

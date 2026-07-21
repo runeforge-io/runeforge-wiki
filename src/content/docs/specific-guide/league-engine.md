@@ -1,15 +1,12 @@
 ---
 title: Development
 description: All guides about the League of Legends Development.
-published: true
-date: 2024-08-26T10:56:24.196Z
-tags: 
-editor: markdown
-dateCreated: 2024-02-12T14:21:23.193Z
+lastUpdated: 2024-08-26
 ---
 
-> Hmm, seems like there is no content here. This may change in the future!
-{.is-warning}
+:::caution
+Hmm, seems like there is no content here. This may change in the future!
+:::
 
 # Basic Guides
 

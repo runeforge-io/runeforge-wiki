@@ -1,11 +1,7 @@
 ---
 title: Autodesk Maya
 description: This page is all about Autodesk Maya. We include a list of pages which contain this tool in order to help you finding what you need!
-published: true
-date: 2024-12-31T19:38:24.136Z
-tags: maya, autodesk, student, trial, tool, lolmaya
-editor: markdown
-dateCreated: 2024-02-07T11:21:56.262Z
+lastUpdated: 2024-12-31
 ---
 
 # Autodesk Maya (2023) acquisition methods
@@ -44,20 +40,17 @@ Also those prices are paid in **advance** so the full price for the whole time p
 ## Errors
 
 - [Maya errorlist](/core-guides/tools/maya/errorlist)
-{.links-list}
 
 # **Install LoL-Maya**
 
 First get the Plugin
 - [LoL-Maya *External Link*](https://github.com/tarngaina/lol_maya/releases/tag/4.2.8)
-{.links-list}
 
 Once you choose any way of getting a Maya License, you simply follow their installation instructions. 
 
 In order to modify League of Legends models, animations or rigs, you need a Plugin called LoL-Maya by Tarngaina.
 > If you need help with the Plugin, check out the overview page
 - [LoL-Maya Overview Page](/core-guides/tools/maya/lolmaya)
-{.links-list}
 
 ![](/lolmaya.png)
 
@@ -92,7 +85,6 @@ When updating the plugin, you simply need to download the latest version and rep
 ## Errors
 
 - [Lolmaya errorlist](/core-guides/tools/maya/lolmaya-errorlist)
-{.links-list}
 
 # Sources
 

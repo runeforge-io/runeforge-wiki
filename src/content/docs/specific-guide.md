@@ -1,11 +1,7 @@
 ---
 title: Specific Creator guides
 description: All categories listed here.
-published: true
-date: 2024-08-26T10:55:52.126Z
-tags: 
-editor: markdown
-dateCreated: 2024-02-10T21:41:40.190Z
+lastUpdated: 2024-08-26
 ---
 
 # All guide categories
@@ -19,4 +15,3 @@ dateCreated: 2024-02-10T21:41:40.190Z
 - [Sound FX *All available Guides containing the Sound FX thematic*](/specific-guide/sfx)
 - [Texturing *All available Guides containing the Texturing thematic*](/specific-guide/texturing)
 - [Visual FX *All available Guides containing the Visual FX thematic*](/specific-guide/vfx)
-{.links-list}

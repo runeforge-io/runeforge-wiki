@@ -1,11 +1,7 @@
 ---
 title: LtMAO
 description: A guide on how to install and use LtMAO.
-published: true
-date: 2025-04-08T17:00:48.875Z
-tags: guide, install, ltmao
-editor: markdown
-dateCreated: 2024-02-11T19:27:37.139Z
+lastUpdated: 2025-04-08
 ---
 
 # LtMAO
@@ -20,11 +16,11 @@ This page will explain the LtMAO tool made by Tarngaina and all of its features.
 > {.is-info}
   
 - [LtMAO GitHub page](https://github.com/tarngaina/LtMAO?tab=readme-ov-file)
-{.links-list}
 ---
 ## cslmao
-> Please make sure to use the updated cslol version in order to work with vanguard!
-{.is-danger}
+:::danger
+Please make sure to use the updated cslol version in order to work with vanguard!
+:::
 ### Update cslmao
   copy cslol/mod-tools.exe to ltmao/resources/ext-tools
   
@@ -71,7 +67,7 @@ Just <a href="/core-guides/tools/cslolmanager">cslol-manager</a>, but different 
 		+ Joint hashes -> joint names in SKL.
 		+ Submesh hashes -> submesh names in SKN.
 	- game:
-		+ File path that starts with <kbd style="background-color:#343942">assets/</kbd> or <kbd style="background-color:#343942">data/</kbd> in BIN. If file type is <a href="/en/specific-guide/filetypes#dds">.dds</a>, extract 2x, 4x dds too.
+		+ File path that starts with <kbd style="background-color:#343942">assets/</kbd> or <kbd style="background-color:#343942">data/</kbd> in BIN. If file type is <a href="/specific-guide/filetypes">.dds</a>, extract 2x, 4x dds too.
 
 3. Custom Hashes:
 

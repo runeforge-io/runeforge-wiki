@@ -1,19 +1,17 @@
 ---
 title:  Inicio
 description: Página Principal de la Wiki de Runeforge
-published: true
-date: 2024-08-26T10:57:59.657Z
-tags: 
-editor: markdown
-dateCreated: 2024-05-01T13:18:42.024Z
+lastUpdated: 2024-08-26
 ---
 
-> En este momento, se recomienda usar la versión inglesa de la Wiki hasta nuevo aviso. Muchos enlaces y páginas estarán desabilitados hasta su traducción.
-{.is-danger}
+:::danger
+En este momento, se recomienda usar la versión inglesa de la Wiki hasta nuevo aviso. Muchos enlaces y páginas estarán desabilitados hasta su traducción.
+:::
 
 
-> **El español se tradujo mediante inteligencia artificial, ¡puede haber errores!**
-{.is-info}
+:::note
+**El español se tradujo mediante inteligencia artificial, ¡puede haber errores!**
+:::
 
 
 # Bienvenido al Wiki de Runeforge
@@ -34,4 +32,4 @@ Si aún así no puedes encontrar lo que necesitas, es posible que la guía o la 
 
 Si tienes un momento (~5 minutos), ¡te agradecemos tus comentarios! *¡Esta encuesta está en inglés!*
 
-[![survey.webp](/survey.webp =75%x)](https://forms.gle/jKzcJ6jPtbPmK69d7)
+[<img src="/survey.webp" alt="survey.webp" style="width:75%" />](https://forms.gle/jKzcJ6jPtbPmK69d7)

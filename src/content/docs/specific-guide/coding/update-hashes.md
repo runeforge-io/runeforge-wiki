@@ -1,11 +1,8 @@
 ---
 title: Update Hashes
 description: How to update hashes
-published: false
-date: 2025-06-05T20:49:44.949Z
-tags: 
-editor: markdown
-dateCreated: 2025-03-19T13:33:26.686Z
+draft: true
+lastUpdated: 2025-06-05
 ---
 
 # How to Update Your Hashes for Modding Tools
@@ -13,12 +10,12 @@ dateCreated: 2025-03-19T13:33:26.686Z
 ## Overview
 Hashes are required for three main tools. This guide will cover multiple ways to update and actually provide these tools with your new hashes.
 * [Obsidian](https://github.com/Crauzer/Obsidian) for browsing wad files in a familiar File Explorer interace.
-* [Ritobin](/https://github.com/moonshadow565/ritobin/releases) for decoding riot's `bin` files.
+* [Ritobin](https://github.com/moonshadow565/ritobin/releases) for decoding riot's `bin` files.
 * `wad-extract` shipped alongside CSLOL in `CSLOL\cslol-tools`.
 
 Obsidian and Ritobin both use a folder in it's installed directory called `hashes` to store it's hash files. CSLOL simply includes it's hash files next to the tool files in `cslol-tools`.
 
-![update_hashes_hash_location.png](/user-pictures/moga/update_hashes_hash_location.png =x250)
+<img src="/user-pictures/moga/update_hashes_hash_location.png" alt="update_hashes_hash_location.png" height="250" />
 
 # Method 1: Take Hashes From Obsidian
 
@@ -29,8 +26,9 @@ Directly copying files from your `Obsidian\hashes` folder is probably the simple
 3. Open Obsidian and wait for it to redownload your hashes into the hashes folder.
 4. Go to `Obsidian\hashes` and there are your hash files.
 
-> Obsidian does not download the three `hashes.rst.txt` files found in the actual [CDTB data repository](https://github.com/CommunityDragon/Data/tree/master/hashes/lol). 
-{.is-info}
+:::note
+Obsidian does not download the three `hashes.rst.txt` files found in the actual [CDTB data repository](https://github.com/CommunityDragon/Data/tree/master/hashes/lol). 
+:::
 
 
 have obsidian auto-update it's hashes and then copy it's hashes into your tool's folderr.

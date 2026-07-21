@@ -1,11 +1,7 @@
 ---
 title: How to Recolor Particles
 description: A guide on recoloring particles
-published: true
-date: 2024-08-26T10:58:05.861Z
-tags: vfx, color, particle
-editor: markdown
-dateCreated: 2024-05-10T01:11:02.396Z
+lastUpdated: 2024-08-26
 ---
 
 # How to Recolor Particles
@@ -13,14 +9,12 @@ dateCreated: 2024-05-10T01:11:02.396Z
 ## Required tools
 - [Ritobin *.bin to .py file converter*](/core-guides/tools/rito-bin)
 - [Hacksaw *Tool to visually edit bin file **colors***](/core-guides/tools/hacksaw)
-{.links-list}
 
 AND 
 -   [Gimp *Program to edit 2D files*](/core-guides/tools/gimp)
 -   [Photopea (Browser) *Close Photoshop clone as a web application*](https://www.photopea.com/)
 -   [paint.net *Program to edit 2D files*](/core-guides/tools/paint-net)
 -   [Adobe Photoshop *Program to edit 2D files*](/core-guides/tools/adobe/photoshop)
-{.links-list}
 
 # Tutorial
 <br>

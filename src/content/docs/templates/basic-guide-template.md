@@ -1,11 +1,7 @@
 ---
 title: Basic Guide Template
-description: 
-published: false
-date: 2024-08-26T10:56:52.369Z
-tags: 
-editor: markdown
-dateCreated: 2024-02-20T22:03:05.366Z
+draft: true
+lastUpdated: 2024-08-26
 ---
 
 <!--Welcome to the Classic Page template. This is a really barebones version of what you can do here. Make sure to read the Posting Guide to get a better understanding in general! You can delete the orange messages after your done with the editing.-->
@@ -21,7 +17,6 @@ dateCreated: 2024-02-20T22:03:05.366Z
 Examples:
 
 - [Choose a 2D Editing program *Photoshop recommended*](/core-guides/tools#texturing)
-{.links-list}
 
 <!--You can add multiple links into the list, just follow the usual "list" rules-->
 

@@ -1,11 +1,7 @@
 ---
 title: Maya's Skin Binding Settings
 description: This guide will explain all the Skin Binding settings in Maya and what each one does.
-published: true
-date: 2024-12-31T17:18:01.303Z
-tags: maya, 3d, modelling
-editor: markdown
-dateCreated: 2024-04-19T20:00:26.001Z
+lastUpdated: 2024-12-31
 ---
 
 <!--SOMEONE ADD IMAGES, PLEASE-->

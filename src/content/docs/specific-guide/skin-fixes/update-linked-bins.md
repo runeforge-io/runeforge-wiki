@@ -1,19 +1,14 @@
 ---
 title: How to Update Linked Bins
 description: A guide on how to update your bin's linked bins. This will fix most missing voicelines or crashing skins.
-published: true
-date: 2025-07-11T13:42:02.256Z
-tags: audio, voiceline, fix
-editor: markdown
-dateCreated: 2024-02-20T21:53:45.483Z
+lastUpdated: 2025-07-11
 ---
 
 # Required Tools
 
 - [Obsidian](/core-guides/tools/obsidian)
 - [Ritobin *Tools to translate bin files into Python files*](/core-guides/tools/rito-bin)
-- [Any Code editing software *Capable of editing python files*](/core-guides/tools#coding)
-{.links-list}
+- [Any Code editing software *Capable of editing python files*](/core-guides/tools#code-bin-editing)
 
 # Introduction
 

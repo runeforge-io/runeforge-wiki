@@ -1,16 +1,13 @@
 ---
 title: A texture swapping tutorial
 description: An advanced tutorial on how to swap textures using Static Materials and Particle events
-published: true
-date: 2025-04-01T14:26:30.281Z
-tags: vfx, bin, material
-editor: markdown
-dateCreated: 2025-01-29T08:25:10.357Z
+lastUpdated: 2025-04-01
 ---
 
 # Texture swapping with bins
-> This is a complex tutorial involving bin editing.
-{.is-warning}
+:::caution
+This is a complex tutorial involving bin editing.
+:::
 
 
 ## 1. Getting ur staticmaterials ready

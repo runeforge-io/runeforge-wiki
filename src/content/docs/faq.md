@@ -1,16 +1,13 @@
 ---
 title: FAQ
 description: Frequently Asked Questions
-published: true
-date: 2025-01-26T16:37:52.192Z
-tags: faq
-editor: markdown
-dateCreated: 2024-03-17T21:31:27.204Z
+lastUpdated: 2025-01-26
 ---
 
 
-> This page is no longer maintained, please visit [this](https://wiki.runeforge.io/en/runeforge2#faq) one to read our current FAQ!
-{.is-warning}
+:::caution
+This page is no longer maintained, please visit [this](/runeforge2#faq) one to read our current FAQ!
+:::
 
 
 
@@ -40,7 +37,6 @@ A new version of Cslol was released which uses the new DLL patcher that works wi
 Download the new version and you are good to go!
 
 - [Download the latest Cslol](https://github.com/LeagueToolkit/cslol-manager/releases)
-{.links-list}
 
 <br>
 
@@ -49,8 +45,9 @@ We can confidently say that you will most likely not get banned. There have been
 
 
 ## Missing skins?
-> Some creators aren't active anymore and skins could have been lost to time.
-{.is-info}
+:::note
+Some creators aren't active anymore and skins could have been lost to time.
+:::
 
 We have the Skin Recovery Forum on our <a href="https://www.discord.gg/runeforge">Discord server</a> for:
 - Storing Skins
@@ -60,8 +57,9 @@ We have the Skin Recovery Forum on our <a href="https://www.discord.gg/runeforge
 Our main goal is to recover skins people want, so they can appear on the website later on.
 
 ## Help/Support
-> You can join our <a href="https://www.discord.gg/runeforge">Discord server</a> and ask for assistance in the help-forum.
-{.is-info}
+:::note
+You can join our <a href="https://www.discord.gg/runeforge">Discord server</a> and ask for assistance in the help-forum.
+:::
 
 We have the Help Forum where you can ask for help about but not limited to:
 - CsLol issues
@@ -71,10 +69,12 @@ We have the Help Forum where you can ask for help about but not limited to:
 
 
 ## Can I get a paid skin through custom skins?
-> No. We do not support skin hacking and never will.
-{.is-info}
+:::note
+No. We do not support skin hacking and never will.
+:::
 
 Skin hacking would be obtaining Riot skins for free. We will never allow this and please do not request it within our community.
 ## What happened to Killerskins, where is it?
-> Killerskins was bound to shut down and Runeforge stepped in to save as much content as possible.
-{.is-info}
+:::note
+Killerskins was bound to shut down and Runeforge stepped in to save as much content as possible.
+:::

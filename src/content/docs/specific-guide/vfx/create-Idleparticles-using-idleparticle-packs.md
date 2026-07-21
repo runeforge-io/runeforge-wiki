@@ -1,26 +1,22 @@
 ---
 title: Create Idleparticles
 description: This is a guide explaining how to create idle particles using the custom-made idle particle packs.
-published: true
-date: 2025-04-07T18:05:56.879Z
-tags: #idleparticles
-editor: markdown
-dateCreated: 2024-05-08T04:44:42.696Z
+lastUpdated: 2025-04-07
 ---
 
 # Required tools
  
  
  
- - [Obsidian *Click here*](https://wiki.runeforge.io/en/core-guides/tools/obsidian)
- - [CSLOL MANAGER *Click here*](https://wiki.runeforge.io/en/core-guides/tools/cslolmanager)
- - [RITOBIN *Click here*](https://wiki.runeforge.io/en/core-guides/tools/rito-bin)
- - [Any Code editor *Click here*](https://wiki.runeforge.io/en/core-guides/tools#code-bin-editing)
- {.links-list}
+ - [Obsidian *Click here*](/core-guides/tools/obsidian)
+ - [CSLOL MANAGER *Click here*](/core-guides/tools/cslolmanager)
+ - [RITOBIN *Click here*](/core-guides/tools/rito-bin)
+ - [Any Code editor *Click here*](/core-guides/tools#code-bin-editing)
  
  
- > I will add more auras to this guide and collect more of them.
- {.is-info}
+:::note
+I will add more auras to this guide and collect more of them.
+:::
  
  
  # For what is this guide?

@@ -1,11 +1,7 @@
 ---
 title: Simple HUD Template by Yoru
 description: A short guide on how to use the "Simple HUD Template" made by Yoru Queen of Night
-published: true
-date: 2025-04-26T13:44:01.179Z
-tags: hud, template, simple hud
-editor: markdown
-dateCreated: 2024-02-11T18:16:47.335Z
+lastUpdated: 2025-04-26
 ---
 
 # Simple HUD Template
@@ -19,22 +15,18 @@ If you use this template, please credit it properly and link back to this page.
 ## Nessecary tools
 - [Yoru's Template *Download the .zip file and extract it to the folder "UI.wad.client"*](https://drive.google.com/file/d/13GYjZe1m2v6c88BdOz6J7MgUwa5Mlo2c/view)
 - [Photoshop *Paid Program to edit picture files*](/core-guides/tools/adobe/photoshop)
-{.links-list}
 
 **PLUS** one of the Plugin options:
 
 - [PLUGIN: Nvidia Texture Tool *Plugin for Photoshop to edit .dds files | ONLY USABLE if you have a Nvidia Graphics card*](https://developer.nvidia.com/nvidia-texture-tools-exporter)
 - [PLUGIN: Intel Texture Works *Plugin for Photoshop to edit .dds files | USABLE if you don't have a Nvidia Graphics card*](https://www.intel.com/content/www/us/en/developer/articles/tool/intel-texture-works-plugin.html)
-{.links-list}
 
 Optional if you dont have Photoshop:
 - [Photopea *No guarantee, web version of Photoshop*](https://www.photopea.com/)
-{.links-list}
 
 **Season 12 Update:**
 Due to changes in filetype to .tex files you now need to convert all [.dds](/specific-guide/filetypes) files into [.tex](/specific-guide/filetypes) files after editing:
 - [Tex2DDS by Morilli *Tool to convert .dds files into .tex*](https://github.com/Morilli/Ritoddstex/releases)
-{.links-list}
 
 <br>
 

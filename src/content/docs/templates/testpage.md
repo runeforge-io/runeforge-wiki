@@ -1,11 +1,7 @@
 ---
 title: Testing
-description: 
-published: false
-date: 2025-06-03T14:53:13.179Z
-tags: 
-editor: markdown
-dateCreated: 2024-12-31T21:51:40.832Z
+draft: true
+lastUpdated: 2025-06-03
 ---
 
 # Header
@@ -26,33 +22,35 @@ Text
 
 > More
 
-> Even More
-{.is-info}
+:::note
+Even More
+:::
 
-> Extremely More
-{.is-success}
+:::tip
+Extremely More
+:::
 
-> Such More
-{.is-warning}
+:::caution
+Such More
+:::
 
-> Impressive More
-{.is-danger}
+:::danger
+Impressive More
+:::
 
 - One
 - 2
 - [three]()
-{.links-list}
 
 [faq](/faq)
 
-# Tabs {.tabset}
+<!-- wikijs:tabset -->
+# Tabs
 ## Maya 2023
 - [Creating a custom skin Maya 2023/24.1](/specific-guide/3d-modelling/maya/2023)
- {.links-list}
  
 ## Maya 2018
 - [Creating a custom skin Maya 2018 *Outdated*](/specific-guide/3d-modelling/maya/2018)
- {.links-list}
 
 
 ![plugin_manager.png](/plugin_manager.png)

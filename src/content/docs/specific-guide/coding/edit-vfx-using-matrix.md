@@ -1,11 +1,7 @@
 ---
 title: Using Matrix to edit VFX
 description: A guide on how to add and edit the matrix system in bin files.
-published: true
-date: 2024-08-26T10:57:01.056Z
-tags: vfx, bin, matrix
-editor: markdown
-dateCreated: 2024-02-21T22:39:18.777Z
+lastUpdated: 2024-08-26
 ---
 
 If you encounter any issues with this tip or you don’t understand part of it, you can ask for help on the Runeforge Discord Server.
@@ -14,18 +10,15 @@ or you can contact guisai directly on discord
 
 # Required Tools
 - [Ritobin *Tools to translate bin files into Python files*](/core-guides/tools/rito-bin)
-{.links-list}
 
 An code editor of your choice:
-- [Choose any Code Editor *Visual Studio recommended*](/core-guides/tools#coding-bin-editing)
-{.links-list}
+- [Choose any Code Editor *Visual Studio recommended*](/core-guides/tools#code-bin-editing)
 
 If you choose Visual Studio Code, you need the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) aswell!
 *Other editors work aswell, aslong as they can edit .py (Python) files.*
 
 You also **might** need Maya:
 - [Maya 2023 *Plus LolMaya Plugin*](/core-guides/tools/maya)
-{.links-list}
 
 # Written Guide
 ## Add matrix to your bin
@@ -41,7 +34,6 @@ Transform: mtx44 = {
 ```
 
 - [Step one Video *External Youtube Link*](https://www.youtube.com/watch?v=VZ1L7Y_78-8)
-{.links-list}
 
 ## How to use matrix
 Transformation matrices are usually used in rendering applications due  to their mathematical properties. In games, their dimensions are usually  4×4 (16 floating point numbers) and they’re in row-major order (unlike  the typical matrices used in classical math which tend to be  column-major). They are called “transformation” matrices because they’re  a composition of translation, rotation and scale hence they can be used  to transform points in a rendering scene.
@@ -139,7 +131,6 @@ global proc getTransform()
 ```
 And then you type `getTransform` with the mesh selected.
 - [Create Rotation Matrix Video Guide *External Youtube Link*](https://www.youtube.com/watch?v=VJlGIb_pQ14)
-{.links-list}
 # Sources
 
 - GuiSai

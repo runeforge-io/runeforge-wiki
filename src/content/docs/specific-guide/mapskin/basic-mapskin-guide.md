@@ -1,15 +1,12 @@
 ---
 title: Basic Mapskin starter guide
 description: A small guide on how to create a mapskin, this includes only textures.
-published: true
-date: 2024-10-30T01:23:35.750Z
-tags: texture, starting, mapskin
-editor: markdown
-dateCreated: 2024-10-29T22:16:12.732Z
+lastUpdated: 2024-10-30
 ---
 
->⚠️ Maintaining a mapskin guide and template is tricky, we appreciate any feedback and discoveries so we can update everything accordingly. Missing/ moved/ new files, changed names or new filetypes can potentially change every patch but mostly with every pre-season!⚠️
-{.is-info}
+:::note
+⚠️ Maintaining a mapskin guide and template is tricky, we appreciate any feedback and discoveries so we can update everything accordingly. Missing/ moved/ new files, changed names or new filetypes can potentially change every patch but mostly with every pre-season!⚠️
+:::
 
 
 # Introduction
@@ -29,13 +26,11 @@ Editing League maps can lead to many problems. Since this is the playground of t
 The following tools are needed to edit the map **textures**.
 
 - [Obsidian *To extract files*](/core-guides/tools/obsidian) 
-{.links-list}
 
 **OR *HIGHLY RECOMMENDED:***
 - [Mapskin template *Base Template recommended*](/core-guides/downloadable-assets#templates)
 - [Any 2D editing software *which can handle editing .dds files*](/core-guides/tools#texturing)
 - [tex2dds *converter for .dds and .tex files*](/core-guides/tools/ritoddstex)
-{.links-list}
 
 # Guide
 
@@ -62,8 +57,7 @@ In order to edit those textures, you need a 2D editing software which can handle
 
 #### Ground Textures
 
-- [Ground Texture Photoshop template *Recommended when you use Photoshop or Photopea*](/core-guides/downloadable-assets#mapskin-ground-texture-photoshop-template)
-{.links-list}
+- [Ground Texture Photoshop template *Recommended when you use Photoshop or Photopea*](/core-guides/downloadable-assets#mapskin-ground-texture-photoshop-template2)
 
 *Warning huge file, you need a decent PC to handle that*
 
@@ -93,7 +87,6 @@ Exporting the mapskin is as simple as every other skin, if you need a refreshmen
 Since some people dont own a Nasa PC, you should be so kind to implement Quality settings, which can be done with this tool:
 
 - [XnConvert *Easy conversion into 2x and 4x files*](/core-guides/tools/xnconvert#rescale-files)
-{.links-list}
 
 AFTER CONVERSION!
 

@@ -1,25 +1,20 @@
 ---
 title: Animation Repathing
 description: Guide to Animation repathing 
-published: true
-date: 2025-03-09T08:10:15.586Z
-tags: animation, bin, python
-editor: markdown
-dateCreated: 2024-11-13T20:01:33.195Z
+lastUpdated: 2025-03-09
 ---
 
 # How to repath animations
 Animation repathing ensures custom animations in games are applied to specific skin only, preventing them from affecting other skins. Without repathing, a custom animation may unintentionally override animations for other skins.
 
 Here's an example of base custom skin Gragas animations overriding Hillybilly Gragas's animations.
-![gif-ezgif.com-crop.gif](/user-pictures/nyht/gif-ezgif.com-crop.gif =x200){.align-center}
+<img src="/user-pictures/nyht/gif-ezgif.com-crop.gif" alt="gif-ezgif.com-crop.gif" height="200" />
 
 ## Required Tools
 -   [Obsidian *Main program to extract and browse Leagues gamefiles.*](/core-guides/tools/obsidian)
 - [Choose any Code Editor *Visual Studio Code is recommended*](/core-guides/tools#code-bin-editing)
 - [Ritobin *Tools to convert bin files into Python files*](/core-guides/tools/rito-bin)
 
-{.links-list}
 
 # New Animation Repath Tool!
 Here's a new tool designed for creators who don't want to waste time and aim to make their workflow easier — introducing **lolAnimPath**.
@@ -29,7 +24,6 @@ lolAnimPath is a lightweight and easy-to-use tool designed for League of Legends
 
 - [lolAnimPath *Tools to easily modify and repath animations*](https://github.com/Nyht7/lolAnimPath)
 
-{.links-list}
 
 ![image_2025-03-09_160551448.png](/user-pictures/nyht/image_2025-03-09_160551448.png)
 
@@ -45,7 +39,7 @@ for example on `Gragas.wad.client/assets/characters/gragas/skins/base`
 In this step, we’ll rename the existing `Skin0.bin` file, which represents the base skin and, by default, overrides animations for all other skins. Rename `Skin0.bin` to a unique name to link it specifically to your mod, which will prevent it from unintentionally affecting other skins. You can name it anything you like, but in my case, I’ll be naming it `snorlax.bin` to match my theme. This ensures that the custom animations remain isolated to the intended skin only.
 
 This file is located at `Gragas.wad.client/data/characters/gragas/animations`
-![image_2024-11-14_031804514.png](/user-pictures/nyht/image_2024-11-14_031804514.png =x100)
+<img src="/user-pictures/nyht/image_2024-11-14_031804514.png" alt="image_2024-11-14_031804514.png" height="100" />
 
 ## Repathing the animation path in Skin0.bin (skins folder)
 Next, we’ll edit the animation paths in the `Skin0.bin` file (found in the skins folder). 
@@ -89,7 +83,7 @@ also, update the animation paths within each `AtomicClipData {}` section. This s
 ![image_2024-11-14_040854007.png](/user-pictures/nyht/image_2024-11-14_040854007.png)
 
 ## Result
-![2024-11-1403-48-27-ezgif.com-resize.gif](/user-pictures/nyht/2024-11-1403-48-27-ezgif.com-resize.gif =x300)
+<img src="/user-pictures/nyht/2024-11-1403-48-27-ezgif.com-resize.gif" alt="2024-11-1403-48-27-ezgif.com-resize.gif" height="300" />
 
 Now, the custom animations will no longer override other skins. By properly updating the animation paths, your custom animations will only apply to the intended skin, ensuring that no other skins are affected by the changes.now all the skins will not be override by the default's custom animations
 

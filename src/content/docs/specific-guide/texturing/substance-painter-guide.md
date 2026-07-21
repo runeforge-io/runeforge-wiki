@@ -1,11 +1,7 @@
 ---
 title: Substance Painter 3D Guide
 description: A full overview on how to use Adobe Substance Painter 3D.
-published: true
-date: 2025-01-26T18:05:44.373Z
-tags: guide, maya, texturing, adobe, substance, painter, drawing
-editor: markdown
-dateCreated: 2024-02-18T20:05:08.131Z
+lastUpdated: 2025-01-26
 ---
 
 This is an overall comprehensive guide for beginners on how to use Substance Painter for the sole purpose of painting textures for your creations. Lessons here can obviously be applicable outside of League skins, but this will specifically be geared towards that workflow.
@@ -15,7 +11,6 @@ This is an overall comprehensive guide for beginners on how to use Substance Pai
 - [Maya *3D Modeling software*](/core-guides/tools/maya)
 - [Adobe Substance Painter *3D texture painting software*](/core-guides/tools/adobe/substance-painter)
 - [Nvidia Texture Tools or Intel Texture Works *To export as .dds format*](/core-guides/tools/adobe/photoshop#intel-texture-works)
-{.links-list}
 
 # Written Steps
 
@@ -28,7 +23,7 @@ In Maya, to check our face normals, select your object in face mode and then hol
 
 If your normals need to be reversed, go to `mesh display > reverse.`
 
-![reversenormals.webp](/user-pictures/vector/general-guides/substance-guides/reversenormals.webp =x1200)
+<img src="/user-pictures/vector/general-guides/substance-guides/reversenormals.webp" alt="reversenormals.webp" height="1200" />
 
 **2.**
 Our entire model must also be one material. You can set different materials for different parts on the model as you like, however you will need to combine the textures in a photo editing software such as through Photoshop or Gimp equivalent after you have finished painting.
@@ -41,7 +36,7 @@ Seraphine however has three textures: one for her entire body, separate one for 
 
 You can always add more than one material via the champion’s bins.
 
-![matsgraves.webp](/user-pictures/vector/general-guides/substance-guides/matsgraves.webp =x1000)
+<img src="/user-pictures/vector/general-guides/substance-guides/matsgraves.webp" alt="matsgraves.webp" height="1000" />
 
 **3.**
 When you open Adobe Substance 3D Painter and start a project with a new FBX (for multiple materials) model, you get both a 3D and 2D view (UV). 
@@ -50,8 +45,9 @@ On the top right of your screen you should see something that says `Texture Set 
 
 You will also see `Properties` which is where you can adjust your brush texture and other attributes. This can also be found on the top left of the UI for ease of access. And then there’s “Layers” which is self explanatory.
 
-> Interface will differ depending on your version of the program - the version in the pictures is older.
-{.is-info}
+:::note
+Interface will differ depending on your version of the program - the version in the pictures is older.
+:::
 
 ![modelp1.webp](/user-pictures/vector/general-guides/substance-guides/modelp1.webp)
 
@@ -72,18 +68,19 @@ You will also see `Properties` which is where you can adjust your brush texture 
 4. *(Optional step 4)* The next step you want to do is bake the Ambient Occlusion map (AO). This will essentially create shadows for your mesh and will make your painting process significantly faster. Go to `Texture Set Settings`, and hit `Bake Mesh Maps`. 
 Change your output size if you would like and then select `Ambient Occlusion.` Change Secondary Rays to `40`, with Distribution to `Uniform`. Then bake it.
 
-![modelp5.webp](/user-pictures/vector/general-guides/substance-guides/modelp5.webp =x1500)
+<img src="/user-pictures/vector/general-guides/substance-guides/modelp5.webp" alt="modelp5.webp" height="1500" />
 
 5. *(Optional step 4)* Drag your AO texture under the shelf project onto the `base color` of your fill layer. Then right click on your layer and click `add filter`. Choose `Gradient` and change the colors as you want. (Starting with the skin as the first layer is what I usually do).
 
-![modelp6.webp](/user-pictures/vector/general-guides/substance-guides/modelp6.webp =x2000)
+<img src="/user-pictures/vector/general-guides/substance-guides/modelp6.webp" alt="modelp6.webp" height="2000" />
 
 6. *(Optional step 4)* Add another filter to your fill layer and choose `blur`. Setting it to `0.5` usually works best but you can adjust it as you need. You can see here what the texture looks like with and without the blur.
 
 ![modelp7.webp](/user-pictures/vector/general-guides/substance-guides/modelp7.webp)
 
-> If some parts of your model appear black and it doesn’t look right, see [AMBIENT OCCLUSION BAKE FIX (WITH MAYA)](/specific-guide/texturing/substance-painter-guide#ambient-occlusion-bake-fix). If you don’t mind it you can just proceed.
-{.is-info}
+:::note
+If some parts of your model appear black and it doesn’t look right, see [AMBIENT OCCLUSION BAKE FIX (WITH MAYA)](/specific-guide/texturing/substance-painter-guide#ambient-occlusion-bake-fix). If you don’t mind it you can just proceed.
+:::
 
 ---
 
@@ -95,7 +92,7 @@ Change your output size if you would like and then select `Ambient Occlusion.` C
 8. Adding another layer to paint the dress for example is essentially the same process however, this time you will add a black mask to your fill layer. White color is to paint, and black is to erase.
 Now you can paint the areas that you want for the dress. In this particular instance, I would add another layer for her bow, the rope around her waist, the hair, etc. I essentially keep things with the same colors on the same layers.
 
-![modelp8.webp](/user-pictures/vector/general-guides/substance-guides/modelp8.webp =x1000)
+<img src="/user-pictures/vector/general-guides/substance-guides/modelp8.webp" alt="modelp8.webp" height="1000" />
 
 ---
 
@@ -105,14 +102,15 @@ Now you can paint the areas that you want for the dress. In this particular inst
 
 9. Once you have finished painting go to `File > Export Textures`. Click on your material name and deselect everything but the base color. When it states the export is finished, go to `Open output directory` and you will be directed to the location of the texture’s export. 
 
-![export1.webp](/user-pictures/vector/general-guides/substance-guides/export1.webp =x2600)
+<img src="/user-pictures/vector/general-guides/substance-guides/export1.webp" alt="export1.webp" height="2600" />
 
-> You will need to convert all textures exported to DDS as your final output into the game. If you are using Gimp, you will not need a plugin, however if you are using [Photoshop](/core-guides/tools/adobe/photoshop), you will need to get either [Nvidia Texture Tools](/core-guides/tools/adobe/photoshop#nvidia-texture-tools) or [Intel Texture Works](/core-guides/tools/adobe/photoshop#intel-texture-works). Nvidia only works with Nvidia graphic cards. Listed below are the settings for each export.
-{.is-info}
+:::note
+You will need to convert all textures exported to DDS as your final output into the game. If you are using Gimp, you will not need a plugin, however if you are using [Photoshop](/core-guides/tools/adobe/photoshop), you will need to get either [Nvidia Texture Tools](/core-guides/tools/adobe/photoshop#nvidia-texture-tools) or [Intel Texture Works](/core-guides/tools/adobe/photoshop#intel-texture-works). Nvidia only works with Nvidia graphic cards. Listed below are the settings for each export.
+:::
 
 ### Nvidia Texture Tools Export Settings
 
-![nvidiaexport.webp](/user-pictures/vector/general-guides/substance-guides/nvidiaexport.webp =x1150)
+<img src="/user-pictures/vector/general-guides/substance-guides/nvidiaexport.webp" alt="nvidiaexport.webp" height="1150" />
 
 ### Intel Texture Works Export Settings
 
@@ -138,7 +136,7 @@ You can import textures to your scene which is especially useful when you are re
 
 Go to `file > import resources > add resource`, then select your image/texture file and change the file type to `texture`. Import the resource to your Project. Now you can create a fill layer with a mask and paint where you want the face and make your edits!
 
-![texturefix1.webp](/user-pictures/vector/general-guides/substance-guides/texturefix1.webp =x900)
+<img src="/user-pictures/vector/general-guides/substance-guides/texturefix1.webp" alt="texturefix1.webp" height="900" />
 
 You can also export your entire texture when you are finished and then reimport that texture so that you have everything on one single layer. Very useful for repainting areas like hair where you want to do a lot of smudging on top of what you’ve already painted.
 
@@ -147,8 +145,9 @@ You can also export your entire texture when you are finished and then reimport 
 ## Paint on higher resolution
 Always paint at a higher texture output than you plan to export, at the very least double the original texture size. Most League textures are at their highest at **1020x1020px**. That means you want your texture output to be at **2040x2040px** or higher at **4096×4096** (only IF your computer can handle it). You can always downscale in Photoshop or Gimp equivalent later. 
 
-> EVEN IF A CHAMPION’S ORIGINAL TEXTURE IS 512×512, ALWAYS MAKE YOUR FINAL TEXTURE 1024×1024. 
-{.is-info}
+:::note
+EVEN IF A CHAMPION’S ORIGINAL TEXTURE IS 512×512, ALWAYS MAKE YOUR FINAL TEXTURE 1024×1024. 
+:::
 
 You won’t break the game, trust me. Every champion needs love, especially the older ones, so their textures should be the exact same sizes as their newer skins and champions. Be mindful that all textures must also be converted into a [.DDS](/specific-guide/filetypes) file format.
 
@@ -176,7 +175,7 @@ Generally, League has lighting that is top-down, so you want to paint your shado
 
 Here in this diagram you can see a very simplified example of how this lighting works. As we move towards the legs, there will be more darkness and less contrast between highlights and shadows. Pool Party Jarvan is a fantastic example to look at. The closer the body is the ground, the less contrast there will be between lights and darks. As you travel up, there will be more contrast.
 
-![lighting1.webp](/user-pictures/vector/general-guides/substance-guides/lighting1.webp =x1000)
+<img src="/user-pictures/vector/general-guides/substance-guides/lighting1.webp" alt="lighting1.webp" height="1000" />
 
 You must always keep in mind the top-down lighting that League has. You will always have a dark gradient traveling upwards. Without this, champions can appear flat in-game. The farther their body is away from us, the darker it gets!
 
@@ -184,14 +183,14 @@ Take a screenshot of your champion in Maya and place them in a test scene agains
 
 Sometimes the values can differ depending on what you are comparing to. Darker colors will obviously be darker in value, so you have to be especially mindful of gradients in those. Lighter colors are usually easy to catch issues in. In this example of Graves, I plan to make a darker purple color for the lower half of his jacket to help with giving a more convincing lighting situation.
 
-![lighting2.webp](/user-pictures/vector/general-guides/substance-guides/lighting2.webp =x800)
+<img src="/user-pictures/vector/general-guides/substance-guides/lighting2.webp" alt="lighting2.webp" height="800" />
 
 ## Get skin color right
 Usually as you go darker you also want to saturate and push more towards a colder hue like purple or blue. As you go lighter, push your hue slightly more towards a warm color like yellow.
 
 It is especially important to keep this concept in mind as you paint skin tones because it’ll help to make the skin feel alive and colorful while also keeping away from making it look muddy. Pick a level of saturation for your base mid tone color and push that color down and right with a shift to red to go darker or up and left with a shift to yellow to go lighter. You can see this in this example that I have painted.
 
-![skin1.webp](/user-pictures/vector/general-guides/substance-guides/skin1.webp =x800)
+<img src="/user-pictures/vector/general-guides/substance-guides/skin1.webp" alt="skin1.webp" height="800" />
 
 ## Get the right shadows
 
@@ -211,11 +210,11 @@ There can be exceptions to "[Get skin color right](/specific-guide/texturing/sub
 
 Desaturated skin tones like Viego indicate death or less health and well-being. This can also be seen in the Ruined skin line in Karma and Draven.
 
-![shadow3.webp](/user-pictures/vector/general-guides/substance-guides/shadow3.webp =x1000)
+<img src="/user-pictures/vector/general-guides/substance-guides/shadow3.webp" alt="shadow3.webp" height="1000" />
 
 Other champions have completely unique skin tones such as purple or blue like Mundo and Cosmic Lux. You can still see the same concept of more yellow being added to the blue color for Lux on her lighter highlights. And Mundo on the other hand has more blue since his skin is unnatural. These are things to look out for as you use League skins as references for your painting.
 
-![shadow4.webp](/user-pictures/vector/general-guides/substance-guides/shadow4.webp =x500)
+<img src="/user-pictures/vector/general-guides/substance-guides/shadow4.webp" alt="shadow4.webp" height="500" />
 
 ## Painting in black and white
 You should also try painting in black and white then using the gradient color filter to apply your color after. When you paint in B&W you focus significantly more on details, slight changes in values and on your edges without having to worry about color. This makes it effortless to create chromas because all you have to do is change the colors on your gradient as opposed to adding more layers with different blending modes and praying that you will get the color that you want.

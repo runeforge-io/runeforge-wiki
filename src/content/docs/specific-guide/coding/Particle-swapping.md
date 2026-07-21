@@ -1,22 +1,17 @@
 ---
 title: Particle swapping through bin-editing
 description: This tutorial teaches you how to take particles from one champion and reuse them on another champion.
-published: true
-date: 2024-08-26T10:57:11.941Z
-tags: code, bin, particle
-editor: markdown
-dateCreated: 2024-02-22T04:29:01.767Z
+lastUpdated: 2024-08-26
 ---
 
 # Particle swapping through bin-editing
 This tutorial teaches you how to take particles from one champion and reuse them on another champion.
 
-![reuse_particle.gif](/user-pictures/goat/reuse_particle.gif =x400)
+<img src="/user-pictures/goat/reuse_particle.gif" alt="reuse_particle.gif" height="400" />
 
 ## Required Tools
 An code editor of your choice, we recommend **Visual Studio Code**:
 - [Choose any Code Editor *Visual Studio Code is recommended*](/core-guides/tools#code-bin-editing)
-{.links-list}
 
 If you choose Visual Studio Code, you need the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) aswell!
 *Other editors work aswell, aslong as they can edit .py (Python) files.*
@@ -24,7 +19,6 @@ If you choose Visual Studio Code, you need the [Python extension](https://market
 - [Ritobin *.bin to .py file converter*](/core-guides/tools/rito-bin)
 - [Bintex by Marcius *Tool to list all textures and models inside a Python file*](https://www.dropbox.com/s/yfvuyl5rebwbaml/bintex.exe?dl=1)
 - [Hacksaw *Tool to visually edit bin files*](/core-guides/tools/hacksaw)
-{.links-list}
 ---
 <br>
 
@@ -60,7 +54,7 @@ style="width:75%"></a>
 11. Done
 
 # How to make your particles break less often
-After finishing your particles I recommend following this [tutorial](https://wiki.runeforge.io/specific-guide/coding/fix-breaking-vfx).
+After finishing your particles I recommend following this [tutorial](/specific-guide/skin-fixes/fix-breaking-vfx).
 Your skins will break less often and should only break when a new skin for the champion gets released.
 
 # Sources

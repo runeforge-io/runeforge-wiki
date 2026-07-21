@@ -1,16 +1,12 @@
 ---
 title: Fix Broken Textures
 description: A tutorial on how to update your mod's deprecated DDS texture files to Riot's TEX format.
-published: true
-date: 2026-02-07T08:34:21.915Z
-tags: texture, skin fix
-editor: markdown
-dateCreated: 2025-02-18T03:42:17.638Z
+lastUpdated: 2026-02-07
 ---
 
-> The first section of this tutorial uses LtMAO, specifically its explorer contexts. Follow the instructions [here to install LtMAO](/core-guides/tools/LtMAO) and [here for enabling explorer contexts](/core-guides/tools/LtMAO#explorer-contexts).
+> The first section of this tutorial uses LtMAO, specifically its explorer contexts. Follow the instructions [here to install LtMAO](/core-guides/tools/ltmao) and [here for enabling explorer contexts](/core-guides/tools/ltmao#explorer-contexts).
 > 
-> Use the [second section of this tutorial](https://wiki.runeforge.io/en/specific-guide/skin-fixes/broken-textures#bulk-fix-large-mods-no-ltmao) to fix without LtMAO, or if the first section causes a crash or invisible textures. {.is-warning}
+> Use the [second section of this tutorial](/specific-guide/skin-fixes/broken-textures#bulk-fix-large-mods-no-ltmao) to fix without LtMAO, or if the first section causes a crash or invisible textures. {.is-warning}
 
 Riot is in the process of updating League's main texture file format from DDS to their own TEX format, updating groups of champions in alphabetical order. This causes mods to appear broken as Riot's bins are now using TEX files, which your mod does not have.
 
@@ -22,7 +18,7 @@ Riot is in the process of updating League's main texture file format from DDS to
 
 Find your mod's WAD file under CSLOL's installed folder at `CSLOL\installed\Mod_Name\WAD`.
 
-![wrongred.png](/user-pictures/fbs/wrongred.png =x260)
+<img src="/user-pictures/fbs/wrongred.png" alt="wrongred.png" height="260" />
 
 ## 2. Locate Texture Files and Convert DDS to TEX
 
@@ -31,16 +27,16 @@ Find your mod's WAD file under CSLOL's installed folder at `CSLOL\installed\Mod_
 3. After you convert your files to TEX, you can delete any remaining DDS files. If LtMAO gives any errors like `Unsupported DDS format`, try converting to PNG using the same context menu, back to DDS, and finally to TEX. You can delete your remaining PNG files alongside the DDS files.
 4. If there is a folder labeled `particles`, you need to convert DDS files there as well.
 
-![ddstexdel.png](/user-pictures/fbs/ddstexdel.png =x105)
+<img src="/user-pictures/fbs/ddstexdel.png" alt="ddstexdel.png" height="105" />
 
 ## 3. Repack Your WAD and Reload CSLOL
 
-![backtowad.png](/user-pictures/fbs/backtowad.png =x120)
-![deletefolder.png](/user-pictures/fbs/deletefolder.png =x55)
+<img src="/user-pictures/fbs/backtowad.png" alt="backtowad.png" height="120" />
+<img src="/user-pictures/fbs/deletefolder.png" alt="deletefolder.png" height="55" />
 
 This should be it. If you did everything right, your textures should look normal again in game.
 
-![brad.png](/user-pictures/fbs/brad.png =x300)
+<img src="/user-pictures/fbs/brad.png" alt="brad.png" height="300" />
 
 ---
 
@@ -48,16 +44,17 @@ This should be it. If you did everything right, your textures should look normal
 
 For crashing or invisible skins after LtMAO converting see step 3 and 4.
 
-> You will need at least [tex2dds](https://github.com/Morilli/Ritoddstex/releases) by Morilli and it's a good idea to get [texconv](https://github.com/microsoft/DirectXTex/releases) by Microsoft. These are both small CLI utilities. Install both of these to a folder you can remember later.
+:::note
+You will need at least [tex2dds](https://github.com/Morilli/Ritoddstex/releases) by Morilli and it's a good idea to get [texconv](https://github.com/microsoft/DirectXTex/releases) by Microsoft. These are both small CLI utilities. Install both of these to a folder you can remember later.
 Please read this section in its entirety before trying to follow the instructions. You may inadvertantly do something by simply following along without having fully understood what you're doing. If you have problems at any stage in this process, go back and re-read this entire section and make sure you haven’t missed anything.
-{.is-info}
+:::
 
 This tutorial uses CMD, but the commands are simple enough to easily rework for use with any other command processor like PowerShell.
 
 ## 1. Extract Your Mod and It's WAD File
 Extract your mod's Fantome or Zip file to a folder using 7-Zip or WinRAR. To add 7-Zip options to your context menu follow this guide [Fix 7-Zip Option Missing From Context Menu](https://www.intowindows.com/fix-7-zip-option-missing-from-context-menu/). Additionally, for easier access to your mod's files in the future, set Fantome files to open by default with 7-Zip or WinRAR. (Do not just rename the fantome to `.zip`, this is a huge waste of time.)
 
-![extract_&_open.png](/user-pictures/moga/extract_&_open.png =x250)
+<img src="/user-pictures/moga/extract_&_open.png" alt="extract_&_open.png" height="250" />
 
 Under your extracted folder, `Mod_Name\WAD` you will find all of your mod's files compressed within a single WAD file, labeled `Champion.wad.client` or `Champion.en_US.wad.client`. Extract a WAD by dragging it onto one of CSLOL's tools called `wad-extract`, found in your CSLOL directory under `CSLOL\cslol-tools\wad-extract`. This extracts your mod's files into a folder called `Champion.wad` next to your WAD file. It may be necessary to have updated hashes and their full pathnames in your `wad-extract` directory, although some files may be custom or no known hash regardless. Unknown hashes will not prevent you from converting or editing your files, but without them you may inadvertently edit files, such as any QWER+P icons because they are largely indistinguishable while not labeled and in their directory.
 
@@ -81,7 +78,7 @@ First, you need to add both `tex2dds` and `texconv` to your Windows path in orde
 Using tex2dds manually by dragging each file, from the cli like `tex2dds file.tex` to create `file.dds`, or using LtMAO's context menu is impractical.
 Navigate **inside** of your `champion.wad` folder, press `Ctrl+L` or click to focus the address bar in file explorer, type `cmd`, and press enter to open a command prompt at your current location. Your CMD path should end with `champ.wad`.
 
-![open_cmd_here.gif](/user-pictures/moga/open_cmd_here.gif =x325)
+<img src="/user-pictures/moga/open_cmd_here.gif" alt="open_cmd_here.gif" height="325" />
 
 To convert every single DDS file in a directory to TEX, or vice versa, shrimply run this for command inside `champ.wad`. Make sure you understand the four highlighted notes above.
 `for /R %I in (*dds) do tex2dds "%I"` If this fails with an error, appears blank/white in game, or wont load and crashes, see step 3 and 4.
@@ -97,14 +94,15 @@ Next, on the same command line, run `DEL /S 4x*.dds 4x*.tex 2x*.dds 2x*.tex` to 
 If this completed successfully, you can go to Step 5 to remake your WAD file and try it in game. 
 
 ## 3. Optional: Fix Bad DDS Pixel Format
-> There are two requirements for a DDS file to correctly convert to a league TEX file. It must be in a DXT1, DXT5, or uncompressed BGRA8 format and it's X and Y dimensions must both be multiples of 4.
-{.is-info}
+:::note
+There are two requirements for a DDS file to correctly convert to a league TEX file. It must be in a DXT1, DXT5, or uncompressed BGRA8 format and it's X and Y dimensions must both be multiples of 4.
+:::
 
 This step can also be used to pre-fix any potentially bad DDS files before converting them to TEX.
 
 In most cases, simply converting all DDS files to TEX with `tex2dds` will have worked, but if both of the above criteria are not met, your TEX file will either simply fail to convert and produce an error such as `Error: dds file needs to be in either DXT1, DXT5 or uncompressed BGRA8 format!`, appear invisible or whited out in game, or fail to load and crash League.
 
-![saved_bad_dds.png](/user-pictures/moga/saved_bad_dds.png =x200)
+<img src="/user-pictures/moga/saved_bad_dds.png" alt="saved_bad_dds.png" height="200" />
 
 - Type `texconv` with no options to see all available switches.
 
@@ -116,9 +114,10 @@ Now, run `texconv -f BC3_UNORM -r:keep -y *dds` to iterate on all DDS files belo
 
 ![img_of_texconv_cmd.png](/user-pictures/moga/img_of_texconv_cmd.png)
 
-> While using `texconv`, it is important you are not in any random directory while using it because `-r` combined with the `*` wildcard will tell texconv to do **every** file under you. **If you want to work on a directory you are not inside of, you need to provide an output DIRECTORY to texconv with `-o`** Ex., `texconv -f BC3_UNORM -r:keep -y -o "Mod_Name\folder" "Mod_Name\folder\*dds"`
+:::caution
+While using `texconv`, it is important you are not in any random directory while using it because `-r` combined with the `*` wildcard will tell texconv to do **every** file under you. **If you want to work on a directory you are not inside of, you need to provide an output DIRECTORY to texconv with `-o`** Ex., `texconv -f BC3_UNORM -r:keep -y -o "Mod_Name\folder" "Mod_Name\folder\*dds"`
 Until you understand this command you should make sure you are under `Champ.wad` like the above image!
-{.is-warning}
+:::
 
 ## 4. Optional: Fix Bad DDS Dimension(s)
 
@@ -134,12 +133,13 @@ To fix this file you need to convert the DDS' pixel format to `BC3_UNORM` as exp
 
 Do note that adjusting—and especially ever so slightly changing the aspect ratio of very small files—such as an icon with the size 111x94 to 112x96 will create **very** apparent resampling artifacts. In order to preserve image quality, it may be better to actually crop pixels from a specific side of the image using a photo editor such as [Paint.NET](https://www.getpaint.net/). Cropping instead of resizing is usually only necessary for for static images like icons or decals with text, whereas resizing an erroneous mod's champion texture from 258x256 to 256x256 is unlikely to produce noticeable discrepancies in game. If the texture is a part of the game involving heavy movement or is otherwise not a static icon, then any resampling blur will not be noticeable in the final TEX texture.
 
-![fukt_up_resize.png](/user-pictures/moga/fukt_up_resize.png =x220)
+<img src="/user-pictures/moga/fukt_up_resize.png" alt="fukt_up_resize.png" height="220" />
 
 As seen in the image above, the right side image, having been resized to 112x96, has very visible artifacting, especially around it's jagged border. If I were to instead crop or extend the the original image's canvas (in accordance with the proper TEX dimensions), it will likely have no or extremely minor adjustments in game; and completely avoid the risk of resample blur ruining the image. The results of cropping can vary on the type of image, for example, an image used as an animation graphic like `kayn_spritesatlas_02`; even cropping or adding only a single pixel may completely alter it's animation in game.
 
-> Remember, if the input file provided to `texconv` is not in your current directory, i.e., the input file `"path\path\*.dds"`, you need to provide an output path, `-o "path\path"` before. Also note that `texconv` will only output to preexisting directories.
-{.is-info}
+:::note
+Remember, if the input file provided to `texconv` is not in your current directory, i.e., the input file `"path\path\*.dds"`, you need to provide an output path, `-o "path\path"` before. Also note that `texconv` will only output to preexisting directories.
+:::
 
 If you are unable to find the broken file(s) manually there is simple way to find them.
 1. Run `texdiag info -r *dds>>%desktop%\fixdds_allinfo.txt`, into a text file. Note `%desktop%` is an example path, change that directory and filename to one for your drive.

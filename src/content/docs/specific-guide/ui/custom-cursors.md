@@ -1,11 +1,7 @@
 ---
 title: Making Custom Cursors
 description: This guide explains the creation of custom cursors using Photoshop and paint.net
-published: true
-date: 2024-08-26T10:56:42.137Z
-tags: guide, photoshop, ui, paint.net
-editor: markdown
-dateCreated: 2024-02-18T21:42:47.305Z
+lastUpdated: 2024-08-26
 ---
 
 # Making Custom Cursos
@@ -15,11 +11,9 @@ You will need one of the following tools to save your custom cursors.
 ### Free
 - <a href="/core-guides/tools/paint-net">paint.net*Explained in this guide*</a>
 - <a href="/core-guides/tools/gimp">GIMP*Not included in this guide (yet)*</a>
-{.links-list}
 
 ### Paid
 - <a href="/core-guides/tools/adobe/photoshop">Adobe Photoshop*Explained in this guide*</a>
-{.links-list}
 
 ---
 ## Extracting and opening League's pointers
@@ -80,8 +74,9 @@ You will lastly be asked to flatten the image to 1 layer. Simply press Flatten a
 
 ### Adobe Photoshop
 
->You do NOT need the .dds plugin for Adobe Photoshop if you wish to make custom cursors as they are saved in the .tga format.
-{.is-info}
+:::note
+You do NOT need the .dds plugin for Adobe Photoshop if you wish to make custom cursors as they are saved in the .tga format.
+:::
 
 TBD
 

@@ -1,17 +1,12 @@
 ---
 title: Hacksaw
 description: A guide on how to install and use Hacksaw.
-published: true
-date: 2024-08-26T10:56:02.724Z
-tags: guide, hacksaw, install, vfx, bin, color
-editor: markdown
-dateCreated: 2024-02-11T19:30:02.226Z
+lastUpdated: 2024-08-26
 ---
 
 # Installing
 
 - [Download Hacksaw *by TheMartynasXS*](https://github.com/TheMartynasXS/Hacksaw/releases)
-{.links-list}
 
 When installing the program, make sure that you have the latest release installed, you can confirm as such on github:
 
@@ -20,7 +15,6 @@ When installing the program, make sure that you have the latest release installe
 When opening the application, it will ask you to find your Ritobin.cli file in order for it to run. Keep in mind that Hacksaw does not function together with the latest version of Ritobin, so go to Ritobin’s Github and download the newest release.
 
 - [Download Ritobin *by Moonshadow*](https://github.com/moonshadow565/ritobin/releases)
-{.links-list}
 
 # Setting up
 

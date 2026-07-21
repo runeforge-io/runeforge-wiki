@@ -1,16 +1,13 @@
 ---
 title: Blender
 description: A starting guide to using Blender for League modding
-published: true
-date: 2024-08-26T10:55:43.753Z
-tags: guide, tools, 3d, modelling, animation, blender
-editor: markdown
-dateCreated: 2024-02-10T14:01:52.224Z
+lastUpdated: 2024-08-26
 ---
 
->W.I.P
+:::note
+W.I.P
 This page is under construction!
-{.is-info}
+:::
 # Blender
 This guide shows you how you can utilize Blender for League modding.
 ## Steam Blender
@@ -24,14 +21,13 @@ If you don't need multiple Blender instances open and you like automatic updates
 ### Downloads
 - <a href="https://store.steampowered.com/app/365670/Blender/">Steam Blender download</a> (*requires a Steam account*)
 - <a href="https://www.blender.org/download/">Standalone Blender download</a>
-{.links-list}
 
 ---
 # What you can and cannot do in Blender
   ### Without Maya
  <!--ADD EXAMPLES OF ALL MENTIONED FILES AS SCREENSHOTS, CROSS OUT ONES YOU CANT DO IN BLENDER-->
-Without using Autodesk Maya you can edit champion's <a href="/en/specific-guide/filetypes#skn">.skn</a> and [.skl](/en/specific-guide/filetypes#skl) files.
-Currently you cannot edit <a href="/en/specific-guide/filetypes#anm">.anm</a>, <a href="/en/specific-guide/filetypes#scb">.scb</a> and <a href="/en/specific-guide/filetypes#sco">.sco</a> files without using <a href="/core-guides/tools/maya">Autodesk Maya.</a>
+Without using Autodesk Maya you can edit champion's <a href="/specific-guide/filetypes">.skn</a> and [.skl](/specific-guide/filetypes) files.
+Currently you cannot edit <a href="/specific-guide/filetypes">.anm</a>, <a href="/specific-guide/filetypes">.scb</a> and <a href="/specific-guide/filetypes">.sco</a> files without using <a href="/core-guides/tools/maya">Autodesk Maya.</a>
   ### With Maya
 If you have Autodesk Maya 2023/24 you can edit all the files mentioned above with Blender.
 When you save your FBX file in blender you can save it in Maya as one of the files you need.
@@ -53,9 +49,9 @@ If you wish to use [lol2gltf](/core-guides/tools/lol2gltf) refer to its guide pa
 
 ## LtMAO
 <!--CHANGE THE LTMAO LINK IF THE PAGE GETS MADE WITH A DIFFERENT LINK-->
-<a href="/core-guides/tools/LtMAO">LtMAO</a> is a useful modding tool, however you will need it for its lol2fbx feature as there is no Blender plugin for League files.
+<a href="/core-guides/tools/ltmao">LtMAO</a> is a useful modding tool, however you will need it for its lol2fbx feature as there is no Blender plugin for League files.
 
-Head to <a href="/core-guides/tools/LtMAO">LtMAO</a> guide page to see how to use the tool, along with lol2fbx.
+Head to <a href="/core-guides/tools/ltmao">LtMAO</a> guide page to see how to use the tool, along with lol2fbx.
 
 ---
 # Saving FBX to convert back
@@ -80,7 +76,7 @@ After saving your FBX file convert it back to .skn and .skl using one of the too
   ## Texture look wierd in game
  You most likely forgot to flip the normals of the mesh.
   ## Other issues
-  Refer to the <a href="/core-guides/tools/LtMAO">LtMAO</a> lol2fbx or <a href="/core-guides/tools/lol2gltf">lol2gltf</a> guide for any encountered errors.
+  Refer to the <a href="/core-guides/tools/ltmao">LtMAO</a> lol2fbx or <a href="/core-guides/tools/lol2gltf">lol2gltf</a> guide for any encountered errors.
   <!--ADD LINKS TO STUFF-->
   
   

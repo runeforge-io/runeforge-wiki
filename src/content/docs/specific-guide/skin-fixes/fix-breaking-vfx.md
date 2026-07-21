@@ -1,11 +1,7 @@
 ---
 title: Common VFX Bugfixes
 description: A list of common VFX problems you might encounter
-published: true
-date: 2025-02-04T02:01:07.014Z
-tags: vfx, bin, fix, transparency, bug
-editor: markdown
-dateCreated: 2024-02-21T21:08:17.473Z
+lastUpdated: 2025-02-04
 ---
 
 
@@ -29,7 +25,7 @@ style="width:75%"></a>
 # Fix VFX transparency
 ## Explanation
 
-![transparent1.webp](/user-pictures/vector/general-guides/fix-sfx/transparent1.webp =393x) ![transparent2.webp](/user-pictures/vector/general-guides/fix-sfx/transparent2.webp =500x)
+<img src="/user-pictures/vector/general-guides/fix-sfx/transparent1.webp" alt="transparent1.webp" width="393" /> <img src="/user-pictures/vector/general-guides/fix-sfx/transparent2.webp" alt="transparent2.webp" width="500" />
 
 Left are are DEFAULT Soraka particles. and right are edited Lux particles. This is caused by .bins using an incorrect blendmode or having the image in the wrong way. In Sorakas case she uses the same particle for Q heal passive effect  on her and the Q missile head. The way her textures are set up is not  compatible, one of those is always gonna be bugged.
 

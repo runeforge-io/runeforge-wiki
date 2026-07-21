@@ -1,31 +1,28 @@
 ---
 title: Maya Errorlist
 description: All common errors you might find while working with maya.
-published: true
-date: 2025-08-26T20:34:40.347Z
-tags: maya, error, fix
-editor: markdown
-dateCreated: 2024-12-31T17:35:21.031Z
+lastUpdated: 2025-08-26
 ---
 
 <center>
 
-  > This page is still W.I.P. we will add/update more errors in time.
-{.is-warning} 
+:::caution
+This page is still W.I.P. we will add/update more errors in time.
+:::
 
 </center>
 
 
 # Maya Errorlist
 
-> Disclaimer: This list is not exhaustive. Maya is a sophisticated tool, and the expected outcomes may vary based on the plugins and versions in use. Additionally, we are unable to provide a comprehensive list of all potential errors that may arise during your experience with Maya. Instead, we will focus on common errors specifically encountered when modding League of Legends models.
-{.is-info}
+:::note
+Disclaimer: This list is not exhaustive. Maya is a sophisticated tool, and the expected outcomes may vary based on the plugins and versions in use. Additionally, we are unable to provide a comprehensive list of all potential errors that may arise during your experience with Maya. Instead, we will focus on common errors specifically encountered when modding League of Legends models.
+:::
 
 
 **Lolmaya Error List**
 
 - [Lolmaya errorlist](/core-guides/tools/maya/lolmaya-errorlist)
-{.links-list}
 
 
 # Common Errors

@@ -1,11 +1,7 @@
 ---
 title: CS-LoL Manager
 description: The tool to install and create mod packages.
-published: true
-date: 2024-11-06T20:14:13.572Z
-tags: cslol, tool, guide, install, update, conflict, error
-editor: markdown
-dateCreated: 2024-02-07T11:36:31.919Z
+lastUpdated: 2024-11-06
 ---
 
 CS-LoL Manager is a tool to install and create mod packages mostly made by [Moonshadow](https://github.com/moonshadow565) with help from [Morilli](https://github.com/Morilli).
@@ -15,7 +11,6 @@ CS-LoL Manager is a tool to install and create mod packages mostly made by [Moon
 # Download and Installation
 Make sure you download the newest version:
 - [CS-LoL *Download the newest version*](https://github.com/LeagueToolkit/cslol-manager/releases/latest)
-{.links-list}
 
 <br>
 <img src="/csloldownload.png" alt="cs-lol download" style="height: 500px" />
@@ -34,11 +29,12 @@ The standard League game installation path would be:
 `C:\Riot Games\League of Legends\Game`
 Now press select and you're done!
 
-> Please do **NOT** install Cslol manager into the League of Legends installation folder.
-{.is-warning}
+:::caution
+Please do **NOT** install Cslol manager into the League of Legends installation folder.
+:::
 
 # Install a Mod
-Once you have the CS-LoL-Manager set up, downloading mods is rather straightforward from then on. Simply take the .zip or [.fantome](/specific-guide/filetypes#fantome) file that you downloaded on our site for the relevant skin, and drag and drop it into the program.
+Once you have the CS-LoL-Manager set up, downloading mods is rather straightforward from then on. Simply take the .zip or [.fantome](/specific-guide/filetypes) file that you downloaded on our site for the relevant skin, and drag and drop it into the program.
 
 ![running_skins.webp](/user-pictures/vector/new-post-guide/running_skins.webp)
 As you add the skin into the program, simply click the box to mark it as selected, and click run on the top right corner for it to run.
@@ -70,7 +66,7 @@ Start by renaming all folders of your mod the same way as its listed in the orig
   <source src="/user-pictures/vector/general-guides/videos/cslolmakemod_fiels.mp4" type="video/mp4">
 </video>
 
-![folder_structure.png](/user-pictures/vector/general-guides/general/folder_structure.png =25%x)
+<img src="/user-pictures/vector/general-guides/general/folder_structure.png" alt="folder_structure.png" style="width:25%" />
 As you can see in the video and the picture above, this is the exact same folder structure as her .wad file. You also need to keep the files in place as in the original.
 
 ## Step 2 CS-Lol mod import

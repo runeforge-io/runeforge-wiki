@@ -1,11 +1,7 @@
 ---
 title: How to fix moonwalking
 description: This is the fix for when your champion starts walking in random directions
-published: true
-date: 2025-02-04T02:00:02.393Z
-tags: animation, code
-editor: markdown
-dateCreated: 2024-02-22T03:13:56.381Z
+lastUpdated: 2025-02-04
 ---
 
 # How to fix "moonwalking" champion

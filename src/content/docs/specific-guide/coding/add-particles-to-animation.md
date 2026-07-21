@@ -1,11 +1,7 @@
 ---
 title: Adding Particle events to specific animations
 description: A guide on how to add particles to animations.
-published: true
-date: 2024-08-26T10:57:23.490Z
-tags: animation, bin, particle
-editor: markdown
-dateCreated: 2024-02-22T17:31:46.922Z
+lastUpdated: 2024-08-26
 ---
 
 # Overview
@@ -18,13 +14,11 @@ If you encounter any issues with this tutorial or you don’t understand part of
 
 An code editor of your choice, we recommend **Visual Studio Code**:
 - [Choose any Code Editor *Visual Studio Code is recommended*](/core-guides/tools#code-bin-editing)
-{.links-list}
 
 If you choose Visual Studio Code, you need the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) aswell!
 *Other editors work aswell, aslong as they can edit .py (Python) files.*
 
 - [Ritobin *Tools to convert bin files into Python files*](/core-guides/tools/rito-bin)
-{.links-list}
 
 # Written Guide
 You will need the `skin0.bin` inside data for both skin and animation bin.

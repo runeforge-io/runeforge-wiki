@@ -1,11 +1,6 @@
 ---
 title: Handling/Fixing weird .dds files
-description: 
-published: true
-date: 2025-02-04T02:00:48.113Z
-tags: photoshop, texturing, gimp
-editor: markdown
-dateCreated: 2024-02-22T03:44:52.272Z
+lastUpdated: 2025-02-04
 ---
 
 # Handling/Fixing weird .dds files
@@ -26,12 +21,10 @@ However, there are multiple textures which have that effect, so you  will need t
 
 ## Required tools
 -   [Adobe Photoshop + .dds Plug-in: NVIDIA Texture Tools / Intel Texture Works *Program to edit 2D files*](/core-guides/tools/adobe/photoshop)
-{.links-list}
 
 Or
  
 -   [Gimp *Program to edit 2D files*](/core-guides/tools/gimp)
-{.links-list}
 
 
 ## Tutorial for Photoshop:
@@ -41,17 +34,17 @@ If you open the image, you can actually see that all the texture is there:
 
 And it’s all handled by an Alpha channel (black means invisible, white means visible):
 
-![4.webp](/user-pictures/goat/handlingfixingdds/4.webp =x400)
+<img src="/user-pictures/goat/handlingfixingdds/4.webp" alt="4.webp" height="400" />
 
 Only the small ball on her “antenna” glows when her passive is up.
 
 In order to make her eyes glow with the passive, I will paint the alpha layer on top of her eyes white too.
 
-![5.webp](/user-pictures/goat/handlingfixingdds/5.webp =x400)
+<img src="/user-pictures/goat/handlingfixingdds/5.webp" alt="5.webp" height="400" />
 
 When I save it now, it looks like this:
 
-![6.webp](/user-pictures/goat/handlingfixingdds/6.webp =x400)
+<img src="/user-pictures/goat/handlingfixingdds/6.webp" alt="6.webp" height="400" />
 
 It reproduces the effect of the Riot texture.
 
@@ -61,7 +54,7 @@ When you open the file you are greeted with the same mysterious invisible image 
 ![7.webp](/user-pictures/goat/handlingfixingdds/7.webp)
 To see original texture go over to “CHANNELS” tab and disable alpha channel:
 
-![8.webp](/user-pictures/goat/handlingfixingdds/8.webp =x400)
+<img src="/user-pictures/goat/handlingfixingdds/8.webp" alt="8.webp" height="400" />
 
 Now go back to layers tab and right click > new from visible:
 

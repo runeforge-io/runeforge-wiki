@@ -1,11 +1,7 @@
 ---
 title: Fixing Broken Face Normal
 description: This is how you can fix your champion looking "see-through"
-published: true
-date: 2025-02-04T02:00:32.387Z
-tags: modelling, texture
-editor: markdown
-dateCreated: 2024-02-22T04:14:43.862Z
+lastUpdated: 2025-02-04
 ---
 
 # Fixing Broken Face Normals
@@ -17,7 +13,7 @@ This is more common, where the whole character or connected parts appears kind o
 
 Staff is missing from certain angles, rather uncommon to just have a few face normals wrong.
 
-![2.webp](/user-pictures/goat/brokennormals/2.webp =x342)
+<img src="/user-pictures/goat/brokennormals/2.webp" alt="2.webp" height="342" />
 
 You can check face normals in Maya here:
 
@@ -40,7 +36,7 @@ The fix is very simple :
 
 Select your mesh, then, while in the modeling tab, go to Mesh Display > Reverse
 
-![fix.png](/user-pictures/goat/brokennormals/fix.png =x400)
+<img src="/user-pictures/goat/brokennormals/fix.png" alt="fix.png" height="400" />
 
 Your model should now appear normal!
 

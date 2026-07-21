@@ -1,11 +1,7 @@
 ---
 title: Notepad ++
 description: A guide on how to install and use Notpad ++
-published: true
-date: 2024-08-26T10:56:00.644Z
-tags: guide, install, notpad++, notepad, plus
-editor: markdown
-dateCreated: 2024-02-11T19:29:34.225Z
+lastUpdated: 2024-08-26
 ---
 
 >Oh shucks!

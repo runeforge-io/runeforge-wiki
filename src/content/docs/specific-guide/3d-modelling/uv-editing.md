@@ -1,20 +1,15 @@
 ---
 title: UV Editing
 description: A general overview of UV editing and modding-specific use cases of it
-published: true
-date: 2024-08-26T10:57:57.600Z
-tags: 
-editor: markdown
-dateCreated: 2024-04-29T15:16:42.757Z
+lastUpdated: 2024-08-26
 ---
 
 Page is still in the works, for further help ask in the discord
 -Gatrix
 
 # Required Tools
-- [Maya + LoLMayaPlugin *3D editing software*](https://wiki.runeforge.io/en/core-guides/tools/maya)
-- [Any photo editing software *`paint.net` is highly recommended*](https://wiki.runeforge.io/en/core-guides/tools/paint-net)
-{.links-list}
+- [Maya + LoLMayaPlugin *3D editing software*](/core-guides/tools/maya)
+- [Any photo editing software *`paint.net` is highly recommended*](/core-guides/tools/paint-net)
 
 # Introduction to UVs
 The concept of UVs is quite simple.
@@ -94,7 +89,7 @@ List of possible use cases I'll be covering in this guide.
 
 # Specific examples
 ## Combining downloaded texture files into a single file
-This will most likely be useful if you're following [the guide for replacing champions with a different model](https://wiki.runeforge.io/en/specific-guide/3d-modelling/Replacing-Champion-With-a-Completely-Different-Model), which doesn't go into detail about how to get textures to work, but that's what this guide is for.
+This will most likely be useful if you're following [the guide for replacing champions with a different model](/specific-guide/3d-modelling/replacing-champion-with-different-model), which doesn't go into detail about how to get textures to work, but that's what this guide is for.
 Since both guides tell you to edit the mesh you've downloaded, it is important to note that ***editing the UV should ALWAYS happen before binding the skin to the skeleton.***
 
 ### Sorting files
@@ -136,7 +131,7 @@ Now you just have to import all other texture files, put them in their assigned 
 Remember to save it as a .dds with "BC3, Linear DXT5" (`paint.net` will default to "BC1, Linear DXT1").
 
 This single file is what you'll replace the champ's original .dds texture with.
-You can now continue following [the guide for replacing champions with a different model](https://wiki.runeforge.io/en/specific-guide/3d-modelling/Replacing-Champion-With-a-Completely-Different-Model).
+You can now continue following [the guide for replacing champions with a different model](/specific-guide/3d-modelling/replacing-champion-with-different-model).
 
 ## Fixing weird UVs
 - UVs outside 0-1 boundary

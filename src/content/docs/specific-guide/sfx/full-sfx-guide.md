@@ -1,23 +1,17 @@
 ---
 title: Full sound modding guide
 description: A full overview of sound modding for League of Legends.
-published: true
-date: 2024-10-30T04:44:09.005Z
-tags: sfx, sound fx, sound effects, sound
-editor: markdown
-dateCreated: 2024-02-22T20:47:04.714Z
+lastUpdated: 2024-10-30
 ---
 
 # Required Tools
 Download: **BNK-extract**, **Audacity**, **Wwise** 
 
-- [Audio Tools](/core-guides/tools#sound-fx-audio)
-{.links-list}
+- [Audio Tools](/core-guides/tools#sound-fx--audio)
 
 Optional:
 - [Foobar2000 *Convert Leagues file format into common ones.*](https://www.foobar2000.org/)
 - [Foobar2000 League Plugin *Nessecary if you want to use Foobar*](https://vgmstream.org/)
-{.links-list}
 
 # Written Guide
 ## Preparation

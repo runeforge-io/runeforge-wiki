@@ -1,11 +1,7 @@
 ---
 title: Custom Skins in Blender - Starting guide
 description: A couple of videos(with a tutorial you can follow) to get started with the very basics of custom skinning
-published: true
-date: 2024-09-07T17:23:21.971Z
-tags: 3d, modelling, blender
-editor: markdown
-dateCreated: 2024-02-12T16:10:47.938Z
+lastUpdated: 2024-09-07
 ---
 
 # Custom Skins in Blender - Starting Guide
@@ -16,7 +12,6 @@ This guide will help you start making custom skins on Blender, having the tools 
 - [Obsidian *Redirect to our Download and Guide page*](/core-guides/tools/obsidian)
 - [lol2gltf *Redirect to Download Page | **Make sure you download both, the .exe and CLI.exe!***](https://github.com/Crauzer/lol2gltf/releases/tag/3.0.3)
 - [Paint NET *Redirect to Download Page*](https://www.getpaint.net/download.html#download)
-{.links-list}
 ## Tool Installation
 ### lol2gltf
 - Create a folder called "lol2gltf"
@@ -41,7 +36,7 @@ This guide will help you start making custom skins on Blender, having the tools 
 - Open "Blender"
 - Go to "File", "Import", "gltf2.0"
 - **MAKE SURE YOU CHANGE BONE DIR TO "Blender"**
-![imagem_2024-02-12_153307903.png](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_153307903.png =75%x)
+<img src="/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_153307903.png" alt="imagem_2024-02-12_153307903.png" style="width:75%" />
 - Select your file
 - You should be able to see the model imported into blender
 - If the model has various materials interlapping eachother, you can hide them by changing them to "Alpha Clip" (see video for example)
@@ -57,7 +52,7 @@ For my example, the command would be
 - A command box should appear
 - Paste the command from before
 - If it worked, it created a .skn and .skl file on the export location you provided
-![imagem_2024-02-12_154851922.png](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_154851922.png =x400)![imagem_2024-02-12_154903496.png](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_154903496.png)
+<img src="/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_154851922.png" alt="imagem_2024-02-12_154851922.png" height="400" />![imagem_2024-02-12_154903496.png](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_154903496.png)
 ---
 ### If it didnt work, check the following
 - Make sure all the meshes are joined
