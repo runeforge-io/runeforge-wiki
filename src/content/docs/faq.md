@@ -1,80 +1,135 @@
 ---
 title: FAQ
-description: Frequently Asked Questions
+description: All information about Runeforge 2.0, becoming a Creator, posting mods, and frequently asked questions.
 lastUpdated: 2025-01-26
 ---
 
+# Runeforge 2.0 is here
 
-:::caution
-This page is no longer maintained, please visit [this](/runeforge2#faq) one to read our current FAQ!
-:::
+Runeforge came a long way, now we want to present Runeforge 2.0. Please note, that the website is still in BETA. Bugs and missing functions can still occur. If you notice a bug, please let us know on our [Discord](https://discord.com/invite/runeforge) Server!
+
+# How to become a Creator
+
+### Step 1 Register Account
+
+- Create an Account by clicking "register" in the top right corner
+
+### Create a Mod
+
+*See [how to post a Mod](/faq#how-to-post-a-mod)*
+
+- Go to your dashboard (top right corner and click dashboard)
+- Click "Create mod" & follow the steps
+
+### Review your mod
+
+- Once finished, click "Send for Review"
+
+After some time, once the mod got reviewed, you can get either of the following responses:
+
+- **Review rejected**
+We tell you why your mod got rejected, fix those issues and resend for another review
+
+- **Review approved**
+After you got your first mod approved, you can continue to post more afterwards without the waittime. You also automatically get the Creator role on your account.
 
 
-
-# *Frequently Asked Questions*
-
-<br>
-
-## Are custom skins safe to use?
-Riot has stated previously that Custom Skins are "Use at your own risk" as they cannot take responsibility if third parties provide you with any malware when using Custom Skins. 
-That said, RuneForge is the safest Custom Skins platform with an active community and moderation team. 
-
-
-### Can I get banned for using Custom Skins?
-RuneForge currently has no recorded bans registered from any of its mods. But does warn users not to use Custom Skins in Korean Servers due to past banning history and strict competitive management of those servers.
-
-<br>
-
-## What about Vanguard?
-**Vanguard was added to all the servers recently, for news surrounding it join our [Discord](https://www.discord.gg/runeforge) server.**
-
-
-Custom skins work fine with `cslol-manager`.
-
-
-### Vanguard was added in 14.9, is it bannable now?
-A new version of Cslol was released which uses the new DLL patcher that works with Vanguard.
-Download the new version and you are good to go!
-
-- [Download the latest Cslol](https://github.com/LeagueToolkit/cslol-manager/releases)
+# How to post a Mod
 
 <br>
 
-### Will I get banned for using cslol-manager if I use it with Vanguard ?
-We can confidently say that you will most likely not get banned. There have been no reports of bans from the PH server and we do not expect that to change any time soon as it would signal a stance change from Riot towards custom skins - something which is unlikely to happen.
+<div align="left">
+  <a href="https://www.youtube.com/watch?v=BwR6KMdsHhU"><img src="https://img.youtube.com/vi/BwR6KMdsHhU/0.jpg" alt="Guide on how to post a mod"
+style="width:50%"></a>
+</div>
+
+*Video will open externally*
 
 
-## Missing skins?
-:::note
-Some creators aren't active anymore and skins could have been lost to time.
-:::
 
-We have the Skin Recovery Forum on our <a href="https://www.discord.gg/runeforge">Discord server</a> for:
-- Storing Skins
-- Fixing Old Skins
-- Looking For Skins
+## Which License should I use?
 
-Our main goal is to recover skins people want, so they can appear on the website later on.
+Licensing can be complicated, in order to understand what you want to allow user and what not, put the "Name" into the License field on Runeforge.
 
-## Help/Support
-:::note
-You can join our <a href="https://www.discord.gg/runeforge">Discord server</a> and ask for assistance in the help-forum.
-:::
+Example:
+You want you skin to only be played by users and not used for commercial use, then choose one license which prohibits commercial use like **CC-BY-NC-ND-4.0**.
+
+<br>
+
+| Name            | Credit | Commercial Use | Modifications Allowed | Share-Alike Required |
+| --------------- | ------ | -------------- | --------------------- | -------------------- |
+| CC-BY-4.0       | 🟢     | 🟢             | 🟢                    | 🔴                   |
+| CC-BY-SA-4.0    | 🟢     | 🟢             | 🟢                    | 🟢                   |
+| CC-BY-NC-4.0    | 🟢     | 🔴             | 🟢                    | 🔴                   |
+| CC-BY-NC-SA-4.0 | 🟢     | 🔴             | 🟢                    | 🟢                   |
+| CC-BY-ND-4.0    | 🟢     | 🟢             | 🔴                    | 🔴                   |
+| CC-BY-NC-ND-4.0 | 🟢     | 🔴             | 🔴                    | 🔴                   |
+
+🟢 : Yes
+🔴 : No
+
+# FAQ
+
+## Safety & Security
+
+<br>
+
+### Are custom skins safe to use?
+
+- Riot's official statement is "Use at your own risk", which means, it is allowed to use them but Riot does not take responsibility with any third party problems occuring in game or affect your PC
+
+- Runeforge has a moderation team and allows players to post mods for everyone else. We work with a Trusted status, which is a compromise between fast moderation and security
+
+### Can I get banned for using custom skins?
+
+- As of right now, no bans regarding skins provided by Runeforge are registered
+
+- Custom skin bans occured on **Korea** servers, on which all third party apps are prohibited including cs-lol
+
+- Cs-lol is not tested on **Chinese** servers, if you want to try it there, us at your own risk
+
+- Bans can and will occur if you used "free" paid skins also know as [Skin Hacking](/faq#can-i-get-paid-skins-through-custom-skins-skin-hacking)
+
+
+### Vanguard was added, is it dangerous to use cs-lol?
+
+- cs-lol does work with Vanguard, since its release in Patch 14.9, no bans or records regarding custom skins have been reported
+
+- Make sure you always run the latest version:
+[Download the latest Cslol](https://github.com/LeagueToolkit/cslol-manager/releases)
+
+<br>
+
+## Skins
+
+<br>
+
+### My favorite skin is missing
+
+Sometimes Creators leave the community or stop maintaining them. If the skin isn't on the website, you can try and ask in our Discord Skin recovery Forum for help.
+
+### Can I get Paid skins through custom skins? (Skin Hacking)
+
+No Skin hacking is prohibited by Riot Games. We highly recommend to not download and use those skins, since this can and will lead to bans from Runeforge and League of Legends.
+
+<br>
+
+## Help & Support
+
+<br>
+
+### My cs-lol/skin/game is broken
+
+Regarding any issue you might have with cs-lol you can either go to this [page](/core-guides/tools/cslolmanager#misc-guides) or visit our help forum in our Discord server.
+For any other issue regarding crashes, broken skins or missing sounds, etc. please visit our Discord server for further help.
 
 We have the Help Forum where you can ask for help about but not limited to:
+
 - CsLol issues
 - Broken skins
 - Help with creating
 - Issues regarding modding software we use
 
+### What happened to Killerskins?
 
-## Can I get a paid skin through custom skins?
-:::note
-No. We do not support skin hacking and never will.
-:::
-
-Skin hacking would be obtaining Riot skins for free. We will never allow this and please do not request it within our community.
-## What happened to Killerskins, where is it?
-:::note
-Killerskins was bound to shut down and Runeforge stepped in to save as much content as possible.
-:::
+- Killerskins had to shut down, Runeforge is its successor.
