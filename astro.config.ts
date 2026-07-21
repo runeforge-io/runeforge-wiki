@@ -19,6 +19,10 @@ export default defineConfig({
       description:
         'Community wiki for League of Legends skin and mod creation - guides for 3D modelling, animation, VFX, SFX, texturing, and more.',
       favicon: '/favicon.svg',
+      head: [
+        { tag: 'link', attrs: { rel: 'icon', href: '/favicon.ico', sizes: '32x32' } },
+        { tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' } },
+      ],
       social: [
         {
           icon: 'github',
@@ -40,6 +44,8 @@ export default defineConfig({
       components: {
         ThemeProvider: './src/components/ThemeProvider.astro',
         ThemeSelect: './src/components/ThemeSelect.astro',
+        // App-style logo box + "Wiki" in the header.
+        SiteTitle: './src/components/SiteTitle.astro',
       },
       plugins: [starlightLinksValidator()],
       sidebar: [
