@@ -28,25 +28,15 @@ style="width:75%" /></a>
 ## TIPS
 ### Best order to work on particles to minimize fuckups
 1. Look up skills that might be useful for your champion (skin previews etc.)
-
 2. Extract the bins and textures/models etc. for those abilities
-
 3. Copy all the particles folders of the other champions into your wad.client folder
-
 4. Edit the bins to your liking
-
 5. Check in-game
-
 6. If you have buggy textures: Run your wad folder through bintex, open the “Missing” list and add any missing files to your wad folder – Tutorial
-
 7. Make sure that you now have everything in-game
-
 8. In .bins, reroute all your particle files to the base folder of your champion – Tutorial
-
 9. Move all your particle files into the base folder of your champion
-
 10. Hope everything is there, if not, check the “Missing” list again or the code directly and add missing files.
-
 11. Done
 
 ## How to make your particles break less often

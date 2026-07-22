@@ -37,17 +37,13 @@ In order for a texture with a transparent background to show up properly, the bl
 ### How to fix
 
 1. Load the .bin(s) with incorrect blendmodes as .py in a coding program.
-
 2. Search for the name of the bugged looking texture after determining if it’s a texture with transparency or black background
-
 3. Look at the whole emitter it is in and look for a `blendmode` value,  it’s usually around the top and around `birthColor`. If you cannot find  one, it’s already set to 1 as 1 is default.
 
 ![The blendmode value inside an emitter near birthColor](/user-pictures/vector/general-guides/fix-sfx/transparent5.webp)
 
 4. Now change your blendmode to the correct one.
-
 5. Make sure every time this texture is mentioned it uses the same blendmode.
-
 6. If you need blendmode 4 and there is no blendmode value: simply add  it anywhere in the top part of the emitter, before the `pass:` value.
 
 ## Sources

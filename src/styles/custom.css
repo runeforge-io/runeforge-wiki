@@ -104,6 +104,19 @@ h6 {
   padding-inline-start: 1.625rem;
 }
 
+.sl-markdown-content li:not(:where(.not-content *)) {
+  --sl-content-gap-y: 0.5rem;
+}
+.sl-markdown-content
+  :is(ol, ul):has(> li > :not(a, strong, em, del, span, input, code, br, script, ol, ul))
+  > li
+  > :is(
+    :last-child:not(a, strong, em, del, span, input, code, br, script, :where(.not-content *)),
+    :not(script):has(~ script:last-child):not(:has(~ :not(script)))
+  ) {
+  margin-bottom: 0.75rem;
+}
+
 /* Markers slightly dimmer than the text so they read as structure. */
 .sl-markdown-content li:not(:where(.not-content *))::marker {
   color: var(--sl-color-gray-3);
