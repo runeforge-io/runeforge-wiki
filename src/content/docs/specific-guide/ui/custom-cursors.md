@@ -4,25 +4,23 @@ description: This guide explains the creation of custom cursors using Photoshop 
 lastUpdated: 2024-08-26
 ---
 
-# Making Custom Cursos
-
-## Tools
+### Tools
 You will need one of the following tools to save your custom cursors.
-### Free
+#### Free
 - <a href="/core-guides/tools/paint-net">paint.net*Explained in this guide*</a>
 - <a href="/core-guides/tools/gimp">GIMP*Not included in this guide (yet)*</a>
 
-### Paid
+#### Paid
 - <a href="/core-guides/tools/adobe/photoshop">Adobe Photoshop*Explained in this guide*</a>
 
 ---
-## Extracting and opening League's pointers
+### Extracting and opening League's pointers
 
 Firstly you want to extract all the pointers using Obsidian.
 
 The cursors are located under <kbd style="background-color:#343942">UI.wad.client/assets/ux/cursors</kbd>. Select and extract the cursors folder.
 
-![assetsuxcursors.png](/user-pictures/bud/assetsuxcursors.png)
+![Cursors folder selected in Obsidian for extraction](/user-pictures/bud/assetsuxcursors.png)
 
 Once you have extracted the cursors folder navigate to the location where you extracted it and you will see all the pointers League uses which includes legacy and the new ones.
 
@@ -30,7 +28,7 @@ You can delete the pointers you don’t need. Ones that have a small mouse icon 
 
 You can also delete legacy or the new pointers, depending on which ones you want to edit. In this guide the new cursors will be edited.
 
-![cursors.png](/user-pictures/bud/cursors.png)
+![Extracted cursor files in the cursors folder](/user-pictures/bud/cursors.png)
 
 Prepare the pointers. See what pointers you have left in the cursors folder and prepare your own.
 
@@ -40,23 +38,23 @@ New pointers are all 64 pixels by 64 pixels.
 
 ---
 
-## Replacing Pointers
+### Replacing Pointers
 
-### paint.<span>net</span>
+#### paint.<span>net</span>
 
 Open what pointers you want to edit one by one by simply dragging them onto paint.<span>net</span> and pressing Open.
 
 Press <code>CTRL+SHIFT+V</code> to paste your image as a new layer on the original pointer, or you can draw on it.
 
-![igot2layers.png](/user-pictures/bud/igot2layers.png)
+![Custom cursor pasted as a new layer in paint.net](/user-pictures/bud/igot2layers.png)
 
 After you’ve added your cursor on top as a new layer and positioned it right you can look over to the bottom right to the layers tab and uncheck the background layer.
 
-![cursorsunckechkedlayers.png](/user-pictures/bud/cursorsunckechkedlayers.png)
+![Background layer unchecked in the paint.net layers tab](/user-pictures/bud/cursorsunckechkedlayers.png)
 
 Process for other pointers is the same, the paint bucket tool is used to recolor the pointers accordingly.
 
-![rednbluecursor.png](/user-pictures/bud/rednbluecursor.png)
+![Pointers recolored red and blue with the paint bucket tool](/user-pictures/bud/rednbluecursor.png)
 
 After you finished editing the cursors you want head over to each one and save them like this.
 
@@ -64,15 +62,15 @@ Press <code>CTRL+SHIFT+S</code> to save as. paint.<span>net</span> will automati
 
 Press Save and you will be prompted to replace the old file, click Yes.
 
-![tgacompression.png](/user-pictures/bud/tgacompression.png)
+![TGA save settings dialog in paint.net](/user-pictures/bud/tgacompression.png)
 
 Do not touch the Bit Depth setting. You can uncheck the Compress (RLE) setting if you feel like it will make a difference which will make your file around 13 Kilobytes larger. Press OK. 
 
-![flattenimage.png](/user-pictures/bud/flattenimage.png)
+![Flatten image prompt shown when saving the TGA](/user-pictures/bud/flattenimage.png)
 
 You will lastly be asked to flatten the image to 1 layer. Simply press Flatten and it will save. If you have anything unfinished after flattening you can always Undo.
 
-### Adobe Photoshop
+#### Adobe Photoshop
 
 :::note
 You do NOT need the .dds plugin for Adobe Photoshop if you wish to make custom cursors as they are saved in the .tga format.
@@ -82,11 +80,11 @@ TBD
 
 ---
 
-## Testing the mod
+### Testing the mod
 
 Once you finished editing all the pointers you will need to put the assets folder inside a folder either named UI or UI.wad.client.
 
-![cursorspathwin.png](/user-pictures/bud/cursorspathwin.png)
+![Assets folder placed inside a UI.wad.client folder](/user-pictures/bud/cursorspathwin.png)
 
 The final address of the folder should look like this: 
 
@@ -98,11 +96,11 @@ Head over to the Practice Tool and check how your cursor looks. Enable target ch
 
 If everything is alright, congrats on creating a cursor mod!
 
-## Windows cursors
+### Windows cursors
 
 The pointers that the Windows Operating system uses are located under <kbd style="background-color:#343942">C:\Windows\Cursors</kbd>. Using the <a href="https://forums.getpaint.net/topic/927-icon-cursor-and-animated-cursor-format-v37-may-2010/page/13/#comment-514467">.ico .cur and .ani paint.net plugin</a> and [.svg and .svgz plugin for paint.net](https://forums.getpaint.net/topic/117086-scalable-vector-graphics-filetype-alternative-plugin-svg-svgz/) you can open these pointers in paint.<span>net</span> without needing to convert any files.
 
-## Useful Links and Resources
+### Useful Links and Resources
 
 - [Open Cursor Library](http://www.rw-designer.com/cursor-library), there are many cursors for Windows here
 

@@ -4,15 +4,14 @@ description: A short guide on how to use the "Simple HUD Template" made by Yoru 
 lastUpdated: 2025-04-26
 ---
 
-# Simple HUD Template
 Yoru made a simplified HUD for herself and decided to turn it into an easy-to-use template so everyone can use it too.
 
 If you use this template, please credit it properly and link back to this page.
 
 
-![previewpic.webp](/user-pictures/vector/general-guides/simplehud/previewpic.webp)
+![Preview of Yoru's simplified HUD in-game](/user-pictures/vector/general-guides/simplehud/previewpic.webp)
 
-## Nessecary tools
+### Nessecary tools
 - [Yoru's Template *Download the .zip file and extract it to the folder "UI.wad.client"*](https://drive.google.com/file/d/13GYjZe1m2v6c88BdOz6J7MgUwa5Mlo2c/view)
 - [Photoshop *Paid Program to edit picture files*](/core-guides/tools/adobe/photoshop)
 
@@ -24,13 +23,12 @@ If you use this template, please credit it properly and link back to this page.
 Optional if you dont have Photoshop:
 - [Photopea *No guarantee, web version of Photoshop*](https://www.photopea.com/)
 
-**Season 12 Update:**
+#### Season 12 Update
 Due to changes in filetype to .tex files you now need to convert all [.dds](/specific-guide/filetypes) files into [.tex](/specific-guide/filetypes) files after editing:
 - [Tex2DDS by Morilli *Tool to convert .dds files into .tex*](https://github.com/Morilli/Ritoddstex/releases)
 
-<br>
 
-## Infos
+### Infos
 
 The layers (should) have the same name in all of the .psd files.They are also color coded:
 
@@ -49,20 +47,16 @@ The layers (should) have the same name in all of the .psd files.They are also co
 |<span style="color:gray">Gray:</span>| You do not need to edit that layer at all and they are usually locked, however, you can turn it invisible if you want to, unless it says (Leave untouched).|
 
 |Uncolored: |Folders containing all the image areas you can drop in your image.|
-<br>
 There will also be gray colored folders called “Empty layers for actions (Ignore)”. They are needed in order to not break when batch processing the template.
 
-## Video Guide
+### Video Guide
 Follow the video until the 17th minute, then scroll further.
-<br>
-<div align="left">
-  <a href="https://www.youtube.com/watch?v=9BMv-_M00ac"><img src="https://img.youtube.com/vi/9BMv-_M00ac/0.jpg" alt="Guide on how to use the simple hud template"
+<a href="https://www.youtube.com/watch?v=9BMv-_M00ac"><img src="https://img.youtube.com/vi/9BMv-_M00ac/0.jpg" alt="Guide on how to use the simple hud template"
 style="width:75%"></a>
-</div>
 
 *External link to Youtube!*
 
-# Sources
+## Sources
 
 - Yoru Queen of Night
 

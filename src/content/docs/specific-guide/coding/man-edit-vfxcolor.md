@@ -4,7 +4,7 @@ description: A short guide on how to manually edit VFX colors in bin files.
 lastUpdated: 2024-08-26
 ---
 
-# Required tools
+## Required tools
 
 Extractor and Converter:
 - [Obsidian *Tool to explore and export Riot Game files*](/core-guides/tools/obsidian)
@@ -21,31 +21,28 @@ A calculator or:
 
 *Your antivirus may flag this prgram, it is of course safe!*
 
-# Guide
-## Color Codes
+## Guide
+### Color Codes
 1,1,1,X = White0,0,0,X = BlackShould be left like this as it can distort the look of particles.
 
-## Edit multiple same values in Visual Studio Code
+### Edit multiple same values in Visual Studio Code
 Sometimes you have blocks like this, where you have multiple lines with only the same color value.
 To select them all at once, first of all select one of the lines with the 3 values you want to replace.
-![part1.webp](/user-pictures/vector/general-guides/manualedit-vfx/part1.webp)
+![Selecting a line containing the color values to replace](/user-pictures/vector/general-guides/manualedit-vfx/part1.webp)
 
 Now you rightclick and select “Change all Occurences”
-![part2.webp](/user-pictures/vector/general-guides/manualedit-vfx/part2.webp)
+![Right-click menu showing the Change All Occurrences option](/user-pictures/vector/general-guides/manualedit-vfx/part2.webp)
 
 Then it selects all lines
-![part3.webp](/user-pictures/vector/general-guides/manualedit-vfx/part3.webp)
+![All matching color value lines selected at once](/user-pictures/vector/general-guides/manualedit-vfx/part3.webp)
 
 Now you just paste in your values and done.
-![part4.webp](/user-pictures/vector/general-guides/manualedit-vfx/part4.webp)
+![New color values pasted into every selected line](/user-pictures/vector/general-guides/manualedit-vfx/part4.webp)
 
-## Video Guide
-<br>
-<div align="left">
-  <a href="https://www.youtube.com/watch?v=h2NlIc35qWY"><img src="https://img.youtube.com/vi/h2NlIc35qWY/0.jpg" alt="Guide on how to edit VFX Color values via code"
+### Video Guide
+<a href="https://www.youtube.com/watch?v=h2NlIc35qWY"><img src="https://img.youtube.com/vi/h2NlIc35qWY/0.jpg" alt="Guide on how to edit VFX Color values via code"
 style="width:75%"></a>
-</div>
 *External Youtube Link!*
 
-# Sources
+## Sources
 - Yoru Queen of Night

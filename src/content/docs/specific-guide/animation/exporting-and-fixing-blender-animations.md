@@ -6,22 +6,22 @@ lastUpdated: 2024-08-26
 ---
 
 
-# Exporting from Blender
+## Exporting from Blender
 
-## Export
+### Export
 Upon completing your work in Blender export the file as FBX and make sure to change the following settings:
 - In the Transformation dropdown put Forward to be "-Z Forward" and up to be "Y up".
 - Open the Armature dropdown and *uncheck* Add Leaf Bones.
 - Other FBX settings should be fine as they are by default.
 
-# Importing and Fixing in Maya
+## Importing and Fixing in Maya
 
-## Import
+### Import
 
 Import your FBX file in the Maya scene.
 You will see the mesh and a grouped armature. Click the armature and ungroup it. Delete the empty group.
 
-## Fixing
+### Fixing
 Select the root bone and play the animation. You will see that the skeleton is small and rotated.
 Select the rotate tool (E) and select Absolute Transform. Input -90 in the box for X and hit Enter.
 Press S to save the frame and do the same in the last frame of the animation.

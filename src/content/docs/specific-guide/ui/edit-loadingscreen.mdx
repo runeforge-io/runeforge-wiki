@@ -6,21 +6,18 @@ lastUpdated: 2024-08-26
 
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 
-# Create custom loadingscreen
+## Create custom loadingscreen
 
 This guide teaches you how to change the loading screen background to any background you like.
 
-## Required Tools
+### Required Tools
 
 - [Any 2D editing program *Any tool which can handle .dds files*](/core-guides/tools#texturing)
 - [Template *External Link*](https://www.mediafire.com/file/ulwhlqwju0ab5tz/Loading_Screen_Template.zip/file)
 
 {/*
-<br>
-<div align="left">
-  <a href="https://www.youtube.com/watch?v=WbR6AMlCK8w"><img src="https://img.youtube.com/vi/WbR6AMlCK8w/0.jpg" alt="Guide on how to edit VFX Color values via code"
+<a href="https://www.youtube.com/watch?v=WbR6AMlCK8w"><img src="https://img.youtube.com/vi/WbR6AMlCK8w/0.jpg" alt="Guide on how to edit VFX Color values via code"
 style="width:75%"></a>
-</div>
 *External Youtube Link!*
 */}
 
@@ -28,11 +25,11 @@ style="width:75%"></a>
 
 ---
 
-## Preparation
+### Preparation
 
 Download the template provided and prepare the image you plan to use as the background.
 
-## Creation
+### Creation
 
 Open the template you have downloaded and go to Map11 folder and get srbackground.tex.
 
@@ -42,26 +39,26 @@ Open the DDS file you got in the image editing program of choice.
 Take the image you prepared and copy it over the background.
 You can use any file thats 1024x512 or larger.
 
-## Saving
+### Saving
 
 Save your file as a DDS again and make sure its saved using Bc3/DXT5.
 
 Drag the DDS file on [tex2dds](/core-guides/tools/ritoddstex) to get the .tex file back.
 You can leave the DDS file in your mod or delete it if you wish.
 
-### Howling abyss
+#### Howling abyss
 
 If you want to use the same background for the Howling abyss map you will just need to copy the .tex file you got and rename it to habackground.tex.
 If you wish to make it different you will follow the same process as the one for Summoners Rift.
 
-### Cslol Notice
+#### Cslol Notice
 
 If you are using a custom map mod which changes the loading screen, name your mod in Cslol with a 0 in front so that its at the top and make sure "Suppress install conflicts" setting is enabled.
 This will ensure that your loading screen is applied.
 
 ---
 
-# Custom loadingscreen spinner
+## Custom loadingscreen spinner
 
 <Tabs>
   <TabItem label="Photoshop">
@@ -102,7 +99,7 @@ This will ensure that your loading screen is applied.
   </TabItem>
 </Tabs>
 
-# Sources
+## Sources
 
 - Tyre
 - LxVer

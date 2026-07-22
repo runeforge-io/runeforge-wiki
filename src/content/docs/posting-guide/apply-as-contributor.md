@@ -10,7 +10,6 @@ Hey!
 This page is currently W.I.P, but worked on!
 :::
 
-# Apply as Contributor
 
 In order for you to post pages, you need the **Contributor** role. As a Contributor you are allowed to add, edit and complete existing or new pages. You, however, can't edit major pages like "home".
 

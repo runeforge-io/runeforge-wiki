@@ -13,23 +13,22 @@ This page is still W.I.P. we will add/update more errors in time.
 </center>
 
 
-# Maya Errorlist
 
 :::note
 Disclaimer: This list is not exhaustive. Maya is a sophisticated tool, and the expected outcomes may vary based on the plugins and versions in use. Additionally, we are unable to provide a comprehensive list of all potential errors that may arise during your experience with Maya. Instead, we will focus on common errors specifically encountered when modding League of Legends models.
 :::
 
 
-**Lolmaya Error List**
+## Lolmaya Error List
 
 - [Lolmaya errorlist](/core-guides/tools/maya/lolmaya-errorlist)
 
 
-# Common Errors
+## Common Errors
 
-## Unrecognized file type
+### Unrecognized file type
 
-![unknownfile.png](/user-pictures/bud/unknownfile.png)
+![Maya error dialog for an unrecognized file type](/user-pictures/bud/unknownfile.png)
 This error occurs when you try to import a file that maya can't read. In the case of League Skn you most likely didn't install/enable the plugin properly.
 
 - **Fix**

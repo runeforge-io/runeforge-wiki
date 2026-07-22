@@ -5,15 +5,14 @@ draft: true
 lastUpdated: 2025-07-19
 ---
 
-# Reducing model attributes
 
 This guide will tell you in details about ways that you can reduce the models verticle/joint so that maya may export it
 
-![](/user-pictures/ascila/screenshot_2025-07-19_223221.png)
+![Maya error about exceeding the vertex limit on export](/user-pictures/ascila/screenshot_2025-07-19_223221.png)
 
-![](/user-pictures/ascila/screenshot_2025-07-19_223040.png)
+![Maya error about exceeding the joint limit on export](/user-pictures/ascila/screenshot_2025-07-19_223040.png)
 
-### Required tools:
+## Required tools
 
 - [Autodesk Maya](/core-guides/tools/maya)
 
@@ -25,19 +24,19 @@ This guide will tell you in details about ways that you can reduce the models ve
 This only work if you want to model swap. else if you want to maintain the entire weight, refer to solution #2 below. REDUCE MESH WILL RUIN THE WEIGGHT OF THAT PART YOU REDUCE.
 :::
 
-![](/user-pictures/ascila/screenshot_2025-07-19_230127.png)
+![The model in the Maya viewport before editing](/user-pictures/ascila/screenshot_2025-07-19_230127.png)
 
 Select the mesh you want to reduce. Usually you select the most detailed one, but for this guide i will be chosing her upper half.
 
-![](/user-pictures/ascila/screenshot_2025-07-19_230324.png)
+![The vertex heads-up display showing 65k total and 21k selected](/user-pictures/ascila/screenshot_2025-07-19_230324.png)
 
 In the red circle mark, you may see that the total visable vert (verticle in short) in the scene being 65k and her selected part being 21k. Go to modeling>mesh and you may see this dropdown.
 
-![](/user-pictures/ascila/screenshot_2025-07-19_230949.png)
+![The Mesh dropdown in the Modeling menu set](/user-pictures/ascila/screenshot_2025-07-19_230949.png)
 
 Some mesh may require you to clean up due to nonmanifold geometry. To do so, simply select the cleanup… function to the bottom of this mesh dropdown. Then, when you're ready, select the rectangle icon next to reduce
 
-![](/user-pictures/ascila/screenshot_2025-07-19_231838.png)
+![The Reduce Options window](/user-pictures/ascila/screenshot_2025-07-19_231838.png)
 
 To simplify this process, i will only explain the 3 settting, shape and reduction method sections:
 
@@ -50,7 +49,7 @@ To simplify this process, i will only explain the 3 settting, shape and reductio
 
 Once youre done, follow this guide to bind that reduced part back: [Replacing Champion With Different Model](/specific-guide/3d-modelling/replacing-champion-with-different-model)
 
-![](/user-pictures/ascila/screenshot_2025-07-19_232651.png)
+![The model after reducing the selected mesh](/user-pictures/ascila/screenshot_2025-07-19_232651.png)
 
 ### Solution #2: delete unnecessary mesh
 
@@ -58,15 +57,15 @@ Once youre done, follow this guide to bind that reduced part back: [Replacing Ch
 There's two way to achieve this, one is faster, but will ruin current weight of your model so it's perfectly fine if youre model swapping.
 :::
 
-<mark>Delete mesh and (might) break the weight</mark>
+#### Delete mesh and (might) break the weight
 
 Back to the starting screen
 
-![](/user-pictures/ascila/screenshot_2025-07-19_230127.png)
+![The model in the Maya viewport before editing](/user-pictures/ascila/screenshot_2025-07-19_230127.png)
 
 If I inspect this model a little more, there's a lot of flower parts on her clothes. When ported into league, they are hardly visable and so we want to remove them, to do that, f11 aka face selection. Upon clicking on any mesh, you will see this weird spider alike net.
 
-![](/user-pictures/ascila/screenshot_2025-07-19_234006.png)
+![Face selection mode showing the mesh wireframe](/user-pictures/ascila/screenshot_2025-07-19_234006.png)
 
 click on any vert, you may zooom however close you want to that. from then on, you can either single click, double click or drag select to choose multiple, then delete those parts until maya let you export the file. Hold shift to select multiple vert at once.
 
@@ -74,11 +73,11 @@ click on any vert, you may zooom however close you want to that. from then on, y
 You may have to repeat this process multiple times. Keep in mind to check up, or bind the mesh again, cause by doing this there's a chance to break the weight.
 :::
 
-![](/user-pictures/ascila/screenshot_2025-07-19_234158.png)
+![Selecting flower mesh parts to delete](/user-pictures/ascila/screenshot_2025-07-19_234158.png)
 
-![](/user-pictures/ascila/screenshot_2025-07-19_235528.png)
+![The model after deleting the unnecessary mesh parts](/user-pictures/ascila/screenshot_2025-07-19_235528.png)
 
-<mark>Delete mesh, does not break the weight</mark>
+#### Delete mesh, does not break the weight
 
 :::note
 This may only work for models that you can already export.
@@ -86,16 +85,16 @@ This may only work for models that you can already export.
 
 Back to the earlier step, be sure to check if you have all of the parts selected. Now, hold on to right mouse, drag down to assign new material and choose whichever option you want (we will be removing it anyways) but preferably another lambert. Export the scene as skl/skn with a placeholder name of your choice.
 
-![](/user-pictures/ascila/screenshot_2025-07-19_235801.png)
+![Assigning a new lambert material to the selected parts](/user-pictures/ascila/screenshot_2025-07-19_235801.png)
 
 Start a new scene and import the file you just edit, with this settings perhap.
 
-![](/user-pictures/ascila/screenshot_2025-07-20_002521.png)
+![Import settings for the exported skn file](/user-pictures/ascila/screenshot_2025-07-20_002521.png)
 
-![](/user-pictures/ascila/screenshot_2025-07-20_002601.png)
+![The reimported model in a new scene](/user-pictures/ascila/screenshot_2025-07-20_002601.png)
 
 You will see that newly generated mesh named lambert2 that I've just assigned. Select it, then the joint hierarchy it belongs to, unbind. You may delete lambert2 now, then repeat the export import process for a little more testing about weight.
 
-![](/user-pictures/ascila/screenshot_2025-07-20_005008.png)
+![Selecting the lambert2 mesh and its joint hierarchy to unbind](/user-pictures/ascila/screenshot_2025-07-20_005008.png)
 
 ## Reduce joint count

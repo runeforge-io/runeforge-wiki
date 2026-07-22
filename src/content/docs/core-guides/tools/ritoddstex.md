@@ -4,15 +4,14 @@ description: Ritoddstex tool guide
 lastUpdated: 2025-01-03
 ---
 
-# Ritoddstex
 Ritoddstex is a programm used to convert between [.tex](/specific-guide/filetypes) and [.dds](/specific-guide/filetypes) files. Made by [Morilli](https://github.com/Morilli).
 
 ---
 
-# Download and Installation
+## Download and Installation
 - [Ritoddstex *Download*](https://github.com/Morilli/Ritoddstex/releases)
 
-![ritoddstex.png](/user-pictures/egogorn/ritoddstex.png)
+![Ritoddstex GitHub releases page with tex2dds download](/user-pictures/egogorn/ritoddstex.png)
 
 Download tex2dds.exe for Windows. Make sure to download the latest version, it will have green label saying "Latest" near its name.
 
@@ -20,7 +19,7 @@ Download tex2dds.exe for Windows. Make sure to download the latest version, it w
 
 This programm comes as standalone .exe file and doesn't require any installation.
 
-# How to use
+## How to use
 
 Simply drag and drop all .tex files onto the tex2dds.exe and wait until the process is finished. 
 

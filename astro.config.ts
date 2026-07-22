@@ -282,7 +282,13 @@ export default defineConfig({
             { label: 'League Engine', slug: 'specific-guide/league-engine' },
           ],
         },
-        { label: 'Posting Guide', slug: 'posting-guide' },
+        {
+          label: 'Posting Guide',
+          items: [
+            { label: 'How to Post', slug: 'posting-guide' },
+            { label: 'Style Guide', slug: 'posting-guide/style-guide' },
+          ],
+        },
       ],
     }),
     svelte(),

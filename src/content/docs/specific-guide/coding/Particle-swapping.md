@@ -4,12 +4,11 @@ description: This tutorial teaches you how to take particles from one champion a
 lastUpdated: 2024-08-26
 ---
 
-# Particle swapping through bin-editing
 This tutorial teaches you how to take particles from one champion and reuse them on another champion.
 
-<img src="/user-pictures/goat/reuse_particle.gif" alt="reuse_particle.gif" height="400" />
+<img src="/user-pictures/goat/reuse_particle.gif" alt="Animated preview of a particle reused on another champion" height="400" />
 
-## Required Tools
+### Required Tools
 An code editor of your choice, we recommend **Visual Studio Code**:
 - [Choose any Code Editor *Visual Studio Code is recommended*](/core-guides/tools#code-bin-editing)
 
@@ -20,17 +19,14 @@ If you choose Visual Studio Code, you need the [Python extension](https://market
 - [Bintex by Marcius *Tool to list all textures and models inside a Python file*](https://www.dropbox.com/s/yfvuyl5rebwbaml/bintex.exe?dl=1)
 - [Hacksaw *Tool to visually edit bin files*](/core-guides/tools/hacksaw)
 ---
-<br>
 
-<div align="left">
-  <a href="https://www.youtube.com/watch?v=_RoS1Dpdvfg"><img src="https://img.youtube.com/vi/_RoS1Dpdvfg/0.jpg" alt="Guide on how to install LOL Maya Plugin"
+<a href="https://www.youtube.com/watch?v=_RoS1Dpdvfg"><img src="https://img.youtube.com/vi/_RoS1Dpdvfg/0.jpg" alt="Guide on how to install LOL Maya Plugin"
 style="width:75%"></a>
-</div>
 
 *External Youtube Link!*
 
-# TIPS
-## Best order to work on particles to minimize fuckups
+## TIPS
+### Best order to work on particles to minimize fuckups
 1. Look up skills that might be useful for your champion (skin previews etc.)
 
 2. Extract the bins and textures/models etc. for those abilities
@@ -53,10 +49,10 @@ style="width:75%"></a>
 
 11. Done
 
-# How to make your particles break less often
+## How to make your particles break less often
 After finishing your particles I recommend following this [tutorial](/specific-guide/skin-fixes/fix-breaking-vfx).
 Your skins will break less often and should only break when a new skin for the champion gets released.
 
-# Sources
+## Sources
 
 - Yoru Queen of Night

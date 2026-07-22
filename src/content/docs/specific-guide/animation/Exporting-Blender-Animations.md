@@ -5,24 +5,24 @@ draft: true
 lastUpdated: 2024-08-26
 ---
 
-# Start
-## Required Tools
+## Start
+### Required Tools
 - [Blender](/core-guides/tools/blender)
 - [Autodesk Maya](/core-guides/tools/maya)
 - [LolMaya plugin](/core-guides/tools/maya)
 ---
 
-## Saving the Animation
+### Saving the Animation
 Upon completing the animation in Blender you will need to 
 
 TBD
-## Fixing the Animation
+### Fixing the Animation
 
 
-## Exporting the Animation
+### Exporting the Animation
 
 
 
 
 
-## Video Guide
+### Video Guide

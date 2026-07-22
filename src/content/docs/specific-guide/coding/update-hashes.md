@@ -5,9 +5,7 @@ draft: true
 lastUpdated: 2025-06-05
 ---
 
-# How to Update Your Hashes for Modding Tools
-
-## Overview
+### Overview
 Hashes are required for three main tools. This guide will cover multiple ways to update and actually provide these tools with your new hashes.
 * [Obsidian](https://github.com/Crauzer/Obsidian) for browsing wad files in a familiar File Explorer interace.
 * [Ritobin](https://github.com/moonshadow565/ritobin/releases) for decoding riot's `bin` files.
@@ -15,9 +13,9 @@ Hashes are required for three main tools. This guide will cover multiple ways to
 
 Obsidian and Ritobin both use a folder in it's installed directory called `hashes` to store it's hash files. CSLOL simply includes it's hash files next to the tool files in `cslol-tools`.
 
-<img src="/user-pictures/moga/update_hashes_hash_location.png" alt="update_hashes_hash_location.png" height="250" />
+<img src="/user-pictures/moga/update_hashes_hash_location.png" alt="File explorer showing the hashes folder with hash files" height="250" />
 
-# Method 1: Take Hashes From Obsidian
+## Method 1: Take Hashes From Obsidian
 
 Directly copying files from your `Obsidian\hashes` folder is probably the simplest method for most people to get new hashes, but is also the slowest way to get hashes.
 

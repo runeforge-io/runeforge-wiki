@@ -4,18 +4,15 @@ description: A guide on how to install and use LtMAO.
 lastUpdated: 2025-04-08
 ---
 
-# LtMAO
 This page will explain the LtMAO tool made by Tarngaina and all of its features.
 
 ---
 ## Download and Installation
-:::note
-### <p><span style="color:#ffffff">Installation</span>
-Download: <a href="https://github.com/tarngaina/LtMAO/archive/refs/heads/hai.zip">LtMAO-hai.zip</a>
-Extract: <kbd>LtMAO-hai.zip</kbd>
-Run <kbd>LtMAO/start.bat</kbd>
-:::
-  
+
+1. Download [LtMAO-hai.zip](https://github.com/tarngaina/LtMAO/archive/refs/heads/hai.zip)
+2. Extract `LtMAO-hai.zip`
+3. Run `LtMAO/start.bat`
+
 - [LtMAO GitHub page](https://github.com/tarngaina/LtMAO?tab=readme-ov-file)
 ---
 ## cslmao
@@ -27,38 +24,38 @@ Please make sure to use the updated cslol version in order to work with vanguard
   
 ### Info
 
-Just <a href="/core-guides/tools/cslolmanager">cslol-manager</a>, but different UI.
+Just [cslol-manager](/core-guides/tools/cslolmanager), but different UI.
 
-<u style="color:orange">Important: Need to set Game folder in setting tab first to work.</u>
+:::caution
+You need to set the Game folder in the settings tab first for this to work.
+:::
 
-  ![cslmao.png](/user-pictures/bud/cslmao.png)
+  ![The cslmao mod manager window in LtMAO](/user-pictures/bud/cslmao.png)
   
  ---
 ## leaguefile_inspector
   View League files information.
   
-  ![ltmaofileinspect.png](/user-pictures/bud/ltmaofileinspect.png)
+  ![The leaguefile_inspector window showing League file information](/user-pictures/bud/ltmaofileinspect.png)
   
  ---
 ## animask_viewer
   Edit MaskData's weights inside animation BINs.
   
-  ![animask.png](/user-pictures/bud/animask.png)
+  ![The animask_viewer window for editing MaskData weights](/user-pictures/bud/animask.png)
   
  ---
 ## hash_manager
-  ![hashmanager.png](/user-pictures/bud/hashmanager.png)
+  ![The hash_manager window for syncing and extracting hashes](/user-pictures/bud/hashmanager.png)
 
-  <u style="color:orange">Important: Please wait for all syncing/updating/loading hashes finished before process with any <kbd style="background-color:#343942;color:orange">LtMAO</kbd> functions.</u>
+:::caution
+Wait for all syncing/updating/loading of hashes to finish before proceeding with any LtMAO functions.
+:::
 
-1. CDTB Hashes: Auto sync <a href="https://github.com/CommunityDragon/CDTB/tree/master/cdragontoolbox">CommunityDragon</a> hashes. Can also be manually downloaded at mentioned link.
+1. CDTB Hashes: Auto sync [CommunityDragon](https://github.com/CommunityDragon/CDTB/tree/master/cdragontoolbox) hashes. Can also be manually downloaded at mentioned link.
 
- <span>
-   
 2. Extracted Hashes: Extract personally by user.
 
-	<span>
-    
    Hashes that can be extracted:
 
 	- binentries:
@@ -80,20 +77,22 @@ Just <a href="/core-guides/tools/cslolmanager">cslol-manager</a>, but different 
 Also has generate wad & bin hash function. Those generated hashes can be added to Custom Hashes with <kbd style="background-color:#343942">-></kbd> buttons.
    
  ---
-  ## vo_helper
+## vo_helper
 Make the fantome work on all languages by cloning it.
 
-<u style="color:orange">Important: The audio inside fantome must also come with events file to make it work on other languages.</u>
+:::caution
+The audio inside the fantome must also come with an events file to make it work on other languages.
+:::
     
-![vohelper.png](/user-pictures/bud/vohelper.png)
+![The vo_helper window for cloning fantome audio languages](/user-pictures/bud/vohelper.png)
     
  ---
-  ## no_skin
+## no_skin
   Creates a mod that disables (almost) all riot skins and turns every champion to the default skin.
     
 <kbd style="background-color:#343942">SKIPS.json</kbd>: Some skins cause League to crash when they get changed to base. This file tells the program to not change those skins to base.
   
-![noskin.png](/user-pictures/bud/noskin.png)
+![The no_skin window for creating a default skin mod](/user-pictures/bud/noskin.png)
     
   Use it by clicking "Browse Champions folder" button and locating the Champions folder inside the game installation address.
 :::note
@@ -105,28 +104,28 @@ Press the Start button and select the folder where you want the mod to be create
   After the operation is completed select the .fantome file you got and put it in CsLol or cslmao.
     
  ---
-  ## uvee
+## uvee
 Extract UVs from skn/sco/scb as png files.
     
-![uvee.png](/user-pictures/bud/uvee.png)
+![The uvee window for extracting UVs as png files](/user-pictures/bud/uvee.png)
     
  ---
 
-  ## shrum
+## shrum
 Rename joints in ANM using old names & new names input.
 
 Can load SKL as inputs.
     
-![shrum.png](/user-pictures/bud/shrum.png)
+![The shrum window for renaming joints in ANM files](/user-pictures/bud/shrum.png)
     
  ---
-  ## hapiBin
+## hapiBin
 An app with multiple functions related to updating BIN file:
 
 - Copy linked list.
 - Copy vfx colors.
 
-![hapibin.png](/user-pictures/bud/hapibin.png)
+![The hapiBin window with BIN file update functions](/user-pictures/bud/hapibin.png)
     
  ---
 
@@ -135,28 +134,28 @@ An app with multiple functions related to updating BIN file:
 
 Can bulk unpack multiple WADs into same output. Example: Bulk unpacking all voiced wad then throw into vo_helper is a fast way to create a champion voicepack for specific language mod.
 
-![wadtool.png](/user-pictures/bud/wadtool.png)
+![The wad_tool window for unpacking and packing WAD files](/user-pictures/bud/wadtool.png)
     
  ---
 
-  ## pyntex
+## pyntex
 <a href="/core-guides/tools/hacksaw">Hacksaw/bintex</a> but rewritten. Print out mentioned & missing files in all BINs inside a WAD or a Folder.
 
-![pyntex.png](/user-pictures/bud/pyntex.png)
+![The pyntex window listing mentioned and missing BIN files](/user-pictures/bud/pyntex.png)
     
  ---
 
-  ## sborf
+## sborf
 Fix skin based on rito files: moonwalk animations, layering animations,...
     
-![sborf.png](/user-pictures/bud/sborf.png)
+![The sborf window for fixing skins based on rito files](/user-pictures/bud/sborf.png)
     
  ---
     
-  ## lol2fbx
+## lol2fbx
 Convert League .skn and .skl files to FBX and vice versa.
     
-![lol2fbx.png](/user-pictures/bud/lol2fbx.png)
+![The lol2fbx window for converting skn and skl to FBX](/user-pictures/bud/lol2fbx.png)
     
     
  ---
@@ -164,25 +163,12 @@ Convert League .skn and .skl files to FBX and vice versa.
     
 For some guides on this wiki, you will need the file explorer contexts to make things easier. You can enable them by running LtMAO throught the shortcut as Admin, going to the settings and clicking this button.
     
-![explorer-contexts.png](/user-pictures/fbs/explorer-contexts.png) 
+![LtMAO settings button enabling file explorer contexts](/user-pictures/fbs/explorer-contexts.png) 
     
 After this, you should see LtMAO options when right clicking a directory or file.
     
-![right-click.png](/user-pictures/fbs/right-click.png) 
+![Right-click context menu showing LtMAO options](/user-pictures/fbs/right-click.png) 
 
 ---
 ## issues
 If you have any issues or questions you can ask for help on the RuneForge discord.
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  

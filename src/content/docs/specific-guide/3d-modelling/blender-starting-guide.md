@@ -4,7 +4,6 @@ description: A couple of videos(with a tutorial you can follow) to get started w
 lastUpdated: 2024-09-07
 ---
 
-# Custom Skins in Blender - Starting Guide
 This guide will help you start making custom skins on Blender, having the tools needed, how to use them, and quick videos to explain every single one of these steps
 ## Tools Needed
 
@@ -22,21 +21,21 @@ This guide will help you start making custom skins on Blender, having the tools 
 - Open Obsidian
 - Search the champion you want the 3d model (in Game/DATA/FINAL/Champions. an example of a champion is *Kayn.wad.client*)
 - Click the checkmark of said champion then go to "File" and "Extract Selected". Make sure you extract it on an empty folder(create a "Kayn" folder for example)
-![imagem_2024-02-12_151800082.png](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_151800082.png)
+![Extracting the selected champion wad in Obsidian's File menu](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_151800082.png)
 - Close Obsidian, and open "lol2gltf"
 - Resize the window as needed then click on "Select Simple Skin"
 - The simple skin should be located on *"FOLDER/Kayn/assets/character/kayn/skin/base"* for the base skin, while the other skins are numbered depending on the number of skins of the champion
-![imagem_2024-02-12_152137449.png](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_152137449.png)
+![Selecting the simple skin .skn file in lol2gltf](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_152137449.png)
 - Select the .skn
 - Click on "Select Skeleton" and select the .skl
 - After that, you need to select the textures for the champion. Most of them have only one, but you can encounter ones with more than 1 Material like Udyr or Kayn. Make sure to select the correct ones as most are pretty self explanatory *("Kayn_Base_Assasin" is the assasin form for example, and all the textures regarding it come from the same image)*
-![imagem_2024-02-12_152542217.png](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_152542217.png)
+![Selecting the champion's texture files for each material in lol2gltf](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_152542217.png)
 - Scroll down in lol2gltf and click the "GLTF" button
 - Save the glb file wherever you want
 - Open "Blender"
 - Go to "File", "Import", "gltf2.0"
 - **MAKE SURE YOU CHANGE BONE DIR TO "Blender"**
-<img src="/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_153307903.png" alt="imagem_2024-02-12_153307903.png" style="width:75%" />
+<img src="/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_153307903.png" alt="Blender glTF import settings with Bone Dir set to Blender" style="width:75%" />
 - Select your file
 - You should be able to see the model imported into blender
 - If the model has various materials interlapping eachother, you can hide them by changing them to "Alpha Clip" (see video for example)
@@ -48,11 +47,11 @@ For my example, the command would be
 `lol2gltf.CLI.exe gltf2skn -g "C:\Users\manue\Desktop\Nova pasta\briar_import.glb" -m "C:\Users\manue\Desktop\Nova pasta\SKIN EXPORT\briar_base.skn"`
 - Go to the "lol2gltf" folder
 - Click on the search bar, and type "cmd" as shown below
-![imagem_2024-02-12_154159242.png](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_154159242.png)
+![Typing cmd into the folder's address bar](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_154159242.png)
 - A command box should appear
 - Paste the command from before
 - If it worked, it created a .skn and .skl file on the export location you provided
-<img src="/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_154851922.png" alt="imagem_2024-02-12_154851922.png" height="400" />![imagem_2024-02-12_154903496.png](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_154903496.png)
+<img src="/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_154851922.png" alt="Command prompt after running the lol2gltf conversion command" height="400" />![Resulting .skn and .skl files in the export folder](/user-pictures/thisisquitter/blender_starting_guide/imagem_2024-02-12_154903496.png)
 ---
 ### If it didnt work, check the following
 - Make sure all the meshes are joined

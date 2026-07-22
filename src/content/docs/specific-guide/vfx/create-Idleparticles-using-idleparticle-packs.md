@@ -4,7 +4,7 @@ description: This is a guide explaining how to create idle particles using the c
 lastUpdated: 2025-04-07
 ---
 
-# Required tools
+## Required tools
  
  
  
@@ -129,8 +129,6 @@ Fail this, and the void shall remain particle-less, an empty husk of missed pote
  
  # Video Guide
  
- <div align="left">
-   <a href="https://www.youtube.com/watch?v=lfW8YBAUJHw"><img src="https://img.youtube.com/vi/lfW8YBAUJHw/0.jpg" alt="Guide on how to create idle particles"
+ <a href="https://www.youtube.com/watch?v=lfW8YBAUJHw"><img src="https://img.youtube.com/vi/lfW8YBAUJHw/0.jpg" alt="Guide on how to create idle particles"
  style="width:75%"></a>
- </div>
  

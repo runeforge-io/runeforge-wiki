@@ -4,21 +4,21 @@ description: This page is all about Autodesk Maya. We include a list of pages wh
 lastUpdated: 2024-12-31
 ---
 
-# Autodesk Maya (2023) acquisition methods
+## Autodesk Maya (2023) acquisition methods
 
 ### Free Trial (30 days)
 
 If you want to test out Maya or if you are new and want to check out if modding is for you, then the free trial version might be for you! 
 
 [**Get Maya free trial (30 days)**](https://www.autodesk.com/products/maya/free-trial)
-<br>
+
 ### Maya for Students
 
 If you are a student on an university or school, you can get Maya for free for up to a year, you can renew you license each year until your graduation.
 
 [**Get Maya student**](https://www.autodesk.com/education/edu-software/overview?sorting=featured&filters=individual)
-<br>
-### **Maya paid subscription**
+
+### Maya paid subscription
 
 If you want to buy a Maya subscription keep in mind, that you have 3 subscription plans (3 years, 1 year, 1 month). Make sure you are capable of buying the product, dont take financial risks since there is a free option with [Blender](/core-guides/tools/blender).
 
@@ -35,13 +35,12 @@ Also those prices are paid in **advance** so the full price for the whole time p
 [**Get Maya (Paid)**](https://www.autodesk.com/products/maya/overview?term=1-YEAR&tab=subscription&plc=MAYA)
 
 *Make sure you use Maya 2023! Maya 2024.1 is confirmed to work, while 2024.2 might be buggy.*
-<br>
 
-## Errors
+### Errors
 
 - [Maya errorlist](/core-guides/tools/maya/errorlist)
 
-# **Install LoL-Maya**
+## Install LoL-Maya
 
 First get the Plugin
 - [LoL-Maya *External Link*](https://github.com/tarngaina/lol_maya/releases/tag/4.2.8)
@@ -52,7 +51,7 @@ In order to modify League of Legends models, animations or rigs, you need a Plug
 > If you need help with the Plugin, check out the overview page
 - [LoL-Maya Overview Page](/core-guides/tools/maya/lolmaya)
 
-![](/lolmaya.png)
+![The lol_maya release download on GitHub](/lolmaya.png)
 
 ```plaintext
 Download lol_maya_(version_nr).zip
@@ -65,28 +64,28 @@ Next, put those files into you Maya plugins folder. Depending on which version y
 Once you've done that, you can open Maya and go into the **Plugin Manager**.
 `Windows` > `Settings/Preferences` > `Plug-in Manager`
 
-![](/plugin_manager.png)
+![Opening the Plug-in Manager from Maya's Windows menu](/plugin_manager.png)
 
 From there, search for `lol_maya` and check both *loaded* and *auto load.*   
  
 
-![](/activate_plugin.png)
+![The lol_maya plugin with Loaded and Auto load checked](/activate_plugin.png)
 
 And thats it, click close and either restart or click refresh and close the Plugin manager. 
 
 You can check if it worked when a **LolMaya and LolMaya\_MAPGEO** tab were created at the main bar of Maya.
 
-![](/menubar.png)
-<br>
-# Updating LoL Maya
+![The LolMaya tabs in Maya's main menu bar](/menubar.png)
+
+## Updating LoL Maya
 
 When updating the plugin, you simply need to download the latest version and replace the files in Maya's Plugin Folder! That's it.
 
-## Errors
+### Errors
 
 - [Lolmaya errorlist](/core-guides/tools/maya/lolmaya-errorlist)
 
-# Sources
+## Sources
 
 - Nagiliant
 - Tarngaina

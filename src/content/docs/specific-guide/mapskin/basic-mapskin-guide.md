@@ -9,19 +9,19 @@ lastUpdated: 2024-10-30
 :::
 
 
-# Introduction
+## Introduction
 
 Creating a mapskin for League is easier than it looks, since it shares alot of similarities with creating a custom skin. However, it takes alot of time and effort to create one, since there are alot more assets which you need to edit.
 
 So before you start, we **highly recommend** you to check out the [Beginner Guides](/core-guides/get-started) in order to understand how editing League content works in general.
 This guide is not for beginners in modding, however it is made for beginners in modding League maps!
 
-## Disclaimer
+### Disclaimer
 
 Editing League maps can lead to many problems. Since this is the playground of the game, its better to create them with a plan or to test things out. Editing textures like in this guide is an easier task.
 
 
-# Tools
+## Tools
 
 The following tools are needed to edit the map **textures**.
 
@@ -32,17 +32,17 @@ The following tools are needed to edit the map **textures**.
 - [Any 2D editing software *which can handle editing .dds files*](/core-guides/tools#texturing)
 - [tex2dds *converter for .dds and .tex files*](/core-guides/tools/ritoddstex)
 
-# Guide
+## Guide
 
 *Before we start, all nessecary files you need are in our templates. We wont discuss any needed files further in this guide, since Riot has alot of files which aren't used anymore in there. You can use the template for free and add/ remove all files you dont want to edit. In our guide, we work with the template, however the folder structure is the same as if you export it yourself*
 
-## Ground Textures
+### Ground Textures
 
 Filepath: `\assets\maps\kitpieces\srx` & `\assets\maps\kitpieces\srs`
 
 In there are multiple folder which are the ground texture pieces. 
 
-### Declaration
+#### Declaration
 
 | Foldername                                 | Description                                                                                       | 
 |--------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -51,11 +51,11 @@ In there are multiple folder which are the ground texture pieces.
 |textures		                                 |some terrain textures, some unused textures & some assets for mapchanges|
 |worlds			                                 |World event parts (*Needs conversion to .tex*)                                                                                  |
 
-### Editing
+#### Editing
 
 In order to edit those textures, you need a 2D editing software which can handle .dds files. 
 
-#### Ground Textures
+##### Ground Textures
 
 - [Ground Texture Photoshop template *Recommended when you use Photoshop or Photopea*](/core-guides/downloadable-assets#mapskin-ground-texture-photoshop-template2)
 
@@ -65,12 +65,12 @@ Most ground textures are .dds files which need the standard format which you fin
 
 If you use the provided Photoshop template, you can start editing accordingly. It is split in different folders for you to edit. Save them as .dds files. Check the filenames and the folder when saving! 
 
-**Tips**
+###### Tips
 - Edit the tiles as a whole to avoid weird texture failures or uneven seams
 - Save the WHOLE ground as a jpg or png and then open it your editing software to "cut out" each tile when saving, this takes alot less time
 - the tip above can also be used to save memory for less powerful PC's
 
-## Terrain & Mob textures
+### Terrain & Mob textures
 
 Since this is a beginners guide, editing those textures is a bit more complicated. In theory you can still just edit them in any 2D editing software with filters for example. However if you plan on doing more than a simple "mood change" you need to manually edit them with e.g. [Substance Painter](/core-guides/tools#texturing). 
 
@@ -78,11 +78,11 @@ Alternatively, change the model and texture manually, just make sure they don't 
 
 > Regardless, this exceeds this guide and will be declared more detailed in another guide in the future. In the meantime you can check out any 3D editing guide to get more knowledge on how to edit 3D Models & our Texturing guides for more detailed info about painting models.
 
-# Exporting & Creating the mapskin
+## Exporting & Creating the mapskin
 
 Exporting the mapskin is as simple as every other skin, if you need a refreshment check out the [export settings](/core-guides/tools/adobe/photoshop#intel-texture-works).
 
-## Quality settings
+### Quality settings
 
 Since some people dont own a Nasa PC, you should be so kind to implement Quality settings, which can be done with this tool:
 
@@ -90,7 +90,7 @@ Since some people dont own a Nasa PC, you should be so kind to implement Quality
 
 AFTER CONVERSION!
 
-**Worlds Textures & potential future**
+### Worlds Textures & potential future
 
 With the current 2024 worlds, Riot changed the filetype of the ground textures into .tex, which means you need to convert them back into tex once u saved them as .dds. This can be done with [tex2dds](#tools). This might be the case for the future with all ground textures
 

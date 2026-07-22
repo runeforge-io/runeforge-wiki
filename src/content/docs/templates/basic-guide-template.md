@@ -1,50 +1,54 @@
 ---
 title: Basic Guide Template
+description: Copy this file to start a new guide. Replace the title and description with your own.
 draft: true
-lastUpdated: 2024-08-26
+lastUpdated: 2026-07-22
 ---
 
-<!--Welcome to the Classic Page template. This is a really barebones version of what you can do here. Make sure to read the Posting Guide to get a better understanding in general! You can delete the orange messages after your done with the editing.-->
+<!--Welcome to the basic guide template. Copy this file, fill in the frontmatter above (title, description, and today's date), and delete the comments as you go. Read the Posting Guide and Style Guide first! Note: the title in the frontmatter is rendered as the page heading automatically — never repeat it in the body, and start your headings at ## (two hashes).-->
 
-# Overview
+<!--Start with a short intro paragraph (no heading needed): what this guide is about and what the reader will have at the end.-->
 
-<!--Add a short info, what this guide is about, maybe a summary. If not needed, delete.-->
-<!---->
-# Required Tools
+## Required Tools
 
-<!--Add the tools you need for this specific guide. If it's a non specific guide for a tool, tell the user to select a program of their choice -->
+<!--List the tools needed for this guide. If several tools are interchangeable, say so in a lead-in line instead of scattering "And"/"OR" between list items.-->
 
-Examples:
+- [Choose a 2D editing program *Photoshop recommended*](/core-guides/tools#texturing)
 
-- [Choose a 2D Editing program *Photoshop recommended*](/core-guides/tools#texturing)
+## Guide
 
-<!--You can add multiple links into the list, just follow the usual "list" rules-->
+<!--The guide itself. Split it into ### steps with descriptive names so readers can jump to a specific step from the "On this page" sidebar.-->
 
-# Guide
+### Step 1
 
-<!--Here comes the guide part, you can add H2 titles to certain steps. Name them accordingly so users can skip to a specific step if needed.-->
-## Step 1
+### Step 2
 
-## Step 2 
+<!--Tips, warnings, and notes go in asides instead of bold or ALL CAPS:
 
-## ETC...
+:::note
+Extra context the reader might want.
+:::
 
+:::caution
+Something that can go wrong if ignored.
+:::
 
-# Video Guide
+Images use a descriptive alt text, not the filename:
 
-<!--We really discourage you to do a video guide, however if you want to add one use the follow form and don't change it!
-REPLACE THE "VIDEO ID HERE" with the video ID, which is the part after the "=" of the youtube link. Make sure to do replace BOTH ID's, after that remove the "```" at the start and the end to remove the code section.-->
+![The Bind Skin options window](/user-pictures/you/my-guide/bind-options.png)
+-->
 
-``` <-- REMOVE THOSE!
-<br> 
-<div align="left">
-  <a href="https://www.youtube.com/watch?v=VIDEO ID HERE"><img src="https://img.youtube.com/vi/VIDEO ID HERE/0.jpg" alt="Guide on how to install LOL Maya Plugin"
-style="width:75%"></a>
-</div>
+## Video Guide
 
-*External link to Youtube!*
+<!--We discourage video-only guides. If you want to add a companion video, use this form and replace both VIDEO-ID occurrences with the part of the YouTube link after the "=". Delete this section if you have no video.
 
-```
+<a href="https://www.youtube.com/watch?v=VIDEO-ID">
+  <img src="https://img.youtube.com/vi/VIDEO-ID/0.jpg" alt="What the video shows" style="width:75%" />
+</a>
 
-# Sources
-<!--Add all sources of the guide, if it's your guide and not a port, then you can write your name in here. Don't link names to specific webpages! You can link sources from different websites.-->
+*External link to YouTube!*
+-->
+
+## Sources
+
+<!--Credit the sources of the guide. If it's your own work, put your name here. Don't link names to external webpages.-->

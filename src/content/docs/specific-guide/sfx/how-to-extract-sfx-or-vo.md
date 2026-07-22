@@ -4,7 +4,6 @@ description: Tutorial on how to extract Sound Effects or Voice Overs from the ga
 lastUpdated: 2024-08-26
 ---
 
-# How to extract Sound Effects or Voice Overs from the game.
 ## Step 1: Download and install the tools:
 We are going to use a few tools to get the game files:
 - Obsidian

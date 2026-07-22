@@ -4,19 +4,19 @@ description: A guide on how to add child particles to existing ones.
 lastUpdated: 2024-08-26
 ---
 
-# Overview
+## Overview
 Adding child VFX to main VFX systems to create variations and elaborate particles.
 
 
 *If you encounter any issues with this tutorial or you don’t understand part of it, you can ask for help on the Runeforge-Discord server*
-# Required Tools
+## Required Tools
 - [Ritobin *Tools to translate bin files into Python files*](/core-guides/tools/rito-bin)
 - [Choose any Code Editor *Visual Studio recommended*](/core-guides/tools#code-bin-editing)
 
 *If you choose Visual Studio Code, you need the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) aswell!
 Other editors work aswell, aslong as they can edit .py (Python) files.*
 
-# Written Guide
+## Written Guide
 
 We will be focusing on how to add Pool Party Braum’s castles from his Pool Party skin to his base skin. The reason is because BASE Braum utilizes the same mesh with different scales, while Pool Party actually has randomized objects that it pulls from.
 
@@ -30,7 +30,7 @@ We will have to add these to one of BASE Braum’s bins, link in resources, and 
 **SKIN** – Refers to any bins related to the base skin. In our case: `braum_skins_skin33_skins_skin34_skins_skin35_skins_skin36_skins_skin37_skins_skin38_skins_skin39_skins_skin40_skins_skin41.bin`
 `Skin33.bin` from the DATA folder
 
-**Following steps which we’ll go over in detail throughout the post:**
+### Following steps which we’ll go over in detail throughout the post
 1. Grab related bins. Regular and DATA for BASE and SKIN you want to pull from.
 2. Find child systems (R_mis from SKIN and paste as new ones to your BASE bin.
 3. Copy hashes for each child system’s name and find in the DATA resources of SKIN
@@ -45,29 +45,29 @@ In this case, we are grabbing **TWO** children systems, not just one (since our 
 
 Make sure to copy from the bracket below `Particle Path`
 
-![part1.webp](/user-pictures/vector/general-guides/child-particles/part1.webp)
+![Bracket below Particle Path where copying starts](/user-pictures/vector/general-guides/child-particles/part1.webp)
 
 ALL the way up to the `VfxSystemDefinitionData`
 
-![part2.webp](/user-pictures/vector/general-guides/child-particles/part2.webp)
+![VfxSystemDefinitionData line where the copied selection ends](/user-pictures/vector/general-guides/child-particles/part2.webp)
 
 And paste below the last bracket of your targeted VFX system (It's recommended to place it there for organization).
 
-![part3.webp](/user-pictures/vector/general-guides/child-particles/part3.webp)
+![Child systems pasted below the targeted VFX system's last bracket](/user-pictures/vector/general-guides/child-particles/part3.webp)
 
 Our BASE bin should look like this now once we have added the new VFX systems and search for `particleName: string`
 
-![part4.webp](/user-pictures/vector/general-guides/child-particles/part4.webp)
+![BASE bin showing the new systems when searching particleName](/user-pictures/vector/general-guides/child-particles/part4.webp)
 
 Now that we have the new systems added, we immediately have to link them in our resources for **skin0.bin** from DATA.
 
 Copy the hash name before `VfxSystemDefinitionData` of one child system and search for it in resources of **skin33.bin** from DATA.
 
-![part5.webp](/user-pictures/vector/general-guides/child-particles/part5.webp)
+![Searching the child system hash in skin33.bin resources](/user-pictures/vector/general-guides/child-particles/part5.webp)
 
 Now copy and paste that to skin0.bin’s resources.
 
-![part6.webp](/user-pictures/vector/general-guides/child-particles/part6.webp)
+![Child system hashes pasted into skin0.bin's resources](/user-pictures/vector/general-guides/child-particles/part6.webp)
 
 ***Here I have both of my child systems highlighted***.
 
@@ -78,15 +78,15 @@ Now copy and paste that to skin0.bin’s resources.
 *Make sure the hashes are the same as the ones you linked in resources.*
 *Note that this emitter does not have any textures linked (may not always be the case but is most likely). It basically acts as a `linking` emitter that tells the VFX to pull from another system.*
 
-![part7.webp](/user-pictures/vector/general-guides/child-particles/part7.webp)
+![Linking emitter with VfxChildIdentifier referencing the child systems](/user-pictures/vector/general-guides/child-particles/part7.webp)
 
 Now that this has been copied to my **BASE**‘s `R_Mis` vfx system, I can now test the mod.
 
 
 For clarity’s sake, I have removed Braum’s original Ice Spikes that appear in the middle of his ult so that we can see the new children.
 
-![part8.webp](/user-pictures/vector/general-guides/child-particles/part8.webp)
+![New child castles appearing in Braum's ultimate in-game](/user-pictures/vector/general-guides/child-particles/part8.webp)
 
-# Sources
+## Sources
 
 - Bearded Shepherd
