@@ -126,7 +126,7 @@ and that the `mEffectKey` is the same as you listed in your bin resources for an
 Convert both python files to bins and test!
 
 <a href="https://www.youtube.com/watch?v=yrvOLr754HQ"><img src="https://img.youtube.com/vi/yrvOLr754HQ/0.jpg" alt="Guide on how to install LOL Maya Plugin"
-style="width:75%"></a>
+style="width:75%" /></a>
 
 *External link to Youtube!*
 

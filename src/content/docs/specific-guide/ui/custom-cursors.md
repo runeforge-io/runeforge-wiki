@@ -7,11 +7,11 @@ lastUpdated: 2024-08-26
 ### Tools
 You will need one of the following tools to save your custom cursors.
 #### Free
-- <a href="/core-guides/tools/paint-net">paint.net*Explained in this guide*</a>
-- <a href="/core-guides/tools/gimp">GIMP*Not included in this guide (yet)*</a>
+- [paint.net*Explained in this guide*](/core-guides/tools/paint-net)
+- [GIMP*Not included in this guide (yet)*](/core-guides/tools/gimp)
 
 #### Paid
-- <a href="/core-guides/tools/adobe/photoshop">Adobe Photoshop*Explained in this guide*</a>
+- [Adobe Photoshop*Explained in this guide*](/core-guides/tools/adobe/photoshop)
 
 ---
 ### Extracting and opening League's pointers
@@ -90,7 +90,7 @@ The final address of the folder should look like this:
 
 <kbd style="background-color:#343942">UI.wad.client\assets\ux\cursors</kbd> or <kbd style="background-color:#343942">UI\assets\ux\cursors</kbd>.
 
-Now simply create the mod in CsLoL. If you are unable to, refer to the <a href="/core-guides/tools/cslolmanager">Cslol guide</a>.
+Now simply create the mod in CsLoL. If you are unable to, refer to the [Cslol guide](/core-guides/tools/cslolmanager).
 
 Head over to the Practice Tool and check how your cursor looks. Enable target champions only, hover the shop, ping, hover allies, etc. Check if everything is in order.
 
@@ -98,7 +98,7 @@ If everything is alright, congrats on creating a cursor mod!
 
 ### Windows cursors
 
-The pointers that the Windows Operating system uses are located under <kbd style="background-color:#343942">C:\Windows\Cursors</kbd>. Using the <a href="https://forums.getpaint.net/topic/927-icon-cursor-and-animated-cursor-format-v37-may-2010/page/13/#comment-514467">.ico .cur and .ani paint.net plugin</a> and [.svg and .svgz plugin for paint.net](https://forums.getpaint.net/topic/117086-scalable-vector-graphics-filetype-alternative-plugin-svg-svgz/) you can open these pointers in paint.<span>net</span> without needing to convert any files.
+The pointers that the Windows Operating system uses are located under <kbd style="background-color:#343942">C:\Windows\Cursors</kbd>. Using the [.ico .cur and .ani paint.net plugin](https://forums.getpaint.net/topic/927-icon-cursor-and-animated-cursor-format-v37-may-2010/page/13/#comment-514467) and [.svg and .svgz plugin for paint.net](https://forums.getpaint.net/topic/117086-scalable-vector-graphics-filetype-alternative-plugin-svg-svgz/) you can open these pointers in paint.<span>net</span> without needing to convert any files.
 
 ### Useful Links and Resources
 

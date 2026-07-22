@@ -19,9 +19,9 @@ For Jhin, his reload animation is horribly bugged if you export it normally:
 ## Written Guide
 
 ### How to get a Riot .skl file
-First extract the original champion <a href="/specific-guide/filetypes">.skl</a> file from Obsidian, following the tutorial above. You only need the <a href="/specific-guide/filetypes">.skl</a>. In my case, it’s Jhin.skl
+First extract the original champion [.skl](/specific-guide/filetypes) file from Obsidian, following the tutorial above. You only need the [.skl](/specific-guide/filetypes). In my case, it’s Jhin.skl
 
-Rename the <a href="/specific-guide/filetypes">.skl</a> to Riot.skl and place it in the champion skin folder of your custom skin. I rename Jhin.skl to Riot.skl and put it into Jhin.wad.client/assets/characters/jhin/skins/base.
+Rename the [.skl](/specific-guide/filetypes) to Riot.skl and place it in the champion skin folder of your custom skin. I rename Jhin.skl to Riot.skl and put it into Jhin.wad.client/assets/characters/jhin/skins/base.
 
 ![Riot.skl placed in the custom skin's base folder](/user-pictures/goat/fixbrokenanimation/2.webp)
 

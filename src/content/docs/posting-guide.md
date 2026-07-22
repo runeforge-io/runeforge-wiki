@@ -54,16 +54,7 @@ Videos can be uploaded the same way (`.mp4` only) or embedded from YouTube — s
 
 ## Previewing your changes
 
-For bigger contributions it's worth running the wiki locally:
-
-```sh
-git clone https://github.com/your-username/runeforge-wiki
-cd runeforge-wiki
-npm install
-npm run dev
-```
-
-The site runs at `http://localhost:4321` and live-reloads as you edit. `npm run build` runs the same checks as the PR pipeline, including the internal-link validator — a typo'd link will fail the build, so run it before pushing.
+For bigger contributions it's worth running the wiki locally — you get a live preview at `http://localhost:4321` that reloads as you edit, and you can run the same checks as the PR pipeline before pushing. The [Authoring Locally](/posting-guide/local-authoring) guide walks through the whole setup.
 
 ## Writing the content
 

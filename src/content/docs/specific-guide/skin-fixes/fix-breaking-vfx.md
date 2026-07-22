@@ -15,7 +15,7 @@ Particles break and have blocky shapes due to Riot renaming files that you might
 
 
 <a href="https://www.youtube.com/watch?v=6FLj7f9_fRE"><img src="https://img.youtube.com/vi/6FLj7f9_fRE/0.jpg" alt="Guide on how to fix broken vfx and prevent them from breaking"
-style="width:75%"></a>
+style="width:75%" /></a>
 
 *External link to Youtube!*
 

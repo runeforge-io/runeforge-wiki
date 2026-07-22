@@ -15,7 +15,7 @@ In order to edit [dds](/specific-guide/filetypes) files, you need to install a c
 #### Download
 Head to Intel's website on the link below and click the download link at the top of the page.
 When redirected to the second page click the <kbd style="background:#7cad18">ZIP</kbd> button at the top.
-- <a href="https://www.intel.com/content/www/us/en/developer/articles/tool/intel-texture-works-plugin.html">Intel Texture Works download*Works with both Intel&reg; and AMD processors*</a>
+- [Intel Texture Works download*Works with both Intel&reg; and AMD processors*](https://www.intel.com/content/www/us/en/developer/articles/tool/intel-texture-works-plugin.html)
 #### Installation
 1. Close Photoshop.
 2. Extract the plugin .zip file you downloaded.

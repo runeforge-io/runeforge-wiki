@@ -38,7 +38,7 @@ After you got your first mod approved, you can continue to post more afterwards 
 
 
 <a href="https://www.youtube.com/watch?v=BwR6KMdsHhU"><img src="https://img.youtube.com/vi/BwR6KMdsHhU/0.jpg" alt="Guide on how to post a mod"
-style="width:50%"></a>
+style="width:50%" /></a>
 
 *Video will open externally*
 

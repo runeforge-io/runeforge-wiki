@@ -65,7 +65,7 @@ Wait for all syncing/updating/loading of hashes to finish before proceeding with
 		+ Joint hashes -> joint names in SKL.
 		+ Submesh hashes -> submesh names in SKN.
 	- game:
-		+ File path that starts with <kbd style="background-color:#343942">assets/</kbd> or <kbd style="background-color:#343942">data/</kbd> in BIN. If file type is <a href="/specific-guide/filetypes">.dds</a>, extract 2x, 4x dds too.
+		+ File path that starts with <kbd style="background-color:#343942">assets/</kbd> or <kbd style="background-color:#343942">data/</kbd> in BIN. If file type is [.dds](/specific-guide/filetypes), extract 2x, 4x dds too.
 
 3. Custom Hashes:
 
@@ -139,7 +139,7 @@ Can bulk unpack multiple WADs into same output. Example: Bulk unpacking all voic
  ---
 
 ## pyntex
-<a href="/core-guides/tools/hacksaw">Hacksaw/bintex</a> but rewritten. Print out mentioned & missing files in all BINs inside a WAD or a Folder.
+[Hacksaw/bintex](/core-guides/tools/hacksaw) but rewritten. Print out mentioned & missing files in all BINs inside a WAD or a Folder.
 
 ![The pyntex window listing mentioned and missing BIN files](/user-pictures/bud/pyntex.png)
     

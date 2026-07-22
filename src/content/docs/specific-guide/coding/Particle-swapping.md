@@ -21,7 +21,7 @@ If you choose Visual Studio Code, you need the [Python extension](https://market
 ---
 
 <a href="https://www.youtube.com/watch?v=_RoS1Dpdvfg"><img src="https://img.youtube.com/vi/_RoS1Dpdvfg/0.jpg" alt="Guide on how to install LOL Maya Plugin"
-style="width:75%"></a>
+style="width:75%" /></a>
 
 *External Youtube Link!*
 

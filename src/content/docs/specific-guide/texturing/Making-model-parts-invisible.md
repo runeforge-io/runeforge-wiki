@@ -36,7 +36,7 @@ Follow this tutorial to load your model in Blender (or Maya or wherever you can 
 
 
 <a href="https://www.youtube.com/watch?v=_i3xVpwBIHQ"><img src="https://img.youtube.com/vi/_i3xVpwBIHQ/0.jpg" alt="Guide on how to install LOL Maya Plugin"
-style="width:75%"></a>
+style="width:75%" /></a>
 
 *External link to Youtube!*
 

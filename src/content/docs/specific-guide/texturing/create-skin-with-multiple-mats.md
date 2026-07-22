@@ -28,7 +28,7 @@ Plus **one** code editor of your choice:
 This tutorial teaches you how to assign multiple materials to a skin properly.
 A lot of the newer champions and skins require multiple materials. An indicator for that are assets, that are not always there, but for example only appear in the recall animation, like KDA Ahri’s throne. Those champions and skins also usually have more than just the basic texture in the folder Skins/base.
 <a href="https://www.youtube.com/watch?v=19LhAguxJtU"><img src="https://i3.ytimg.com/vi/19LhAguxJtU/maxresdefault.jpg" alt="Guide on how to create skins with different materials"
-style="width:75%"></a>
+style="width:75%" /></a>
 
 *External link to Youtube!*
 
@@ -37,7 +37,7 @@ style="width:75%"></a>
 While assigning materials you might run into a rare issue, which for example Kalista and Mordekaiser have: they have bones and materials that have the same name.
 
 <a href="https://www.youtube.com/watch?v=Yqe_GwzF8AU"><img src="https://img.youtube.com/vi/Yqe_GwzF8AU/0.jpg" alt="Guide on how to create skins with identical materials & bones"
-style="width:75%"></a>
+style="width:75%" /></a>
 
 *External link to Youtube!*
 

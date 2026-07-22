@@ -19,7 +19,7 @@ Plus **one** 2D editing program of your choice:
 
 ## Tutorial
 <a href="https://www.youtube.com/watch?v=TY3tinLwf4I"><img src="https://i.ytimg.com/vi/TY3tinLwf4I/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAJoNIa-D6O1XTsqxhbJ0ZEQiez4A" alt="Guide on Recoloring Particles"
-style="width:75%"></a>
+style="width:75%" /></a>
 
 
 ## Sources

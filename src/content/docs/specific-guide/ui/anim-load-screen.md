@@ -10,7 +10,7 @@ Learn how to create a custom animated loading screen for League of Legends by fo
 
 If you prefer a visual guide, you can follow the step-by-step video tutorial available on YouTube. The video will walk you through the entire process.
 
-<a href="https://www.youtube.com/watch?v=9Mz6xG-CBV8"><img src="https://img.youtube.com/vi/9Mz6xG-CBV8/0.jpg" alt="How to make Animated Loading Screen" style="width:75%"></a>
+<a href="https://www.youtube.com/watch?v=9Mz6xG-CBV8"><img src="https://img.youtube.com/vi/9Mz6xG-CBV8/0.jpg" alt="How to make Animated Loading Screen" style="width:75%" /></a>
 
 ### Step 1: Download and Extract Files
 

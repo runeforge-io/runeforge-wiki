@@ -52,7 +52,7 @@ There will also be gray colored folders called “Empty layers for actions (Igno
 ### Video Guide
 Follow the video until the 17th minute, then scroll further.
 <a href="https://www.youtube.com/watch?v=9BMv-_M00ac"><img src="https://img.youtube.com/vi/9BMv-_M00ac/0.jpg" alt="Guide on how to use the simple hud template"
-style="width:75%"></a>
+style="width:75%" /></a>
 
 *External link to Youtube!*
 

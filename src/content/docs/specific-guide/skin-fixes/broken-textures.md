@@ -77,7 +77,7 @@ First, you need to add both `tex2dds` and `texconv` to your Windows path in orde
 ---
 
 <video width="720" height="auto" controls>
-  <source src="/user-pictures/moga/how_to_add_a_folder_to_path_on_windows.mp4" type="video/mp4">
+  <source src="/user-pictures/moga/how_to_add_a_folder_to_path_on_windows.mp4" type="video/mp4" />
 </video>
 
 Using tex2dds manually by dragging each file, from the cli like `tex2dds file.tex` to create `file.dds`, or using LtMAO's context menu is impractical.

@@ -65,7 +65,7 @@ And that’s all! Now CSLoL is updated!
 Start by renaming all folders of your mod the same way as its listed in the original data. 
 
 <video width="640" height="auto" controls>
-  <source src="/user-pictures/vector/general-guides/videos/cslolmakemod_fiels.mp4" type="video/mp4">
+  <source src="/user-pictures/vector/general-guides/videos/cslolmakemod_fiels.mp4" type="video/mp4" />
 </video>
 
 <img src="/user-pictures/vector/general-guides/general/folder_structure.png" alt="Mod folder structure matching the original wad file layout" style="width:25%" />
@@ -75,7 +75,7 @@ As you can see in the video and the picture above, this is the exact same folder
 Creating a mod package is pretty simple, just follow the video down below and you're done!
 
 <video width="480" height="auto" controls>
-  <source src="/user-pictures/vector/general-guides/videos/cslolmakemod_create.mp4" type="video/mp4">
+  <source src="/user-pictures/vector/general-guides/videos/cslolmakemod_create.mp4" type="video/mp4" />
 </video>
 
 ## Misc Guides

@@ -41,7 +41,7 @@ Now you just paste in your values and done.
 
 ### Video Guide
 <a href="https://www.youtube.com/watch?v=h2NlIc35qWY"><img src="https://img.youtube.com/vi/h2NlIc35qWY/0.jpg" alt="Guide on how to edit VFX Color values via code"
-style="width:75%"></a>
+style="width:75%" /></a>
 *External Youtube Link!*
 
 ## Sources

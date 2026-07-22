@@ -130,5 +130,5 @@ Fail this, and the void shall remain particle-less, an empty husk of missed pote
  # Video Guide
  
  <a href="https://www.youtube.com/watch?v=lfW8YBAUJHw"><img src="https://img.youtube.com/vi/lfW8YBAUJHw/0.jpg" alt="Guide on how to create idle particles"
- style="width:75%"></a>
+ style="width:75%" /></a>
  
