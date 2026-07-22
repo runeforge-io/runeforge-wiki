@@ -95,6 +95,23 @@ h6 {
   text-decoration-color: #f7004d; /* crimson-400 */
 }
 
+.sl-markdown-content ul:not([class]):not(:where(.not-content *)) {
+  list-style: disc;
+  padding-inline-start: 1.625rem;
+}
+.sl-markdown-content ol:not([class]):not(:where(.not-content *)) {
+  list-style: decimal;
+  padding-inline-start: 1.625rem;
+}
+
+/* Markers slightly dimmer than the text so they read as structure. */
+.sl-markdown-content li:not(:where(.not-content *))::marker {
+  color: var(--sl-color-gray-3);
+}
+.sl-markdown-content li ul:not([class]):not(:where(.not-content *)) {
+  list-style: circle;
+}
+
 /* Current page in the sidebar: solid crimson pill with the app's glow. */
 a[aria-current='page'],
 a[aria-current='page']:hover,

@@ -133,7 +133,9 @@ When you bring your model in Maya you want to first reverse your normals AND the
 ### Importing textures to your scene
 You can import textures to your scene which is especially useful when you are reusing a champion’s face from their best skin. You can only import regular image formats like PNG or JPG. [DDS](/specific-guide/filetypes) will NOT work.
 
-Go to `file > import resources > add resource`, then select your image/texture file and change the file type to `texture`. Import the resource to your Project. Now you can create a fill layer with a mask and paint where you want the face and make your edits!
+1. Go to `file > import resources > add resource`, then select your image/texture file and change the file type to `texture`.
+2. Import the resource to your Project.
+3. Create a fill layer with a mask and paint where you want the face and make your edits!
 
 <img src="/user-pictures/vector/general-guides/substance-guides/texturefix1.webp" alt="Import resources dialog with file type set to texture" height="900" />
 
@@ -224,7 +226,15 @@ You should also try painting in black and white then using the gradient color fi
 
 And that brings me to TIP 7 which is to always use League of Legends skins as reference for anything you are painting, especially if you want your skin to match the same aesthetic as the game. Check out [Teemo.gg](https://teemo.gg/) to view their models and use as reference.
 
-There are plenty of great references for leather such as in Swiftbolt Varus and KDA ALL OUT Evelynn. Metals on Mordekaiser, hair in Transcended Kayle or Coven Morgana, muscles in Pool Party Braum or female forms in Evelynn, body hair in Pantheon, patterns in Spirit Blossom Cassiopeia, and many more.
+There are plenty of great references:
+
+- Leather in Swiftbolt Varus and KDA ALL OUT Evelynn
+- Metals on Mordekaiser
+- Hair in Transcended Kayle or Coven Morgana
+- Muscles in Pool Party Braum or female forms in Evelynn
+- Body hair in Pantheon
+- Patterns in Spirit Blossom Cassiopeia
+- And many more
 
 ### Brush Settings and Importing Alphas
 

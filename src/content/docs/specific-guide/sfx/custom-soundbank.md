@@ -95,7 +95,11 @@ First, open the `Audio Tab` and select one of your audio files to edit. Once sel
 
 ![Sound Property Editor window in Wwise](/user-pictures/nyht/image_2024-12-09_215607665.png)
 
-Next, switch tab from the `General Settings` tab to `Positioning`, and you'll see this. What you want to do is enable `Listener Relative Routing`, set `3D Spatialization` to `Position + Orientation`, and then check `Attenuation`.
+Next, switch tab from the `General Settings` tab to `Positioning`, and you'll see this. What you want to do is:
+
+1. Enable `Listener Relative Routing`.
+2. Set `3D Spatialization` to `Position + Orientation`.
+3. Check `Attenuation`.
 
 ![Positioning tab with Listener Relative Routing and 3D Spatialization enabled](/user-pictures/nyht/image_2024-12-09_215828087.png)
 
@@ -107,10 +111,10 @@ The `New Attenuation` window will pop up. We want to create our own so we don’
 
 ![Naming the new Attenuation in its creation window](/user-pictures/nyht/image_2024-12-09_220301661.png)
 
-Now, once you've created the `Attenuation`, click `Edit....`
-Adjust the curve to about `2000`-`3000` distance.
-Volume should be at the top for about `1300`-`1700` units, then drop down
-Remember to also disable `High Spread`
+1. Now, once you've created the `Attenuation`, click `Edit....`
+2. Adjust the curve to about `2000`-`3000` distance.
+3. Volume should be at the top for about `1300`-`1700` units, then drop down
+4. Remember to also disable `High Spread`
 
 ![Editing the attenuation curve to the recommended distances](/user-pictures/nyht/image_2024-12-09_220544127.png)
 

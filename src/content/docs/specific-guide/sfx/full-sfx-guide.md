@@ -47,7 +47,14 @@ For now, I have imported a voice line belonging to Kars, ripped from JoJo ASBR. 
 
 As a golden rule, you should strive to keep the custom sound about the same length as the original sound. This is most important for SFX, less so for voice-overs. In the case of the latter, the game will play out the voice to the end anyway, so if it's longer than the original then it will simply last longer. Which is fine by itself, but if that voice line is supposed to play during an ability, then it may be weird to have it play much longer than the ability's duration. However, in the case of the former, the SFX, if the sound is too long the game will cut it short, if it's too short, then it might not blend properly, so in both cases it will sound weird. If you are not sure how long is the sound effect you want to replace, you can wait until we get to using BNK Extract later in the tutorial and then come back to this section. If you, however, know the duration and/or you are focusing on the voice-over, then continue reading this section.
 
-Whether you just want a specific part from your sound file, the track has silent, unnecessary parts, or whatever else might be the reason, what you have to do is trim it. Left-click on the start of the part you want to cut, then right-click and split clip. Then, left click and the end of the part you want to cut, then right-click and split clip again. Now you have a part of your found split from the rest.  Click on it, then press delete. Remember to align the rest of the timeline, so that everything begins at 0.0 and doesn't have any gaps in between. The GIF below shows this process:
+Whether you just want a specific part from your sound file, the track has silent, unnecessary parts, or whatever else might be the reason, what you have to do is trim it:
+
+1. Left-click on the start of the part you want to cut, then right-click and split clip.
+2. Left click and the end of the part you want to cut, then right-click and split clip again. Now you have a part of your found split from the rest.
+3. Click on it, then press delete.
+4. Remember to align the rest of the timeline, so that everything begins at 0.0 and doesn't have any gaps in between.
+
+The GIF below shows this process:
 
 ![Splitting and trimming a sound clip in Audacity](/user-pictures/vector/general-guides/sfxguide/sg4.gif)
 
@@ -55,14 +62,25 @@ After you are done trimming your file, there is one more thing to do. Generally 
 
 ![Volume gauge under the track's Effects tab in Audacity](/user-pictures/vector/general-guides/sfxguide/sg5.webp)
 
-nce that's done, all you have to do is go to `File -> Export -> Export as WAV`, then select your preferred destination. I also advise you to name the file accordingly. For example, if you are doing SFX, then name it for what you want to use this sound for, e.g. "Recall" or "Ult". If you are doing voice lines, what I like to do is type out what I hear in the voice line. If I hear, say, "I'm Batman", then I'll name the file "I'm Batman". Just don't make the name too long.
+Once that's done, all you have to do is go to `File -> Export -> Export as WAV`, then select your preferred destination. I also advise you to name the file accordingly. For example, if you are doing SFX, then name it for what you want to use this sound for, e.g. "Recall" or "Ult". If you are doing voice lines, what I like to do is type out what I hear in the voice line. If I hear, say, "I'm Batman", then I'll name the file "I'm Batman". Just don't make the name too long.
 
 Remember to repeat the process for every file you have!
 
 #### Converting your edited files with Wwise
-Now has come the time to convert all of our .wav files into .wem files, which is the format League uses for all its sound. To achieve that, open your Wwise Launcher. Go to the tab "Wwise". From there, click on the Install button and choose the 2016 version. If it gives you a choice, the one I'm using is "2016.2.6.6153" You might have to create an account for it. If you are annoyed by such practices, just create a throwaway email for this kind of stuff, as I did. Anyway, once you have the 2016 version installed, open it. We are using the 2016 version not because we live in the past and can't move on, but because Riot Games lives in the past and can't move on. In other words, LoL uses this specific version of Wwise and so we have to as well. 
+Now has come the time to convert all of our .wav files into .wem files, which is the format League uses for all its sound. To achieve that:
 
-First, it's gonna ask you to create a new project. Do so, name it however you want. Next, you will receive a pop-up that you are not operating on a full license. Ignore this, of course. The first thing you need to do once inside Wwise, is to head over to `Project -> Project Settings -> Source Settings`, then change the Default Conversion Settings to `Vorbis Quality High`. It's crucial to do so before importing any files. The GIF below shows you how to do it: 
+1. Open your Wwise Launcher.
+2. Go to the tab "Wwise".
+3. From there, click on the Install button and choose the 2016 version. If it gives you a choice, the one I'm using is "2016.2.6.6153" You might have to create an account for it. If you are annoyed by such practices, just create a throwaway email for this kind of stuff, as I did.
+4. Once you have the 2016 version installed, open it.
+
+We are using the 2016 version not because we live in the past and can't move on, but because Riot Games lives in the past and can't move on. In other words, LoL uses this specific version of Wwise and so we have to as well. 
+
+1. First, it's gonna ask you to create a new project. Do so, name it however you want.
+2. You will receive a pop-up that you are not operating on a full license. Ignore this, of course.
+3. The first thing you need to do once inside Wwise, is to head over to `Project -> Project Settings -> Source Settings`, then change the Default Conversion Settings to `Vorbis Quality High`. It's crucial to do so before importing any files.
+
+The GIF below shows you how to do it: 
 
 ![Setting Wwise default conversion settings to Vorbis Quality High](/user-pictures/vector/general-guides/sfxguide/sg6.gif)
 
@@ -70,7 +88,9 @@ Then, click on `Project -> Import Audio Files`. A window will pop up, giving you
 
 ![Importing audio folders into Wwise](/user-pictures/vector/general-guides/sfxguide/sg7.gif)
 
-Now just go to `Project -> Convert All Audio Files`. Click Ok. To quickly find your converted files, go to `Project -> File Manager`, then right-click on the displayed file path and click Open Containing Folder. a File Explorer window will pop up. your converted files are in `.cache\Windows\SFX`. I recommend copying all those files into the original folder you imported into Wwise. You can now also close Wwise.
+1. Now just go to `Project -> Convert All Audio Files`. Click Ok.
+2. To quickly find your converted files, go to `Project -> File Manager`, then right-click on the displayed file path and click Open Containing Folder. a File Explorer window will pop up. your converted files are in `.cache\Windows\SFX`.
+3. I recommend copying all those files into the original folder you imported into Wwise. You can now also close Wwise.
 
 ### Importing your sound to League
 #### Open League's audio files using BNK-extract
@@ -81,9 +101,17 @@ What you want to do first is open up the BNK Extract (file is simply named gui.e
 
 You'll see three "select" buttons on the top. The bin file is the same for both SFX and voice-over, that's why I made you all extract the bin file from Obsidian at the beginning of the tutorial, no matter what you are editing. Now, click the "select bin file" button. Locate the folder you have extracted files from Obsidian to. Once you are there, you should see two folders: assets and data. Go to data and click through the folders until you arrive at the file called skin0.bin (this is for the default skin, if you are editing a different one then the number will be different too).
 
-**For SFX**: click on "select audio file", locate the place you extracted the Obsidian files to, then click on assets -> sounds -> wwise2016 -> sfx -> characters -> (your champion name) -> skins -> base (if you are editing the default skin). There you will see two files. Select the one that ends with "audio". Afterward, click on "select events file". In the same directory as the previous file, select the file ending with "events".
+**For SFX**:
 
-**For voice-over**: click on "select audio file", locate the place you extracted the Obsidian files to, then click on `assets -> sounds -> wwise2016 -> vo -> en_us (or whatever other language you use) -> characters -> (your champion name) -> skins -> base (if you are editing the default skin)`. There you will see three files. Select the one that ends with "audio" and is a WPK file, it should also weigh more. Afterward, click on "select events file". In the same directory as the previous file, select the file ending with "events".
+1. Click on "select audio file", locate the place you extracted the Obsidian files to, then click on assets -> sounds -> wwise2016 -> sfx -> characters -> (your champion name) -> skins -> base (if you are editing the default skin).
+2. There you will see two files. Select the one that ends with "audio".
+3. Afterward, click on "select events file". In the same directory as the previous file, select the file ending with "events".
+
+**For voice-over**:
+
+1. Click on "select audio file", locate the place you extracted the Obsidian files to, then click on `assets -> sounds -> wwise2016 -> vo -> en_us (or whatever other language you use) -> characters -> (your champion name) -> skins -> base (if you are editing the default skin)`.
+2. There you will see three files. Select the one that ends with "audio" and is a WPK file, it should also weigh more.
+3. Afterward, click on "select events file". In the same directory as the previous file, select the file ending with "events".
 
 For both: once you have all three files selected, click "parse files" on the right. 
 
@@ -107,17 +135,49 @@ Say, you wanted to take a sound from Pyke's Ult, make it louder, and put it on P
 
 #### Replacing sound files
 
-Replacing the sound files is rather simple. Simply click the sound file you want to replace, then click "Replace wem data", locate the file you wanted to replace it with (converted to .wem with Wwise), and simply click open. The file is now replaced. You can play the sound of this file again to confirm it has indeed changed. Once you have done that for every file you wished to replace, click on the higher most line in the gui, the one that is selected on the screenshots above, then place "Save as bnk/wpk" and choose your preferred destination. Please note, that even though you have initially selected three files, the bin, the audio and the events, you only modify the audio file, hence that's the only one that will get extracted.
+Replacing the sound files is rather simple:
+
+1. Simply click the sound file you want to replace.
+2. Click "Replace wem data", locate the file you wanted to replace it with (converted to .wem with Wwise), and simply click open. The file is now replaced.
+3. You can play the sound of this file again to confirm it has indeed changed.
+4. Once you have done that for every file you wished to replace, click on the higher most line in the gui, the one that is selected on the screenshots above, then place "Save as bnk/wpk" and choose your preferred destination.
+
+Please note, that even though you have initially selected three files, the bin, the audio and the events, you only modify the audio file, hence that's the only one that will get extracted.
 
 ### Place your modded files in-game
 #### Creating .wad file
 This is it, we are almost there! Now has come the time to create the wad files. You have already seen them at the very beginning of this tutorial - these are the files in League's install folder, the ones that store all the champion info, the ones we extracted with Obsidian. Now we need to create them ourselves.
 
 ##### For SFX
-this file goes into the main wad file, the (Name).wad.client. As you might remember, this is the main file, so it stores all other info about a champion except for their voice-over. So, if you are just editing the sounds for your own custom skin mod, then you put both in the same wad file. But, to the point: you need to create a very specific path in your file explorer. Navigate to a folder of your choosing, then create a folder with your champion's name, exactly as it appeared in the original files. So, for my case, I have to name my folder "Khazix". In there create another folder, called "assets". In it, a folder called "sounds". In it, a folder called "wwise2016". In it, a folder called "sfx". In it, a folder called "characters". In it, a folder with the name of your champion, so for me, "khazix". In it, a folder called "skins". In it, a folder called "base" (if you are doing the default skin). And inside of that is where you put the file you extracted from BNK Extract gui.
+this file goes into the main wad file, the (Name).wad.client. As you might remember, this is the main file, so it stores all other info about a champion except for their voice-over. So, if you are just editing the sounds for your own custom skin mod, then you put both in the same wad file. But, to the point: you need to create a very specific path in your file explorer.
+
+1. Navigate to a folder of your choosing, then create a folder with your champion's name, exactly as it appeared in the original files. So, for my case, I have to name my folder "Khazix".
+2. In there create another folder, called "assets".
+3. In it, a folder called "sounds".
+4. In it, a folder called "wwise2016".
+5. In it, a folder called "sfx".
+6. In it, a folder called "characters".
+7. In it, a folder with the name of your champion, so for me, "khazix".
+8. In it, a folder called "skins".
+9. In it, a folder called "base" (if you are doing the default skin).
+
+And inside of that is where you put the file you extracted from BNK Extract gui.
 
 ##### For Voice-over
-this file goes into the other file, the one named "(Name).en_US.wad.client". Again, remember that the en_US part will be different for you if you are using a different language. So, you need to create a very specific path in your file explorer. Navigate to a folder of your choosing, then create a folder with your champion's name, exactly as it appeared in the original files, and add ".en_US" after the name, or whatever other language you have. So, for my case, I have to name my folder "Khazix.en_US". In there create another folder, called "assets". In it, a folder called "sounds". In it, a folder called "wwise2016". In it, a folder called "vo". In it, a folder called "en_us". In it, a folder called "characters". In it, a folder with the name of your champion, so for me, "khazix". In it, a folder called "skins". In it, a folder called "base" (if you are doing the default skin). And inside of that is where you put the file you extracted from BNK Extract gui.
+this file goes into the other file, the one named "(Name).en_US.wad.client". Again, remember that the en_US part will be different for you if you are using a different language. So, you need to create a very specific path in your file explorer.
+
+1. Navigate to a folder of your choosing, then create a folder with your champion's name, exactly as it appeared in the original files, and add ".en_US" after the name, or whatever other language you have. So, for my case, I have to name my folder "Khazix.en_US".
+2. In there create another folder, called "assets".
+3. In it, a folder called "sounds".
+4. In it, a folder called "wwise2016".
+5. In it, a folder called "vo".
+6. In it, a folder called "en_us".
+7. In it, a folder called "characters".
+8. In it, a folder with the name of your champion, so for me, "khazix".
+9. In it, a folder called "skins".
+10. In it, a folder called "base" (if you are doing the default skin).
+
+And inside of that is where you put the file you extracted from BNK Extract gui.
 
 ##### For both
 Now head over to the place where you have your LCSManager installed. There, you should see a folder called "cslol-tools":

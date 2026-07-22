@@ -33,7 +33,11 @@ Change it's value to `12` and save your file. Next, convert your `.py` back into
 
 ![Converting the edited py file back into a bin](/user-pictures/fbs/pytobin.png)
 
-Next, you need to delete the `.py` file, navigate to your `WAD` directory, and convert the `Champion.wad` directory back to a `.wad.client` file. 
+Next, you need to:
+
+1. Delete the `.py` file.
+2. Navigate to your `WAD` directory.
+3. Convert the `Champion.wad` directory back to a `.wad.client` file.
 
 ![Packing the Champion.wad directory back into a wad.client file](/user-pictures/fbs/packtowad.png)
 

@@ -97,6 +97,21 @@ Hold `J` while rotating to snap to hard angles.
 
 ## Lists
 
+If a paragraph chains three or more actions ("First do X. Then do Y. After that Z."), write it as a numbered list instead — steps are much easier to follow and re-find when each one is its own item:
+
+```md
+<!-- Bad -->
+First open the project settings, then change the conversion to Vorbis Quality High, then import your audio files and finally generate the soundbank.
+
+<!-- Good -->
+1. Open the project settings.
+2. Change the conversion to Vorbis Quality High.
+3. Import your audio files.
+4. Generate the soundbank.
+```
+
+The same goes for a sentence that enumerates three or more tools, files, or options — break it into a bullet list with a short intro line.
+
 Keep list items together — don't insert loose "And" / "OR" paragraphs between them, and don't add blank lines between every item:
 
 ```md

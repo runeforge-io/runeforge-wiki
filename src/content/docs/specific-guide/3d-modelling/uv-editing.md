@@ -28,7 +28,11 @@ To do this you have to open Hypershade and then drag & drop an image file into t
 ![Dragging an image file into the Hypershade Textures tab](/user-pictures/gatrix/hypershadeimport.png)
 
 #### Applying imported textures to a mesh
-To apply a texture to a mesh, you simply have to select that mesh in your scene or Outliner and then hold right-click on the texture you want to apply. In the options that appear now, select "Apply Texture's Material to Mesh" and your mesh will have the texture applied to it, for better or worse.
+To apply a texture to a mesh:
+
+1. Select that mesh in your scene or Outliner.
+2. Hold right-click on the texture you want to apply.
+3. In the options that appear now, select "Apply Texture's Material to Mesh" and your mesh will have the texture applied to it, for better or worse.
 
 #### Fixing transparent textures
 ![Example of a mesh with unwanted transparency](/user-pictures/gatrix/transparentexample.png)

@@ -83,7 +83,11 @@ You may have to repeat this process multiple times. Keep in mind to check up, or
 This may only work for models that you can already export.
 :::
 
-Back to the earlier step, be sure to check if you have all of the parts selected. Now, hold on to right mouse, drag down to assign new material and choose whichever option you want (we will be removing it anyways) but preferably another lambert. Export the scene as skl/skn with a placeholder name of your choice.
+Back to the earlier step:
+
+1. Be sure to check if you have all of the parts selected.
+2. Hold on to right mouse, drag down to assign new material and choose whichever option you want (we will be removing it anyways) but preferably another lambert.
+3. Export the scene as skl/skn with a placeholder name of your choice.
 
 ![Assigning a new lambert material to the selected parts](/user-pictures/ascila/screenshot_2025-07-19_235801.png)
 

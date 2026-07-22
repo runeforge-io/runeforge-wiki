@@ -20,8 +20,11 @@ Make sure you check for the green "latest" lable
 
 ---
 
-In order to install CS-LoL, you simply have to execute the file and choose a location you like to install it to. After it has extracted open the `cslol-manager.exe` and then open the League client.
-Press "Detect" in Cslol while the League client is open and you're set, you can add mods now!
+In order to install CS-LoL:
+
+1. Execute the file and choose a location you like to install it to.
+2. After it has extracted open the `cslol-manager.exe` and then open the League client.
+3. Press "Detect" in Cslol while the League client is open and you're set, you can add mods now!
 
 If detecting doesn't work for some reason, open CS-LoL and choose the "game"-folder for League of Legends. 
 The standard League game installation path would be: 

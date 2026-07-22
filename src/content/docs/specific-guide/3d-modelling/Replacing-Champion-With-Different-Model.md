@@ -148,11 +148,19 @@ Try to place it like the original weapon was. Put it somewhere on the weapon bon
 
 ## Binding the Skeleton 
 
-We will now bind the skeleton to our model! To do this, simply select your mesh(es) and the Root of your skeleton, then go to the Rigging tab, Skin > Bind Skin, and open the options by pressing the little square on the right side.
+We will now bind the skeleton to our model! To do this:
+
+1. Select your mesh(es) and the Root of your skeleton.
+2. Go to the Rigging tab, Skin > Bind Skin.
+3. Open the options by pressing the little square on the right side.
 
 <img src="/user-pictures/moga/goat_model_swap/goat_model_swap_20.png" alt="Opening the Bind Skin options in the Rigging tab" height="500" />
 
-Now that you are in the options, try to copy my settings here: Make sure to bind to the Joint Hierarchy, set the max influence TO A MAXIMUM OF 4 (I highly recommend 3, and go lower if your mesh doesn't have many polygons/faces), and remove "Maintain max influences."
+Now that you are in the options, try to copy my settings here:
+
+- Make sure to bind to the Joint Hierarchy.
+- Set the max influence TO A MAXIMUM OF 4 (I highly recommend 3, and go lower if your mesh doesn't have many polygons/faces).
+- Remove "Maintain max influences."
 
 <img src="/user-pictures/goat/custommodels/34.png" alt="Recommended Bind Skin settings with low max influences" height="400" />
 

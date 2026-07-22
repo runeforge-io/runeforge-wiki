@@ -69,7 +69,10 @@ Under your extracted folder, `Mod_Name\WAD` you will find all of your mod's file
 > - ***Every*** champion still uses DDS files for their QWER+P icons (found under `champ.wad\assets\characters\champ\hud\icons2d`).
 > - ***Every*** champion uses TEX for their **loadscreen** found in the main folder and in game **HUD icons** found in `champ.wad\assets\characters\champ\hud`.
 
-First, you need to add both `tex2dds` and `texconv` to your Windows path in order to use them from within any directory, otherwise, they will only be available while inside the folder they were installed to. To do this, search `env var` from your Windows start menu and click `Edit the system environment variables` or follow this video guide since default windows search is garbage.
+First, you need to add both `tex2dds` and `texconv` to your Windows path in order to use them from within any directory, otherwise, they will only be available while inside the folder they were installed to. To do this:
+
+1. Search `env var` from your Windows start menu.
+2. Click `Edit the system environment variables` or follow this video guide since default windows search is garbage.
 
 ---
 
@@ -78,7 +81,10 @@ First, you need to add both `tex2dds` and `texconv` to your Windows path in orde
 </video>
 
 Using tex2dds manually by dragging each file, from the cli like `tex2dds file.tex` to create `file.dds`, or using LtMAO's context menu is impractical.
-Navigate **inside** of your `champion.wad` folder, press `Ctrl+L` or click to focus the address bar in file explorer, type `cmd`, and press enter to open a command prompt at your current location. Your CMD path should end with `champ.wad`.
+
+1. Navigate **inside** of your `champion.wad` folder.
+2. Press `Ctrl+L` or click to focus the address bar in file explorer.
+3. Type `cmd`, and press enter to open a command prompt at your current location. Your CMD path should end with `champ.wad`.
 
 <img src="/user-pictures/moga/open_cmd_here.gif" alt="Opening a command prompt from the explorer address bar" height="325" />
 

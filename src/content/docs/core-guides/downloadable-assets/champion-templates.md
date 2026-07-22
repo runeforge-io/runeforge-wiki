@@ -17,9 +17,9 @@ Templates for all 3 softwares will open up to 2 layers, simply paste the image y
 Templates for all 3 softwares will open up to 2 layers, paste the image you want into the first layer.
 Adjust the image if needed and merge the layers.
 
-Zoom into the image and you will see 2 red pixels at the top left and bottom right.
-Use the circle selection tool to select exactly from one red pixel to the other.
-Once selected, invert the selection and delete the selected part.
+1. Zoom into the image and you will see 2 red pixels at the top left and bottom right.
+2. Use the circle selection tool to select exactly from one red pixel to the other.
+3. Once selected, invert the selection and delete the selected part.
 
 
 

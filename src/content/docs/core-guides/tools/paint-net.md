@@ -19,6 +19,7 @@ The links below will take you to the download page. Click the download button in
 
 paint.<span></span>net comes with DDS support out of the box.
 
-Go to File/Save As. From the dropdown menu pick DirectDrawSurface (DDS) (*.dds) and save click save.
-A new menu will open. In the first dropdown menu you will need to select `BC3 (Linear DXT5)`.
-Don't change other settings and click OK.
+1. Go to File/Save As.
+2. From the dropdown menu pick DirectDrawSurface (DDS) (*.dds) and save click save.
+3. A new menu will open. In the first dropdown menu you will need to select `BC3 (Linear DXT5)`.
+4. Don't change other settings and click OK.
