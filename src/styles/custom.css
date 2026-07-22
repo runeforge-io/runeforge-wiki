@@ -112,6 +112,25 @@ h6 {
   list-style: circle;
 }
 
+.starlight-aside {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--sl-color-asides-border) 30%, transparent);
+  border-radius: 0.5rem;
+  background-color: color-mix(in srgb, var(--sl-color-asides-border) 8%, var(--sl-color-gray-6));
+}
+.starlight-aside::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 3px;
+  background: var(--sl-color-asides-border);
+}
+.starlight-aside code {
+  background-color: color-mix(in srgb, var(--sl-color-asides-border) 15%, var(--sl-color-gray-6));
+}
+
 /* Current page in the sidebar: solid crimson pill with the app's glow. */
 a[aria-current='page'],
 a[aria-current='page']:hover,
