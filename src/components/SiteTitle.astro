@@ -1,15 +1,15 @@
 ---
 // Replaces Starlight's SiteTitle with the Runeforge app's header treatment:
-// the logo mark in a crimson rounded box, followed by "Wiki". The full
-// "Runeforge Wiki" name stays in page metadata (config.title) and for
-// screen readers via the sr-only span.
+// the crimson logo mark followed by "Wiki". The full "Runeforge Wiki" name
+// stays in page metadata (config.title) and for screen readers via the
+// sr-only span.
 import RuneforgeLogo from '../assets/runeforge-logo.svg';
 
 const { siteTitleHref } = Astro.locals.starlightRoute;
 ---
 
 <a href={siteTitleHref} class="site-title sl-flex">
-	<span class="logo-box"><RuneforgeLogo aria-hidden="true" /></span>
+	<RuneforgeLogo class="logo-mark" aria-hidden="true" />
 	<span class="title-text" translate="no"><span class="sr-only">Runeforge </span>Wiki</span>
 </a>
 
@@ -23,17 +23,11 @@ const { siteTitleHref } = Astro.locals.starlightRoute;
 		white-space: nowrap;
 		min-width: 0;
 	}
-	.logo-box {
-		display: flex;
+	.site-title :global(svg.logo-mark) {
 		flex-shrink: 0;
-		padding: 0.3rem;
-		border-radius: 0.5rem;
-		background-color: #ed0049; /* crimson-500 */
-	}
-	.logo-box :global(svg) {
-		width: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y) - 0.85rem);
-		height: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y) - 0.85rem);
-		fill: #e9f4fb; /* base-100 */
+		width: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y) - 0.25rem);
+		height: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y) - 0.25rem);
+		fill: #ed0049; /* crimson-500 */
 	}
 	.title-text {
 		overflow: hidden;
