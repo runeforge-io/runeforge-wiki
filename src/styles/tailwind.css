@@ -4,7 +4,7 @@
    uses. Keep names in sync with apps/web in runeforge-io/runeforge. */
 @theme {
   --font-display: 'Rubik', ui-sans-serif, system-ui, sans-serif;
-  --font-title: 'Beaufort Pro', 'Rubik', ui-sans-serif, sans-serif;
+  --font-title: 'Rubik', ui-sans-serif, sans-serif;
 
   --color-base-100: #e9f4fb;
   --color-base-200: #e2edf4;

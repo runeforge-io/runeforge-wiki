@@ -4,35 +4,11 @@
  * via the ThemeProvider/ThemeSelect component overrides in astro.config.ts.
  */
 
-/* Self-hosted fonts, shared with the Runeforge web app. */
+/* Self-hosted font, shared with the Runeforge web app. */
 @font-face {
   font-family: 'Rubik';
   src: url('../fonts/rubik-variable.woff2') format('woff2');
   font-weight: 300 900;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Beaufort Pro';
-  src: url('../fonts/beaufort-pro-regular.woff2') format('woff2');
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Beaufort Pro';
-  src: url('../fonts/beaufort-pro-medium.woff2') format('woff2');
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Beaufort Pro';
-  src: url('../fonts/beaufort-pro-bold.woff2') format('woff2');
-  font-weight: 600 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Beaufort Pro';
-  src: url('../fonts/beaufort-pro-heavy.woff2') format('woff2');
-  font-weight: 800 900;
   font-display: swap;
 }
 
@@ -63,19 +39,18 @@
   --sl-font: 'Rubik', ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Beaufort Pro for headings, Rubik for everything else. */
+/* Headings share the body family; hierarchy comes from weight and tracking. */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Beaufort Pro', var(--sl-font);
-  letter-spacing: 0.015em;
+  font-weight: 650;
+  letter-spacing: -0.01em;
 }
 
 .site-title span {
-  font-family: 'Beaufort Pro', var(--sl-font);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
