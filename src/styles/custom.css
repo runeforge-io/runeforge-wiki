@@ -1,16 +1,10 @@
 /*
- * Runeforge Wiki theme — dark-only re-skin using the Runeforge app palette
+ * Runeforge Wiki theme - dark-only re-skin using the Runeforge app palette
  * (token values mirrored in tailwind.css). The light/dark toggle is removed
  * via the ThemeProvider/ThemeSelect component overrides in astro.config.ts.
  */
 
-/* Self-hosted font, shared with the Runeforge web app. */
-@font-face {
-  font-family: 'Rubik';
-  src: url('../fonts/rubik-variable.woff2') format('woff2');
-  font-weight: 300 900;
-  font-display: swap;
-}
+/* ── Palette ────────────────────────────────────────────────── */
 
 /* Runeforge palette mapped onto Starlight's dark-theme tokens. The site is
    pinned to data-theme="dark", so :root is sufficient. */
@@ -27,8 +21,8 @@
   --sl-color-gray-3: #8b95a2; /* subtitle tone lifted to AA contrast on base-600 */
   --sl-color-gray-4: #4d5158; /* field-border-hover */
   --sl-color-gray-5: #292e36; /* base-400 / border-base */
-  --sl-color-gray-6: #0e1218; /* background-muted → header + sidebar */
-  --sl-color-black: #12161d; /* background-base → page */
+  --sl-color-gray-6: #0e1218; /* background-muted: header + sidebar */
+  --sl-color-black: #12161d; /* background-base: page */
 
   /* gray-6 doubles as Starlight's hairline color but is darker than the page
      here, so borders and inline code get explicit surfaces instead. */
@@ -36,7 +30,68 @@
   --sl-color-hairline-shade: #090d14; /* base-800 */
   --sl-color-bg-inline-code: #20242b; /* field-bg */
 
-  --sl-font: 'Rubik', ui-sans-serif, system-ui, sans-serif;
+  /* Declared by the `fonts` config in astro.config.ts; the variable already
+     carries Rubik plus the generated metric-matched fallback. */
+  --sl-font: var(--font-rubik);
+}
+
+/* Brand crimsons for mixes and gradients, where the semantic accent slot
+   cannot carry the hue. */
+:root {
+  --rf-crimson: #ed0049; /* crimson-500 */
+  --rf-crimson-vivid: #f7004d; /* crimson-400 */
+  --rf-crimson-deep: #c4003b; /* crimson-700 */
+  --rf-glow: 0px 0px 3px 1px rgb(237 0 73 / 0.3); /* shadow-crimson-md */
+
+  /* Glow for the logo mark, in the header and the hero. Stacked short radii
+     trace the vector edge and its cutouts; one wide shadow blurs the mark into
+     a blob behind itself. */
+  --rf-mark-glow: drop-shadow(0 0 1px color-mix(in srgb, var(--rf-crimson-vivid) 60%, transparent))
+    drop-shadow(0 0 4px color-mix(in srgb, var(--rf-crimson) 40%, transparent))
+    drop-shadow(0 0 10px color-mix(in srgb, var(--rf-crimson) 20%, transparent));
+}
+
+/* ── Corner Radius ──────────────────────────────────────────── */
+
+/* One scale for every rounded corner, kept tight on purpose: a corner softens
+   an edge, it never reads as a shape. Pills are gone. Circles by construction -
+   the mobile menu button, the status dots - are not corners and sit outside
+   this scale. */
+:root {
+  --rf-radius-lg: 0.25rem; /* cards, tables, asides, code blocks */
+  --rf-radius-md: 0.1875rem; /* buttons, inputs */
+  --rf-radius-sm: 0.125rem; /* nav rows, code pills */
+}
+
+/* ── Font Weights ───────────────────────────────────────────── */
+
+/* Pick from these, never a raw number. Body copy rides the face default. */
+:root {
+  --rf-weight-medium: 500; /* labels, secondary emphasis */
+  --rf-weight-semibold: 650; /* headings, UI emphasis */
+  --rf-weight-bold: 800; /* wordmark, strongest voice */
+}
+
+/* ── Motion ─────────────────────────────────────────────────── */
+
+/* Hover timing. The curve is front-loaded so the state change lands before the
+   eye tracks it; the asymmetric pair keeps mouse-out from reading as twitchy. */
+:root {
+  --rf-ease-snap: cubic-bezier(0.2, 0.9, 0.25, 1);
+  --rf-dur-in: 0.11s;
+  --rf-dur-out: 0.22s;
+}
+
+/* ── Typography ─────────────────────────────────────────────── */
+
+/* Heading scale, clamped so long guide titles stay short on phones.
+   --sl-text-body is deliberately absent: Starlight defines it but never
+   consumes it, so body size comes from the 16px default. */
+:root {
+  --sl-text-h1: clamp(1.75rem, 4vw, 2.25rem);
+  --sl-text-h2: clamp(1.375rem, 3vw, 1.625rem);
+  --sl-text-h3: clamp(1.125rem, 2.5vw, 1.25rem);
+  --sl-line-height-headings: 1.2;
 }
 
 /* Headings share the body family; hierarchy comes from weight and tracking. */
@@ -46,18 +101,35 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 650;
+  font-weight: var(--rf-weight-semibold);
   letter-spacing: -0.01em;
 }
 
-.site-title span {
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+.sl-markdown-content h1,
+.sl-markdown-content h2 {
+  letter-spacing: -0.02em;
 }
 
-/* Content links follow the app: crimson with a soft underline that fills in
-   on hover. Anchors with a class are components (cards, buttons) — skip them. */
+/* Plain prose only: classed elements are component parts with their own
+   line-height, and this unlayered rule would beat theirs. */
+.sl-markdown-content p:not([class]),
+.sl-markdown-content li:not([class]) {
+  line-height: 1.7;
+}
+
+/* Uppercase is the one case that needs positive tracking to breathe, so the
+   wordmark is exempt from the negative tracking the headings carry - but only
+   just enough to set the caps apart, not enough to read as a second family. */
+.site-title span {
+  font-weight: var(--rf-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ── Links ──────────────────────────────────────────────────── */
+
+/* Content links follow the app: crimson with a soft underline that fills in on
+   hover. Anchors with a class are components (cards, buttons), so skip them. */
 .sl-markdown-content a:not([class]) {
   color: var(--sl-color-accent-high);
   text-decoration: underline;
@@ -70,6 +142,12 @@ h6 {
   text-decoration-color: #f7004d; /* crimson-400 */
 }
 
+/* ── Lists ──────────────────────────────────────────────────── */
+
+/* Tailwind's preflight (@layer base) strips list styles; these unlayered rules
+   win them back. Every rule needs BOTH guards: `:not([class])` skips component
+   lists that style themselves, `.not-content` skips components built from bare
+   ul/li. */
 .sl-markdown-content ul:not([class]):not(:where(.not-content *)) {
   list-style: disc;
   padding-inline-start: 1.625rem;
@@ -77,6 +155,20 @@ h6 {
 .sl-markdown-content ol:not([class]):not(:where(.not-content *)) {
   list-style: decimal;
   padding-inline-start: 1.625rem;
+}
+
+/* Distinct marker per nesting level, so deep procedure lists stay readable. */
+.sl-markdown-content ul ul:not([class]):not(:where(.not-content *)) {
+  list-style: circle;
+}
+.sl-markdown-content ul ul ul:not([class]):not(:where(.not-content *)) {
+  list-style: square;
+}
+.sl-markdown-content ol ol:not([class]):not(:where(.not-content *)) {
+  list-style: lower-alpha;
+}
+.sl-markdown-content ol ol ol:not([class]):not(:where(.not-content *)) {
+  list-style: lower-roman;
 }
 
 .sl-markdown-content li:not(:where(.not-content *)) {
@@ -96,15 +188,136 @@ h6 {
 .sl-markdown-content li:not(:where(.not-content *))::marker {
   color: var(--sl-color-gray-3);
 }
-.sl-markdown-content li ul:not([class]):not(:where(.not-content *)) {
-  list-style: circle;
+
+/* ── Code ───────────────────────────────────────────────────── */
+
+:root {
+  --ec-brdRad: var(--rf-radius-lg);
 }
 
+.expressive-code .frame {
+  --header-border-radius: var(--ec-brdRad);
+}
+
+/* Preflight's @layer base mono stack beats Starlight's layered rule;
+   unlayered wins over both. */
+.sl-markdown-content code {
+  font-family: var(--__sl-font-mono);
+}
+
+/* Inline code pills. em insets scale with the pill's own font size, which
+   tables shrink to 0.75rem. */
+.sl-markdown-content :not(pre) > code:not(:where(.not-content *)) {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: var(--rf-radius-sm);
+  padding-block: 0.1em;
+  padding-inline: 0.3em;
+  margin-inline: 0.1em;
+}
+
+/* Tint the border like Starlight tints aside code fills. */
+.sl-markdown-content .starlight-aside :not(pre) > code:not(:where(.not-content *)) {
+  border-color: color-mix(in srgb, var(--sl-color-asides-text-accent) 25%, transparent);
+}
+
+/* ── Tables ─────────────────────────────────────────────────── */
+
+/* Self-scrolling table frame. `display: block` is what gives the table its own
+   overflow, and costs narrow tables their stretch to the column width. */
+.sl-markdown-content table {
+  display: block;
+  overflow-x: auto;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: var(--rf-radius-lg);
+  font-size: 0.875rem;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.sl-markdown-content th,
+.sl-markdown-content td {
+  padding: 0.625rem 1rem;
+}
+
+.sl-markdown-content th {
+  font-weight: var(--rf-weight-semibold);
+  text-transform: none;
+  letter-spacing: 0;
+  background: var(--sl-color-gray-6);
+  border-bottom: 1px solid var(--sl-color-gray-5);
+}
+
+.sl-markdown-content td {
+  border-bottom: 1px solid var(--sl-color-gray-5);
+}
+
+.sl-markdown-content tr:last-child td {
+  border-bottom: none;
+}
+
+.sl-markdown-content table code {
+  font-size: 0.75rem;
+}
+
+/* The site's one non-brand hue: crimson's mirror at the same saturation and
+   lightness, so a yes/no pair reads as equals instead of one shouting. */
+:root {
+  --rf-green: #00c251;
+}
+
+/* Flat status dots for yes/no columns. The word beside each dot carries the
+   meaning; the dot is only what makes a column of them scannable. */
+.sl-markdown-content :is(.rf-dot-yes, .rf-dot-no, .rf-dot-na) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  white-space: nowrap;
+}
+
+.sl-markdown-content :is(.rf-dot-yes, .rf-dot-no, .rf-dot-na)::before {
+  content: '';
+  flex-shrink: 0;
+  width: 0.55em;
+  height: 0.55em;
+  /* Circle by construction, so it sits outside the radius scale. */
+  border-radius: 50%;
+  background: var(--rf-dot);
+}
+
+.sl-markdown-content .rf-dot-yes {
+  --rf-dot: var(--rf-green);
+}
+.sl-markdown-content .rf-dot-no {
+  --rf-dot: var(--rf-crimson);
+}
+.sl-markdown-content .rf-dot-na {
+  --rf-dot: var(--sl-color-gray-4);
+}
+
+/* ── Blockquotes & Rules ────────────────────────────────────── */
+
+.sl-markdown-content blockquote {
+  border-left: 3px solid var(--sl-color-accent);
+  padding-left: 1rem;
+  color: var(--sl-color-gray-2);
+}
+
+.sl-markdown-content hr {
+  border-color: var(--sl-color-gray-5);
+  margin-block: 2.5rem;
+}
+
+/* ── Asides ─────────────────────────────────────────────────── */
+
+/* Card treatment instead of Starlight's flat panels. The stripe is an overlay
+   rather than a border-inline-start, which would curve at the rounded corners. */
 .starlight-aside {
   position: relative;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--sl-color-asides-border) 30%, transparent);
-  border-radius: 0.5rem;
+  border-radius: var(--rf-radius-lg);
   background-color: color-mix(in srgb, var(--sl-color-asides-border) 8%, var(--sl-color-gray-6));
 }
 .starlight-aside::before {
@@ -119,32 +332,502 @@ h6 {
   background-color: color-mix(in srgb, var(--sl-color-asides-border) 15%, var(--sl-color-gray-6));
 }
 
-/* Current page in the sidebar: solid crimson pill with the app's glow. */
-a[aria-current='page'],
-a[aria-current='page']:hover,
-a[aria-current='page']:focus {
-  background-color: var(--sl-color-accent);
-  color: #fff;
-  box-shadow: 0px 0px 3px 1px rgba(237, 0, 73, 0.3); /* shadow-crimson-md */
+/* ── Link Cards ─────────────────────────────────────────────── */
+
+/* Gradient border for link cards: ramp on the border box, opaque fill clipped
+   to the padding box. Opaque by construction - needs the page background under
+   it, not a tinted surface. Shared with the landing page's NavCard, which is
+   the same object with an icon and its own internal layout. */
+
+/* Animatable percentage stops for the card ring and fill; plain custom
+   properties would jump instead of interpolating. */
+@property --rf-card-ring {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 35%;
 }
 
-/* Hero action buttons. */
+@property --rf-card-fill {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+.sl-link-card,
+.rf-nav-card {
+  --rf-card-ring: 35%;
+  --rf-card-fill: 0%;
+  border: 1px solid transparent;
+  border-radius: var(--rf-radius-lg);
+  background:
+    linear-gradient(
+        color-mix(in srgb, var(--sl-color-gray-5) var(--rf-card-fill), var(--sl-color-bg)) 0 0
+      )
+      padding-box,
+    linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--rf-crimson) var(--rf-card-ring), transparent),
+        color-mix(in srgb, var(--rf-crimson-deep) var(--rf-card-ring), transparent)
+      )
+      border-box;
+  transition:
+    --rf-card-ring 0.2s ease,
+    --rf-card-fill 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sl-link-card:hover,
+.rf-nav-card:hover {
+  --rf-card-ring: 100%;
+  --rf-card-fill: 45%;
+  transform: translateY(-2px);
+}
+
+/* ── Pagination ─────────────────────────────────────────────── */
+
+/* Compact prev/next cards. Starlight's stock sizing (2xl titles, 18rem grid
+   tracks) stacks the pair long before the column is narrow enough to need it. */
+.pagination-links {
+  grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
+}
+
+.pagination-links a {
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--rf-radius-lg);
+  box-shadow: none;
+  font-size: var(--sl-text-xs);
+  color: var(--sl-color-gray-3);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.pagination-links a:hover {
+  border-color: color-mix(in srgb, var(--rf-crimson) 55%, transparent);
+  transform: translateY(-2px);
+}
+
+.pagination-links .link-title {
+  font-size: var(--sl-text-base);
+  font-weight: var(--rf-weight-medium);
+}
+
+.pagination-links svg {
+  font-size: 1rem;
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+
+/* Frosted chrome for the nav bar. Starlight fills the bar and the sidebar
+   identically, which merges the two into one L-shaped slab. */
+:root {
+  --rf-glass-chrome-fill: color-mix(in srgb, var(--sl-color-gray-6) 96%, transparent);
+  --rf-glass-chrome-blur: blur(24px) saturate(140%);
+}
+
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  :root {
+    --rf-glass-chrome-fill: color-mix(in srgb, var(--sl-color-gray-6) 72%, transparent);
+  }
+}
+
+/* -webkit-backdrop-filter goes before the standard property, here and
+   everywhere: the minifier keeps whichever comes last, and Safari is the only
+   engine that ever aliased the prefixed form. */
+header.header {
+  border-bottom: 0;
+  background-color: var(--rf-glass-chrome-fill);
+  -webkit-backdrop-filter: var(--rf-glass-chrome-blur);
+  backdrop-filter: var(--rf-glass-chrome-blur);
+}
+
+/* Crimson wash bleeding in from the leading edge, under the wordmark. */
+header.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    60rem 8rem at 0% 50%,
+    color-mix(in srgb, var(--rf-crimson) 10%, transparent),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+header.header::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--rf-crimson) 60%, transparent) 20%,
+    color-mix(in srgb, var(--rf-crimson-deep) 45%, transparent) 65%,
+    transparent
+  );
+  pointer-events: none;
+}
+
+/* Paint the bar's contents above the washes. */
+header.header > * {
+  position: relative;
+}
+
+/* Search chrome onto the radius scale. Starlight hard-codes 0.5rem on the box
+   and the dialog, and Pagefind defaults its own results panel to 8px. */
+site-search button[data-open-modal],
+site-search dialog {
+  border-radius: var(--rf-radius-md);
+}
+
+site-search button kbd {
+  border-radius: var(--rf-radius-sm);
+}
+
+/* Set on the element rather than :root so it wins by proximity: Pagefind
+   declares its own defaults on :root, and bundle order is not ours to rely on. */
+site-search {
+  --pagefind-ui-border-radius: var(--rf-radius-md);
+  --pagefind-ui-image-border-radius: var(--rf-radius-md);
+}
+
+/* Social icons rest neutral. Starlight rests them on the accent, which fights
+   the crimson logo mark beside them. */
+header.header .social-icons a {
+  color: var(--sl-color-gray-2);
+  transition: color 0.15s ease;
+}
+
+header.header .social-icons a:hover {
+  color: var(--sl-color-white);
+}
+
+/* Reading-progress fill riding the hairline; --rf-read-progress comes from the
+   scroll script in components/Header.astro. Child selector so this outranks the
+   `header.header > *` rule above. */
+header.header > .rf-read-progress {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--rf-crimson), var(--rf-crimson-deep));
+  clip-path: inset(0 calc(100% - var(--rf-read-progress, 0%)) 0 0);
+  pointer-events: none;
+}
+
+/* The mobile ToC summary, the last piece of chrome Starlight rounds to 0.5rem.
+   Its sibling menu button stays a circle: that is geometry, not a corner. */
+mobile-starlight-toc .toggle {
+  border-radius: var(--rf-radius-md);
+}
+
+/* Mobile hide-on-scroll, driven by the html attribute the Header script sets.
+
+   - Chrome on Android nudges fixed elements while its URL bar collapses; a
+     deliberate full slide replaces that jammed half-state.
+   - The ToC nav travels its own height plus the header's, since it starts
+     below the header. */
+@media (width < 50rem) {
+  header.header,
+  mobile-starlight-toc nav {
+    transition: transform 0.25s ease;
+  }
+
+  html[data-rf-chrome-hidden] header.header {
+    transform: translateY(calc(-1 * var(--sl-nav-height)));
+  }
+
+  html[data-rf-chrome-hidden] mobile-starlight-toc nav {
+    transform: translateY(calc(-1 * (var(--sl-nav-height) + var(--sl-mobile-toc-height))));
+  }
+
+  /* Keyboard focus (search, menu) must never sit in hidden chrome. */
+  html[data-rf-chrome-hidden] header.header:focus-within {
+    transform: none;
+  }
+}
+
+/* ── Sidebar ────────────────────────────────────────────────── */
+
+/* Hover wash for nav rows; the current page keeps the app's solid pill. Built on
+   crimson-400, the one brand red with no white mixed in: a lighter crimson
+   composites over the near-black sidebar at roughly half the saturation. */
+:root {
+  --rf-nav-hover: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--rf-crimson-vivid) 68%, transparent),
+    color-mix(in srgb, var(--rf-crimson-vivid) 46%, transparent) 70%,
+    color-mix(in srgb, var(--rf-crimson-vivid) 22%, transparent)
+  );
+}
+
+/* The base rule owns the slower hover-out; :hover overrides duration and curve
+   so the row arrives fast and leaves gently. */
+.sidebar-content a,
+.sidebar-content summary {
+  border-radius: var(--rf-radius-sm);
+  transition:
+    background var(--rf-dur-out) ease,
+    color var(--rf-dur-out) ease;
+}
+
+/* Group headers are `summary`, not links, but need the same affordance. */
+.sidebar-content a:hover,
+.sidebar-content summary:hover {
+  background: var(--rf-nav-hover);
+  color: var(--sl-color-white);
+  transition-duration: var(--rf-dur-in);
+  transition-timing-function: var(--rf-ease-snap);
+}
+
+/* Current page in the sidebar: solid crimson pill with the app's glow. Ties
+   with the hover rule on specificity, so it has to stay below it, and the
+   `background` shorthand is what clears the hover gradient. */
+.sidebar-content a[aria-current='page'],
+.sidebar-content a[aria-current='page']:hover,
+.sidebar-content a[aria-current='page']:focus {
+  background: var(--sl-color-accent);
+  color: #fff;
+  box-shadow: var(--rf-glow);
+}
+
+/* Group carets, dimmed at rest so the label leads. The transform tween restates
+   Starlight's, which this unlayered rule replaces. */
+.sidebar-pane summary .caret {
+  color: var(--sl-color-gray-3);
+  transition:
+    transform 0.2s ease-in-out,
+    color 0.15s ease;
+}
+
+.sidebar-pane summary:hover .caret {
+  color: var(--sl-color-white);
+}
+
+/* Group expand/collapse animation. Geometry is unconditional so collapsed
+   groups paint right on the first frame; only the transition waits for
+   .sl-sidebar-loaded, else every group animates shut on each navigation. */
+.sidebar-pane {
+  interpolate-size: allow-keywords;
+}
+
+.sidebar-pane details::details-content {
+  overflow: clip;
+  height: 0;
+  opacity: 0;
+}
+
+.sidebar-pane details[open]::details-content {
+  height: auto;
+  opacity: 1;
+}
+
+.sidebar-pane.sl-sidebar-loaded details::details-content {
+  transition:
+    height 0.2s ease-out,
+    opacity 0.2s ease-out,
+    content-visibility 0.2s allow-discrete;
+}
+
+/* Top-level section icons, keyed on a contained link rather than :nth-child so
+   reordering the sidebar cannot reassign them. The four hrefs are mutually
+   exclusive: "Start Here" holds /core-guides/get-started/ but not
+   /core-guides/, and "Core Guides" the reverse. */
+.sidebar-pane ul.top-level > li > details > summary > .group-label,
+.sidebar-pane ul.top-level > li > a.large {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-pane ul.top-level > li > details > summary > .group-label::before,
+.sidebar-pane ul.top-level > li > a.large::before {
+  content: '';
+  flex-shrink: 0;
+  width: 1.125em;
+  height: 1.125em;
+  margin-inline-end: 0.5em;
+  background-color: var(--sl-color-accent-high);
+  -webkit-mask: var(--rf-section-icon) center / contain no-repeat;
+  mask: var(--rf-section-icon) center / contain no-repeat;
+}
+
+/* Current page sits on the solid crimson pill, where a crimson icon would
+   disappear. */
+.sidebar-pane ul.top-level > li > a.large[aria-current='page']::before {
+  background-color: var(--sl-color-white);
+}
+
+.sidebar-pane ul.top-level > li:has(a[href='/core-guides/get-started/']) {
+  --rf-section-icon: url('@phosphor-icons/core/assets/bold/compass-bold.svg');
+}
+
+.sidebar-pane ul.top-level > li:has(a[href='/core-guides/']) {
+  --rf-section-icon: url('@phosphor-icons/core/assets/bold/toolbox-bold.svg');
+}
+
+.sidebar-pane ul.top-level > li:has(a[href='/specific-guide/']) {
+  --rf-section-icon: url('@phosphor-icons/core/assets/bold/paint-brush-bold.svg');
+}
+
+.sidebar-pane ul.top-level > li:has(a[href='/posting-guide/']) {
+  --rf-section-icon: url('@phosphor-icons/core/assets/bold/upload-simple-bold.svg');
+}
+
+/* Indent guides for the nested groups. The nav runs four levels deep in places,
+   so the guide is what tells you where you are. */
+.sidebar-pane ul ul li {
+  border-inline-start-color: var(--sl-color-gray-5);
+  transition: border-inline-start-color var(--rf-dur-out) ease;
+}
+
+/* Same timing as the wash, so the guide and the row land on the same frame. */
+.sidebar-pane ul ul li:hover {
+  border-inline-start-color: var(--sl-color-gray-4);
+  transition-duration: var(--rf-dur-in);
+  transition-timing-function: var(--rf-ease-snap);
+}
+
+.sidebar-pane ul ul li:has(a[aria-current='page']) {
+  border-inline-start-color: var(--sl-color-accent);
+}
+
+/* ── Splash Page ────────────────────────────────────────────── */
+
+/* Containing block for the hero's full-bleed backdrop, which is nested inside
+   the 48rem content column and escapes it by anchoring here instead. `.page`
+   spans the page's own width, so no 100vw scrollbar arithmetic is involved. */
+body:has(.rf-hero) .page {
+  position: relative;
+}
+
+/* Glass for the hero panel. Denser than the chrome pair: this one sits over
+   artwork rather than page colour, and the copy has to stay legible on it. */
+:root {
+  --rf-glass-hero-fill: color-mix(in srgb, var(--sl-color-gray-6) 97%, transparent);
+  --rf-glass-hero-blur: blur(20px) saturate(130%);
+}
+
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  :root {
+    --rf-glass-hero-fill: color-mix(in srgb, var(--sl-color-gray-6) 82%, transparent);
+  }
+}
+
+/* The hero already ends on a gradient into the page colour, so Starlight's
+   panel divider reads as a stray line across the artwork. */
+body:has(.rf-hero) .content-panel + .content-panel {
+  border-top: 0;
+}
+
+/* Scoped on the hero so these only ever affect the landing page. */
+body:has(.rf-hero) .sl-markdown-content h2 {
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: var(--rf-weight-bold);
+  letter-spacing: -0.03em;
+  margin-top: 3rem;
+}
+
+/* Short crimson rule above each section title. */
+body:has(.rf-hero) .sl-markdown-content h2::before {
+  content: '';
+  display: block;
+  width: 2.25rem;
+  height: 2px;
+  margin-bottom: 0.875rem;
+  border-radius: 1px;
+  background: linear-gradient(90deg, var(--rf-crimson), var(--rf-crimson-deep));
+}
+
+/* Hero action buttons. Starlight ships these as 999rem pills at 0.9375rem of
+   block padding around a 1.5rem icon, which lands near 56px tall - a shape and a
+   size the app never uses. */
+.sl-link-button {
+  border-radius: var(--rf-radius-md);
+  padding-block: 0.5625rem;
+}
+
+.sl-link-button svg {
+  font-size: 1.125rem;
+}
+
 .sl-link-button.primary {
   background: var(--sl-color-accent);
   border-color: transparent;
   color: #fff;
-  box-shadow: 0px 0px 3px 1px rgba(237, 0, 73, 0.3);
+  box-shadow: var(--rf-glow);
 }
 .sl-link-button.primary:hover {
   background: #d80042; /* crimson-600 */
 }
 
-.hero-html img {
-  filter: drop-shadow(0 3px 5px rgba(218, 165, 32, 0.5)); /* drop-shadow-gold */
+/* Outlined counterpart, for the secondary action beside it. Starlight's own
+   `secondary` inherits its border from the text colour, which on the hero
+   panel resolves to a grey ring. */
+.sl-link-button.secondary {
+  border-color: color-mix(in srgb, var(--rf-crimson) 55%, transparent);
+  background: color-mix(in srgb, var(--rf-crimson) 8%, transparent);
+  color: var(--sl-color-accent-high);
+}
+/* The ring and the fill carry the hover on their own. Swapping the label to
+   white as well reads as a different button, not the same one under a cursor. */
+.sl-link-button.secondary:hover {
+  border-color: var(--rf-crimson);
+  background: color-mix(in srgb, var(--rf-crimson) 16%, transparent);
 }
 
+/* ── Content Width ──────────────────────────────────────────── */
+
+/* The guides are screenshot-heavy, so the prose column runs wider than
+   Starlight's 45rem and the table of contents gives back the difference. */
+:root {
+  --sl-content-width: 48rem;
+  --rf-toc-width: 15rem;
+}
+
+/* Starlight's TwoColumnContent keys the ToC column on --sl-sidebar-width;
+   these restate its width formulas with the narrower --rf-toc-width. */
+@media (min-width: 72rem) {
+  .right-sidebar-container {
+    width: max(
+      var(--rf-toc-width),
+      calc(var(--rf-toc-width) + (100% - var(--sl-content-width) - var(--rf-toc-width)) / 2)
+    );
+  }
+
+  [data-has-sidebar][data-has-toc] .main-pane {
+    width: min(
+      calc(100% - var(--rf-toc-width)),
+      calc(var(--sl-content-width) + (100% - var(--sl-content-width) - var(--rf-toc-width)) / 2)
+    );
+  }
+
+  .right-sidebar-panel .sl-container {
+    width: calc(var(--rf-toc-width) - 2 * var(--sl-sidebar-pad-x));
+  }
+}
+
+/* ── Selection & Scrollbars ─────────────────────────────────── */
+
+/* Crimson-500 taken to half toward black, opaque. Mixed toward `transparent`
+   instead it composites over a blue-grey page and sheds a quarter of its
+   saturation; opaque also keeps the highlight identical over code blocks. */
+:root {
+  --rf-selection: #770025;
+}
+
+/* background-color, not background: the shorthand is off the allow-list engines
+   honour here, so a gradient would drop the highlight entirely. */
 ::selection {
-  background-color: rgba(237, 0, 73, 0.35);
+  background-color: var(--rf-selection);
+}
+
+/* Firefox and other modern engines. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #20242b transparent; /* base-500 */
 }
 
 /* App-style scrollbars. */
@@ -163,4 +846,24 @@ a[aria-current='page']:focus {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #292e36; /* base-400 */
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* ── Reduced Motion ─────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .sl-link-card:hover,
+  .rf-nav-card:hover,
+  .pagination-links a:hover {
+    transform: none;
+  }
 }

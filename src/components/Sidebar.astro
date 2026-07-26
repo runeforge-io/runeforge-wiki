@@ -1,0 +1,38 @@
+---
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+---
+
+<Default><slot /></Default>
+
+<script>
+  // Sidebar boot, in a deliberate order so the reveal never animates:
+  // 1. Expand any folded ancestor group of the current page; Starlight's
+  //    restore point may have re-closed the group the server rendered open.
+  // 2. Scroll the current item into view. The nav runs four levels deep and
+  //    most groups ship collapsed.
+  // 3. Arm the collapse animation, which custom.css gates on
+  //    .sl-sidebar-loaded.
+  const boot = () => {
+    requestAnimationFrame(() => {
+      const current = document.querySelector('.sidebar-content a[aria-current="page"]');
+      if (current) {
+        let group = current.closest('details');
+        while (group) {
+          group.open = true;
+          group = group.parentElement?.closest('details') ?? null;
+        }
+        current.scrollIntoView({ block: 'nearest' });
+      }
+      document.querySelector('.sidebar-pane')?.classList.add('sl-sidebar-loaded');
+    });
+  };
+
+  // Guarded rather than a bare DOMContentLoaded listener: the module can
+  // execute after that event has already fired, and the listener would never
+  // run.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+</script>

@@ -29,9 +29,15 @@ const ASSET_EXT = /\.(png|jpe?g|gif|webp|svg|ico|mp4|webm|zip|rar|7z|pdf|dds|tex
 // Filled in from the unresolved-links report; extend as triage decides.
 const MANUAL_ROUTES = new Map([
   // pages linked under a path they never lived at (or a former name)
-  ['/specific-guide/animation/maya/fix-broken-animations', '/specific-guide/skin-fixes/fix-broken-animations'],
+  [
+    '/specific-guide/animation/maya/fix-broken-animations',
+    '/specific-guide/skin-fixes/fix-broken-animations',
+  ],
   ['/specific-guide/coding/fix-breaking-vfx', '/specific-guide/skin-fixes/fix-breaking-vfx'],
-  ['/specific-guide/3d-modelling/fixing_broken_face_normals', '/specific-guide/skin-fixes/fixing_broken_face_normals'],
+  [
+    '/specific-guide/3d-modelling/fixing_broken_face_normals',
+    '/specific-guide/skin-fixes/fixing_broken_face_normals',
+  ],
   [
     '/specific-guide/3d-modelling/replacing-champion-with-a-completely-different-model',
     '/specific-guide/3d-modelling/replacing-champion-with-different-model',
@@ -87,7 +93,9 @@ function* walk(dir) {
 const files = [...walk(DOCS)];
 const routeMap = new Map();
 for (const f of files) {
-  const rel = relative(DOCS, f).replace(/\.mdx?$/, '').split(sep);
+  const rel = relative(DOCS, f)
+    .replace(/\.mdx?$/, '')
+    .split(sep);
   const oldPath = '/' + rel.join('/');
   const newPath = '/' + rel.map(slugSegment).join('/');
   routeMap.set(oldPath, newPath);
@@ -117,7 +125,8 @@ function mapTarget(raw, file, lineNo) {
   const mapped = routeMap.get(path) ?? routeMap.get(path.toLowerCase());
   if (mapped) {
     if (DROP_ANCHOR_PATHS.has(mapped)) mappedAnchor = undefined;
-    else if (mappedAnchor) mappedAnchor = ANCHOR_FIXES.get(`${mapped}#${mappedAnchor}`) ?? mappedAnchor;
+    else if (mappedAnchor)
+      mappedAnchor = ANCHOR_FIXES.get(`${mapped}#${mappedAnchor}`) ?? mappedAnchor;
     return mapped + (mappedAnchor ? '#' + mappedAnchor : '');
   }
   const suffix = mappedAnchor ? '#' + mappedAnchor : '';
@@ -128,7 +137,7 @@ function mapTarget(raw, file, lineNo) {
 }
 
 function rewriteLinks(line, file, lineNo) {
-  // markdown targets: ](...) — tolerates one level of balanced parens in the URL
+  // markdown targets: ](...) - tolerates one level of balanced parens in the URL
   let out = line.replace(/\]\(((?:[^()\s]|\([^()]*\))+)\)/g, (m, target, off) => {
     if (inCodeSpan(line, off)) {
       report.skippedInCode++;
@@ -165,8 +174,10 @@ function rewriteImages(line, file) {
       report.imageFiles.add(relative(DOCS, file));
       const attrs = [`src="${src}"`, `alt="${alt}"`];
       const styles = [];
-      if (w) (w.endsWith('%') ? styles : attrs).push(w.endsWith('%') ? `width:${w}` : `width="${w}"`);
-      if (h) (h.endsWith('%') ? styles : attrs).push(h.endsWith('%') ? `height:${h}` : `height="${h}"`);
+      if (w)
+        (w.endsWith('%') ? styles : attrs).push(w.endsWith('%') ? `width:${w}` : `width="${w}"`);
+      if (h)
+        (h.endsWith('%') ? styles : attrs).push(h.endsWith('%') ? `height:${h}` : `height="${h}"`);
       if (styles.length) attrs.push(`style="${styles.join(';')}"`);
       return `<img ${attrs.join(' ')} />`;
     },
@@ -255,7 +266,9 @@ function transformBody(lines, file, fmOffset) {
         report.admonitionFiles.add(relative(DOCS, file));
       } else {
         out.push(...run);
-        report.unresolved.push(`${relative(DOCS, file)}:${lineNo}  {.is-${adm[1]}} without blockquote`);
+        report.unresolved.push(
+          `${relative(DOCS, file)}:${lineNo}  {.is-${adm[1]}} without blockquote`,
+        );
       }
       continue;
     }
@@ -309,7 +322,9 @@ for (const file of files) {
 const list = (set) => [...set].map((f) => `  ${f}`).join('\n') || '  (none)';
 console.log(`Files processed: ${files.length}`);
 console.log(`Admonitions converted: ${report.admonitions} in ${report.admonitionFiles.size} files`);
-console.log(`Attribute lines stripped (links-list/grid-list/align-center): ${report.strippedAttrs}`);
+console.log(
+  `Attribute lines stripped (links-list/grid-list/align-center): ${report.strippedAttrs}`,
+);
 console.log(`Sized images -> <img>: ${report.images} in ${report.imageFiles.size} files`);
 console.log(`Links rewritten: ${report.links}`);
 console.log(`Matches skipped inside code spans: ${report.skippedInCode}`);

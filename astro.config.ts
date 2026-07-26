@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import svelte from '@astrojs/svelte';
 import react from '@astrojs/react';
@@ -19,6 +19,20 @@ export default defineConfig({
   // Cloudflare Workers static assets). Astro-level redirects are avoided on
   // purpose: they emit HTML stub files whose case-variant paths collide with
   // content pages on case-insensitive filesystems (Windows dev machines).
+
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Rubik',
+      cssVariable: '--font-rubik',
+      weights: ['300 900'],
+      styles: ['normal'],
+      subsets: ['latin'],
+      // A generic family last is what opts the family into Astro's generated
+      // metric overrides.
+      fallbacks: ['system-ui', 'sans-serif'],
+    },
+  ],
 
   integrations: [
     starlight({
@@ -53,6 +67,15 @@ export default defineConfig({
         ThemeSelect: './src/components/ThemeSelect.astro',
         // App-style logo box + "Wiki" in the header.
         SiteTitle: './src/components/SiteTitle.astro',
+        // Adds the centred section nav, the reading-progress bar, and the
+        // mobile hide-on-scroll chrome.
+        Header: './src/components/Header.astro',
+        // Adds the boot script that reveals the current page in the nav.
+        Sidebar: './src/components/Sidebar.astro',
+        // Emits the Rubik <Font> tags, including the preload link.
+        Head: './src/components/Head.astro',
+        // Landing-page hero: full-bleed backdrop, glass panel, search, stats.
+        Hero: './src/components/Hero.astro',
       },
       plugins: [starlightLinksValidator()],
       sidebar: [
@@ -141,10 +164,22 @@ export default defineConfig({
                   collapsed: true,
                   items: [
                     { label: 'Overview', slug: 'specific-guide/3d-modelling/maya' },
-                    { label: 'Custom Skin (Maya 2023+)', slug: 'specific-guide/3d-modelling/maya/2023' },
-                    { label: 'Custom Skin (Maya 2018)', slug: 'specific-guide/3d-modelling/maya/2018' },
-                    { label: 'Skin Bind Settings', slug: 'specific-guide/3d-modelling/maya/bind-settings' },
-                    { label: 'T/A Posing Older Champions', slug: 'specific-guide/3d-modelling/maya/tposeoldchamps' },
+                    {
+                      label: 'Custom Skin (Maya 2023+)',
+                      slug: 'specific-guide/3d-modelling/maya/2023',
+                    },
+                    {
+                      label: 'Custom Skin (Maya 2018)',
+                      slug: 'specific-guide/3d-modelling/maya/2018',
+                    },
+                    {
+                      label: 'Skin Bind Settings',
+                      slug: 'specific-guide/3d-modelling/maya/bind-settings',
+                    },
+                    {
+                      label: 'T/A Posing Older Champions',
+                      slug: 'specific-guide/3d-modelling/maya/tposeoldchamps',
+                    },
                   ],
                 },
                 {
@@ -152,7 +187,10 @@ export default defineConfig({
                   slug: 'specific-guide/3d-modelling/replacing-champion-with-different-model',
                 },
                 { label: 'UV Editing', slug: 'specific-guide/3d-modelling/uv-editing' },
-                { label: 'Blender Starting Guide', slug: 'specific-guide/3d-modelling/blender-starting-guide' },
+                {
+                  label: 'Blender Starting Guide',
+                  slug: 'specific-guide/3d-modelling/blender-starting-guide',
+                },
               ],
             },
             {
@@ -164,7 +202,10 @@ export default defineConfig({
                   label: 'Importing & Exporting Animations',
                   slug: 'specific-guide/animation/importing-and-exporting-animation',
                 },
-                { label: 'Animation Retargeting', slug: 'specific-guide/animation/retarget-animation' },
+                {
+                  label: 'Animation Retargeting',
+                  slug: 'specific-guide/animation/retarget-animation',
+                },
               ],
             },
             {
@@ -172,11 +213,23 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { label: 'Overview', slug: 'specific-guide/coding' },
-                { label: 'Particle & Bin Dictionary', slug: 'specific-guide/coding/particle-dictionary' },
-                { label: 'Manually Edit VFX Colors', slug: 'specific-guide/coding/man-edit-vfxcolor' },
-                { label: 'Edit VFX Using Matrix', slug: 'specific-guide/coding/edit-vfx-using-matrix' },
+                {
+                  label: 'Particle & Bin Dictionary',
+                  slug: 'specific-guide/coding/particle-dictionary',
+                },
+                {
+                  label: 'Manually Edit VFX Colors',
+                  slug: 'specific-guide/coding/man-edit-vfxcolor',
+                },
+                {
+                  label: 'Edit VFX Using Matrix',
+                  slug: 'specific-guide/coding/edit-vfx-using-matrix',
+                },
                 { label: 'Particle Swapping', slug: 'specific-guide/coding/particle-swapping' },
-                { label: 'Adding Child Particles', slug: 'specific-guide/coding/adding-child-particles' },
+                {
+                  label: 'Adding Child Particles',
+                  slug: 'specific-guide/coding/adding-child-particles',
+                },
                 {
                   label: 'Add Particles to Animations',
                   slug: 'specific-guide/coding/add-particles-to-animation',
@@ -228,7 +281,10 @@ export default defineConfig({
                   label: 'Making Model Parts Invisible',
                   slug: 'specific-guide/texturing/making-model-parts-invisible',
                 },
-                { label: 'Substance Painter Guide', slug: 'specific-guide/texturing/substance-painter-guide' },
+                {
+                  label: 'Substance Painter Guide',
+                  slug: 'specific-guide/texturing/substance-painter-guide',
+                },
                 { label: 'Special Materials', slug: 'specific-guide/texturing/add-special-mats' },
               ],
             },
@@ -238,7 +294,10 @@ export default defineConfig({
               items: [
                 { label: 'Overview', slug: 'specific-guide/ui' },
                 { label: 'Custom Cursors', slug: 'specific-guide/ui/custom-cursors' },
-                { label: 'Customizing the Loadingscreen', slug: 'specific-guide/ui/edit-loadingscreen' },
+                {
+                  label: 'Customizing the Loadingscreen',
+                  slug: 'specific-guide/ui/edit-loadingscreen',
+                },
                 { label: 'Animated Loading Screen', slug: 'specific-guide/ui/anim-load-screen' },
                 { label: 'Custom Font', slug: 'specific-guide/ui/custom-font' },
                 { label: 'Simple HUD Template', slug: 'specific-guide/ui/simple-hud-template' },
@@ -250,9 +309,18 @@ export default defineConfig({
               items: [
                 { label: 'Overview', slug: 'specific-guide/skin-fixes' },
                 { label: 'Fix Healthbars', slug: 'specific-guide/skin-fixes/healthbars' },
-                { label: 'Fix Moonwalking', slug: 'specific-guide/skin-fixes/how_to_fix_moonwalking' },
-                { label: 'Fix Broken Animations', slug: 'specific-guide/skin-fixes/fix-broken-animations' },
-                { label: 'Animation Repathing', slug: 'specific-guide/skin-fixes/animation-repathing' },
+                {
+                  label: 'Fix Moonwalking',
+                  slug: 'specific-guide/skin-fixes/how_to_fix_moonwalking',
+                },
+                {
+                  label: 'Fix Broken Animations',
+                  slug: 'specific-guide/skin-fixes/fix-broken-animations',
+                },
+                {
+                  label: 'Animation Repathing',
+                  slug: 'specific-guide/skin-fixes/animation-repathing',
+                },
                 {
                   label: 'Fix Broken Face Normals',
                   slug: 'specific-guide/skin-fixes/fixing_broken_face_normals',
@@ -261,9 +329,18 @@ export default defineConfig({
                   label: 'Weird .DDS Files',
                   slug: 'specific-guide/skin-fixes/handling_fix_weird_dds_files',
                 },
-                { label: 'Fix Outdated Textures', slug: 'specific-guide/skin-fixes/broken-textures' },
-                { label: 'Prevent VFX Breaking', slug: 'specific-guide/skin-fixes/fix-breaking-vfx' },
-                { label: 'Update Linked Bins', slug: 'specific-guide/skin-fixes/update-linked-bins' },
+                {
+                  label: 'Fix Outdated Textures',
+                  slug: 'specific-guide/skin-fixes/broken-textures',
+                },
+                {
+                  label: 'Prevent VFX Breaking',
+                  slug: 'specific-guide/skin-fixes/fix-breaking-vfx',
+                },
+                {
+                  label: 'Update Linked Bins',
+                  slug: 'specific-guide/skin-fixes/update-linked-bins',
+                },
               ],
             },
             {
@@ -271,7 +348,10 @@ export default defineConfig({
               collapsed: true,
               items: [
                 { label: 'Overview', slug: 'specific-guide/mapskin' },
-                { label: 'Basic Mapskin Guide', slug: 'specific-guide/mapskin/basic-mapskin-guide' },
+                {
+                  label: 'Basic Mapskin Guide',
+                  slug: 'specific-guide/mapskin/basic-mapskin-guide',
+                },
               ],
             },
             {

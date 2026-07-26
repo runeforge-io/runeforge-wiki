@@ -1,12 +1,8 @@
 ---
 title: FAQ
-description: All information about Runeforge 2.0, becoming a Creator, posting mods, and frequently asked questions.
-lastUpdated: 2025-01-26
+description: All information about becoming a Creator, posting mods, and frequently asked questions.
+lastUpdated: 2026-07-26
 ---
-
-## Runeforge 2.0 is here
-
-Runeforge came a long way, now we want to present Runeforge 2.0. Please note, that the website is still in BETA. Bugs and missing functions can still occur. If you notice a bug, please let us know on our [Discord](https://discord.com/invite/runeforge) Server!
 
 ## How to become a Creator
 
@@ -16,7 +12,7 @@ Runeforge came a long way, now we want to present Runeforge 2.0. Please note, th
 
 ### Create a Mod
 
-*See [how to post a Mod](/faq#how-to-post-a-mod)*
+_See [how to post a Mod](/faq#how-to-post-a-mod)_
 
 - Go to your dashboard (top right corner and click dashboard)
 - Click "Create mod" & follow the steps
@@ -28,44 +24,65 @@ Runeforge came a long way, now we want to present Runeforge 2.0. Please note, th
 After some time, once the mod got reviewed, you can get either of the following responses:
 
 - **Review rejected**
-We tell you why your mod got rejected, fix those issues and resend for another review
+  We tell you why your mod got rejected, fix those issues and resend for another review
 
 - **Review approved**
-After you got your first mod approved, you can continue to post more afterwards without the waittime. You also automatically get the Creator role on your account.
-
+  After you got your first mod approved, you can continue to post more afterwards without the waittime. You also automatically get the Creator role on your account.
 
 ## How to post a Mod
-
 
 <a href="https://www.youtube.com/watch?v=BwR6KMdsHhU"><img src="https://img.youtube.com/vi/BwR6KMdsHhU/0.jpg" alt="Guide on how to post a mod"
 style="width:50%" /></a>
 
-*Video will open externally*
+_Video will open externally_
 
-### Which License should I use?
+## Which license should I use?
 
-Licensing can be complicated, in order to understand what you want to allow user and what not, put the "Name" into the License field on Runeforge.
+The license tells everyone else what they may do with your mod without asking you first. Put the name from the first column below into the **License** field on Runeforge.
 
-Example:
-You want you skin to only be played by users and not used for commercial use, then choose one license which prohibits commercial use like **CC-BY-NC-ND-4.0**.
+Every license listed here requires credit, so that part is never in question. What changes between them is the answer to three questions:
 
+- **Commercial use** - may someone earn money from your work? `NC`, for non-commercial, says no.
+- **Modifications** - may someone edit your mod and release their own version? `ND`, for no derivatives, says no.
+- **Share-alike** - must an edited version carry this same license? `SA` says yes.
 
-| Name            | Credit | Commercial Use | Modifications Allowed | Share-Alike Required |
-| --------------- | ------ | -------------- | --------------------- | -------------------- |
-| CC-BY-4.0       | 🟢     | 🟢             | 🟢                    | 🔴                   |
-| CC-BY-SA-4.0    | 🟢     | 🟢             | 🟢                    | 🟢                   |
-| CC-BY-NC-4.0    | 🟢     | 🔴             | 🟢                    | 🔴                   |
-| CC-BY-NC-SA-4.0 | 🟢     | 🔴             | 🟢                    | 🟢                   |
-| CC-BY-ND-4.0    | 🟢     | 🟢             | 🔴                    | 🔴                   |
-| CC-BY-NC-ND-4.0 | 🟢     | 🔴             | 🔴                    | 🔴                   |
+| License                                                               | Commercial use                      | Modifications                       | Share-alike                         |
+| --------------------------------------------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
+| [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)             | <span class="rf-dot-yes">Yes</span> | <span class="rf-dot-yes">Yes</span> | <span class="rf-dot-no">No</span>   |
+| [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/)       | <span class="rf-dot-yes">Yes</span> | <span class="rf-dot-yes">Yes</span> | <span class="rf-dot-yes">Yes</span> |
+| [CC-BY-NC-4.0](https://creativecommons.org/licenses/by-nc/4.0/)       | <span class="rf-dot-no">No</span>   | <span class="rf-dot-yes">Yes</span> | <span class="rf-dot-no">No</span>   |
+| [CC-BY-NC-SA-4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) | <span class="rf-dot-no">No</span>   | <span class="rf-dot-yes">Yes</span> | <span class="rf-dot-yes">Yes</span> |
+| [CC-BY-ND-4.0](https://creativecommons.org/licenses/by-nd/4.0/)       | <span class="rf-dot-yes">Yes</span> | <span class="rf-dot-no">No</span>   | <span class="rf-dot-na">n/a</span>  |
+| [CC-BY-NC-ND-4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) | <span class="rf-dot-no">No</span>   | <span class="rf-dot-no">No</span>   | <span class="rf-dot-na">n/a</span>  |
 
-🟢 : Yes
-🔴 : No
+Share-alike reads n/a on the two `ND` licenses because they permit no edited version for it to apply to.
+
+Two common picks:
+
+- **CC-BY-4.0** if you want your work built on and only ask to be named for it.
+- **CC-BY-NC-ND-4.0** if you want people to play your skin, but not sell it and not publish their own edit of it.
+
+### Keep the package and the page in sync
+
+Set the same license in your mod package as you set on the project page. A package travels on its own once it is downloaded - reuploaded somewhere else, passed around in a Discord, sitting in a mod folder a year later - and the license it carries is the only one anyone still has.
+
+Every name in the table above is an SPDX identifier, which is what a mod project's manifest takes:
+
+```json
+"license": "CC-BY-NC-ND-4.0"
+```
+
+`.fantome` has nowhere to put it. Its `META/info.json` carries no license field, so if you publish fantome the project page is the only place the license exists. Worth stating it in the package's `META/README.md` too.
+
+The LTK Wiki documents both in full: the [manifest schema](https://wiki.leaguetoolkit.dev/making-mods/mod-projects/#the-manifest) and the [fantome format](https://wiki.leaguetoolkit.dev/reference/mod-packages/fantome/).
+
+### What the license does not cover
+
+A Creative Commons license only covers the parts of the mod you made yourself. It grants nobody any right to Riot Games' assets, so a skin built on an existing champion's files is not yours to relicense in full.
 
 ## FAQ
 
 ### Safety & Security
-
 
 #### Are custom skins safe to use?
 
@@ -83,17 +100,14 @@ You want you skin to only be played by users and not used for commercial use, th
 
 - Bans can and will occur if you used "free" paid skins also know as [Skin Hacking](/faq#can-i-get-paid-skins-through-custom-skins-skin-hacking)
 
-
 #### Vanguard was added, is it dangerous to use cs-lol?
 
 - cs-lol does work with Vanguard, since its release in Patch 14.9, no bans or records regarding custom skins have been reported
 
 - Make sure you always run the latest version:
-[Download the latest Cslol](https://github.com/LeagueToolkit/cslol-manager/releases)
-
+  [Download the latest Cslol](https://github.com/LeagueToolkit/cslol-manager/releases)
 
 ### Skins
-
 
 #### My favorite skin is missing
 
@@ -103,9 +117,7 @@ Sometimes Creators leave the community or stop maintaining them. If the skin isn
 
 No Skin hacking is prohibited by Riot Games. We highly recommend to not download and use those skins, since this can and will lead to bans from Runeforge and League of Legends.
 
-
 ### Help & Support
-
 
 #### My cs-lol/skin/game is broken
 

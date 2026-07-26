@@ -1,10 +1,10 @@
 @import 'tailwindcss';
 
-/* Runeforge design tokens — the subset of the app's Tailwind theme the wiki
+/* Runeforge design tokens - the subset of the app's Tailwind theme the wiki
    uses. Keep names in sync with apps/web in runeforge-io/runeforge. */
 @theme {
-  --font-display: 'Rubik', ui-sans-serif, system-ui, sans-serif;
-  --font-title: 'Rubik', ui-sans-serif, sans-serif;
+  --font-display: var(--font-rubik);
+  --font-title: var(--font-rubik);
 
   --color-base-100: #e9f4fb;
   --color-base-200: #e2edf4;

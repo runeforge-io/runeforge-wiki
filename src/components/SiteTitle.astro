@@ -9,27 +9,28 @@ const { siteTitleHref } = Astro.locals.starlightRoute;
 ---
 
 <a href={siteTitleHref} class="site-title sl-flex">
-	<RuneforgeLogo class="logo-mark" aria-hidden="true" />
-	<span class="title-text" translate="no"><span class="sr-only">Runeforge </span>Wiki</span>
+  <RuneforgeLogo class="logo-mark" aria-hidden="true" />
+  <span class="title-text" translate="no"><span class="sr-only">Runeforge </span>Wiki</span>
 </a>
 
 <style>
-	.site-title {
-		align-items: center;
-		gap: 0.625rem;
-		font-size: var(--sl-text-h4);
-		color: var(--sl-color-white);
-		text-decoration: none;
-		white-space: nowrap;
-		min-width: 0;
-	}
-	.site-title :global(svg.logo-mark) {
-		flex-shrink: 0;
-		width: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y) - 0.25rem);
-		height: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y) - 0.25rem);
-		fill: #ed0049; /* crimson-500 */
-	}
-	.title-text {
-		overflow: hidden;
-	}
+  .site-title {
+    align-items: center;
+    gap: 0.625rem;
+    font-size: var(--sl-text-h4);
+    color: var(--sl-color-white);
+    text-decoration: none;
+    white-space: nowrap;
+    min-width: 0;
+  }
+  .site-title :global(svg.logo-mark) {
+    flex-shrink: 0;
+    width: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y) - 0.25rem);
+    height: calc(var(--sl-nav-height) - 2 * var(--sl-nav-pad-y) - 0.25rem);
+    fill: var(--rf-crimson);
+    filter: var(--rf-mark-glow);
+  }
+  .title-text {
+    overflow: hidden;
+  }
 </style>

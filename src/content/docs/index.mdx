@@ -3,49 +3,73 @@ title: Runeforge Wiki
 description: 'League of Legends Custom Skins Wiki: Your Ultimate Modding Resource. The definitive hub for League of Legends custom skins and the go-to source for the League of Legends modding community.'
 template: splash
 hero:
-  title: Welcome to the Runeforge Wiki!
-  tagline: We are a community dedicated to creating mods for League of Legends. If you seek help, you shall find it here, with our evergrowing list of guides and information all about modding League of Legends.
-  image:
-    alt: Runeforge Wiki Welcome Banner
-    html: <img src="/titles/runeforge_welcome.webp" alt="" style="max-width:100%" />
+  title: Learn League modding
+  tagline: Community-written guides for custom skins, models, VFX, sound, and the tools behind them.
   actions:
     - text: Get Started
       link: /core-guides/get-started
-      icon: rocket
+      icon: right-arrow
       variant: primary
     - text: Join our Discord
       link: https://discord.com/invite/runeforge
       icon: discord
-      variant: minimal
+      variant: secondary
 ---
 
-import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { CardGrid } from '@astrojs/starlight/components';
+import NavCard from '../../components/NavCard.astro';
+import TopicRow from '../../components/TopicRow.astro';
+import CtaPanel from '../../components/CtaPanel.astro';
 
 ## Find your way around
 
 <CardGrid>
-  <LinkCard
+  <NavCard
+    icon="compass"
     title="Beginners Guide"
     href="/core-guides/get-started"
     description="New to the community? Start here for the necessities and starter guides to get a leap into your new journey."
   />
-  <LinkCard
+  <NavCard
+    icon="toolbox"
     title="Core Guides"
     href="/core-guides"
     description="How to install mods, the tools every modder needs, and downloadable assets."
   />
-  <LinkCard
+  <NavCard
+    icon="paint-brush"
     title="Guides"
     href="/specific-guide"
     description="In-depth guides for 3D modelling, animation, coding, SFX, VFX, texturing, UI, skin fixes, and more."
   />
-  <LinkCard
+  <NavCard
+    icon="question"
     title="FAQ"
     href="/faq"
-    description="Runeforge 2.0, becoming a Creator, posting mods, and frequently asked questions."
+    description="Becoming a Creator, posting mods, and frequently asked questions."
   />
 </CardGrid>
 
+## Browse by topic
+
+<TopicRow
+  topics={[
+    { label: '3D Modelling', href: '/specific-guide/3d-modelling' },
+    { label: 'Animation', href: '/specific-guide/animation' },
+    { label: 'Coding', href: '/specific-guide/coding' },
+    { label: 'Sound FX', href: '/specific-guide/sfx' },
+    { label: 'Visual FX', href: '/specific-guide/vfx' },
+    { label: 'Texturing', href: '/specific-guide/texturing' },
+    { label: 'UI', href: '/specific-guide/ui' },
+    { label: 'Skin Fixes', href: '/specific-guide/skin-fixes' },
+    { label: 'Mapskin', href: '/specific-guide/mapskin' },
+    { label: 'Rigging & Weighting', href: '/specific-guide/rigging-weighting' },
+  ]}
+/>
+
 ## Want to contribute?
 
-We welcome your contributions to the Wiki! If you possess valuable knowledge not yet covered, or skills in programs relevant to our work, please don't hesitate to join our [Discord](https://discord.com/invite/runeforge) server. Once there, feel free to **ping a Mod/Staff Member**; we're eager to assist you in sharing your expertise and helping our community grow. Your unique insights can significantly enhance our resources, benefiting all users. We look forward to collaborating with you!
+<CtaPanel cta="Join our Discord" href="https://discord.com/invite/runeforge" icon="discord">
+  Every page here was written by someone in the community. If you know something the wiki doesn't
+  cover yet, join the Discord and **ping a Mod/Staff Member** — we'll help you turn it into a guide.
+</CtaPanel>

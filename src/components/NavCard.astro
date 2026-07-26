@@ -1,0 +1,77 @@
+---
+// Landing-page entry card. Carries the same gradient ring as .sl-link-card
+// (shared from the Link Cards section of custom.css) plus a section icon that
+// matches the sidebar's, so the two navigation surfaces read as one system.
+interface Props {
+  title: string;
+  href: string;
+  description: string;
+  icon: 'compass' | 'toolbox' | 'paint-brush' | 'question' | 'upload-simple';
+}
+
+const { title, href, description, icon } = Astro.props;
+---
+
+<a class="rf-nav-card not-content" {href} data-icon={icon}>
+  <span class="rf-nav-card-icon" aria-hidden="true"></span>
+  <span class="rf-nav-card-text">
+    <span class="rf-nav-card-title">{title}</span>
+    <span class="rf-nav-card-desc">{description}</span>
+  </span>
+</a>
+
+<style>
+  .rf-nav-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+    padding: 1.125rem 1.25rem;
+    text-decoration: none;
+  }
+
+  .rf-nav-card-icon {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    /* Optically aligns the mask box with the title's cap height. */
+    margin-block-start: 0.0625rem;
+    background-color: var(--sl-color-accent-high);
+    -webkit-mask: var(--rf-card-icon) center / contain no-repeat;
+    mask: var(--rf-card-icon) center / contain no-repeat;
+  }
+
+  .rf-nav-card[data-icon='compass'] {
+    --rf-card-icon: url('@phosphor-icons/core/assets/bold/compass-bold.svg');
+  }
+  .rf-nav-card[data-icon='toolbox'] {
+    --rf-card-icon: url('@phosphor-icons/core/assets/bold/toolbox-bold.svg');
+  }
+  .rf-nav-card[data-icon='paint-brush'] {
+    --rf-card-icon: url('@phosphor-icons/core/assets/bold/paint-brush-bold.svg');
+  }
+  .rf-nav-card[data-icon='question'] {
+    --rf-card-icon: url('@phosphor-icons/core/assets/bold/question-bold.svg');
+  }
+  .rf-nav-card[data-icon='upload-simple'] {
+    --rf-card-icon: url('@phosphor-icons/core/assets/bold/upload-simple-bold.svg');
+  }
+
+  .rf-nav-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 0;
+  }
+
+  .rf-nav-card-title {
+    font-size: var(--sl-text-h5);
+    font-weight: var(--rf-weight-semibold);
+    color: var(--sl-color-white);
+  }
+
+  .rf-nav-card-desc {
+    font-size: var(--sl-text-sm);
+    line-height: 1.55;
+    color: var(--sl-color-gray-3);
+  }
+</style>
