@@ -8,6 +8,8 @@ tags:
   subject: [wiki]
 ---
 
+import Hint from '../../../components/Hint.svelte';
+
 Follow these rules when writing or editing a page. They exist because the wiki runs on [Starlight](https://starlight.astro.build/), which renders Markdown differently than the old wiki.js site did — some old habits now break pages or make them look bad.
 
 ## Headings
@@ -185,6 +187,31 @@ Content here. Leave a blank line after the summary so Markdown inside renders.
 
 </details>
 ```
+
+## Tooltips
+
+A jargon word that a beginner will not know does not need its own paragraph. Wrap it in a `<Hint>` and put the explanation in the `tip`, so the reader gets it on hover or keyboard focus without losing their place:
+
+```mdx
+---
+title: Recoloring Particles
+---
+
+import Hint from '../../../components/Hint.svelte';
+
+Open the <Hint client:visible tip="Riot's binary property format. Holds particle colours, file paths, and most other tunable values in the game.">bin file</Hint> and find the emitter you want to change.
+```
+
+That renders as: open the <Hint client:visible tip="Riot's binary property format. Holds particle colours, file paths, and most other tunable values in the game.">bin file</Hint> and find the emitter you want to change.
+
+Two things to get right:
+
+- The page must be `.mdx`, and the number of `../` in the import depends on how deep the page sits. Count from the page to `src/components/Hint.svelte`.
+- `client:visible` is the directive to use. It loads the tooltip only once the word scrolls into view.
+
+The trigger is a real button, so the tip is reachable by keyboard. If you are wrapping something already interactive, such as a link, pass `as="span"` instead, and use `side` (`top`, `right`, `bottom`, `left`) when the default position would run off the edge of the screen.
+
+Keep the tip to one or two plain sentences. Anything a reader must act on belongs in an aside or in the body text, because a tooltip cannot be printed, searched, or linked to.
 
 ## Linking
 

@@ -34,6 +34,7 @@ pnpm, TypeScript strict mode. Build output is static HTML/CSS/JS.
 - `src/components/*.astro` - both the components MDX pages import and the
   overrides of Starlight's own components, registered in the `components` map
   in `astro.config.ts`.
+- `src/components/ui/**` - shared UI primitives, a folder per primitive.
 - `src/styles/custom.css` - the site theme and every cross-component rule.
 - `src/styles/tailwind.css` - the Runeforge design tokens mirrored from the app.
 - `src/content.config.ts` - collection schemas (Zod), enforced at build time.
@@ -66,23 +67,30 @@ components`. A component never reaches back into another page's frontmatter.
 
 ## Component architecture
 
-5. **`.astro` by default, `.svelte` only for interactivity.** If a component has
+5. **Shared UI lives in `src/components/`.** Anything a second page or
+   component would otherwise duplicate belongs there, not inline in an MDX
+   page. Primitives that exist to be composed rather than used directly -
+   the bits-ui wrappers behind `Hint.svelte` - get their own folder under
+   `src/components/ui/`, one per primitive, with an `index.ts` barrel so
+   callers import the set rather than each file.
+
+6. **`.astro` by default, `.svelte` only for interactivity.** If a component has
    no client-side state, it must be `.astro` and ship zero JS.
 
-6. **Choose the hydration directive deliberately.** `client:load` only for
+7. **Choose the hydration directive deliberately.** `client:load` only for
    above-the-fold interactivity, `client:visible` for anything below it,
    `client:idle` for non-urgent work.
 
-7. **Page-entry components stay thin.** Past roughly 150 lines of markup plus
+8. **Page-entry components stay thin.** Past roughly 150 lines of markup plus
    logic, split into orchestrator -> section -> per-item card.
 
-8. **One parameterized component beats near-duplicate ones.** If two blocks
+9. **One parameterized component beats near-duplicate ones.** If two blocks
    differ only by label, colour, or icon, unify them behind a prop.
 
-9. **Replace repeated conditional branches with a keyed lookup.** Reach for a
-   lookup object when you see parallel `if`s.
+10. **Replace repeated conditional branches with a keyed lookup.** Reach for a
+    lookup object when you see parallel `if`s.
 
-10. **Icons come from Phosphor (`@phosphor-icons/core`), applied as CSS masks.**
+11. **Icons come from Phosphor (`@phosphor-icons/core`), applied as CSS masks.**
     A masked icon takes its container's `color` and hover state for free, so
     there is no second set of rules per state. Reference the asset by package
     path (Vite resolves the URL at build time), pass it through a custom
@@ -95,14 +103,14 @@ components`. A component never reaches back into another page's frontmatter.
 
 ## Props and types
 
-11. **Every component declares `interface Props`.** Never destructure an untyped
+12. **Every component declares `interface Props`.** Never destructure an untyped
     `Astro.props`.
 
-12. **No `any`.** Strict mode is on project-wide and the build fails on type
+13. **No `any`.** Strict mode is on project-wide and the build fails on type
     errors. Unavoidable third-party gaps get a narrow local type, not an escape
     hatch.
 
-13. **Content shapes belong in `src/content.config.ts`.** Frontmatter is
+14. **Content shapes belong in `src/content.config.ts`.** Frontmatter is
     validated by Zod at build time; a component that reads frontmatter trusts
     that schema rather than re-checking fields.
 
@@ -110,12 +118,12 @@ components`. A component never reaches back into another page's frontmatter.
 
 ## Styling
 
-14. **Scope styles per component by default.** Astro hashes each `<style>` block
+15. **Scope styles per component by default.** Astro hashes each `<style>` block
     to its component. "Sharing" means either sharing _values_ (tokens) or
     promoting a rule to the global stylesheet - pick by what you are actually
     sharing.
 
-15. **Share values with design tokens, never copied hex.** Starlight's palette
+16. **Share values with design tokens, never copied hex.** Starlight's palette
     (`--sl-color-*`) covers most needs and is already mapped to the Runeforge
     colours at the top of `custom.css`. Site-specific values are `--rf-*`
     tokens: the brand crimsons (`--rf-crimson`, `--rf-crimson-deep`,
@@ -128,31 +136,31 @@ components`. A component never reaches back into another page's frontmatter.
     the exception: they define the literals. Leave incidental one-off sizes
     (`0.4rem`, `0.8125rem`) inline rather than minting a token per magic number.
 
-16. **Cross-component rules go in `src/styles/custom.css`,** which Starlight
+17. **Cross-component rules go in `src/styles/custom.css`,** which Starlight
     loads via `customCss`. Keep its section banner comments and add to the right
     section rather than appending to the end.
 
-17. **Rules that override Starlight must stay unlayered.** Starlight ships its
+18. **Rules that override Starlight must stay unlayered.** Starlight ships its
     own styles in `@layer starlight.core`, and an unlayered rule beats any
     layered one. That is why the sidebar and aside overrides in `custom.css`
     carry no `!important` - don't add one, check the layer first.
 
-18. **Tailwind's preflight is the other half of that story.** Preflight lives in
+19. **Tailwind's preflight is the other half of that story.** Preflight lives in
     `@layer base` and resets list styles and the mono font stack, so
     `custom.css` restores them with guards (`:not([class])`,
     `:not(:where(.not-content *))`) that keep component markup out of the blast
     radius. Read the comment above those rules before touching anything
     list-related.
 
-19. **The site is dark-only.** `ThemeProvider.astro` pins `data-theme="dark"`
+20. **The site is dark-only.** `ThemeProvider.astro` pins `data-theme="dark"`
     and `ThemeSelect.astro` renders nothing, so a `:root[data-theme='light']`
     block is dead code. Don't add one.
 
-20. **Respect `prefers-reduced-motion`.** `custom.css` neutralises durations
+21. **Respect `prefers-reduced-motion`.** `custom.css` neutralises durations
     globally and cancels the card and pagination lifts; a component that
     animates transforms should also disable them in its own scoped block.
 
-21. **`-webkit-` prefixed properties go before the standard property.** The
+22. **`-webkit-` prefixed properties go before the standard property.** The
     minifier collapses a pair into whichever comes last, and Safari is the only
     engine that ever aliased the prefixed forms of `backdrop-filter` and `mask`.
 
@@ -160,30 +168,30 @@ components`. A component never reaches back into another page's frontmatter.
 
 ## Starlight overrides
 
-22. **Override through the `components` map in `astro.config.ts`,** never by
+23. **Override through the `components` map in `astro.config.ts`,** never by
     editing anything under `node_modules`. Current overrides: `ThemeProvider`
     and `ThemeSelect` (pin dark mode), `SiteTitle` (the app's logo mark plus
     "Wiki"), `Sidebar` (reveals the current page and arms the collapse
     animation), `Header` (section nav, reading-progress bar, and the mobile
     hide-on-scroll script), and `Head` (the `<Font>` tags).
 
-23. **Don't import Starlight internals.** Only the documented entry points are
+24. **Don't import Starlight internals.** Only the documented entry points are
     exported. `virtual:starlight/components/*` resolves at build time but ships
     no types, so `astro check` fails on it: import the concrete component
     instead, as `Header.astro` does for `SiteTitle`.
 
-24. **Wrap, don't rewrite, when you only need to add behaviour.**
+25. **Wrap, don't rewrite, when you only need to add behaviour.**
     `Sidebar.astro` renders Starlight's default component and layers a script
     on top rather than reimplementing the tree. When new markup must land
     _inside_ the default's layout, compose from Starlight's building blocks
     instead, as `Header.astro` does.
 
-25. **Don't assume a component script runs before `DOMContentLoaded`.** Astro
+26. **Don't assume a component script runs before `DOMContentLoaded`.** Astro
     hands these modules to the browser through an import chain, so a bare
     `DOMContentLoaded` listener can register after the event has fired. Guard on
     `document.readyState`, as `Sidebar.astro` does.
 
-26. **Fonts go through the `fonts` config, never a hand-written `@font-face`.**
+27. **Fonts go through the `fonts` config, never a hand-written `@font-face`.**
     The API self-hosts the file into `/_astro/` either way; what it adds is the
     preload link and a metric-matched fallback face, without which the first
     paint reflows when the real font swaps in. A new family needs a `fonts`
@@ -195,22 +203,22 @@ components`. A component never reaches back into another page's frontmatter.
 
 ## Comments
 
-27. **A comment says only what the code cannot.** Before writing one, check the
+28. **A comment says only what the code cannot.** Before writing one, check the
     code and the section doc above it: if the selector, condition, or an
     existing block already carries the rationale, write nothing. Never narrate
     current values ("at 72% the frost stays visible...") - they go stale on the
     next tweak.
 
-28. **One or two lines is the budget.** State the single non-obvious
+29. **One or two lines is the budget.** State the single non-obvious
     constraint and stop. No problem-statement preamble, no trade-off
     narration, no describing what neighbouring rules do.
 
-29. **Structure multi-point comments as lists.** When a comment covers more
+30. **Structure multi-point comments as lists.** When a comment covers more
     than a couple of distinct points, open with a one-line summary and put the
     points in a `-` or numbered list, as the mobile hide-on-scroll block in
     `custom.css` does. Single-point comments stay plain sentences.
 
-30. **Open with what the thing is, not what it does.** The first words are a
+31. **Open with what the thing is, not what it does.** The first words are a
     noun phrase naming the construct, not a verb describing its effect.
     [AGENTS.md](./AGENTS.md#comments) carries the rule and a worked
     before/after example from `custom.css`.
@@ -224,8 +232,3 @@ components`. A component never reaches back into another page's frontmatter.
 - `pnpm astro check` is clean for the files you touched.
 - `pnpm lint` reports nothing new.
 - `pnpm format` has been run, or the file matches `.prettierrc`.
-- Visual changes were looked at in a browser at desktop and mobile width. Two
-  traps when checking in an automated browser: a backgrounded tab suspends
-  `requestAnimationFrame`, so rAF-driven scripts appear not to run, and a
-  dark-mode browser extension rewrites background colours out from under the
-  theme.

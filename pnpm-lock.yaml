@@ -60,6 +60,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.17)
+      bits-ui:
+        specifier: ^2.18.1
+        version: 2.18.1(@internationalized/date@3.12.2)(svelte@5.56.6(@typescript-eslint/types@8.64.0))
       eslint:
         specifier: ^9.0.0
         version: 9.39.5(jiti@2.7.0)
@@ -1704,6 +1707,13 @@ packages:
   bcp-47@2.1.1:
     resolution: {integrity: sha512-KLw+H/gd2p4zly1X7Yh/qziuyae5/w/QFnvTng9eZL5fvszL7Whl3MBoWF8yxL7ksUjBfOD+OxkytiqbBpG+Fw==}
 
+  bits-ui@2.18.1:
+    resolution: {integrity: sha512-KkemzKFH4T3gt3H+P86JcnAWExjByv/6vlwjm/BoCwTPHu03yiCdxbghdJLvFReQTe0acCAiRcKfmixxD6XvlA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@internationalized/date': ^3.8.1
+      svelte: ^5.33.0
+
   blake3-wasm@2.1.5:
     resolution: {integrity: sha512-F1+K8EbfOZE49dtoPtmxUQrpXaBIl3ICvasLh+nJta0xkz+9kF/7uet9fLnwKqhDrmj6g+6K3Tw9yQPUg2ka5g==}
 
@@ -2689,6 +2699,10 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  lz-string@1.5.0:
+    resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
+    hasBin: true
+
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
@@ -3312,6 +3326,15 @@ packages:
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
 
+  runed@0.35.1:
+    resolution: {integrity: sha512-2F4Q/FZzbeJTFdIS/PuOoPRSm92sA2LhzTnv6FXhCoENb3huf5+fDuNOg1LNvGOouy3u/225qxmuJvcV3IZK5Q==}
+    peerDependencies:
+      '@sveltejs/kit': ^2.21.0
+      svelte: ^5.7.0
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+
   s.color@0.0.15:
     resolution: {integrity: sha512-AUNrbEUHeKY8XsYr/DYpl+qk5+aM+DChopnWOPEzn8YKzOhv4l2zH6LzZms3tOZP3wwdOyc0RmTciyi46HLIuA==}
 
@@ -3472,6 +3495,12 @@ packages:
     peerDependenciesMeta:
       svelte:
         optional: true
+
+  svelte-toolbelt@0.10.6:
+    resolution: {integrity: sha512-YWuX+RE+CnWYx09yseAe4ZVMM7e7GRFZM6OYWpBKOb++s+SQ8RBIMMe+Bs/CznBMc0QPLjr+vDBxTAkozXsFXQ==}
+    engines: {node: '>=18', pnpm: '>=8.7.0'}
+    peerDependencies:
+      svelte: ^5.30.2
 
   svelte2tsx@0.7.58:
     resolution: {integrity: sha512-NXzvlRQ2ZH8mhHOIQURyzGAu2RbbY+rcSNIXs39m2bBo6Fcw3T+EgDHnCKhncupRtzUqhWNaqQnAkfLCDjHrDg==}
@@ -5809,6 +5838,19 @@ snapshots:
       is-alphanumerical: 2.0.1
       is-decimal: 2.0.1
 
+  bits-ui@2.18.1(@internationalized/date@3.12.2)(svelte@5.56.6(@typescript-eslint/types@8.64.0)):
+    dependencies:
+      '@floating-ui/core': 1.8.0
+      '@floating-ui/dom': 1.8.0
+      '@internationalized/date': 3.12.2
+      esm-env: 1.2.2
+      runed: 0.35.1(svelte@5.56.6(@typescript-eslint/types@8.64.0))
+      svelte: 5.56.6(@typescript-eslint/types@8.64.0)
+      svelte-toolbelt: 0.10.6(svelte@5.56.6(@typescript-eslint/types@8.64.0))
+      tabbable: 6.5.0
+    transitivePeerDependencies:
+      - '@sveltejs/kit'
+
   blake3-wasm@2.1.5: {}
 
   boolbase@1.0.0: {}
@@ -6816,6 +6858,8 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lz-string@1.5.0: {}
 
   magic-string@0.30.21:
     dependencies:
@@ -7837,6 +7881,13 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
+  runed@0.35.1(svelte@5.56.6(@typescript-eslint/types@8.64.0)):
+    dependencies:
+      dequal: 2.0.3
+      esm-env: 1.2.2
+      lz-string: 1.5.0
+      svelte: 5.56.6(@typescript-eslint/types@8.64.0)
+
   s.color@0.0.15: {}
 
   sass-formatter@0.7.9:
@@ -8051,6 +8102,15 @@ snapshots:
       semver: 7.8.5
     optionalDependencies:
       svelte: 5.56.6(@typescript-eslint/types@8.64.0)
+
+  svelte-toolbelt@0.10.6(svelte@5.56.6(@typescript-eslint/types@8.64.0)):
+    dependencies:
+      clsx: 2.1.1
+      runed: 0.35.1(svelte@5.56.6(@typescript-eslint/types@8.64.0))
+      style-to-object: 1.0.14
+      svelte: 5.56.6(@typescript-eslint/types@8.64.0)
+    transitivePeerDependencies:
+      - '@sveltejs/kit'
 
   svelte2tsx@0.7.58(svelte@5.56.6(@typescript-eslint/types@8.64.0))(typescript@5.9.3):
     dependencies:

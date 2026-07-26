@@ -633,7 +633,7 @@ mobile-starlight-toc .toggle {
 }
 
 /* Top-level section icons, keyed on a contained link rather than :nth-child so
-   reordering the sidebar cannot reassign them. The four hrefs are mutually
+   reordering the sidebar cannot reassign them. The hrefs are mutually
    exclusive: "Start Here" holds /core-guides/get-started/ but not
    /core-guides/, and "Core Guides" the reverse. */
 .sidebar-pane ul.top-level > li > details > summary > .group-label,
@@ -650,8 +650,11 @@ mobile-starlight-toc .toggle {
   height: 1.125em;
   margin-inline-end: 0.5em;
   background-color: var(--sl-color-accent-high);
-  -webkit-mask: var(--rf-section-icon) center / contain no-repeat;
-  mask: var(--rf-section-icon) center / contain no-repeat;
+  /* Transparent fallback mask: a top-level entry with no icon assigned below
+     would otherwise paint the bare accent-coloured box. */
+  -webkit-mask: var(--rf-section-icon, linear-gradient(transparent, transparent)) center / contain
+    no-repeat;
+  mask: var(--rf-section-icon, linear-gradient(transparent, transparent)) center / contain no-repeat;
 }
 
 /* Current page sits on the solid crimson pill, where a crimson icon would
@@ -674,6 +677,10 @@ mobile-starlight-toc .toggle {
 
 .sidebar-pane ul.top-level > li:has(a[href='/posting-guide/']) {
   --rf-section-icon: url('@phosphor-icons/core/assets/bold/upload-simple-bold.svg');
+}
+
+.sidebar-pane ul.top-level > li:has(a[href='/tags/']) {
+  --rf-section-icon: url('@phosphor-icons/core/assets/bold/tag-bold.svg');
 }
 
 /* Indent guides for the nested groups. The nav runs four levels deep in places,
