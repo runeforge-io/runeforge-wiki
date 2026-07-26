@@ -2,6 +2,11 @@
 title: How to fix broken animations with LoLmaya
 description: This tutorial shows you how to fix broken animations on your model that happen due to animation layering etc.
 lastUpdated: 2025-02-04
+tags:
+  type: troubleshooting
+  level: advanced
+  subject: [skin-fixes, animation]
+  tool: [maya, obsidian]
 ---
 
 Common issues that can appear are: bugged animations that just don’t look properly, champions walking backwards/sidewards or smth

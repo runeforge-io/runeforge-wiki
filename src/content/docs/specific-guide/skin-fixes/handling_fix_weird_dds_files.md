@@ -1,6 +1,11 @@
 ---
 title: Handling/Fixing weird .dds files
 lastUpdated: 2025-02-04
+tags:
+  type: troubleshooting
+  level: intermediate
+  subject: [skin-fixes, texturing]
+  tool: [photoshop, gimp]
 ---
 
 

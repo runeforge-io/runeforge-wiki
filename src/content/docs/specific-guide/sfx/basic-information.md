@@ -2,6 +2,11 @@
 title: Basic Information
 description: Basic Information to do SFX modding!
 lastUpdated: 2025-02-14
+tags:
+  type: reference
+  level: beginner
+  subject: [sfx, file-formats]
+  tool: [wwise]
 ---
 
 ## Sound Effects

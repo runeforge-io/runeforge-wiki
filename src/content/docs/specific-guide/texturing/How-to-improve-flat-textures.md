@@ -2,6 +2,11 @@
 title: How to improve flat textures
 description: This tutorial shows you how you can improve flat, textures without shadows, specifically Wild Rift textures, by baking an occlusion map in Maya and editing the texture in Photoshop.
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: intermediate
+  subject: [texturing]
+  tool: [maya, photoshop, gimp, paint-net]
 ---
 
 Original Wild Rift textures:

@@ -2,6 +2,11 @@
 title: UV Editing
 description: A general overview of UV editing and modding-specific use cases of it
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: advanced
+  subject: [3d-modelling, texturing]
+  tool: [maya, paint-net]
 ---
 
 Page is still in the works, for further help ask in the discord

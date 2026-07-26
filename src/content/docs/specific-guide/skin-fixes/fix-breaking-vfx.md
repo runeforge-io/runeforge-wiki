@@ -2,6 +2,10 @@
 title: Common VFX Bugfixes
 description: A list of common VFX problems you might encounter
 lastUpdated: 2025-02-04
+tags:
+  type: troubleshooting
+  level: advanced
+  subject: [skin-fixes, vfx, bin-editing]
 ---
 
 

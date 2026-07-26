@@ -2,6 +2,11 @@
 title: Using Matrix to edit VFX
 description: A guide on how to add and edit the matrix system in bin files.
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: advanced
+  subject: [vfx, bin-editing, particles]
+  tool: [ritobin, vscode, maya]
 ---
 
 If you encounter any issues with this tip or you don’t understand part of it, you can ask for help on the Runeforge Discord Server.

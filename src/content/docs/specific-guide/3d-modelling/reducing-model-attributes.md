@@ -3,6 +3,11 @@ title: Reducing model attributes
 description: This guide will help you process files that surpass the joint/verticle limit
 draft: true
 lastUpdated: 2025-07-19
+tags:
+  type: guide
+  level: advanced
+  subject: [3d-modelling]
+  tool: [maya]
 ---
 
 

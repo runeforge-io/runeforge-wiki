@@ -2,6 +2,11 @@
 title: Hacksaw
 description: A guide on how to install and use Hacksaw.
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: intermediate
+  subject: [installation, texturing]
+  tool: [hacksaw, ritobin]
 ---
 
 ## Installing

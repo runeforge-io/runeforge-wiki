@@ -2,6 +2,11 @@
 title: How to Recolor Particles
 description: A guide on recoloring particles
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: beginner
+  subject: [vfx, particles]
+  tool: [ritobin, hacksaw, gimp, paint-net, photoshop]
 ---
 
 

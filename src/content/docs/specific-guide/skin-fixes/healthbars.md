@@ -2,6 +2,11 @@
 title: How to manually fix healthbars
 description: A short tutorial on how to fix healthbars if FixHealthBar.exe doesnt work.
 lastUpdated: 2025-09-20
+tags:
+  type: troubleshooting
+  level: intermediate
+  subject: [skin-fixes, ui]
+  tool: [ltmao, cslol-manager]
 ---
 
 :::note

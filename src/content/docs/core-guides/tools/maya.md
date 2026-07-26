@@ -2,6 +2,11 @@
 title: Autodesk Maya
 description: This page is all about Autodesk Maya. We include a list of pages which contain this tool in order to help you finding what you need!
 lastUpdated: 2024-12-31
+tags:
+  type: guide
+  level: beginner
+  subject: [installation]
+  tool: [maya]
 ---
 
 ## Autodesk Maya (2023) acquisition methods

@@ -2,6 +2,11 @@
 title: Adobe Photoshop
 description: A guide on how to install and use Adobe Photoshop
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: beginner
+  subject: [installation, texturing]
+  tool: [photoshop]
 ---
 
 

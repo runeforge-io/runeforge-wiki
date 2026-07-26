@@ -2,6 +2,10 @@
 title: How to Post
 description: How to create and edit wiki pages through GitHub, from small fixes to whole new guides.
 lastUpdated: 2026-07-22
+tags:
+  type: guide
+  level: beginner
+  subject: [wiki]
 ---
 
 The wiki lives in a GitHub repository: [runeforge-io/runeforge-wiki](https://github.com/runeforge-io/runeforge-wiki). Every page is a Markdown file, and all changes go through pull requests — this page explains the whole flow.

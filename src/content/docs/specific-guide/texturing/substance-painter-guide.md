@@ -2,6 +2,11 @@
 title: Substance Painter 3D Guide
 description: A full overview on how to use Adobe Substance Painter 3D.
 lastUpdated: 2025-01-26
+tags:
+  type: guide
+  level: advanced
+  subject: [texturing]
+  tool: [maya, substance-painter, photoshop]
 ---
 
 This is an overall comprehensive guide for beginners on how to use Substance Painter for the sole purpose of painting textures for your creations. Lessons here can obviously be applicable outside of League skins, but this will specifically be geared towards that workflow.

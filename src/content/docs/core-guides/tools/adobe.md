@@ -2,6 +2,11 @@
 title: Adobe
 description: All Adobe Programs
 lastUpdated: 2024-08-26
+tags:
+  type: overview
+  level: beginner
+  subject: [installation]
+  tool: [photoshop, substance-painter]
 ---
 
 ## All Adobe programs

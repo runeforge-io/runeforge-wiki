@@ -2,6 +2,11 @@
 title: Add child Particles
 description: A guide on how to add child particles to existing ones.
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: advanced
+  subject: [vfx, bin-editing, particles]
+  tool: [ritobin, vscode]
 ---
 
 ## Overview

@@ -2,6 +2,11 @@
 title: Maya Errorlist
 description: All common errors you might find while working with maya.
 lastUpdated: 2025-08-26
+tags:
+  type: troubleshooting
+  level: intermediate
+  subject: [3d-modelling]
+  tool: [maya]
 ---
 
 <center>

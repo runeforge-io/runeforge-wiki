@@ -2,6 +2,11 @@
 title: Obsidian
 description: A tool to explore and export .wad archives.
 lastUpdated: 2024-11-22
+tags:
+  type: guide
+  level: beginner
+  subject: [installation, exporting]
+  tool: [obsidian]
 ---
 
 Obsidian is a tool to explore and export .wad files, which are the League of Legends game file packages. This tool was made by Crauzer.

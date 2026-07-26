@@ -3,6 +3,10 @@ title: Apply as Contributor
 description: This wiki lives through their community, so as a Contributor you can help out here by adding/ editing pages.
 draft: true
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: beginner
+  subject: [wiki]
 ---
 
 :::note

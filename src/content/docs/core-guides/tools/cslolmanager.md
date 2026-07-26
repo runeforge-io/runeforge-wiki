@@ -2,6 +2,11 @@
 title: CS-LoL Manager
 description: The tool to install and create mod packages.
 lastUpdated: 2024-11-06
+tags:
+  type: guide
+  level: beginner
+  subject: [installation]
+  tool: [cslol-manager]
 ---
 
 CS-LoL Manager is a tool to install and create mod packages mostly made by [Moonshadow](https://github.com/moonshadow565) with help from [Morilli](https://github.com/Morilli).

@@ -2,6 +2,11 @@
 title: Basic Mapskin starter guide
 description: A small guide on how to create a mapskin, this includes only textures.
 lastUpdated: 2024-10-30
+tags:
+  type: tutorial
+  level: intermediate
+  subject: [mapskin, texturing, resources]
+  tool: [obsidian, ritoddstex]
 ---
 
 :::note

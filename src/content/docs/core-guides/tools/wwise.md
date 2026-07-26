@@ -2,6 +2,11 @@
 title: Wwise
 description: A guide on how to install and use Wwise.
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: intermediate
+  subject: [installation, sfx]
+  tool: [wwise]
 ---
 
 :::danger

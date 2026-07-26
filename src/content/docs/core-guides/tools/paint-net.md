@@ -2,6 +2,11 @@
 title: paint.net
 description: A simple guide to using paint.net for League's image files.
 lastUpdated: 2025-03-19
+tags:
+  type: guide
+  level: beginner
+  subject: [installation, texturing]
+  tool: [paint-net]
 ---
 
 :::note

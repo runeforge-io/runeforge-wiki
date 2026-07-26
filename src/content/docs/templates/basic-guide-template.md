@@ -3,9 +3,13 @@ title: Basic Guide Template
 description: Copy this file to start a new guide. Replace the title and description with your own.
 draft: true
 lastUpdated: 2026-07-22
+tags:
+  type: template
+  level: beginner
+  subject: [wiki]
 ---
 
-<!--Welcome to the basic guide template. Copy this file, fill in the frontmatter above (title, description, and today's date), and delete the comments as you go. Read the Posting Guide and Style Guide first! Note: the title in the frontmatter is rendered as the page heading automatically — never repeat it in the body, and start your headings at ## (two hashes).-->
+<!--Welcome to the basic guide template. Copy this file, fill in the frontmatter above (title, description, today's date, and your own tags - see the Style Guide for the vocabulary), and delete the comments as you go. Read the Posting Guide and Style Guide first! Note: the title in the frontmatter is rendered as the page heading automatically — never repeat it in the body, and start your headings at ## (two hashes).-->
 
 <!--Start with a short intro paragraph (no heading needed): what this guide is about and what the reader will have at the end.-->
 

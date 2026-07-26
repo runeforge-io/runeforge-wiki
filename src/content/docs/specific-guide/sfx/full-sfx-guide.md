@@ -2,6 +2,11 @@
 title: Full sound modding guide
 description: A full overview of sound modding for League of Legends.
 lastUpdated: 2024-10-30
+tags:
+  type: tutorial
+  level: intermediate
+  subject: [sfx, soundbanks]
+  tool: [wwise, obsidian, cslol-manager]
 ---
 
 ## Required Tools

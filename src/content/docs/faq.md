@@ -2,6 +2,11 @@
 title: FAQ
 description: All information about becoming a Creator, posting mods, and frequently asked questions.
 lastUpdated: 2026-07-26
+tags:
+  type: faq
+  level: beginner
+  subject: [posting, getting-started]
+  tool: [cslol-manager]
 ---
 
 ## How to become a Creator

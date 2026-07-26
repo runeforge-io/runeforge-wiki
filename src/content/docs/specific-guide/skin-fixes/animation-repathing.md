@@ -2,6 +2,11 @@
 title: Animation Repathing
 description: Guide to Animation repathing 
 lastUpdated: 2025-03-09
+tags:
+  type: guide
+  level: advanced
+  subject: [skin-fixes, animation, bin-editing]
+  tool: [obsidian, ritobin, vscode]
 ---
 
 ## How to repath animations

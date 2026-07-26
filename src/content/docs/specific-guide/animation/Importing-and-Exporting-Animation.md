@@ -2,6 +2,11 @@
 title: Importing and Exporting Animations
 description: A guide on how to import animations in Maya and export then for League modding
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: intermediate
+  subject: [animation, exporting]
+  tool: [maya, obsidian]
 ---
 
 This guide will help you import animations in maya and export them for League modding.

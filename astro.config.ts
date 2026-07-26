@@ -76,8 +76,12 @@ export default defineConfig({
         Head: './src/components/Head.astro',
         // Landing-page hero: full-bleed backdrop, glass panel, search, stats.
         Hero: './src/components/Hero.astro',
+        // Appends the tag chip row for pages that carry `tags` frontmatter.
+        PageTitle: './src/components/PageTitle.astro',
       },
-      plugins: [starlightLinksValidator()],
+      // The tag pages live in src/pages/, outside the docs collection, so the
+      // validator cannot resolve links to them.
+      plugins: [starlightLinksValidator({ exclude: ['/tags/**'] })],
       sidebar: [
         {
           label: 'Start Here',
@@ -377,6 +381,7 @@ export default defineConfig({
             { label: 'Authoring Locally', slug: 'posting-guide/local-authoring' },
           ],
         },
+        { label: 'Tags', link: '/tags/' },
       ],
     }),
     svelte(),

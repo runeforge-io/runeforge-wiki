@@ -2,6 +2,11 @@
 title: How to Transfer Animations from One Champ to Another (AKA Animation Retargeting)
 description: This guide will show you how to transfer an animation unto another character
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: intermediate
+  subject: [animation, skeletons]
+  tool: [maya, blender, obsidian]
 ---
 
 ## Required Tools

@@ -2,6 +2,11 @@
 title: Blender
 description: A starting guide to using Blender for League modding
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: beginner
+  subject: [installation, 3d-modelling]
+  tool: [blender, lol2gltf, ltmao]
 ---
 
 :::note

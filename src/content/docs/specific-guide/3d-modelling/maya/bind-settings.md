@@ -2,6 +2,11 @@
 title: Maya's Skin Binding Settings
 description: This guide will explain all the Skin Binding settings in Maya and what each one does.
 lastUpdated: 2024-12-31
+tags:
+  type: reference
+  level: advanced
+  subject: [rigging-weighting, skeletons]
+  tool: [maya]
 ---
 
 <!--SOMEONE ADD IMAGES, PLEASE-->

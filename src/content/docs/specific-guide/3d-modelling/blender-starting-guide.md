@@ -2,6 +2,11 @@
 title: Custom Skins in Blender - Starting guide
 description: A couple of videos(with a tutorial you can follow) to get started with the very basics of custom skinning
 lastUpdated: 2024-09-07
+tags:
+  type: tutorial
+  level: beginner
+  subject: [3d-modelling]
+  tool: [blender, lol2gltf, obsidian, cslol-manager]
 ---
 
 This guide will help you start making custom skins on Blender, having the tools needed, how to use them, and quick videos to explain every single one of these steps

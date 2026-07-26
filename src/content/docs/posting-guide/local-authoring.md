@@ -2,6 +2,11 @@
 title: Authoring Locally
 description: Set up the wiki on your own machine to write and preview guides with live reload before opening a pull request.
 lastUpdated: 2026-07-22
+tags:
+  type: guide
+  level: intermediate
+  subject: [wiki, installation]
+  tool: [vscode]
 ---
 
 For quick fixes, the GitHub editor described in [How to Post](/posting-guide) is all you need. For writing whole guides it's much nicer to run the wiki on your own machine: you see the rendered page while you type, images work immediately, and broken links are caught before you open a pull request.

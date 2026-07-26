@@ -2,6 +2,11 @@
 title: Visual Studio Code
 description: A guide on how to install and use Visual Studio Code
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: beginner
+  subject: [installation, bin-editing]
+  tool: [vscode]
 ---
 
 :::danger

@@ -2,6 +2,10 @@
 title: Use custom Font
 description: A short guide including a template on how to use your custom font.
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: intermediate
+  subject: [ui, resources]
 ---
 
 :::note

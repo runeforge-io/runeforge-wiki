@@ -2,6 +2,10 @@
 title: BGM moding guide
 description: Guide on how to mod in game background music
 lastUpdated: 2025-08-26
+tags:
+  type: guide
+  level: advanced
+  subject: [sfx, soundbanks]
 ---
 
 ## Overview

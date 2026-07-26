@@ -2,6 +2,11 @@
 title: Fix Broken Textures
 description: A tutorial on how to update your mod's deprecated DDS texture files to Riot's TEX format.
 lastUpdated: 2026-02-07
+tags:
+  type: troubleshooting
+  level: intermediate
+  subject: [skin-fixes, texturing]
+  tool: [ltmao, cslol-manager, ritoddstex, paint-net]
 ---
 
 :::caution

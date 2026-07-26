@@ -2,6 +2,11 @@
 title: Ritoddstex
 description: Ritoddstex tool guide
 lastUpdated: 2025-01-03
+tags:
+  type: guide
+  level: intermediate
+  subject: [installation, texturing]
+  tool: [ritoddstex]
 ---
 
 Ritoddstex is a programm used to convert between [.tex](/specific-guide/filetypes) and [.dds](/specific-guide/filetypes) files. Made by [Morilli](https://github.com/Morilli).

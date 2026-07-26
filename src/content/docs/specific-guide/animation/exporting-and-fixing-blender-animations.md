@@ -3,6 +3,11 @@ title: Exporting and Fixing Blender animations
 description: This guide will explain the process or exporting an animation from Blender and fix it in Maya so that it can be used in a mod.
 draft: true
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: advanced
+  subject: [animation, exporting]
+  tool: [blender, maya]
 ---
 
 

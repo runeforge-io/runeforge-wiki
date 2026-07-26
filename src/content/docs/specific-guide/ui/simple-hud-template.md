@@ -2,6 +2,11 @@
 title: Simple HUD Template by Yoru
 description: A short guide on how to use the "Simple HUD Template" made by Yoru Queen of Night
 lastUpdated: 2025-04-26
+tags:
+  type: guide
+  level: intermediate
+  subject: [ui, resources]
+  tool: [photoshop]
 ---
 
 Yoru made a simplified HUD for herself and decided to turn it into an easy-to-use template so everyone can use it too.

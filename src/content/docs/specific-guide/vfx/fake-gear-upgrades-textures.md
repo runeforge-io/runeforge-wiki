@@ -2,6 +2,10 @@
 title: A texture swapping tutorial
 description: An advanced tutorial on how to swap textures using Static Materials and Particle events
 lastUpdated: 2025-04-01
+tags:
+  type: tutorial
+  level: advanced
+  subject: [texturing, materials, bin-editing]
 ---
 
 ## Texture swapping with bins

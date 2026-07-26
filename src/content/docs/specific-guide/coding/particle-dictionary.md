@@ -2,6 +2,11 @@
 title: Particle and Bin Dictionary
 description: The full overview about everything you need to know about bins and particles!
 lastUpdated: 2024-08-26
+tags:
+  type: reference
+  level: intermediate
+  subject: [vfx, bin-editing, particles]
+  tool: [cslol-manager, obsidian, vscode]
 ---
 
 ## Overview

@@ -1,6 +1,11 @@
 ---
 title: Using the champion templates
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: beginner
+  subject: [resources, ui]
+  tool: [photoshop, gimp, paint-net]
 ---
 
 ## Champion templates

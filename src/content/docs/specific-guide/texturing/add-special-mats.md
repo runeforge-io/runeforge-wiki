@@ -2,6 +2,11 @@
 title: Add special materials
 description: A full overview about different materials and how to use them.
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: advanced
+  subject: [texturing, materials]
+  tool: [maya, ritobin, vscode]
 ---
 
 ## Overview

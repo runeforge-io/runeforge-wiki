@@ -2,6 +2,11 @@
 title: Lolmaya Errorlist
 description: All common and uncommon errors listed and their solutions
 lastUpdated: 2025-01-23
+tags:
+  type: troubleshooting
+  level: intermediate
+  subject: [3d-modelling]
+  tool: [maya]
 ---
 
 <center>

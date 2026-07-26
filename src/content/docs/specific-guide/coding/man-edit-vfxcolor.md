@@ -2,6 +2,11 @@
 title: Edit Visual FX Colors manually
 description: A short guide on how to manually edit VFX colors in bin files.
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: advanced
+  subject: [vfx, bin-editing, particles]
+  tool: [ritobin, vscode, obsidian]
 ---
 
 ## Required tools

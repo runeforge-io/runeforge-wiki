@@ -2,6 +2,11 @@
 title: Lol2gltf
 description: A guide on how to install and use lol2gltf
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: intermediate
+  subject: [installation, exporting]
+  tool: [lol2gltf, blender, obsidian]
 ---
 
 This page will explain lol2gltf and its features

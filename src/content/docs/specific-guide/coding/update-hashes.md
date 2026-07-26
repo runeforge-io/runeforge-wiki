@@ -3,6 +3,11 @@ title: Update Hashes
 description: How to update hashes
 draft: true
 lastUpdated: 2025-06-05
+tags:
+  type: guide
+  level: advanced
+  subject: [hashes, bin-editing]
+  tool: [obsidian, ritobin, cslol-manager]
 ---
 
 ### Overview

@@ -2,6 +2,11 @@
 title: Animated Loading Screen
 description: How to make Animated Loading Screen
 lastUpdated: 2024-09-09
+tags:
+  type: tutorial
+  level: intermediate
+  subject: [ui, resources]
+  tool: [photoshop]
 ---
 
 Learn how to create a custom animated loading screen for League of Legends by following this comprehensive step-by-step guide. Whether you're a beginner or an experienced modder, this guide will help you.

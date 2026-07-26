@@ -2,6 +2,11 @@
 title: Replacing Champions With a Different Character (Model Swap)
 description: This tutorial will show you how to model swap a League champion with a custom model
 lastUpdated: 2025-09-04
+tags:
+  type: tutorial
+  level: advanced
+  subject: [3d-modelling, rigging-weighting, skeletons]
+  tool: [obsidian, maya, blender]
 ---
 
 

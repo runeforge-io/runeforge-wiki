@@ -2,6 +2,10 @@
 title: How to fix moonwalking
 description: This is the fix for when your champion starts walking in random directions
 lastUpdated: 2025-02-04
+tags:
+  type: troubleshooting
+  level: intermediate
+  subject: [skin-fixes, animation, bin-editing]
 ---
 
 Sometimes champions might be turned in the opposite direction of where  they go and generally move really weirdly. This happens mainly on  remodels due to animation layering.

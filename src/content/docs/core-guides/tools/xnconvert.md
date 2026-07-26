@@ -2,6 +2,11 @@
 title: XnConvert tool
 description: A short guide on how to use XnConvert to rescale League assets
 lastUpdated: 2024-10-30
+tags:
+  type: guide
+  level: intermediate
+  subject: [texturing]
+  tool: [xnconvert]
 ---
 
 ## Download

@@ -2,6 +2,11 @@
 title: LtMAO
 description: A guide on how to install and use LtMAO.
 lastUpdated: 2025-04-08
+tags:
+  type: guide
+  level: intermediate
+  subject: [installation, exporting]
+  tool: [ltmao, cslol-manager, hacksaw, ritobin]
 ---
 
 This page will explain the LtMAO tool made by Tarngaina and all of its features.

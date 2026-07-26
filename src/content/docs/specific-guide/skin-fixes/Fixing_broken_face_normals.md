@@ -2,6 +2,11 @@
 title: Fixing Broken Face Normal
 description: This is how you can fix your champion looking "see-through"
 lastUpdated: 2025-02-04
+tags:
+  type: troubleshooting
+  level: intermediate
+  subject: [skin-fixes, 3d-modelling]
+  tool: [maya]
 ---
 
 How wrong face normals in-game are usually noticeable:

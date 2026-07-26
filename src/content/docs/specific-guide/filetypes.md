@@ -2,6 +2,10 @@
 title: Filetypes
 description: All filetypes listed here.
 lastUpdated: 2024-08-26
+tags:
+  type: reference
+  level: beginner
+  subject: [file-formats]
 ---
 
 All file formats used by the League of Legends engine.

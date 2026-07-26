@@ -2,6 +2,11 @@
 title: Ritobin
 description: A tool to to convert League's .bin into Python (.py) files.
 lastUpdated: 2024-08-26
+tags:
+  type: guide
+  level: intermediate
+  subject: [installation, bin-editing]
+  tool: [ritobin, cslol-manager]
 ---
 
 ## Installing

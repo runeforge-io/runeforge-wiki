@@ -2,6 +2,11 @@
 title: Create Idleparticles
 description: This is a guide explaining how to create idle particles using the custom-made idle particle packs.
 lastUpdated: 2025-04-07
+tags:
+  type: guide
+  level: intermediate
+  subject: [vfx, particles, resources]
+  tool: [obsidian, cslol-manager, ritobin, vscode]
 ---
 
 ## Required tools

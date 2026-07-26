@@ -2,6 +2,11 @@
 title: How to Update Linked Bins
 description: A guide on how to update your bin's linked bins. This will fix most missing voicelines or crashing skins.
 lastUpdated: 2025-07-11
+tags:
+  type: guide
+  level: advanced
+  subject: [skin-fixes, bin-editing]
+  tool: [obsidian, ritobin, cslol-manager]
 ---
 
 ## Required Tools

@@ -2,6 +2,11 @@
 title: Particle swapping through bin-editing
 description: This tutorial teaches you how to take particles from one champion and reuse them on another champion.
 lastUpdated: 2024-08-26
+tags:
+  type: tutorial
+  level: advanced
+  subject: [vfx, bin-editing, particles]
+  tool: [vscode, ritobin, hacksaw]
 ---
 
 This tutorial teaches you how to take particles from one champion and reuse them on another champion.

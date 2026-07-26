@@ -2,6 +2,11 @@
 title: Custom Soundbanks
 description: Learn how to create custom soundbanks to add your own sound events in League of Legends! This guide will teach you to prepare audio files, package them using Wwise, and link them to in-game events like abilities, animations, and more.
 lastUpdated: 2026-03-05
+tags:
+  type: tutorial
+  level: advanced
+  subject: [sfx, soundbanks]
+  tool: [wwise, vscode, notepad-plus-plus]
 ---
 
 ## How to create your own events/soundbanks

@@ -2,6 +2,10 @@
 title: Style Guide
 description: How to format guide pages so they render correctly and look consistent across the wiki.
 lastUpdated: 2026-07-22
+tags:
+  type: reference
+  level: beginner
+  subject: [wiki]
 ---
 
 Follow these rules when writing or editing a page. They exist because the wiki runs on [Starlight](https://starlight.astro.build/), which renders Markdown differently than the old wiki.js site did — some old habits now break pages or make them look bad.
@@ -42,6 +46,34 @@ lastUpdated: 2026-07-22
 ```
 
 The `description` is shown in search results and link previews — write a real sentence, not a placeholder.
+
+## Tags
+
+Tags render as the chip row under the page title and build the [tag index](/tags/). Add them to the frontmatter:
+
+```md
+tags:
+  type: guide
+  level: intermediate
+  subject: [texturing, materials]
+  tool: [maya, photoshop, ritobin]
+```
+
+On the page these render as labelled groups: `type` is **Format**, `subject` is **Covers**, `tool` is **Needs**, and `level` and `status` keep their names.
+
+`type` and `level` take exactly one value. `subject` takes one to three, and past three the chip row stops reading as a summary. `tool` is optional and has no limit: list every program in your Required Tools section, so a reader can tell at a glance whether they have what the guide needs. Pages that need no software at all leave it out.
+
+A fifth key, `status`, is optional and only for pages that are unfinished (`wip`) or have fallen behind the tool they describe (`outdated`, `legacy`).
+
+The vocabulary is fixed. Every term lives in `src/lib/tags.ts`, and the build fails on anything that is not in that list, so add the term there first if you need a new one. The full list with descriptions is on the [tags page](/tags/).
+
+### Picking a level
+
+This is the tag readers lean on most, so pick it from the guide rather than from how hard it felt to write:
+
+- **Beginner** if someone can follow it on their first day, before they have made a skin.
+- **Advanced** if it needs bin editing, or if the section index already files it under "Advanced Guides".
+- **Intermediate** otherwise. Most pages land here.
 
 ## Images
 
