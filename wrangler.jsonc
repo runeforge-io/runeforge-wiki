@@ -9,5 +9,8 @@
   // adapter), so there is no worker script - wrangler serves `dist` directly.
   "assets": {
     "directory": "dist",
+    // Without this, a miss returns Cloudflare's bare 404 instead of the
+    // site's own 404.html.
+    "not_found_handling": "404-page",
   },
 }
