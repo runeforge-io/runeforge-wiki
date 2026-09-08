@@ -1,0 +1,50 @@
+---
+import { LinkButton } from '@astrojs/starlight/components';
+import type { ComponentProps } from 'astro/types';
+
+// A short pitch beside a single action. Copy comes through the default slot so
+// it stays in the page that shows it.
+interface Props {
+  cta: string;
+  href: string;
+  icon?: ComponentProps<typeof LinkButton>['icon'];
+}
+
+const { cta, href, icon } = Astro.props;
+---
+
+<div class="rf-cta-panel not-content">
+  <div class="rf-cta-copy"><slot /></div>
+  <LinkButton {href} {icon} variant="primary">{cta}</LinkButton>
+</div>
+
+<style>
+  .rf-cta-panel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: var(--rf-radius-lg);
+    background-color: var(--sl-color-gray-6);
+  }
+
+  .rf-cta-copy {
+    flex: 1 1 20rem;
+    line-height: 1.65;
+    color: var(--sl-color-gray-2);
+  }
+
+  .rf-cta-copy :global(strong) {
+    color: var(--sl-color-white);
+  }
+
+  /* LinkButton adds markdown-flow margins when it sits inside prose; the panel
+     supplies its own spacing. */
+  .rf-cta-panel :global(.sl-link-button) {
+    margin: 0;
+    white-space: nowrap;
+  }
+</style>

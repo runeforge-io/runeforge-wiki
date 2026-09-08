@@ -1,0 +1,40 @@
+---
+title: Coding
+description: All guides listed here.
+lastUpdated: 2025-07-11
+tags:
+  type: overview
+  level: advanced
+  subject: [bin-editing]
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Mandatory
+
+<LinkCard
+  title="Particle & Bin Dictionary"
+  href="/specific-guide/coding/particle-dictionary"
+  description="A dictionary with all informations about Particles in bin files"
+/>
+
+## Advanced Guides
+
+<CardGrid>
+  <LinkCard
+    title="Manually edit VFX colors in bins"
+    href="/specific-guide/coding/man-edit-vfxcolor"
+    description="A guide on how to edit VFX colors in bins via a Code Editor"
+  />
+  <LinkCard
+    title="Using matrix to edit VFX"
+    href="/specific-guide/coding/edit-vfx-using-matrix"
+    description="A guide on how to edit VFX via a Code Editor"
+  />
+  <LinkCard
+    title="Particle swapping through bin-editing"
+    href="/specific-guide/coding/particle-swapping"
+    description="A guide on how to reuse particles from another source via a Code Editor"
+  />
+  <LinkCard title="Update Linked bin files" href="/specific-guide/skin-fixes/update-linked-bins" />
+</CardGrid>

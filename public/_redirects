@@ -1,0 +1,88 @@
+# Permanent redirects from old Wiki.js URLs. Evaluated server-side by
+# Cloudflare Workers static assets (and emulated by `wrangler dev`).
+# First match wins; the /en/* splat must stay last. Do not remove -
+# external links to the old wiki depend on these.
+
+# pages consolidated or dropped during the migration
+/home / 301
+/home/ / 301
+/status / 301
+/status/ / 301
+/runeforge /faq 301
+/runeforge/ /faq 301
+/runeforge2 /faq 301
+/runeforge2/ /faq 301
+/es / 301
+/es/ / 301
+/es/home / 301
+/es/home/ / 301
+/es/core-guides/tools /core-guides/tools 301
+/es/core-guides/tools/ /core-guides/tools 301
+
+# ckeditor landing stubs replaced by the section indexes
+/general-guides-landing /specific-guide 301
+/general-guides-landing/ /specific-guide 301
+/3dmodelling-landing /specific-guide/3d-modelling 301
+/3dmodelling-landing/ /specific-guide/3d-modelling 301
+/3dmodelling-new-page /specific-guide/3d-modelling 301
+/3dmodelling-new-page/ /specific-guide/3d-modelling 301
+/animation-landing /specific-guide/animation 301
+/animation-landing/ /specific-guide/animation 301
+/coding-landing /specific-guide/coding 301
+/coding-landing/ /specific-guide/coding 301
+/sfx-landing /specific-guide/sfx 301
+/sfx-landing/ /specific-guide/sfx 301
+/texture-landing /specific-guide/texturing 301
+/texture-landing/ /specific-guide/texturing 301
+/vfx-landing /specific-guide/vfx 301
+/vfx-landing/ /specific-guide/vfx 301
+/tools-landing /core-guides/tools 301
+/tools-landing/ /core-guides/tools 301
+/tools-landing/maya /core-guides/tools/maya 301
+/tools-landing/maya/ /core-guides/tools/maya 301
+
+# unpublished drafts: land on the section index until they ship
+/posting-guide/apply-as-contributor /posting-guide 301
+/posting-guide/apply-as-contributor/ /posting-guide 301
+/templates/basic-guide-template /posting-guide 301
+/templates/basic-guide-template/ /posting-guide 301
+/specific-guide/coding/update-hashes /specific-guide/coding 301
+/specific-guide/coding/update-hashes/ /specific-guide/coding 301
+/specific-guide/vfx/fake-gear-upgrades /specific-guide/vfx 301
+/specific-guide/vfx/fake-gear-upgrades/ /specific-guide/vfx 301
+/specific-guide/vfx/fake-gear-upgrades-forms /specific-guide/vfx 301
+/specific-guide/vfx/fake-gear-upgrades-forms/ /specific-guide/vfx 301
+/specific-guide/animation/exporting-and-fixing-blender-animations /specific-guide/animation 301
+/specific-guide/animation/exporting-and-fixing-blender-animations/ /specific-guide/animation 301
+/specific-guide/animation/Exporting-Blender-Animations /specific-guide/animation 301
+/specific-guide/animation/Exporting-Blender-Animations/ /specific-guide/animation 301
+/specific-guide/3d-modelling/maya/Weighting-Tricks /specific-guide/3d-modelling/maya 301
+/specific-guide/3d-modelling/maya/Weighting-Tricks/ /specific-guide/3d-modelling/maya 301
+
+# old mixed-case Wiki.js routes -> lowercase Starlight slugs
+/core-guides/tools/LtMAO /core-guides/tools/ltmao 301
+/core-guides/tools/LtMAO/ /core-guides/tools/ltmao 301
+/specific-guide/3d-modelling/Replacing-Champion-With-Different-Model /specific-guide/3d-modelling/replacing-champion-with-different-model 301
+/specific-guide/3d-modelling/Replacing-Champion-With-Different-Model/ /specific-guide/3d-modelling/replacing-champion-with-different-model 301
+/specific-guide/animation/Importing-and-Exporting-Animation /specific-guide/animation/importing-and-exporting-animation 301
+/specific-guide/animation/Importing-and-Exporting-Animation/ /specific-guide/animation/importing-and-exporting-animation 301
+/specific-guide/animation/Retarget-Animation /specific-guide/animation/retarget-animation 301
+/specific-guide/animation/Retarget-Animation/ /specific-guide/animation/retarget-animation 301
+/specific-guide/coding/Particle-swapping /specific-guide/coding/particle-swapping 301
+/specific-guide/coding/Particle-swapping/ /specific-guide/coding/particle-swapping 301
+/specific-guide/skin-fixes/Fixing_broken_face_normals /specific-guide/skin-fixes/fixing_broken_face_normals 301
+/specific-guide/skin-fixes/Fixing_broken_face_normals/ /specific-guide/skin-fixes/fixing_broken_face_normals 301
+/specific-guide/skin-fixes/How_to_fix_moonwalking /specific-guide/skin-fixes/how_to_fix_moonwalking 301
+/specific-guide/skin-fixes/How_to_fix_moonwalking/ /specific-guide/skin-fixes/how_to_fix_moonwalking 301
+/specific-guide/texturing/How-to-improve-flat-textures /specific-guide/texturing/how-to-improve-flat-textures 301
+/specific-guide/texturing/How-to-improve-flat-textures/ /specific-guide/texturing/how-to-improve-flat-textures 301
+/specific-guide/texturing/Making-model-parts-invisible /specific-guide/texturing/making-model-parts-invisible 301
+/specific-guide/texturing/Making-model-parts-invisible/ /specific-guide/texturing/making-model-parts-invisible 301
+/specific-guide/vfx/create-Idleparticles-using-idleparticle-packs /specific-guide/vfx/create-idleparticles-using-idleparticle-packs 301
+/specific-guide/vfx/create-Idleparticles-using-idleparticle-packs/ /specific-guide/vfx/create-idleparticles-using-idleparticle-packs 301
+/specific-guide/vfx/Recoloring_Particles /specific-guide/vfx/recoloring_particles 301
+/specific-guide/vfx/Recoloring_Particles/ /specific-guide/vfx/recoloring_particles 301
+
+# every old URL also existed under /en/<path>; cased /en/ links resolve
+# via two hops (/en/X -> /X -> lowercase). Must stay last.
+/en/* /:splat 301

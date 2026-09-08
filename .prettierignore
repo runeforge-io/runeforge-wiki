@@ -1,0 +1,13 @@
+# Build output and caches
+dist/
+.astro/
+.wrangler/
+node_modules/
+public/
+
+# Contributor prose. Prettier's MDX printer refills component children to
+# printWidth, which merges list items and breaks Starlight <Tabs> blocks.
+# Structure is enforced by the Style Guide and the build, not the formatter.
+src/content/
+
+pnpm-lock.yaml

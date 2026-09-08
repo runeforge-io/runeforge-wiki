@@ -1,0 +1,183 @@
+---
+import Search from '@astrojs/starlight/components/Search.astro';
+import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
+import SiteTitle from './SiteTitle.astro';
+
+// Own layout, composed from Starlight's building blocks: title | section nav |
+// search + socials.
+//
+// - SiteTitle is imported directly, not through Starlight's component registry:
+//   the registry is a `virtual:` module with no types for user code.
+// - ThemeSelect and LanguageSelect are dropped; the site is dark-only and
+//   single-locale.
+// - Search stays in the bar rather than moving to the sidebar, which is a
+//   drawer below 50rem.
+
+// Section hrefs nest (/core-guides/get-started/ sits under /core-guides/), so
+// the current section is the longest matching prefix, not every match.
+const sections = [
+  { label: 'Get Started', href: '/core-guides/get-started/' },
+  { label: 'Core Guides', href: '/core-guides/' },
+  { label: 'Guides', href: '/specific-guide/' },
+  { label: 'Posting', href: '/posting-guide/' },
+];
+
+const { pathname } = Astro.url;
+const currentHref = sections
+  .filter((section) => pathname.startsWith(section.href))
+  .sort((a, b) => b.href.length - a.href.length)[0]?.href;
+
+// Reading-progress bar on the header's bottom edge, over the crimson hairline
+// custom.css draws there. Splash pages have no reading flow to track.
+const isSplash = Astro.locals.starlightRoute.entry.data.template === 'splash';
+---
+
+<div class="header">
+  <div class="title-wrapper sl-flex">
+    <SiteTitle />
+  </div>
+  <nav class="section-nav print:hidden" aria-label="Site sections">
+    {
+      sections.map((section) => (
+        <a href={section.href} aria-current={section.href === currentHref ? 'true' : undefined}>
+          {section.label}
+        </a>
+      ))
+    }
+  </nav>
+  <div class="right-group sl-flex print:hidden">
+    <Search />
+    <div class="sl-hidden md:sl-flex social-icons">
+      <SocialIcons />
+    </div>
+  </div>
+</div>
+{
+  /* Styled from custom.css (Header section): the rule must outrank the
+  `header.header > *` positioning rule there, which an Astro-scoped class
+  cannot. */
+}
+{!isSplash && <div class="rf-read-progress" aria-hidden="true" />}
+
+<script>
+  const root = document.documentElement;
+  const bar = document.querySelector<HTMLElement>('.rf-read-progress');
+  // Clamped so iOS rubber-band overscroll can't produce negative deltas.
+  let lastY = Math.max(window.scrollY, 0);
+  let ticking = false;
+
+  const update = () => {
+    ticking = false;
+    const y = Math.max(window.scrollY, 0);
+
+    if (bar) {
+      const max = root.scrollHeight - window.innerHeight;
+      const progress = max > 0 ? Math.min(y / max, 1) : 0;
+      bar.style.setProperty('--rf-read-progress', `${progress * 100}%`);
+    }
+
+    // Hide-on-scroll for the mobile chrome; custom.css scopes the visual effect
+    // to narrow viewports, so the attribute is harmless on desktop. The 6px
+    // dead zone filters the jitter Chrome on Android emits while its URL bar
+    // collapses.
+    const dy = y - lastY;
+    lastY = y;
+    const tocOpen = document.querySelector<HTMLDetailsElement>('#starlight__mobile-toc')?.open;
+    if (y < 96 || dy < -6 || tocOpen) {
+      root.removeAttribute('data-rf-chrome-hidden');
+    } else if (dy > 6) {
+      root.setAttribute('data-rf-chrome-hidden', '');
+    }
+  };
+
+  const schedule = () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  };
+  addEventListener('scroll', schedule, { passive: true });
+  addEventListener('resize', schedule, { passive: true });
+  update();
+</script>
+
+<style>
+  .header {
+    display: flex;
+    gap: var(--sl-nav-gap);
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .title-wrapper {
+    /* Prevent long titles overflowing and covering the search and menu buttons
+       on narrow viewports (kept from Starlight's default Header). */
+    overflow: clip;
+    /* Avoid clipping the focus ring around the link inside the title wrapper. */
+    padding: 0.25rem;
+    margin: -0.25rem;
+    min-width: 0;
+  }
+
+  .right-group,
+  .social-icons {
+    gap: 1rem;
+    align-items: center;
+  }
+
+  /* Symmetric flanks pin the nav to the bar's true centre regardless of how
+     wide the title and the right group happen to be. */
+  @media (min-width: 50rem) {
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-content: center;
+    }
+
+    .right-group {
+      justify-content: flex-end;
+    }
+  }
+
+  /* Section nav: quiet links. Held back to 65rem rather than the 50rem where
+     the hamburger disappears, since between the two the bar already carries the
+     wordmark, the search box and the socials. */
+  .section-nav {
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 65rem) {
+    .section-nav {
+      display: flex;
+    }
+  }
+
+  .section-nav a {
+    position: relative;
+    font-size: var(--sl-text-sm);
+    font-weight: var(--rf-weight-medium);
+    color: var(--sl-color-gray-2);
+    text-decoration: none;
+    transition: color 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .section-nav a:hover,
+  .section-nav a[aria-current='true'] {
+    color: var(--sl-color-white);
+  }
+
+  /* The current section carries a crimson hairline under its label. */
+  .section-nav a[aria-current='true']::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: -0.35rem;
+    height: 2px;
+    border-radius: 1px;
+    background: linear-gradient(90deg, var(--rf-crimson), var(--rf-crimson-deep));
+  }
+</style>

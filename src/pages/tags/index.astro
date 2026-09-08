@@ -1,0 +1,229 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getPagesByTag } from '../../lib/tagged-pages';
+import {
+  LEVELS,
+  LEVEL_META,
+  STATUSES,
+  STATUS_META,
+  SUBJECTS,
+  SUBJECT_GROUP_LABELS,
+  SUBJECT_META,
+  TOOLS,
+  TOOL_META,
+  TYPES,
+  TYPE_META,
+  tagHref,
+  type SubjectGroup,
+  type TagSlug,
+} from '../../lib/tags';
+
+const pagesByTag = await getPagesByTag();
+
+interface Entry {
+  slug: TagSlug;
+  label: string;
+  description: string;
+  count: number;
+}
+
+// Terms nobody has used yet are reserved vocabulary, not navigation - listing
+// them here would only offer dead ends.
+const used = (
+  slugs: readonly TagSlug[],
+  meta: Record<string, { label: string; description: string }>,
+): Entry[] =>
+  slugs.flatMap((slug) => {
+    const pages = pagesByTag.get(slug);
+    return pages ? [{ slug, ...meta[slug], count: pages.length }] : [];
+  });
+
+const types = used(TYPES, TYPE_META);
+const levels = used(LEVELS, LEVEL_META);
+const tools = used(TOOLS, TOOL_META);
+const statuses = used(STATUSES, STATUS_META);
+
+const subjectGroups = (Object.keys(SUBJECT_GROUP_LABELS) as SubjectGroup[])
+  .map((group) => ({
+    label: SUBJECT_GROUP_LABELS[group],
+    entries: used(
+      SUBJECTS.filter((slug) => SUBJECT_META[slug].group === group),
+      SUBJECT_META,
+    ),
+  }))
+  .filter((group) => group.entries.length > 0);
+---
+
+<StarlightPage
+  frontmatter={{
+    title: 'Tags',
+    description: 'Every tag used across the wiki, and the pages behind each one.',
+    tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 2 },
+  }}
+>
+  <p>
+    Every guide says what kind of page it is, how much you are expected to know already, what it
+    covers, and which programs you need. Follow any tag to see the rest of the wiki that shares it.
+  </p>
+
+  <h2 id="level">Level</h2>
+  <p>How much modding experience a page assumes before step one.</p>
+  <div class="tag-list not-content">
+    {
+      levels.map((entry) => (
+        <a class="tag-entry" data-level href={tagHref(entry.slug)}>
+          <span class="tag-label">
+            {entry.label}
+            <span class="tag-count">{entry.count}</span>
+          </span>
+          <span class="tag-desc">{entry.description}</span>
+        </a>
+      ))
+    }
+  </div>
+
+  <h2 id="format">Format</h2>
+  <p>What kind of page it is, and how to read it.</p>
+  <div class="tag-list not-content">
+    {
+      types.map((entry) => (
+        <a class="tag-entry" href={tagHref(entry.slug)}>
+          <span class="tag-label">
+            {entry.label}
+            <span class="tag-count">{entry.count}</span>
+          </span>
+          <span class="tag-desc">{entry.description}</span>
+        </a>
+      ))
+    }
+  </div>
+
+  <h2 id="needs">Needs</h2>
+  <p>
+    The programs a page expects you to have. A guide lists every tool it needs, so these run longer
+    than the other rows.
+  </p>
+  <div class="tag-list not-content">
+    {
+      tools.map((entry) => (
+        <a class="tag-entry" href={tagHref(entry.slug)}>
+          <span class="tag-label">
+            {entry.label}
+            <span class="tag-count">{entry.count}</span>
+          </span>
+          <span class="tag-desc">{entry.description}</span>
+        </a>
+      ))
+    }
+  </div>
+
+  <h2 id="covers">Covers</h2>
+  <p>What a page is about, and where it sits in the workflow.</p>
+  {
+    subjectGroups.map((group) => (
+      <>
+        <h3>{group.label}</h3>
+        <div class="tag-list not-content">
+          {group.entries.map((entry) => (
+            <a class="tag-entry" href={tagHref(entry.slug)}>
+              <span class="tag-label">
+                {entry.label}
+                <span class="tag-count">{entry.count}</span>
+              </span>
+              <span class="tag-desc">{entry.description}</span>
+            </a>
+          ))}
+        </div>
+      </>
+    ))
+  }
+
+  {
+    statuses.length > 0 && (
+      <>
+        <h2 id="status">Status</h2>
+        <p>
+          Carried only by pages that are unfinished or have fallen behind the tools they describe.
+          No status tag means the page is expected to work as written.
+        </p>
+        <div class="tag-list not-content">
+          {statuses.map((entry) => (
+            <a class="tag-entry" data-status href={tagHref(entry.slug)}>
+              <span class="tag-label">
+                {entry.label}
+                <span class="tag-count">{entry.count}</span>
+              </span>
+              <span class="tag-desc">{entry.description}</span>
+            </a>
+          ))}
+        </div>
+      </>
+    )
+  }
+</StarlightPage>
+
+<style>
+  .tag-list {
+    display: grid;
+    gap: 0.625rem;
+    margin-block: 1rem 2rem;
+  }
+
+  @media (min-width: 50rem) {
+    .tag-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .tag-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem 0.875rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: var(--rf-radius-lg);
+    text-decoration: none;
+    transition:
+      border-color var(--rf-dur-out) var(--rf-ease-snap),
+      background-color var(--rf-dur-out) var(--rf-ease-snap);
+  }
+
+  .tag-entry:hover {
+    border-color: color-mix(in srgb, var(--rf-crimson) 55%, transparent);
+    background-color: color-mix(in srgb, var(--sl-color-gray-5) 40%, transparent);
+    transition-duration: var(--rf-dur-in);
+  }
+
+  .tag-entry:focus-visible {
+    outline: 2px solid var(--sl-color-accent);
+    outline-offset: 3px;
+  }
+
+  .tag-label {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-weight: var(--rf-weight-semibold);
+    color: var(--sl-color-white);
+  }
+
+  .tag-entry[data-level] .tag-label {
+    color: var(--sl-color-accent-high);
+  }
+
+  .tag-entry[data-status] .tag-label {
+    color: var(--sl-color-orange-high);
+  }
+
+  .tag-count {
+    font-size: 0.75rem;
+    font-weight: var(--rf-weight-medium);
+    color: var(--sl-color-gray-3);
+  }
+
+  .tag-desc {
+    font-size: 0.8125rem;
+    line-height: 1.55;
+    color: var(--sl-color-gray-2);
+  }
+</style>

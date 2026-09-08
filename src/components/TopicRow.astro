@@ -1,0 +1,54 @@
+---
+// Shortcut chips into the guide topics, so the landing page reaches real
+// content in one click instead of two.
+interface Props {
+  topics: { label: string; href: string }[];
+}
+
+const { topics } = Astro.props;
+---
+
+<ul class="rf-topic-row not-content">
+  {
+    topics.map((topic) => (
+      <li>
+        <a href={topic.href}>{topic.label}</a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .rf-topic-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* The base rule carries the slower hover-out; :hover overrides duration and
+     curve so the chip arrives fast and leaves gently. */
+  .rf-topic-row a {
+    display: block;
+    padding: 0.4375rem 0.875rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: var(--rf-radius-md);
+    background-color: var(--sl-color-gray-6);
+    color: var(--sl-color-gray-2);
+    font-size: var(--sl-text-sm);
+    text-decoration: none;
+    transition:
+      border-color var(--rf-dur-out) ease,
+      background-color var(--rf-dur-out) ease,
+      color var(--rf-dur-out) ease;
+  }
+
+  .rf-topic-row a:hover {
+    border-color: color-mix(in srgb, var(--rf-crimson) 55%, transparent);
+    background-color: color-mix(in srgb, var(--rf-crimson) 14%, transparent);
+    color: var(--sl-color-white);
+    transition-duration: var(--rf-dur-in);
+    transition-timing-function: var(--rf-ease-snap);
+  }
+</style>

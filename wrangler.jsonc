@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "runeforge-wiki",
+  "compatibility_date": "2026-04-10",
+  "observability": {
+    "enabled": true,
+  },
+  // Assets-only Worker: the site is fully static (`output: 'static'`, no
+  // adapter), so there is no worker script - wrangler serves `dist` directly.
+  "assets": {
+    "directory": "dist",
+    // Without this, a miss returns Cloudflare's bare 404 instead of the
+    // site's own 404.html.
+    "not_found_handling": "404-page",
+  },
+}

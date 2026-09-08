@@ -1,0 +1,12 @@
+---
+import Default from '@astrojs/starlight/components/Head.astro';
+import { Font } from 'astro:assets';
+---
+
+{
+  /* Rubik is declared in the `fonts` config in astro.config.ts; <Font> emits its
+  @font-face rules plus the generated fallback face, and `preload` adds the link
+  tag. Rubik carries every glyph on the page, so it preloads unconditionally. */
+}
+<Default><slot /></Default>
+<Font cssVariable="--font-rubik" preload />

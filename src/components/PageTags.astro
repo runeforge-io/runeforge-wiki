@@ -1,0 +1,41 @@
+---
+/**
+ * The tag row under a page title, split into labelled groups.
+ *
+ * Nine bare chips read as one undifferentiated pile, so each facet gets a
+ * label saying what its chips answer, and each chip carries its vocabulary
+ * entry as a tooltip - the terms are the reader's first encounter with them.
+ * Within a group the styling still varies by facet: level carries the accent
+ * and a filled-bar meter, because "is this page for me yet" is the question a
+ * newcomer asks first; tools wear a wrench so a long Required Tools row stays
+ * one group; status borrows the caution colour so an outdated page cannot be
+ * skimmed past.
+ *
+ * The chips render here and hydrate as one island rather than one per chip,
+ * so the whole row shares a single tooltip provider.
+ */
+import warning from '@phosphor-icons/core/assets/bold/warning-bold.svg';
+import wrench from '@phosphor-icons/core/assets/bold/wrench-bold.svg';
+import TagChips from './TagChips.svelte';
+import { LEVELS, groupPageTags, tagHref, type PageTags, type TagLevel } from '../lib/tags';
+
+interface Props {
+  tags: PageTags;
+}
+
+// Flattened to a view model here so the island ships no vocabulary of its own:
+// hrefs and meter counts are the only things it would need `lib/tags` for.
+const groups = groupPageTags(Astro.props.tags).map((group) => ({
+  facet: group.facet,
+  label: group.label,
+  tags: group.tags.map((tag) => ({
+    label: tag.label,
+    description: tag.description,
+    facet: tag.facet,
+    href: tagHref(tag.slug),
+    bars: tag.facet === 'level' ? LEVELS.indexOf(tag.slug as TagLevel) + 1 : 0,
+  })),
+}));
+---
+
+<TagChips client:idle groups={groups} wrenchIcon={wrench.src} warningIcon={warning.src} />

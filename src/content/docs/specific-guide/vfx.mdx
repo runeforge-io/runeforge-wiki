@@ -1,0 +1,55 @@
+---
+title: Visual FX
+description: All guides listed here.
+lastUpdated: 2025-02-01
+tags:
+  type: overview
+  level: intermediate
+  subject: [vfx]
+  tool: [vscode]
+---
+
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Mandatory
+
+<LinkCard
+  title="Particle & Bin Dictionary"
+  href="/specific-guide/coding/particle-dictionary"
+  description="A dictionary with all informations about Particles in bin files"
+/>
+
+## Basic Guides
+
+<CardGrid>
+  <LinkCard
+    title="Create Idle Particles (Auras) using prebuilt Idle Particle packs"
+    href="/specific-guide/vfx/create-idleparticles-using-idleparticle-packs"
+  />
+  <LinkCard title="Recoloring Particles" href="/specific-guide/vfx/recoloring_particles" />
+</CardGrid>
+
+## Advanced Guides
+
+<CardGrid>
+  <LinkCard
+    title="Manually edit VFX colors in bins"
+    href="/specific-guide/coding/man-edit-vfxcolor"
+    description="A Guide on how to edit bin colors manually with Visual Studio Code"
+  />
+  <LinkCard
+    title="Using matrix to edit VFX"
+    href="/specific-guide/coding/edit-vfx-using-matrix"
+    description="A Guide on how to edit VFX via a Code Editor"
+  />
+  <LinkCard title="Adding Child Particles" href="/specific-guide/coding/adding-child-particles" />
+  <LinkCard
+    title="Particle swapping through bin-editing"
+    href="/specific-guide/coding/particle-swapping"
+    description="A guide on how to reuse particles from another source via a Code Editor"
+  />
+  <LinkCard
+    title="Add particles to animations"
+    href="/specific-guide/coding/add-particles-to-animation"
+  />
+</CardGrid>
