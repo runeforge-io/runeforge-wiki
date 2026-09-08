@@ -13,13 +13,10 @@ tags:
 This is a complex tutorial involving bin editing.
 :::
 
-
 ### 1. Getting ur staticmaterials ready
 U thought we were swapping textures? I wish it was that simple.
 You need to copy the existing staticmaterial associated for the base texture for that mesh. For Yuumi's body, its ```Orb_Cat_inst```. U can find it by searching for the texture name in the skin bin
-![Searching the skin bin for the base texture's StaticMaterial](/user-pictures/fbs/findstaticmat.png)
 After that, you copy the entire thing, paste it somewhere, rename things and add your texture file to it. In my case, the name is gonna be "mine", as well as the texture file.
-![Copied StaticMaterial renamed and pointing to the new texture](/user-pictures/fbs/examplestaticmat.png)
 
 ### 2. Vfx
 
@@ -90,7 +87,6 @@ You will also need this in ResourceResolver
             "Show" = "Show"
 ```
 After this, you need the animation bin. Find the animation you want to use as a toggle and paste these code snippets like this.
-![Animation bin showing where to paste the event snippets](/user-pictures/fbs/animbinex.png)
 1.
 ```
                     "Hide" = ParticleEventData {
@@ -114,7 +110,6 @@ After this, you need the animation bin. Find the animation you want to use as a 
                         mIsKillEvent: bool = false
                     }
 ```
-![Hide and Show ParticleEventData entries pasted into the animation bin](/user-pictures/fbs/2025-02-14_02-47.png)
 
 After this, you should be good to go if you did everything right and replaced everything right.
     
