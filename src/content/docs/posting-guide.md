@@ -38,23 +38,41 @@ lastUpdated: 2026-07-22
 Not sure where a page fits? Ask on the Runeforge Discord before opening the PR — we're happy to help.
 :::
 
-## Uploading images and files
+## Adding images and files
 
-Images live in the repository under `public/user-pictures/`. Create a folder with your name (lowercase, no spaces — use `-` or `_`) and put your files in it:
+Images live **next to the guide that uses them**, so a page and its screenshots
+travel together. A guide with images is a folder holding an `index.md`:
 
 ```
-public/user-pictures/your-name/my-cool-guide/step-1.png
+src/content/docs/specific-guide/ui/custom-cursors/
+  index.md
+  step-1.png
+  step-2.png
 ```
 
-Then reference them from your page with a root-relative path and a descriptive alt text:
+Reference them with a relative path and a descriptive alt text:
 
 ```md
-![The Bind Skin options window](/user-pictures/your-name/my-cool-guide/step-1.png)
+![The Bind Skin options window](./step-1.png)
 ```
 
-Keep filenames lowercase and space-free, and compress large screenshots — the whole wiki ships these files to every reader.
+That relative form is what puts the image through the build's optimizer: it is
+resized, converted to WebP, and given width and height so the page does not jump
+while it loads. Animated GIFs stay animated. A path that starts with `/` skips
+all of that, so use `./`.
 
-Videos can be uploaded the same way (`.mp4` only) or embedded from YouTube — see the [Style Guide](/posting-guide/style-guide#videos) for both forms.
+Keep filenames lowercase and space-free. Do not set a size on the image - the
+site caps tall screenshots for you.
+
+If your guide is a single `.md` file and you are adding the first image to it,
+turn it into a folder first: create the folder, move the page into it as
+`index.md`, and put the image beside it. The page's URL does not change.
+
+Two kinds of file cannot sit next to the guide, because they bypass the
+optimizer. Videos (`.mp4` only) go in `public/guide-media/<guide-name>/` and
+downloads in `public/downloads/`, both referenced with a leading `/`. Or embed
+video from YouTube - see the [Style Guide](/posting-guide/style-guide#videos)
+for both forms.
 
 ## Previewing your changes
 

@@ -50,19 +50,27 @@ To create a new page, copy the [guide template](https://github.com/runeforge-io/
 
 ## Adding images
 
-Put your files in a folder with your name under `public/user-pictures/`:
+Put your files **in the guide's own folder**, beside its `index.md`:
 
 ```
-public/user-pictures/your-name/my-cool-guide/step-1.png
+src/content/docs/specific-guide/ui/custom-cursors/
+  index.md
+  step-1.png
 ```
 
-Then reference them with a root-relative path and a descriptive alt text:
+Then reference them with a relative path and a descriptive alt text:
 
 ```md
-![The Bind Skin options window](/user-pictures/your-name/my-cool-guide/step-1.png)
+![The Bind Skin options window](./step-1.png)
 ```
 
-The dev server picks up new files without a restart. Keep filenames lowercase and space-free, and compress large screenshots.
+The dev server picks up new files without a restart. The relative path is what
+sends the image through the optimizer, so avoid a leading `/`. Keep filenames
+lowercase and space-free; you do not need to compress screenshots by hand or set
+a size, the build handles both.
+
+If the guide is still a single `.md` file, make it a folder first - move the page
+in as `index.md` and drop the image next to it. The URL stays the same.
 
 ## Before you push
 

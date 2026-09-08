@@ -79,25 +79,26 @@ This is the tag readers lean on most, so pick it from the guide rather than from
 
 ## Images
 
-Use standard Markdown images with a **descriptive alt text**, not the filename:
+Images live in the guide's own folder and are referenced with a relative path,
+with a **descriptive alt text** rather than the filename:
 
 ```md
 <!-- Good -->
-![The Bind Skin options window with max influences set to 3](/user-pictures/you/guide/bind-options.png)
+![The Bind Skin options window with max influences set to 3](./bind-options.png)
 
 <!-- Bad -->
-![14.png](/user-pictures/you/guide/14.png)
+![14.png](./14.png)
 ```
+
+The leading `./` matters: it is what puts the image through the build's
+optimizer. A path starting with `/` is served untouched.
 
 :::caution
 The old wiki.js sizing syntax (`![x](image.png =x400)` or `=350x200`) **does not work anymore** and renders as a broken image. Remove it wherever you see it.
 :::
 
-If an image really needs a fixed size, use an HTML tag:
-
-```html
-<img src="/user-pictures/you/guide/bind-options.png" alt="The Bind Skin options window" height="400" />
-```
+Don't set a size. The site caps very tall screenshots on its own, and a raw
+`<img>` tag opts the image out of the optimizer entirely.
 
 For side-by-side comparisons, put the images next to each other and label them in the text — don't build separator lines out of dashes:
 
@@ -108,7 +109,7 @@ For side-by-side comparisons, put the images next to each other and label them i
 <!-- Good -->
 Before (left) and after (right):
 
-<img src="/img/before.png" alt="Skeleton before alignment" height="300" /> <img src="/img/after.png" alt="Skeleton after alignment" height="300" />
+![Skeleton before alignment](./before.png) ![Skeleton after alignment](./after.png)
 ```
 
 ## Notes and warnings
@@ -238,6 +239,6 @@ For uploaded clips, use `.mp4`:
 
 ```html
 <video width="480" controls>
-  <source src="/user-pictures/you/guide/clip.mp4" type="video/mp4" />
+  <source src="/guide-media/my-cool-guide/clip.mp4" type="video/mp4" />
 </video>
 ```

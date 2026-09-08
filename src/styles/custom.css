@@ -309,6 +309,17 @@ h6 {
   margin-block: 2.5rem;
 }
 
+/* ── Images ─────────────────────────────────────────────────── */
+
+/* Replaces the per-image `height` attributes the guides used to carry: a cap
+   here beats 96 hand-set heights, and only reins in the portrait screenshots
+   that would otherwise run several thousand pixels tall. */
+.sl-markdown-content img {
+  max-height: 45rem;
+  width: auto;
+  object-fit: contain;
+}
+
 /* ── Asides ─────────────────────────────────────────────────── */
 
 /* Card treatment instead of Starlight's flat panels. The stripe is an overlay
