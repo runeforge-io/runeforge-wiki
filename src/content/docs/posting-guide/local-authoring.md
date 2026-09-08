@@ -64,14 +64,6 @@ Then reference them with a root-relative path and a descriptive alt text:
 
 The dev server picks up new files without a restart. Keep filenames lowercase and space-free, and compress large screenshots.
 
-## The visual editor
-
-:::caution
-The visual editor is experimental and may change or be replaced. Known limitation: **don't save pages that contain images through it** — image references currently get rewritten incorrectly. Edit those pages in a text editor instead. Text-only pages and frontmatter edits are fine.
-:::
-
-While `pnpm dev` is running, a browser-based editor is available at `http://localhost:4321/keystatic`. It lists every guide, edits the page details (title, description, last-updated date) as form fields, and offers a rich text editor for the content — saving writes straight back to the Markdown files, so your changes show up in `git status` as usual.
-
 ## Before you push
 
 Run a production build:

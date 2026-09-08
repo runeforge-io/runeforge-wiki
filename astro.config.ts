@@ -1,15 +1,8 @@
 import { defineConfig, fontProviders } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import svelte from '@astrojs/svelte';
-import react from '@astrojs/react';
-import keystatic from '@keystatic/astro';
 import tailwindcss from '@tailwindcss/vite';
 import starlightLinksValidator from 'starlight-links-validator';
-
-// Keystatic's admin routes are server-rendered, which the static production
-// build rejects (no adapter). Local content editing only needs the dev
-// server, so the integration is enabled for `astro dev` alone.
-const isDev = process.argv.includes('dev');
 
 export default defineConfig({
   site: 'https://wiki.runeforge.dev',
@@ -385,10 +378,6 @@ export default defineConfig({
       ],
     }),
     svelte(),
-    react(),
-    // Keystatic admin UI (/keystatic) for editing content locally during
-    // development. Local storage mode only - not part of the deployed site.
-    ...(isDev ? [keystatic()] : []),
   ],
 
   vite: {
