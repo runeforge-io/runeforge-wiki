@@ -1,0 +1,18 @@
+# Runeforge Wiki - community documentation for League of Legends skin and mod
+# creation, written by the people who make the mods.
+#
+# Content-Signal expresses how this content may be used, per the Content Signals
+# Policy (https://contentsignals.org). Search indexing is welcome: people should
+# be able to find these guides. Training AI models on them is not granted -
+# the guides are volunteer-written and credited, and the authors did not sign up
+# to be a training corpus.
+#
+# ANY RESTRICTION EXPRESSED HERE IS AN EXPRESS RESERVATION OF RIGHTS UNDER
+# ARTICLE 4 OF EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT AND RELATED RIGHTS
+# IN THE DIGITAL SINGLE MARKET.
+
+User-agent: *
+Content-Signal: search=yes, ai-train=no
+Allow: /
+
+Sitemap: https://wiki.runeforge.dev/sitemap-index.xml
